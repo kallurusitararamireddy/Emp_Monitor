@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Sep 05 15:10:15 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>188 seconds (188690 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.emp.testcases.DashBoardTest.DashBoardTest()'><b>DashBoardTest</b><br>Test class: com.emp.testcases.DashBoardTest<br/>
+<a href="#Output-1392482765" onClick='toggleBox("Output-1392482765", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1392482765" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1392482765">
+<B><font color = 'blue'>Step1 .</font></B> Clicked on TotalEnrollments <br/>
+<B><font color = 'blue'>Step2 .</font></B> Clicked on TotalEnrollments_csvButton <br/>
+<B><font color = 'blue'>Step3 .</font></B> Clicked on TotalEnrollments_CloseButtton <br/>
+<B><font color = 'blue'>Step4 .</font></B> Clicked on CurrentlyACtive <br/>
+<B><font color = 'blue'>Step5 .</font></B> Clicked on CurrentlyACtive_CsvButton <br/>
+<B><font color = 'blue'>Step6 .</font></B> Clicked on CurrentlyACtive_Close_Button <br/>
+<B><font color = 'blue'>Step7 .</font></B> Clicked on CurrentlyIdle <br/>
+<B><font color = 'blue'>Step8 .</font></B> Clicked on CurrentlyIdle_csv_Button <br/>
+<B><font color = 'blue'>Step9 .</font></B> Clicked on CurrentlyIdle_close_Button <br/>
+<B><font color = 'blue'>Step10 .</font></B> Clicked on Currently_Offline <br/>
+<B><font color = 'blue'>Step11 .</font></B> Clicked on Currently_offline_csv_Button <br/>
+<B><font color = 'blue'>Step12 .</font></B> Clicked on Currentlyoffline_close_Button <br/>
+<B><font color = 'blue'>Step13 .</font></B> Clicked on Absent_Users <br/>
+<B><font color = 'blue'>Step14 .</font></B> Clicked on Absent_Users_Generate_csvButton <br/>
+<B><font color = 'blue'>Step15 .</font></B> Clicked on Absent_Users_closeButton <br/>
+<B><font color = 'blue'>Step16 .</font></B> Clicked on Suspended_Users <br/>
+<B><font color = 'blue'>Step17 .</font></B> Clicked on Suspended_Users_csvButton <br/>
+<B><font color = 'blue'>Step18 .</font></B> Clicked on Suspende_Users_closeButton <br/>
+<B><font color = 'blue'>Step19 .</font></B> Clicked on Top10ProductiveEmployees_Locations <br/>
+<B><font color = 'blue'>Step20 .</font></B> Clicked on Top10ProductiveEmployees_Departments <br/>
+<B><font color = 'blue'>Step21 .</font></B> Clicked on Top10ProductiveEmployeesToday <br/>
+<B><font color = 'blue'>Step22 .</font></B> Clicked on Top10ProductiveEmployeesyesterday <br/>
+<B><font color = 'blue'>Step23 .</font></B> Clicked on Top10ProductiveEmployees_Thisweek <br/>
+<B><font color = 'blue'>Step24 .</font></B> Clicked on Top10NonProductiveEmployees_Location <br/>
+<B><font color = 'blue'>Step25 .</font></B> Clicked on Top10NonProductiveEmployees_Department <br/>
+<B><font color = 'blue'>Step26 .</font></B> Clicked on Top10NonProductiveEmployees_Today <br/>
+<B><font color = 'blue'>Step27 .</font></B> Clicked on Top10NonProductiveEmployees_Yesterday <br/>
+<B><font color = 'blue'>Step28 .</font></B> Clicked on Top10NonProductiveEmployees_Thisweek <br/>
+<B><font color = 'blue'>Step29 .</font></B> Clicked on Location_Performance_Productive <br/>
+<B><font color = 'blue'>Step30 .</font></B> Clicked on Location_Performance_Today <br/>
+<B><font color = 'blue'>Step31 .</font></B> Clicked on Location_Performance_Yesterday <br/>
+<B><font color = 'blue'>Step32 .</font></B> Clicked on Location_Performance_Thisweek <br/>
+<B><font color = 'blue'>Step33 .</font></B> Clicked on Department_Performance_Productive <br/>
+<B><font color = 'blue'>Step34 .</font></B> Clicked on Department_Performance_Today <br/>
+<B><font color = 'blue'>Step35 .</font></B> Clicked on Department_Performance_Yesterday <br/>
+<B><font color = 'blue'>Step36 .</font></B> Clicked on Department_Performance_Thisweek <br/>
+<B><font color = 'blue'>Step37 .</font></B> Clicked on Top10Websitesusages_Today <br/>
+<B><font color = 'blue'>Step38 .</font></B> Clicked on Top10Websitesusages_Yesterday <br/>
+<B><font color = 'blue'>Step39 .</font></B> Clicked on Top10Websitesusages_Thisweek <br/>
+<B><font color = 'blue'>Step40 .</font></B> Clicked on Top10Websitesusages_Viewdetails <br/>
+<B><font color = 'blue'>Step41 .</font></B> Clicked on Viewdetails_CloseButton <br/>
+<B><font color = 'blue'>Step42 .</font></B> Clicked on Top10_Application_Usage_Today <br/>
+<B><font color = 'blue'>Step43 .</font></B> Clicked on Top10_Application_Usage_Yesterday <br/>
+<B><font color = 'blue'>Step44 .</font></B> Clicked on Top10_Application_Usage_Thisweek <br/>
+<B><font color = 'blue'>Step45 .</font></B> Clicked on Top10_Application_Usage_viewdetails <br/>
+<B><font color = 'blue'>Step45 .</font></B> Clicked on Top10_Application_Usage_view_details_closebutton <br/>
+</div>
+</td>
+<td></td>
+<td>173</td>
+<td>com.emp.testcases.DashBoardTest@503d687a</td></tr>
+</table><p>
+</body>
+</html>

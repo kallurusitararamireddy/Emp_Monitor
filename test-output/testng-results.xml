@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[<B><font color = 'orange'>Username .</font></B> Entered User ID]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'orange'>Password .</font></B> Entered Password]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'orange'>Sign In Button .</font></B> Clicked on Submit Button]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step1 .</font></B> Clicked on TotalEnrollments ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step2 .</font></B> Clicked on TotalEnrollments_csvButton ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step3 .</font></B> Clicked on TotalEnrollments_CloseButtton ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step4 .</font></B> Clicked on CurrentlyACtive ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step5 .</font></B> Clicked on CurrentlyACtive_CsvButton ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step6 .</font></B> Clicked on CurrentlyACtive_Close_Button ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step7 .</font></B> Clicked on CurrentlyIdle ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step8 .</font></B> Clicked on CurrentlyIdle_csv_Button ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step9 .</font></B> Clicked on CurrentlyIdle_close_Button ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step10 .</font></B> Clicked on Currently_Offline ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step11 .</font></B> Clicked on Currently_offline_csv_Button ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step12 .</font></B> Clicked on Currentlyoffline_close_Button ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step13 .</font></B> Clicked on Absent_Users ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step14 .</font></B> Clicked on Absent_Users_Generate_csvButton ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step15 .</font></B> Clicked on Absent_Users_closeButton ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step16 .</font></B> Clicked on Suspended_Users ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step17 .</font></B> Clicked on Suspended_Users_csvButton ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step18 .</font></B> Clicked on Suspende_Users_closeButton ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step19 .</font></B> Clicked on Top10ProductiveEmployees_Locations ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step20 .</font></B> Clicked on Top10ProductiveEmployees_Departments ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step21 .</font></B> Clicked on Top10ProductiveEmployeesToday ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step22 .</font></B> Clicked on Top10ProductiveEmployeesyesterday ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step23 .</font></B> Clicked on Top10ProductiveEmployees_Thisweek ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step24 .</font></B> Clicked on Top10NonProductiveEmployees_Location ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step25 .</font></B> Clicked on Top10NonProductiveEmployees_Department ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step26 .</font></B> Clicked on Top10NonProductiveEmployees_Today ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step27 .</font></B> Clicked on Top10NonProductiveEmployees_Yesterday ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step28 .</font></B> Clicked on Top10NonProductiveEmployees_Thisweek ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step29 .</font></B> Clicked on Location_Performance_Productive ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step30 .</font></B> Clicked on Location_Performance_Today ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step31 .</font></B> Clicked on Location_Performance_Yesterday ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step32 .</font></B> Clicked on Location_Performance_Thisweek ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step33 .</font></B> Clicked on Department_Performance_Productive ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step34 .</font></B> Clicked on Department_Performance_Today ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step35 .</font></B> Clicked on Department_Performance_Yesterday ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step36 .</font></B> Clicked on Department_Performance_Thisweek ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step37 .</font></B> Clicked on Top10Websitesusages_Today ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step38 .</font></B> Clicked on Top10Websitesusages_Yesterday ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step39 .</font></B> Clicked on Top10Websitesusages_Thisweek ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step40 .</font></B> Clicked on Top10Websitesusages_Viewdetails ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step41 .</font></B> Clicked on Viewdetails_CloseButton ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step42 .</font></B> Clicked on Top10_Application_Usage_Today ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step43 .</font></B> Clicked on Top10_Application_Usage_Yesterday ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step44 .</font></B> Clicked on Top10_Application_Usage_Thisweek ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step45 .</font></B> Clicked on Top10_Application_Usage_viewdetails ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step45 .</font></B> Clicked on Top10_Application_Usage_view_details_closebutton ]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2022-09-05T15:10:15 IST" name="Default suite" finished-at="2022-09-05T15:13:23 IST" duration-ms="188690">
+    <groups>
+    </groups>
+    <test started-at="2022-09-05T15:10:15 IST" name="Default test" finished-at="2022-09-05T15:13:23 IST" duration-ms="188690">
+      <class name="com.emp.testcases.DashBoardTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.emp.testcases.DashBoardTest@503d687a]" started-at="2022-09-05T15:10:15 IST" name="beforeSuite" finished-at="2022-09-05T15:10:15 IST" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:com.emp.testcases.DashBoardTest@503d687a]" started-at="2022-09-05T15:10:15 IST" name="initialization" finished-at="2022-09-05T15:10:24 IST" duration-ms="9463" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.emp.testcases.DashBoardTest@503d687a]" started-at="2022-09-05T15:10:24 IST" name="setUp" finished-at="2022-09-05T15:10:30 IST" duration-ms="5292" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<B><font color = 'orange'>Username .</font></B> Entered User ID]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'orange'>Password .</font></B> Entered Password]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'orange'>Sign In Button .</font></B> Clicked on Submit Button]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="DashBoardTest()[pri:0, instance:com.emp.testcases.DashBoardTest@503d687a]" started-at="2022-09-05T15:10:30 IST" name="DashBoardTest" finished-at="2022-09-05T15:13:23 IST" duration-ms="173513" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step1 .</font></B> Clicked on TotalEnrollments ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step2 .</font></B> Clicked on TotalEnrollments_csvButton ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step3 .</font></B> Clicked on TotalEnrollments_CloseButtton ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step4 .</font></B> Clicked on CurrentlyACtive ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step5 .</font></B> Clicked on CurrentlyACtive_CsvButton ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step6 .</font></B> Clicked on CurrentlyACtive_Close_Button ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step7 .</font></B> Clicked on CurrentlyIdle ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step8 .</font></B> Clicked on CurrentlyIdle_csv_Button ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step9 .</font></B> Clicked on CurrentlyIdle_close_Button ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step10 .</font></B> Clicked on Currently_Offline ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step11 .</font></B> Clicked on Currently_offline_csv_Button ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step12 .</font></B> Clicked on Currentlyoffline_close_Button ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step13 .</font></B> Clicked on Absent_Users ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step14 .</font></B> Clicked on Absent_Users_Generate_csvButton ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step15 .</font></B> Clicked on Absent_Users_closeButton ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step16 .</font></B> Clicked on Suspended_Users ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step17 .</font></B> Clicked on Suspended_Users_csvButton ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step18 .</font></B> Clicked on Suspende_Users_closeButton ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step19 .</font></B> Clicked on Top10ProductiveEmployees_Locations ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step20 .</font></B> Clicked on Top10ProductiveEmployees_Departments ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step21 .</font></B> Clicked on Top10ProductiveEmployeesToday ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step22 .</font></B> Clicked on Top10ProductiveEmployeesyesterday ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step23 .</font></B> Clicked on Top10ProductiveEmployees_Thisweek ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step24 .</font></B> Clicked on Top10NonProductiveEmployees_Location ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step25 .</font></B> Clicked on Top10NonProductiveEmployees_Department ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step26 .</font></B> Clicked on Top10NonProductiveEmployees_Today ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step27 .</font></B> Clicked on Top10NonProductiveEmployees_Yesterday ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step28 .</font></B> Clicked on Top10NonProductiveEmployees_Thisweek ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step29 .</font></B> Clicked on Location_Performance_Productive ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step30 .</font></B> Clicked on Location_Performance_Today ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step31 .</font></B> Clicked on Location_Performance_Yesterday ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step32 .</font></B> Clicked on Location_Performance_Thisweek ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step33 .</font></B> Clicked on Department_Performance_Productive ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step34 .</font></B> Clicked on Department_Performance_Today ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step35 .</font></B> Clicked on Department_Performance_Yesterday ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step36 .</font></B> Clicked on Department_Performance_Thisweek ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step37 .</font></B> Clicked on Top10Websitesusages_Today ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step38 .</font></B> Clicked on Top10Websitesusages_Yesterday ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step39 .</font></B> Clicked on Top10Websitesusages_Thisweek ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step40 .</font></B> Clicked on Top10Websitesusages_Viewdetails ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step41 .</font></B> Clicked on Viewdetails_CloseButton ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step42 .</font></B> Clicked on Top10_Application_Usage_Today ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step43 .</font></B> Clicked on Top10_Application_Usage_Yesterday ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step44 .</font></B> Clicked on Top10_Application_Usage_Thisweek ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step45 .</font></B> Clicked on Top10_Application_Usage_viewdetails ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step45 .</font></B> Clicked on Top10_Application_Usage_view_details_closebutton ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- DashBoardTest -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.emp.testcases.DashBoardTest@503d687a]" started-at="2022-09-05T15:13:23 IST" name="tearDown" finished-at="2022-09-05T15:13:23 IST" duration-ms="355" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=DashBoardTest status=SUCCESS method=DashBoardTest.DashBoardTest()[pri:0, instance:com.emp.testcases.DashBoardTest@503d687a] output=<B><font color = 'blue'>Step1 .</font></B> Clicked on TotalEnrollments ]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.emp.testcases.DashBoardTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
