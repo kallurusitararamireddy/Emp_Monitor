@@ -66,7 +66,7 @@
 									<tbody>
 										<tr style="height:100%">
 											<td style="font-size:60px; color:rgb(105, 135, 219)">1</td>
-											<td style="font-size:60px; color:#2ecc71">1</td>
+											<td style="font-size:60px; color:#2ecc71">0</td>
 										</tr>
 										<tr>
 											<td>
@@ -91,7 +91,7 @@
 								<table style="width:100%">
 									<tbody>
 										<tr style="height:100%">
-											<td style="font-size:60px; color:#fc6666">0</td>
+											<td style="font-size:60px; color:#fc6666">1</td>
 											<td style="font-size:60px; color:#9E6B6A">0</td>
 										</tr>
 										<tr>
@@ -149,7 +149,7 @@
  executeDataTable('#cm',3);
  executeDataTable('#tm',3);
  	executeDataTable('#mm',3);
- 	createPieChart(1,0,0,'testChartID','Test Status:');
+ 	createPieChart(0,1,0,'testChartID','Test Status:');
  	createBarGraph('#cm',0,3,5,'classBarID','Number of failures ','Class'); 
  	createBarGraph('#tm',1,3,10,'testsBarID','Elapsed Time(s) ','Test');
  	createBarGraph('#mm',1,3,10,'methodsBarID','Elapsed Time(s) ','Method');
@@ -173,12 +173,12 @@
  </thead>
  <tbody>
 <tr>
-<td style="word-wrap: break-word;max-width: 300px; white-space: normal;text-align:left;">DashBoardTest</td>
+<td style="word-wrap: break-word;max-width: 300px; white-space: normal;text-align:left;">AssignedListTest</td>
 <td style="color:teal">1</td>
-<td style="color:green">1</td>
-<td style="color:red">0</td>
+<td style="color:green">0</td>
+<td style="color:red">1</td>
 <td style="color:#9E6B6A">0</td>
-<td>100.0</td>
+<td>0.0</td>
 </tr>
   </tbody>
  </table>
@@ -188,7 +188,7 @@
  </div>
  <div class="tabcontent" id="testMetrics">
  <h4><b><i class="fa fa-list-alt" style="color:PALEVIOLETRED"></i> Test Metrics</b></h4>
- <h6 style="text-align:right">Total Execution Time: <b style="color:Red; text-align:right">00:03:08</b></h6>
+ <h6 style="text-align:right">Total Execution Time: <b style="color:Red; text-align:right">00:01:19</b></h6>
  <hr/>
  </h6>
  <table class="table row-border tablecard" id="tm">
@@ -202,11 +202,17 @@
  </tr>
  </thead>
  <tbody>
-<tr><td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">DashBoardTest</td>
-<td style="word-wrap: break-word;max-width: 250px; white-space: normal;; text-align:left">DashBoardTest</td>
-<td style="color: green">PASS</td>
-<td style="text-align:center">173</td>
-<td style="word-wrap: break-word;max-width: 300px; white-space: normal; text-align:left"></td>
+<tr><td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">AssignedListTest</td>
+<td style="word-wrap: break-word;max-width: 250px; white-space: normal;; text-align:left">AssignedListTest</td>
+<td style="color: red">FAIL</td>
+<td style="text-align:center">30</td>
+<td style="word-wrap: break-word;max-width: 300px; white-space: normal; text-align:left">element click intercepted: Element <span style="border: solid 2px white">...</span> is not clickable at point (78, 160). Other element would receive the click: <div class="introjs-overlay" style="inset: 0px; position: fixed; cursor: pointer;"></div>
+  (Session info: chrome=104.0.5112.102)
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-Q7KOQDL', ip: '192.168.104.196', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63928}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 83abc8bc3676a179d60f059737a32e4c</td>
 </tr>
  </tbody>
  </table>
@@ -228,28 +234,28 @@
  </tr>
  </thead>
  <tbody>
-<tr><td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">DashBoardTest</td>
+<tr><td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">AssignedListTest</td>
 <td style="word-wrap: break-word;max-width: 250px; white-space: normal;; text-align:left">beforeSuite</td>
 <td style="color: green">PASS</td>
 <td style="text-align:center">0</td>
 <td style="word-wrap: break-word;max-width: 300px; white-space: normal; text-align:left"></td>
 </tr>
-<tr><td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">DashBoardTest</td>
-<td style="word-wrap: break-word;max-width: 250px; white-space: normal;; text-align:left">initialization</td>
-<td style="color: green">PASS</td>
-<td style="text-align:center">9</td>
-<td style="word-wrap: break-word;max-width: 300px; white-space: normal; text-align:left"></td>
-</tr>
-<tr><td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">DashBoardTest</td>
-<td style="word-wrap: break-word;max-width: 250px; white-space: normal;; text-align:left">tearDown ([[TestResult name=DashBoardTest status=SUCCESS method=DashBoardTest.DashBoardTest()[pri:0, instance:com.emp.testcases.DashBoardTest@503d687a] output=<B><font color = 'blue'>Step1 .</font></B> Clicked on TotalEnrollments ]])</td>
-<td style="color: green">PASS</td>
-<td style="text-align:center">0</td>
-<td style="word-wrap: break-word;max-width: 300px; white-space: normal; text-align:left"></td>
-</tr>
-<tr><td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">DashBoardTest</td>
+<tr><td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">AssignedListTest</td>
 <td style="word-wrap: break-word;max-width: 250px; white-space: normal;; text-align:left">setUp</td>
 <td style="color: green">PASS</td>
-<td style="text-align:center">5</td>
+<td style="text-align:center">10</td>
+<td style="word-wrap: break-word;max-width: 300px; white-space: normal; text-align:left"></td>
+</tr>
+<tr><td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">AssignedListTest</td>
+<td style="word-wrap: break-word;max-width: 250px; white-space: normal;; text-align:left">initialization</td>
+<td style="color: green">PASS</td>
+<td style="text-align:center">33</td>
+<td style="word-wrap: break-word;max-width: 300px; white-space: normal; text-align:left"></td>
+</tr>
+<tr><td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">AssignedListTest</td>
+<td style="word-wrap: break-word;max-width: 250px; white-space: normal;; text-align:left">tearDown ([[TestResult name=AssignedListTest status=FAILURE method=AssignedListTest.AssignedListTest()[pri:0, instance:com.emp.testcases.AssignedListTest@503d687a] output={null}]])</td>
+<td style="color: green">PASS</td>
+<td style="text-align:center">4</td>
 <td style="word-wrap: break-word;max-width: 300px; white-space: normal; text-align:left"></td>
 </tr>
  </tbody>
