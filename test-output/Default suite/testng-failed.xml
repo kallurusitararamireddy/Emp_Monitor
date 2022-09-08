@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.emp.testcases.AssignedListTest">
+      <class name="com.emp.testcases.TrackUserSettingsFixedTest">
         <methods>
           <include name="tearDown"/>
-          <include name="AssignedListTest"/>
           <include name="initialization"/>
           <include name="beforeSuite"/>
           <include name="setUp"/>
+          <include name="TrackUserSettingsTest"/>
         </methods>
-      </class> <!-- com.emp.testcases.AssignedListTest -->
+      </class> <!-- com.emp.testcases.TrackUserSettingsFixedTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
