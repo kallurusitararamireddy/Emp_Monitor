@@ -14,10 +14,11 @@
 	<test name="EmpTest Cases">
 		<classes>
 			<class name="com.emp.testcases.DashBoardTest"></class>
-
-
-			<class name="com.emp.testcases.RegisterEmployeeTest"></class>
-			<class name="com.emp.testcases.EmployeeDetailsTest"></class>
+			 <class name="com.emp.testcases.RegisterEmployeeTest"></class>
+			 <class name="com.emp.testcases.EmployeeDetailsTest"></class>
+			 
+			 
+			 
 			<class name="com.emp.testcases.EmployeeAttendanceTest"></class>
 			<class name="com.emp.testcases.TimeSheetsTest"></class>
 
