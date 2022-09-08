@@ -19,8 +19,8 @@
 			 
 			 
 			 
-			<class name="com.emp.testcases.EmployeeAttendanceTest"></class>
-			<class name="com.emp.testcases.TimeSheetsTest"></class>
+			<!--<class name="com.emp.testcases.EmployeeAttendanceTest"></class>
+			<class name="com.emp.testcases.TimeSheetsTest"></class>-->
 
 
 		</classes>
