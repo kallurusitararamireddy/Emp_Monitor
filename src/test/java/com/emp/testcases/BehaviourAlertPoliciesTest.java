@@ -13,7 +13,7 @@ public class BehaviourAlertPoliciesTest extends TestBase {
 	public void BehaviourAlertPoliciesTest() throws InterruptedException{
 		BehaviourAlertPoliciesPage AlertPol=new BehaviourAlertPoliciesPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-		homePage.SkipPopup();
+		//homePage.SkipPopup();
 		homePage.behaviourpage();
 		AlertPol.BehaviourAlertPoliciesPage();
 

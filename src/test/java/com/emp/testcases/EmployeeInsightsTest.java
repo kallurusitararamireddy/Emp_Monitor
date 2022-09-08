@@ -14,7 +14,7 @@ public class EmployeeInsightsTest extends TestBase {
 	public void EmployeeInsightsTest() throws InterruptedException, AWTException{		
 	EmployeeInsightsPage EmployeeInsights =new EmployeeInsightsPage(getDriver());
 	HomePage hp=new HomePage(getDriver());		 
-	hp.SkipPopup();
+//	hp.SkipPopup();
 	hp.clickEmployee();
 	EmployeeInsights.EmployeeInsights();
 

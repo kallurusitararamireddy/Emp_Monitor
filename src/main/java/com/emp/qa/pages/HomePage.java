@@ -92,25 +92,25 @@ public class HomePage extends BasePage {
 	  }
 
 	
-//	public void SkipPopup( ) throws InterruptedException {
-//		
-//		try {
-//		helper.waitFor(SkipPopUP);
-//		helper.highLightElement(driver, SkipPopUP);
-//		helper.Scrollintoview(SkipPopUP);
-//		
-//		helper.Robotclick(SkipPopUP);
-//		helper.click(SkipPopUP);
-//		
-//		Thread.sleep(7000);
-//		helper.jsCLick(SkipPopUP);
-//		helper.waitForpage();
-//		}catch(Exception e) {
-//			System.out.println("Skip pop is not Dislayed");
-//		}
-//
-//		
-//}
+	public void SkipPopup( ) throws InterruptedException {
+		
+		try {
+		helper.waitFor(SkipPopUP);
+		helper.highLightElement(driver, SkipPopUP);
+		helper.Scrollintoview(SkipPopUP);
+		
+		helper.Robotclick(SkipPopUP);
+		helper.click(SkipPopUP);
+		
+		Thread.sleep(7000);
+		helper.jsCLick(SkipPopUP);
+		helper.waitForpage();
+		}catch(Exception e) {
+			System.out.println("Skip pop is not Dislayed");
+		}
+
+		
+}
 	public void clickDashboard() throws InterruptedException {
 		
 		
