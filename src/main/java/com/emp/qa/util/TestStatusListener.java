@@ -9,7 +9,6 @@ public class TestStatusListener implements ITestListener {
 	 * @see org.testing.ITestListener#onTestStart(org.testng.ITstResult)
 	 */
 	
-
 	@Override
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub

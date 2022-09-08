@@ -1,7 +1,9 @@
 package com.emp.qa.pages;
 
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -119,19 +121,27 @@ public class RegisterEmployeePage extends BasePage {
 
 		helper.waitFor(Firstname);
 		helper.highLightElement(driver, Firstname);
-		Firstname.sendKeys("Automation1");
+		Firstname.sendKeys("Automation12");
 		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clickedonFirstname");
 		Assert.assertTrue(true, "Failed to sent data to Firstname");
 
 		helper.waitFor(Lastname);
 		helper.highLightElement(driver, Lastname);
-		Lastname.sendKeys("Codeee");
+		Lastname.sendKeys("CodeeeAuto");
 		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> Lastname");
 		Assert.assertTrue(true, "Failed to sent data to Lastname");
 
+		Random g=new Random();
+		int num=g.nextInt(100);
+		String Act_g="skabcdef";
+		String Exp_g=Act_g+num;
+		
+		
 		helper.waitFor(email);
 		helper.highLightElement(driver, email);
-		email.sendKeys("skabcdef@gmail.com");
+		email.sendKeys(Exp_g+"@gmail.com");
+		
+		
 		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clickedonemail");
 		Assert.assertTrue(true, "Failed to sent data to email");
 
@@ -153,16 +163,21 @@ public class RegisterEmployeePage extends BasePage {
 		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Mobilenumber");
 		Assert.assertTrue(true, "Failed to sent mobile number data");
 
+		Random r=new Random();
+		int num1=r.nextInt(100);
+		String Act_code="Emp-Abzcde-12345";
+		String Exp_code=Act_code+num1;
+		
 		helper.waitFor(Employeecode);
 		helper.highLightElement(driver, Employeecode);
-		Employeecode.sendKeys("Emp-Abzcde-12345");
+		Employeecode.sendKeys(Exp_code);
 		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clickedonEmployeecode");
 		Assert.assertTrue(true, "Failed to sent data to Employeecode");
 
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
 		helper.selectDropDownValue(Location, "visibletext", "Bangalore");
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
 		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clickedonLocation");
 		Assert.assertTrue(true, "Failed to selecte location");
 		

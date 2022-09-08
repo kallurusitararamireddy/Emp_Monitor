@@ -18,6 +18,33 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- com.emp.testcases.TimeSheetsTest -->
+      <class name="com.emp.testcases.EmployeeAttendanceTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialization"/>
+          <include name="EmployeeAttendanceTest"/>
+          <include name="beforeSuite"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.emp.testcases.EmployeeAttendanceTest -->
+      <class name="com.emp.testcases.RegisterEmployeeTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialization"/>
+          <include name="RegisterEmployeeTest"/>
+          <include name="beforeSuite"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.emp.testcases.RegisterEmployeeTest -->
+      <class name="com.emp.testcases.EmployeeDetailsTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialization"/>
+          <include name="beforeSuite"/>
+          <include name="setUp"/>
+          <include name="EmployeeDetailsTest"/>
+        </methods>
+      </class> <!-- com.emp.testcases.EmployeeDetailsTest -->
     </classes>
   </test> <!-- EmpTest Cases(failed) -->
 </suite> <!-- Failed suite [Emp Monitor Suite] -->

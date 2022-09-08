@@ -12,11 +12,12 @@ public class EditEmployeeTest extends TestBase {
 	
 	
 	@Test
-	public void EditEmployeeTest() throws InterruptedException{
+	public void EditEmployeeTest() throws Exception{
 		
 		HomePage homePage =new HomePage(getDriver());
 		EditEmployeePage EditEmployee = new EditEmployeePage(getDriver());
-		homePage.SkipPopup();
+//		homePage.SkipPopup();
+		homePage.Skip();
 		homePage.clickEmployee();
 		EditEmployee.EditEmployee();
 			

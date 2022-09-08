@@ -1,4 +1,5 @@
 package com.emp.qa.base;
+
 import java.awt.AWTException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -22,8 +23,6 @@ import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.emp.qa.pages.LoginPage;
 import com.emp.qa.util.DeleteFilesInDirectory;
@@ -33,7 +32,6 @@ import com.emp.qa.util.Screenshot;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
 public class TestBase {	
 	public static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();	
 	public static Properties prop;
@@ -42,7 +40,7 @@ public class TestBase {
 	static Helpers helpers;	
 	public ExtentTest  extentTest;
 	ExtentReports extent = new ExtentReports();
-    ExtentSparkReporter spark = new ExtentSparkReporter("test-output/Spark/Empcloud.html");
+    ExtentSparkReporter EMP = new ExtentSparkReporter("test-output/emp/EmpMonitor.html");
     
 	/**
 	 * Deleting Screenshots from previous run
@@ -124,7 +122,7 @@ public class TestBase {
 	public void setUp() throws InterruptedException, AWTException {
 		loginPage = new LoginPage(getDriver());
 		loginPage.login(readconfig.getUserName(),readconfig.getPassword());
-	
+
 	}
 
 	@AfterMethod
@@ -150,8 +148,8 @@ public class TestBase {
 	
 	public static void closeBrowser()
 	{
-		driver.get().quit();
-		driver.remove();
+//		driver.get().quit();
+//		driver.remove();
 	}
 	
 	private void takeScreenShot(ITestResult result) {

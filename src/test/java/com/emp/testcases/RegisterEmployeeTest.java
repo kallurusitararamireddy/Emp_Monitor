@@ -10,12 +10,13 @@ import com.emp.qa.pages.RegisterEmployeePage;
 public class RegisterEmployeeTest extends TestBase {
 
 	@Test
-	public void RegisterEmployeeTest() throws InterruptedException{
+	public void RegisterEmployeeTest() throws Exception{
 		
 		HomePage homePage =new HomePage(getDriver());
 		RegisterEmployeePage REP=new RegisterEmployeePage(getDriver());
 		//homePage.SkipPopup();
 		homePage.clickEmployee();
+		homePage.Skip();
 		REP.RegisterEmployee();
 	}
 

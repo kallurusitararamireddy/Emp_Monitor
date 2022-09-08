@@ -1,6 +1,7 @@
 package com.emp.qa.pages;
 
 import java.awt.AWTException;
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -10,6 +11,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestNGListener;
 import org.testng.Reporter;
@@ -26,13 +29,19 @@ public class HomePage extends BasePage {
 
 	Helpers helper=new Helpers();	
 
+//	@FindBy(className = "introjs-skipbutton")
+//	@CacheLookup
+//	WebElement skip;
 
+	
+	@FindBy(css=".introjs-tooltip-header > a[role='button']")
+	WebElement SkipPopUP;
+	
+	
 	@FindBy(xpath = "//a[contains(.,'Dashboard')]")
 	@CacheLookup
 	WebElement DashBoard;
 
-	@FindBy(css=".introjs-tooltip-header > a[role='button']")
-	WebElement SkipPopUP;
 	
 
 	@FindBy(xpath="//button[@id='yesterdayProEmp']")
@@ -64,23 +73,44 @@ public class HomePage extends BasePage {
 	@FindBy(xpath="//span[contains(text(),'Behaviour')]")
 	WebElement Behaviour;
 	
-	public void SkipPopup( ) throws InterruptedException {
-		try {
-		helper.waitFor(SkipPopUP);
-		helper.highLightElement(driver, SkipPopUP);
-		helper.Scrollintoview(SkipPopUP);
-		
-		helper.Robotclick(SkipPopUP);
-		helper.click(SkipPopUP);
-		
-		Thread.sleep(7000);
-		helper.jsCLick(SkipPopUP);
-		helper.waitForpage();
-		}catch(Exception e) {
-			System.out.println("Skip pop is not Dislayed");
-		}
-		
-}
+	
+	@FindBy(xpath = "//a[text()='Skip']")
+	  WebElement skip;
+	
+	
+	  public void Skip() throws Exception
+	  {
+	  try {
+	    WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Skip']"))).click();
+	
+	    skip.click();
+	   
+	  } catch (Exception e) {
+	    e.printStackTrace();
+	  }
+	  }
+
+	
+//	public void SkipPopup( ) throws InterruptedException {
+//		
+//		try {
+//		helper.waitFor(SkipPopUP);
+//		helper.highLightElement(driver, SkipPopUP);
+//		helper.Scrollintoview(SkipPopUP);
+//		
+//		helper.Robotclick(SkipPopUP);
+//		helper.click(SkipPopUP);
+//		
+//		Thread.sleep(7000);
+//		helper.jsCLick(SkipPopUP);
+//		helper.waitForpage();
+//		}catch(Exception e) {
+//			System.out.println("Skip pop is not Dislayed");
+//		}
+//
+//		
+//}
 	public void clickDashboard() throws InterruptedException {
 		
 		
@@ -138,7 +168,7 @@ public class HomePage extends BasePage {
 		
 		
 		
-		
+	
 			
 		
 		Projects.click();

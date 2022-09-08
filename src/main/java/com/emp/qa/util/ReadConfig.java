@@ -85,7 +85,7 @@ public String getOperapath()
 public static String getProperty(String string) {
 	// TODO Auto-generated method stub
 	String value = pro.getProperty(string);
-	return value;
+	return value; 
 }
 	
 
