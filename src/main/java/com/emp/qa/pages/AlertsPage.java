@@ -102,6 +102,7 @@ public class AlertsPage extends  BasePage {
 	@CacheLookup
 	WebElement SaveAndLaunch;
 	
+	@SuppressWarnings("unused")
 	public void AlertsPage()throws InterruptedException{
 		
 		helper.waitFor(Alerts);
@@ -139,11 +140,11 @@ public class AlertsPage extends  BasePage {
 		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Appliesto_Department");
 		Assert.assertTrue(true, "Failed to select Department");
 		
-		helper.waitFor(AllDepartments);
-		helper.highLightElement(driver, AllDepartments);
-		helper.jsCLick(AllDepartments);
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on AllDepartments");
-		Assert.assertTrue(true, "Failed to select AllDepartments");
+//		helper.waitFor(AllDepartments);
+//		helper.highLightElement(driver, AllDepartments);
+//		helper.jsCLick(AllDepartments);
+//		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on AllDepartments");
+//		Assert.assertTrue(true, "Failed to select AllDepartments");
 		
 		helper.waitFor(Appliesto_Emloyee);
 		helper.highLightElement(driver, Appliesto_Emloyee);
@@ -153,11 +154,11 @@ public class AlertsPage extends  BasePage {
 		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on Appliesto_Emloyee");
 		Assert.assertTrue(true, "Failed to select Appliesto_Emloyee");
 		
-		helper.waitFor(Allemloyees);
-		helper.highLightElement(driver, Allemloyees);
-		helper.jsCLick(Allemloyees);
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Allemloyees");
-		Assert.assertTrue(true, "Failed to select Allemloyees");
+//		helper.waitFor(Allemloyees);
+//		helper.highLightElement(driver, Allemloyees);
+//		helper.jsCLick(Allemloyees);
+//		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Allemloyees");
+//		Assert.assertTrue(true, "Failed to select Allemloyees");
 		
 		helper.waitFor(WhattriggerTherule);
 		helper.highLightElement(driver, WhattriggerTherule);

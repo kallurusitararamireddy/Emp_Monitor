@@ -9,12 +9,13 @@ import com.emp.qa.pages.HomePage;
 public class EmployeeDetailsTest extends TestBase {
 
 @Test
-public void EmployeeDetailsTest() throws InterruptedException{
+public void EmployeeDetailsTest() throws Exception{
 	
 	HomePage homePage =new HomePage(getDriver());
 	EmployeeDetailspage empDpage = new EmployeeDetailspage(getDriver());
 	//homePage.SkipPopup();
 	homePage.clickEmployee();
+	homePage.Skip();
 	empDpage.EmployeeDetails();
 		
 

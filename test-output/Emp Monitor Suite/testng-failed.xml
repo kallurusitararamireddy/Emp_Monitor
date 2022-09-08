@@ -9,15 +9,33 @@
   </listeners>
   <test thread-count="5" name="EmpTest Cases(failed)">
     <classes>
-      <class name="com.emp.testcases.TimeSheetsTest">
+      <class name="com.emp.testcases.EmployeeDetailsTest">
         <methods>
           <include name="tearDown"/>
           <include name="initialization"/>
           <include name="beforeSuite"/>
-          <include name="TimeSheetsTest"/>
+          <include name="setUp"/>
+          <include name="EmployeeDetailsTest"/>
+        </methods>
+      </class> <!-- com.emp.testcases.EmployeeDetailsTest -->
+      <class name="com.emp.testcases.DashBoardTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialization"/>
+          <include name="beforeSuite"/>
+          <include name="DashBoardTest"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.emp.testcases.TimeSheetsTest -->
+      </class> <!-- com.emp.testcases.DashBoardTest -->
+      <class name="com.emp.testcases.RegisterEmployeeTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialization"/>
+          <include name="RegisterEmployeeTest"/>
+          <include name="beforeSuite"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.emp.testcases.RegisterEmployeeTest -->
     </classes>
   </test> <!-- EmpTest Cases(failed) -->
 </suite> <!-- Failed suite [Emp Monitor Suite] -->

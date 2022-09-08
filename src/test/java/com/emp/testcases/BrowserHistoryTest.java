@@ -10,13 +10,16 @@ import com.emp.qa.pages.HomePage;
 public class BrowserHistoryTest extends TestBase {
 	
 	@Test
-	public void BrowserHistoryTest() throws InterruptedException{
+	public void BrowserHistoryTest() throws Exception{
 		BrowserHistoryPage Browser=new BrowserHistoryPage(getDriver());
+		Thread.sleep(3000);
 		HomePage homePage =new HomePage(getDriver());
-		homePage.SkipPopup();
+		homePage.Skip();
 		homePage.ReportsDownloadPage();
 		Browser.BrowserHistoryPage();
 
+		
+		
 }
 
 

@@ -6,9 +6,10 @@ import java.io.File;
  * @author Skalluru
  *
  */
+
 public class DeleteFilesInDirectory {
 	
-	public static void  deleteFilesInScreenshots(String TargetFile) {
+	public  void  deleteFilesInScreenshots(String TargetFile) {
 		
 		File dir = new File(TargetFile);
 		
