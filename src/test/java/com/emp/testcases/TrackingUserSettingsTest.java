@@ -21,6 +21,8 @@ public class TrackingUserSettingsTest extends TestBase {
 		homePage.SkipPopup();
 		homePage.clickEmployee();
 		Tracking.TrackingUserSettingsPage();
+		
+		
 	}
 
 	

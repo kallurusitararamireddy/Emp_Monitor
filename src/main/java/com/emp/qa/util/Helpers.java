@@ -56,6 +56,7 @@ public class Helpers extends TestBase {
 	 * Takes a ScreenShot
 	 * @param result
 	 */
+	
 //	public static WebDriver driver;
 	public static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
 		
@@ -77,6 +78,7 @@ public class Helpers extends TestBase {
 			}
 		}
 	
+		@SuppressWarnings("deprecation")
 		public void waitFor(WebElement ele) {
 			//waitForPageToLoad();
 			//log("Waiting 60 seconds for element :" + ele + " to be visible");
@@ -84,8 +86,9 @@ public class Helpers extends TestBase {
 				new WebDriverWait((WebDriver) driver,60).until(ExpectedConditions.visibilityOf(ele));
 					}catch(Exception e) {
 					}
-		}
+		} 
 	
+		@SuppressWarnings("deprecation")
 		public void waitForElementToBeClickable(WebElement ele) {
 			//waitForPageToLoad();
 			//log("Waiting 60 seconds for element :" + ele + " to be visible");
@@ -97,6 +100,7 @@ public class Helpers extends TestBase {
 		
 		}
 	
+		@SuppressWarnings("deprecation")
 		public void waitFor(WebElement ele , int time) {
 			waitForPageToLoad();
 			try {
@@ -162,6 +166,7 @@ public class Helpers extends TestBase {
 		
 		}
 		
+		@SuppressWarnings("deprecation")
 		public static boolean explicitlyWait(WebElement element) {
 		
 			try {  
@@ -347,7 +352,7 @@ public class Helpers extends TestBase {
 			Thread.sleep(2000);
 			robot.keyPress(KeyEvent.VK_DOWN);
 			Thread.sleep(2000);
-			robot.keyPress(KeyEvent.VK_DOWN);
+			robot.keyPress(KeyEvent.VK_DOWN); 
 			Thread.sleep(1000);
 			robot.keyPress(KeyEvent.VK_ENTER);
 			Thread.sleep(2000);
@@ -360,7 +365,7 @@ public class Helpers extends TestBase {
 		     Thread.sleep(2000); // Thread.sleep throws InterruptedException	
 		     robot.keyPress(KeyEvent.VK_DOWN);  // press arrow down key of keyboard to navigate and select Save radio button	
 		     
-		     Thread.sleep(2000);  // sleep has only been used to showcase each event separately	
+		     Thread.sleep(2000);  // sleep has only been used to show case each event separately	
 		     robot.keyPress(KeyEvent.VK_TAB);	
 		     Thread.sleep(2000);	
 		     robot.keyPress(KeyEvent.VK_TAB);	
@@ -377,6 +382,7 @@ public class Helpers extends TestBase {
 			Select status = new Select(element) ;
 			status.selectByVisibleText(string);
 		}
+		@SuppressWarnings("deprecation")
 		public void waitFor(String textToBeDisplayedOnPage) throws InterruptedException {
 			// TODO Auto-generated method stub
 			try {

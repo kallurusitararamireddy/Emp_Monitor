@@ -27,13 +27,12 @@ import com.emp.qa.base.TestBase;
 public class Screenshot extends TestListenerAdapter  {
 	
 	
-
 	public static void captureScreenshot(String screenshotName) {
 
 		try {
 			TakesScreenshot ts = (TakesScreenshot) TestBase.getDriver();
 			File source = ts.getScreenshotAs(OutputType.FILE);
-			String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+			String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(Calendar.getInstance().getTime());
 			screenshotName = System.getProperty("user.dir") + "\\screenshots\\" +screenshotName+timeStamp + ".png";
 			System.out.print("TargetFile"+screenshotName);			
 			Object value = new File(screenshotName);			
