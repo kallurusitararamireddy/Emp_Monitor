@@ -12,6 +12,7 @@ public class EmployeeDashBoardTest extends TestBase {
 	public void EmployeeDashBoardTest() throws Exception{
 		
 		HomePage homePage =new HomePage(getDriver());
+//		homePage.Skip();
 		homePage.Skip();
 		EmployeeDashBoardPage EmployeeDashboard = new EmployeeDashBoardPage(getDriver());
 		EmployeeDashboard.EmployeeDashBoardPage();

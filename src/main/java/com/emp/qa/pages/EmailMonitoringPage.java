@@ -64,14 +64,14 @@ public class EmailMonitoringPage extends BasePage {
 	
 	public void EmailMonitoringPage()throws InterruptedException, AWTException{
 		
-		helper.waitFor(SkipPopUP);
-		helper.highLightElement(driver, SkipPopUP);
-		helper.Scrollintoview(SkipPopUP);
-		helper.Robotclick(SkipPopUP);
-		
-		//helper.click(SkipPopUP);
-        helper.jsCLick(SkipPopUP);
-        Thread.sleep(5000);
+//		helper.waitFor(SkipPopUP);
+//		helper.highLightElement(driver, SkipPopUP);
+//		helper.Scrollintoview(SkipPopUP);
+//		helper.Robotclick(SkipPopUP);
+//		
+//		//helper.click(SkipPopUP);
+//        helper.jsCLick(SkipPopUP);
+//        Thread.sleep(5000);
 		
 		helper.waitFor(EmailMonitoring);
 		helper.highLightElement(driver, EmailMonitoring);
@@ -101,7 +101,7 @@ public class EmailMonitoringPage extends BasePage {
 		
 		helper.waitFor(Clients);
 		helper.highLightElement(driver, Clients);
-		helper.selectDropDownValue(Clients, "value", "gmail");
+//		helper.selectDropDownValue(Clients, "value", "gmail");
 		Clients.click();
 		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Clients Dropdown and Selected Gmail");
 		Assert.assertTrue(true, "Failed to Select Clients Dropdown ");

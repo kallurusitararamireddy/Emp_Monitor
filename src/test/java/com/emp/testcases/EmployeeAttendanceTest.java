@@ -12,10 +12,11 @@ import com.emp.qa.pages.HomePage;
 public class EmployeeAttendanceTest  extends TestBase{
 
 	@Test
-	public void EmployeeAttendanceTest() throws InterruptedException, AWTException{		
+	public void EmployeeAttendanceTest() throws Exception{		
 	EmployeeAttendanePage EmployeeAttendance =new EmployeeAttendanePage(getDriver());
 	HomePage hp=new HomePage(getDriver());		 
 	//hp.SkipPopup();
+	hp.Skip();
 	hp.clickEmployee();
 	EmployeeAttendance.EmployeeAttendance();
 

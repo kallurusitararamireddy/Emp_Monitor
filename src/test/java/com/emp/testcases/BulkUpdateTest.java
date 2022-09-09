@@ -13,11 +13,13 @@ public class BulkUpdateTest extends TestBase {
 	
 	
 	@Test
-	public void BulkUpdateTest() throws InterruptedException, AWTException{
+	public void BulkUpdateTest() throws Exception{
 		
 		HomePage homePage =new HomePage(getDriver());
 		BulkUpdatePage Bulk=new BulkUpdatePage(getDriver());
-		homePage.SkipPopup();
+//		homePage.SkipPopup();
+		homePage.Skip
+		();
 		homePage.clickEmployee();
 		//empDpage	.EmployeeDetails();
 		Bulk.BulkUpdate();

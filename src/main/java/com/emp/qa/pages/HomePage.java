@@ -78,18 +78,24 @@ public class HomePage extends BasePage {
 	  WebElement skip;
 	
 	
+	
+	
 	  public void Skip() throws Exception
 	  {
 	  try {
 	    WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Skip']"))).click();
 	
-	    skip.click();
+	    
+//	    skip.click();
 	   
 	  } catch (Exception e) {
 	    e.printStackTrace();
 	  }
 	  }
+	  
+	  
+	 
 
 	
 	public void SkipPopup( ) throws InterruptedException {

@@ -13,11 +13,17 @@ import com.emp.qa.pages.SkipPopUpPage;
 public class EmailMonitoringTest extends TestBase {
 
 	@Test
-	public void EmailMonitoringTest() throws InterruptedException, AWTException{				 
-	//SkipPopUpPage sk= new SkipPopUpPage(getDriver());	
-	//sk.SkipPopup();
-	EmailMonitoringPage Emailmonitor =new EmailMonitoringPage(getDriver());
-	Emailmonitor.EmailMonitoringPage();
+	public void EmailMonitoringTest() throws Exception {
+		// SkipPopUpPage sk= new SkipPopUpPage(getDriver());
+		// sk.SkipPopup();
+
+		HomePage homePage = new HomePage(getDriver());
+		Thread.sleep(2000);
+		homePage.Skip();
+		homePage.clickEmployee();
+
+		EmailMonitoringPage Emailmonitor = new EmailMonitoringPage(getDriver());
+		Emailmonitor.EmailMonitoringPage();
 
 	}
 
