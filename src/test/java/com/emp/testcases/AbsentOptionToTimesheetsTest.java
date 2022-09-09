@@ -15,9 +15,10 @@ public class AbsentOptionToTimesheetsTest extends TestBase {
 	public void AbsentOptionToTimesheetsTest() throws InterruptedException, IOException{
 		AbsentOptionToTimesheetsPage Absent=new AbsentOptionToTimesheetsPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-		homePage.SkipPopup();
+		//homePage.SkipPopup();
 		homePage.TimeSheets();
 		Absent.AbsentOptionToTimesheetsPage();
+		
 	}
 	
 	
