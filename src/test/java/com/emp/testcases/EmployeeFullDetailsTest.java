@@ -11,11 +11,12 @@ public class EmployeeFullDetailsTest extends TestBase {
 	
 
 @Test
-public void EmployeeFullDetailsTest() throws InterruptedException{
+public void EmployeeFullDetailsTest() throws Exception{
 	
 	HomePage homePage =new HomePage(getDriver());
 	EmployeeFullDetailsPage Fulldetailspage = new EmployeeFullDetailsPage(getDriver());
 	//homePage.SkipPopup();
+	homePage.Skip();
 	homePage.clickEmployee();
 	Fulldetailspage.EmployeeFullDetails();
 		

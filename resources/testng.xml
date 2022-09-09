@@ -14,13 +14,19 @@
 	<test name="EmpTest Cases">
 		<classes>
 			<class name="com.emp.testcases.DashBoardTest"></class>
-			 <class name="com.emp.testcases.RegisterEmployeeTest"></class>
-			 <class name="com.emp.testcases.EmployeeDetailsTest"></class>
-			 
-			 
-			 
-			<!--<class name="com.emp.testcases.EmployeeAttendanceTest"></class>
-			<class name="com.emp.testcases.TimeSheetsTest"></class>-->
+			<class name="com.emp.testcases.RegisterEmployeeTest"></class>
+			<class name="com.emp.testcases.EmployeeDetailsTest"></class>
+
+
+            <class name="com.emp.testcases.EditEmployeeTest"></class>
+            <class name="com.emp.testcases.EmployeeFullDetailsTest"></class>
+			<class name="com.emp.testcases.EmployeeAttendanceTest"></class>
+			<class name="com.emp.testcases.EmployeeNotificationTest"></class>
+			<class name="com.emp.testcases.EmployeeInsightsTest"></class>
+			
+
+
+			<!--<class name="com.emp.testcases.TimeSheetsTest"></class>-->
 
 
 		</classes>
