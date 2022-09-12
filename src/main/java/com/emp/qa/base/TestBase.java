@@ -4,6 +4,7 @@ import java.awt.AWTException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Properties;
 
 import org.openqa.selenium.Dimension;
@@ -42,9 +43,10 @@ public class TestBase {
 	ExtentReports extent = new ExtentReports();
     ExtentSparkReporter EMP = new ExtentSparkReporter("test-output/emp/EmpMonitor.html");
     
-	/**
+	/*
 	 * Deleting Screenshots from previous run
 	 */
+    
 	private static String TargetFile = System.getProperty("user.dir") + "/screenshots/";
 	private static String TargetReports = System.getProperty("user.dir") + "/test-output/";
 	private static String TargetSurefire = System.getProperty("user.dir") + "/target/surefire-reports/";
@@ -90,6 +92,11 @@ public class TestBase {
 			chrome.setCapability("timeouts", "{implicit: 30000, pageLoad: 300000, script: 90000}");
 			chrome.merge(options);
 			System.out.println("Desired Capabilities are: "+ chrome.getCapability("timeouts"));
+			
+			
+			
+			
+			
 		
 			
 		} else if (browserName.equalsIgnoreCase("firefox")) {

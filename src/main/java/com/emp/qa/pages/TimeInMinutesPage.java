@@ -40,7 +40,8 @@ public class TimeInMinutesPage extends BasePage {
 		@CacheLookup
 		WebElement Employee;
 		
-		@FindBy(xpath = "//div[@id='reportrange']")
+//		@FindBy(xpath = "//div[@id='reportrange']")
+		@FindBy(xpath = "//div[@id='reportranges']")
 		@CacheLookup
 		WebElement selectdateranges;
 		

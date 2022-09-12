@@ -11,14 +11,17 @@ import com.emp.qa.pages.HomePage;
 public class BulkRegisterTest extends TestBase {
 
 	@Test
-	public void Employee() throws InterruptedException, AWTException {
+	public void Employee() throws Exception {
 		EmployeePage Employee = new EmployeePage(getDriver());
 		HomePage hp = new HomePage(getDriver());
 
-		hp.SkipPopup();
+//		hp.SkipPopup();
+		hp.Skip();
 		hp.clickEmployee();
 		Employee.BulkRegister();
 
-	}
+		
+  }
+	
 
 }

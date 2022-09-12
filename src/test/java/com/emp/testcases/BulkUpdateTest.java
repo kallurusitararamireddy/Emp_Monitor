@@ -24,7 +24,6 @@ public class BulkUpdateTest extends TestBase {
 		//empDpage	.EmployeeDetails();
 		Bulk.BulkUpdate();
 		
-
 }
 }
 
