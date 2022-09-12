@@ -78,10 +78,10 @@ public class TimeClaimPage extends BasePage  {
 		Reporter.log("<B><font color = 'blue'>Step4 .</font></B>Selected  Status Drop Down ");
 		Assert.assertTrue(true, "Failed to Select Status DropDown");
 		
-//		helper.waitFor(Idle_Radio_Button);
-//		helper.highLightElement(driver, Idle_Radio_Button);
-//		Reporter.log("<B><font color = 'blue'>Step5 .</font></B>Selected Idle_Radio_Button ");
-//		Assert.assertTrue(true, "Failed to Select Idle_Radio_Button");
+		helper.waitFor(Idle_Radio_Button);
+		helper.highLightElement(driver, Idle_Radio_Button);
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B>Selected Idle_Radio_Button ");
+		Assert.assertTrue(true, "Failed to Select Idle_Radio_Button");
 		
 		helper.waitFor(offline_Radio_Button);
 		helper.highLightElement(driver, offline_Radio_Button);

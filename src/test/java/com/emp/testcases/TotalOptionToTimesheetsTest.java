@@ -12,10 +12,11 @@ import com.emp.qa.pages.TotalOptionToTimesheetsPage;
 public class TotalOptionToTimesheetsTest extends TestBase {
 	
 	@Test
-	public void TotalOptionToTimesheetsPage() throws InterruptedException, IOException{
+	public void TotalOptionToTimesheetsPage() throws Exception{
 		TotalOptionToTimesheetsPage Total=new TotalOptionToTimesheetsPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-		homePage.SkipPopup();
+//		homePage.SkipPopup();
+		homePage.Skip();
 		homePage.TimeSheets();
 		Total.TotalOptionToTimesheets();
 

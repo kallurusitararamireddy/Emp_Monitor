@@ -1,5 +1,7 @@
 package com.emp.testcases;
 
+import java.awt.AWTException;
+
 import org.testng.annotations.Test;
 
 import com.emp.qa.base.TestBase;
@@ -11,11 +13,11 @@ public class EmployeeAssignedTest extends TestBase{
 	
 
 @Test
-public void EmployeeAssignedTest() throws InterruptedException{
+public void EmployeeAssignedTest() throws InterruptedException, AWTException{
 	
 	HomePage homePage =new HomePage(getDriver());
 	EmployeeAssignedPage EMPAssigned = new EmployeeAssignedPage(getDriver());
-	////homePage.SkipPopup();
+	//homePage.SkipPopup();
 	homePage.clickEmployee();
 	EMPAssigned.EmployeeAssigned();
 		

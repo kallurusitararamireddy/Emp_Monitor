@@ -10,10 +10,11 @@ import com.emp.qa.pages.TimeSheetsPage;
 public class TimeClaimTest extends TestBase {
 	
 	@Test
-	public void TimeClaimTest() throws InterruptedException{
+	public void TimeClaimTest() throws Exception{
 		TimeClaimPage Timeclaim=new TimeClaimPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-		homePage.SkipPopup();
+//		homePage.SkipPopup();
+		homePage.Skip();
 		homePage.TimeClaim();
 		Timeclaim.TimeClaimPage();
 	

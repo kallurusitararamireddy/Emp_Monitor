@@ -61,9 +61,10 @@ public class BulkUpdatePage extends BasePage {
 		Browse_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Browse_Button");
 		Assert.assertTrue(true, "Failed to click on Browse_Button");
-		helper.uploadFile("C:\\Users\\Official\\Downloads\\Employee list (8).xlsx");
-		Thread.sleep(6000);
+		helper.uploadFile("C:\\Users\\Official\\Downloads\\Employee list (9).xlsx");
+		Thread.sleep(3000);
 
+		
 		helper.waitFor(Update_Button);
 		helper.highLightElement(driver, Update_Button);
 		Update_Button.click();
