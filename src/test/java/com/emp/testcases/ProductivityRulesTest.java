@@ -11,10 +11,11 @@ public class ProductivityRulesTest extends TestBase  {
 	
 	
 	@Test
-	public void ProductivityRulesTest() throws InterruptedException{
+	public void ProductivityRulesTest() throws Exception{
 		ProductivityRulesPage productivityrules=new ProductivityRulesPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-		homePage.SkipPopup();
+//		homePage.SkipPopup();
+		homePage.Skip();
 		homePage.ManageLocationsAndDepartmentPage();
 		productivityrules.ProductivityRulesPage();
 	

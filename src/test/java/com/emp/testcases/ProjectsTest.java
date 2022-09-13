@@ -11,10 +11,11 @@ public class ProjectsTest extends TestBase {
 	
 	
 	@Test
-	public void ProjectsTest() throws InterruptedException{
+	public void ProjectsTest() throws Exception{
 		ProjectsPage ProjectsPage=new ProjectsPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-		homePage.SkipPopup();
+//		homePage.SkipPopup();
+		homePage.Skip();
 		homePage.ProjectsPage();
 		ProjectsPage.ProjectsPage();
 

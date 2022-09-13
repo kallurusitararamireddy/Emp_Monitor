@@ -10,10 +10,11 @@ import com.emp.qa.pages.StorageTypePage;
 public class StorageTypeTest extends TestBase{
 	
 	@Test
-	public void StorageTypeTest() throws InterruptedException{
+	public void StorageTypeTest() throws Exception{
 	StorageTypePage StorageType=new StorageTypePage(getDriver());
 	HomePage homePage =new HomePage(getDriver());
-	homePage.SkipPopup();
+//	homePage.SkipPopup();
+	homePage.Skip();
 	homePage.ManageLocationsAndDepartmentPage();
 	StorageType.StorageTypePage();
 

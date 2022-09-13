@@ -49,7 +49,7 @@ public class StorageTypePage extends BasePage {
 		Reporter.log("<B><font color = 'blue'>Step1 .</font></B>Clicked on  StorageType Field ");
 		Assert.assertTrue(true, "Failed to Select  StorageType Field");
 		
-		helper.waitFor( Add_Storage_Button);
+		helper.waitFor( Add_Storage_Button); 
 		helper.highLightElement(driver,  Add_Storage_Button);
 		Add_Storage_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step2 .</font></B>Clicked on  Add_Storage_Button ");

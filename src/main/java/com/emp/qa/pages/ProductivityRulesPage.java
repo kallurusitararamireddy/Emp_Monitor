@@ -1,5 +1,7 @@
 package com.emp.qa.pages;
 
+import java.util.Random;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -86,8 +88,8 @@ public class ProductivityRulesPage extends BasePage {
 		helper.waitFor(ProductivityRules);		
 		helper.highLightElement(driver, ProductivityRules);
 		ProductivityRules.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on ProductivityRules");
-		Assert.assertTrue(true, "Failed To Select ProductivityRules");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Productivity-Rules");
+		Assert.assertTrue(true, "Failed To Select Productivity-Rules");
 		
 		
 		helper.waitFor(Activity_Button);		
@@ -102,7 +104,7 @@ public class ProductivityRulesPage extends BasePage {
 		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Category_Button");
 		Assert.assertTrue(true, "Failed To Select Category_Button");
 		Thread.sleep(5000);
-		
+		 
 		helper.waitFor(SeeAll_Button);		
 		helper.highLightElement(driver, SeeAll_Button);
 		SeeAll_Button.click();
@@ -150,9 +152,14 @@ public class ProductivityRulesPage extends BasePage {
 		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Addnew_Domain");
 		Assert.assertTrue(true, "Failed To Select Addnew_Domain");
 		
+		Random l=new Random();
+		int num=l.nextInt(100);
+		String act_l="https://www.selenium";
+		String exp_l=act_l+num;
+		
 		helper.waitFor(Add_Domain_Link);		
 		helper.highLightElement(driver, Add_Domain_Link);
-		Add_Domain_Link.sendKeys("https://www.selenium.de");
+		Add_Domain_Link.sendKeys(exp_l+".de");
 		Add_Domain_Link.click();
 		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on Add_Domain_Link");
 		Assert.assertTrue(true, "Failed To Add_Domain_Link");

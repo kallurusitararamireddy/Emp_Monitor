@@ -48,12 +48,12 @@ public class RolesAndPermissionPage extends BasePage {
 	@CacheLookup
 	WebElement Save_Button;
 	public void RolesAndPermissionPage()throws InterruptedException{
-		
+		 
 		helper.waitFor(RolesAndPermission);		
 		helper.highLightElement(driver, RolesAndPermission);
 		RolesAndPermission.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on RolesAndPermission");
-		Assert.assertTrue(true, "Failed To Select RolesAndPermission");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Roles-And-Permission");
+		Assert.assertTrue(true, "Failed To Select Roles-And-Permission");
 		
 		helper.waitFor(Addnewrole_Button);		
 		helper.highLightElement(driver, Addnewrole_Button);
@@ -85,16 +85,16 @@ public class RolesAndPermissionPage extends BasePage {
 		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Department");
 		Assert.assertTrue(true, "Failed To Select Department");
 		
-//		helper.waitFor(Nodejs);		
-//		helper.highLightElement(driver,Nodejs);
-//		helper.jsCLick(Nodejs);
-//		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> selected nodejs");
-//		Assert.assertTrue(true, "Failed To Select NodeJs value");
+		helper.waitFor(Nodejs);		
+		helper.highLightElement(driver,Nodejs);
+		helper.jsCLick(Nodejs);
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> selected nodejs");
+		Assert.assertTrue(true, "Failed To Select NodeJs value");
 		
 		helper.waitFor(Save_Button);		
 		helper.highLightElement(driver,Save_Button);
 		Save_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on save butto");
+		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on save butto");
 		Assert.assertTrue(true, "Failed To clik on save button");
 	
 }

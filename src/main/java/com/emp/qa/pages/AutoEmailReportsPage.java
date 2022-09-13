@@ -1,5 +1,7 @@
 package com.emp.qa.pages;
 
+import java.util.Random;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -85,34 +87,45 @@ public class AutoEmailReportsPage extends BasePage {
 	@CacheLookup
 	WebElement OK_Button;
 	
+	
+	@FindBy(xpath = "/html/body/div[4]/div/div[3]/button[1]")
+	@CacheLookup
+	WebElement OK;
+	
 	public void AutoEmailReportsPage()throws InterruptedException{
 		
 		
 		helper.waitFor(AutoemailReports);
 		helper.highLightElement(driver, AutoemailReports);
 		AutoemailReports.click();
-		Reporter.log("<B><font color = 'blue'>SteP1 .</font></B> clicked on AutoemailReports");
-		Assert.assertTrue(true, "Failed to click on AutoemailReports");
-		
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Autoemail-Reports");
+		Assert.assertTrue(true, "Failed to click on Autoemail-Reports");
+		 
 		helper.waitFor(ShowEntries);
 		helper.highLightElement(driver,ShowEntries);
 		helper.selectDropDownValue(ShowEntries, "index", "4");
 		ShowEntries.click();
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on ShowEntries DropDown");
-		Assert.assertTrue(true, "Failed to click on ShowEntries Drop Down");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Show-Entries Drop-Down");
+		Assert.assertTrue(true, "Failed to click on Show-Entries Drop-Down");
 		
 		helper.waitFor(SelectNewReport);
 		helper.highLightElement(driver,SelectNewReport);
 		SelectNewReport.click();
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on SelectNewReport");
-		Assert.assertTrue(true, "Failed to click on SelectNewReport");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Select-New-Report");
+		Assert.assertTrue(true, "Failed to click on Select-New-Report");
+		
+		
+		Random r=new Random();
+		int num=r.nextInt(100);
+		String Act_name="AutomationCode";
+		String Exp_name=Act_name+num;
 		
 		helper.waitFor(ReportsTitle);
 		helper.highLightElement(driver,ReportsTitle);
-		ReportsTitle.sendKeys("AutomationCode");
+		ReportsTitle.sendKeys(Exp_name);
 		ReportsTitle.click();
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B>  Given title name as ABCDE ");
-		Assert.assertTrue(true, "Failed to Give name to ReportsTitle");
+		Reporter.log("<B><font color = 'blue'>Step4.</font></B>  Given title name as Automation-Code");
+		Assert.assertTrue(true, "Failed to Give name to Reports-Title");
 		
 		helper.waitFor(Frequency_Daily_RadioButton);
 		helper.highLightElement(driver, Frequency_Daily_RadioButton);
@@ -151,8 +164,8 @@ public class AutoEmailReportsPage extends BasePage {
 		helper.waitFor(CSV_CheckBox);
 		helper.highLightElement(driver, CSV_CheckBox);
 		CSV_CheckBox.click();
-		Reporter.log("<B><font color = 'blue'>Step10.</font></B> clicked on  CSV_CheckBox");
-		Assert.assertTrue(true, "Failed to click on  CSV_CheckBox");
+		Reporter.log("<B><font color = 'blue'>Step10.</font></B> clicked on  CSV_Check-Box");
+		Assert.assertTrue(true, "Failed to click on  CSV_Check-Box");
 		Thread.sleep(2000);
 		
 		helper.waitFor(organzation_chekBox);
@@ -162,15 +175,14 @@ public class AutoEmailReportsPage extends BasePage {
 		Assert.assertTrue(true, "Failed to click on  organzation_chekBox");
 		Thread.sleep(2000);
 		
-		
-		
+	
 		
 		
 		helper.waitFor(Send_Testmail);
 		helper.highLightElement(driver, Send_Testmail);
 		Send_Testmail.click();
-		Reporter.log("<B><font color = 'blue'>Step12.</font></B> clicked on Send_Testmail");
-		Assert.assertTrue(true, "Failed to click on  Send_Testmail");
+		Reporter.log("<B><font color = 'blue'>Step12.</font></B> clicked on Send_Test-mail");
+		Assert.assertTrue(true, "Failed to click on  Send_Test-mail");
 		Thread.sleep(2000);
 		
 		helper.waitFor(OK_Button);
@@ -189,9 +201,19 @@ public class AutoEmailReportsPage extends BasePage {
 		Reporter.log("<B><font color = 'blue'>Step14.</font></B> clicked on  Save_Button");
 		Assert.assertTrue(true, "Failed to click on  Save_Button");
 		Thread.sleep(2000);
+		
+		
+		
+		
+		helper.waitFor(OK);
+		helper.highLightElement(driver, OK);
+		OK.click();
+		Reporter.log("<B><font color = 'blue'>Step15.</font></B> clicked on  OK");
+		Assert.assertTrue(true, "Failed to click on  OK");
+		Thread.sleep(2000);
 }
-		
-		
+
+	
 }
 
 

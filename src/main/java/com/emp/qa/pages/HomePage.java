@@ -171,12 +171,6 @@ public class HomePage extends BasePage {
 		helper.waitForpage();
 		helper.waitFor(Projects);
 		helper.highLightElement(driver, Projects);
-		
-		
-		
-	
-			
-		
 		Projects.click();
 	
 	

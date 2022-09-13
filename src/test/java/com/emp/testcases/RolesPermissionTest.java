@@ -10,10 +10,11 @@ import com.emp.qa.pages.RolesPermissionPage;
 public class RolesPermissionTest extends TestBase {
 	
 	@Test
-	public void RolesPermissionTest() throws InterruptedException{
+	public void RolesPermissionTest() throws Exception{
 		RolesPermissionPage Rolespermission=new RolesPermissionPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-		homePage.SkipPopup();
+//		homePage.SkipPopup();
+		homePage.Skip();
 		homePage.ManageLocationsAndDepartmentPage();
 		Rolespermission.RolesPermissionPage();
 
