@@ -10,10 +10,11 @@ import com.emp.qa.pages.TimeClaimPage;
 public class SystemActivityLogsTest extends TestBase{
 	
 	@Test
-	public void SystemActivityLogsTest() throws InterruptedException{
+	public void SystemActivityLogsTest() throws Exception{
 		SystemActivityLogsPage Systemactivity=new SystemActivityLogsPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-		homePage.SkipPopup();
+//		homePage.SkipPopup();
+		homePage.Skip();
 		homePage.ReportsDownloadPage();
 		Systemactivity.SystemActivityLogsPage();
 }

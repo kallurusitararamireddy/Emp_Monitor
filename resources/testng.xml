@@ -13,31 +13,52 @@
 	</listeners>
 	<test name="EmpTest Cases">
 		<classes>
+
+			<!--*******************   Dashboard Module   *******************-->
+			
 			<class name="com.emp.testcases.HomePageTest"></class>
 			<class name="com.emp.testcases.DashBoardTest"></class>
+
+			<!--*******************   Employee Module   ******************* -->
+
 			<class name="com.emp.testcases.RegisterEmployeeTest"></class>
+			<class name="com.emp.testcases.BulkRegisterTest"></class>
+			<class name="com.emp.testcases.BulkUpdateTest"></class>
 			<class name="com.emp.testcases.EmployeeDetailsTest"></class>
-
-
 			<class name="com.emp.testcases.EditEmployeeTest"></class>
 			<class name="com.emp.testcases.EmployeeFullDetailsTest"></class>
 			<class name="com.emp.testcases.EmployeeAttendanceTest"></class>
+			<class name="com.emp.testcases.EmailMonitoringTest"></class>
+			<class name="com.emp.testcases.EmployeeAssignedTest"></class>
 			<class name="com.emp.testcases.EmployeeNotificationTest"></class>
 			<class name="com.emp.testcases.EmployeeInsightsTest"></class>
 
+			<!--*******************   Time-Sheets Module   ******************* -->
 
-			<class name="com.emp.testcases.EmailMonitoringTest"></class>
-			<class name="com.emp.testcases.EmployeeAssignedTest"></class>
-			<class name="com.emp.testcases.BulkUpdateTest"></class>
-			<class name="com.emp.testcases.BulkRegisterTest"></class>
-			<class name="com.emp.testcases.HomePageTest"></class>
+			<class name="com.emp.testcases.TimeSheetsTest"></class>
+			<class name="com.emp.testcases.TimeInMinutesTest"></class>
+			<class name="com.emp.testcases.TotalOptionToTimesheetsTest"></class>
+			<class name="com.emp.testcases.AbsentOptionToTimesheetsTest"></class>
+			
+			<!--*******************   Time-Claim Module   ******************* -->
 
 			<class name="com.emp.testcases.TimeClaimTest"></class>
-			<class name="com.emp.testcases.TimeInMinutesTest"></class>
-			<class name="com.emp.testcases.TimeSheetsTest"></class>
-			<class name="com.emp.testcases.TotalOptionToTimesheetsTest"></class>
 
-			<!--<class name="com.emp.testcases.TimeSheetsTest"></class>-->
+			<!--*******************   Reports Module   ******************* -->
+
+			<class name="com.emp.testcases.ReportsDownloadTest"></class>
+			<class name="com.emp.testcases.ProductivityReportsTest"></class>
+			<class name="com.emp.testcases.AutoEmailReportsTest"></class>
+			<class name="com.emp.testcases.WebsiteandApplicatonTest"></class>
+			<class name="com.emp.testcases.SystemActivityLogsTest"></class>
+
+			<!--*******************   Settings Module   ******************* -->
+
+			<class name="com.emp.testcases.ManageLocationsAndDepartmentTest"></class>
+			<class name="com.emp.testcases.StorageTypeTest"></class>
+			<class name="com.emp.testcases.ProductivityRulesTest"></class>
+			<class name="com.emp.testcases.RolesAndPermissionTest"></class>
+			<class name="com.emp.testcases.ShiftManagementTest"></class>
 
 
 		</classes>

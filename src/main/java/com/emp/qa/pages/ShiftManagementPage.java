@@ -1,5 +1,7 @@
 package com.emp.qa.pages;
 
+import java.util.Random;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -77,9 +79,14 @@ public class ShiftManagementPage extends BasePage{
 		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on CreateShift");
 		Assert.assertTrue(true, "Failed To Select CreateShift");
 		
+		Random r=new Random();
+		int num=r.nextInt(100);
+		String act_sn="AutomationCode";
+		String exp_sn=act_sn+num;
+		
 		helper.waitFor(ShiftName);		
 		helper.highLightElement(driver, ShiftName);
-		ShiftName.sendKeys("AutomationCode");
+		ShiftName.sendKeys(exp_sn);
 		ShiftName.click();
 		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on ShiftName");
 		Assert.assertTrue(true, "Failed To Select ShiftName");

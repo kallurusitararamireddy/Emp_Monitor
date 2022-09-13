@@ -54,20 +54,20 @@ public class ManageLocationsAndDepartmentPage extends BasePage {
 		ManageLocationsAnd_Departmets.click();
 		Reporter.log("<B><font color = 'blue'>Step1.</font></B> clicked on ManageLocationsAnd_Departmets");
 		Assert.assertTrue(true, "Failed to click on ManageLocationsAnd_Departmets");
-		
+		 
 		helper.waitFor(AddLocationsandDepartments);
 		helper.highLightElement(driver,AddLocationsandDepartments);
 		AddLocationsandDepartments.click();
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on AddLocationsandDepartments");
-		Assert.assertTrue(true, "Failed to click on AddLocationsandDepartments");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on AddLocations-and-Departments");
+		Assert.assertTrue(true, "Failed to click on AddLocations-and-Departments");
 		
 		
 		helper.waitFor(SelectTimezone);
 		helper.highLightElement(driver,SelectTimezone);
 		helper.selectDropDownValue(SelectTimezone, "value", "AsiaKolkata");
 		SelectTimezone.click();
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on SelectTimezone");
-		Assert.assertTrue(true, "Failed to click on SelectTimezone");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Select-Timezone");
+		Assert.assertTrue(true, "Failed to click on Select-Timezone");
 		
 		
 		
@@ -86,14 +86,14 @@ public class ManageLocationsAndDepartmentPage extends BasePage {
 		//EnterDepartments.click();
 		//helper.waitFor(Nodejs);
 		//Nodejs.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on EnterDepartments");
-		Assert.assertTrue(true, "Failed to click on EnterDepartments");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Enter-Departments");
+		Assert.assertTrue(true, "Failed to click on Enter-Departments");
 		
 		helper.waitFor(AddLocation_Button);
 		helper.highLightElement(driver,AddLocation_Button);
 		helper.jsCLick(AddLocation_Button);
 		//AddLocation_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on AddLocation_Button ");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on AddLocation_Button ");
 		Assert.assertTrue(true, "Failed to click on AddLocation_Button");
 		Thread.sleep(5000);
 	

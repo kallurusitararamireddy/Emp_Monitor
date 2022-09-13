@@ -12,10 +12,11 @@ public class WebsiteandApplicatonTest extends TestBase{
 	
 
 	@Test
-	public void WebsiteandApplicatonTest() throws InterruptedException{
+	public void WebsiteandApplicatonTest() throws Exception{
 		WebsiteandApplicationPage WebApp=new WebsiteandApplicationPage(getDriver());
 	HomePage homePage =new HomePage(getDriver());
-	homePage.SkipPopup();
+//	homePage.SkipPopup();
+	homePage.Skip();
 	homePage.ReportsDownloadPage();
 	WebApp.WebsiteandApplicationPage();
 

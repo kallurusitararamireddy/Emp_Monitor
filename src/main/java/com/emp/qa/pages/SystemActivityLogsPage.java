@@ -1,5 +1,9 @@
 package com.emp.qa.pages;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -66,7 +70,7 @@ public class SystemActivityLogsPage extends BasePage {
 	
 	
 	
-	public void SystemActivityLogsPage()throws InterruptedException{
+	public void SystemActivityLogsPage()throws InterruptedException, AWTException{
 	
 		helper.waitFor(SystemActivityLogs);		
 		helper.highLightElement(driver, SystemActivityLogs);
@@ -77,7 +81,7 @@ public class SystemActivityLogsPage extends BasePage {
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
 		helper.selectDropDownValue(Location, "id", "2");
-		Location.click();
+		Location.click(); 
 		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Location");
 		Assert.assertTrue(true, "Failed To Select Location");
 		
@@ -91,40 +95,43 @@ public class SystemActivityLogsPage extends BasePage {
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
 		Employee.click();
+		Robot r=new Robot();
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
 		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Employee");
 		Assert.assertTrue(true, "Failed To Select Employee");
 		
-		helper.waitFor(Select_All_Employee);
-		helper.highLightElement(driver, Select_All_Employee);
-		Select_All_Employee.click();
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Select_All_Employee");
-		Assert.assertTrue(true, "Failed To  Select_All_Employee");
+//		helper.waitFor(Select_All_Employee);
+//		helper.highLightElement(driver, Select_All_Employee);
+//		Select_All_Employee.click();
+//		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Select_All_Employee");
+//		Assert.assertTrue(true, "Failed To  Select_All_Employee");
 		
 		helper.waitFor(DateRange);
 		helper.highLightElement(driver, DateRange);
 		DateRange.click();
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on DateRange");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Date-Range");
 		Assert.assertTrue(true, "Failed To Select DateRange");
 		
 		helper.waitFor(Last_30Days);
 		helper.highLightElement(driver,Last_30Days);
 		Last_30Days.click();
-		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on Last_30Days");
-		Assert.assertTrue(true, "Failed To Select Last_30Days");
+		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on Last-30-Days");
+		Assert.assertTrue(true, "Failed To Select Last-30-Days");
 		
 		helper.waitFor(Excel_Button);
 		helper.highLightElement(driver, Excel_Button);
 		Excel_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Excel_Button");
-		Assert.assertTrue(true, "Failed To Select Excel_Button");
+		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Excel-Button");
+		Assert.assertTrue(true, "Failed To Select Excel-Button");
 		Thread.sleep(5000);
 	
 		
 		helper.waitFor(Pdf_Button);
 		helper.highLightElement(driver, Pdf_Button);
 		Pdf_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on Pdf_Button");
-		Assert.assertTrue(true, "Failed To  Select Pdf_Button");
+		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on Pdf-Button");
+		Assert.assertTrue(true, "Failed To  Select Pdf-Button");
 		Thread.sleep(5000);
 	
 	

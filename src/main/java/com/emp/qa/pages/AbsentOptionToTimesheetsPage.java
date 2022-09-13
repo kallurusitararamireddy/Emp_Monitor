@@ -36,10 +36,12 @@ public class AbsentOptionToTimesheetsPage extends BasePage {
 	WebElement Department;
 	
 	@FindBy(xpath = "//select[@id='employee']")
+//	@FindBy(xpath = "//span[@id='select2-employee-container']/..")
 	@CacheLookup
 	WebElement Employee;
 	
-	@FindBy(xpath = "//div[@id='reportrange']")
+//	@FindBy(xpath = "//div[@id='reportrange']")
+	@FindBy(xpath = "//div[@id='reportranges']")
 	@CacheLookup
 	WebElement selectdateranges;
 	
@@ -105,14 +107,14 @@ public class AbsentOptionToTimesheetsPage extends BasePage {
 		//helper.selectDropDownValue(Date, "visibletext", "Yesterday");
 		selectdateranges.click();
 		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on selectdateranges");
-		Assert.assertTrue(true, "Failed toselectdateranges");
+		Assert.assertTrue(true, "Failed to select-date-Ranges");
 		
 		helper.waitFor(Last30days);
 		helper.highLightElement(driver, Last30days);
 		//helper.selectDropDownValue(Date, "visibletext", "Yesterday");
 		Last30days.click();
 		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Last30days");
-		Assert.assertTrue(true, "Failed to select Last30days");
+		Assert.assertTrue(true, "Failed to select Last-30-days");
 		
 		
 		
@@ -127,7 +129,7 @@ public class AbsentOptionToTimesheetsPage extends BasePage {
 		helper.Scrollintoview(Timeintotal);
 		Timeintotal.click();
 		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on Timeintotal checkBox");
-		Assert.assertTrue(true, "Failed to click on Timeintotal ChekBox");
+		Assert.assertTrue(true, "Failed to click on Time-in-total ChekBox");
 		
 //		helper.waitFor(selectall);
 //		helper.highLightElement(driver, selectall);
