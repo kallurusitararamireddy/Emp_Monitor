@@ -1,5 +1,6 @@
 package com.emp.testcases;
 
+import java.awt.AWTException;
 import java.io.IOException;
 
 import org.testng.annotations.Test;
@@ -12,7 +13,7 @@ import com.emp.qa.pages.TimeSheetsPage;
 public class AbsentOptionToTimesheetsTest extends TestBase {
 	
 	@Test
-	public void AbsentOptionToTimesheetsTest() throws InterruptedException, IOException{
+	public void AbsentOptionToTimesheetsTest() throws InterruptedException, IOException, AWTException{
 		AbsentOptionToTimesheetsPage Absent=new AbsentOptionToTimesheetsPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
 		//homePage.SkipPopup();

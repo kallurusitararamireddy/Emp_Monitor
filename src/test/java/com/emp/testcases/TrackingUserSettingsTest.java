@@ -14,11 +14,12 @@ import com.emp.qa.util.Helpers;
 
 public class TrackingUserSettingsTest extends TestBase {
 	@Test
-	public void TrackingUserSettingsPage() throws InterruptedException{
+	public void TrackingUserSettingsPage() throws Exception{
 		
 		HomePage homePage =new HomePage(getDriver());
 		TrackingUserSettingsPage Tracking=new TrackingUserSettingsPage(getDriver());
-		homePage.SkipPopup();
+//		homePage.SkipPopup();
+		homePage.Skip();
 		homePage.clickEmployee();
 		Tracking.TrackingUserSettingsPage();
 		

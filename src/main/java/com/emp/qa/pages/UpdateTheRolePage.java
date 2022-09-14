@@ -28,7 +28,12 @@ public class UpdateTheRolePage extends BasePage{
 	@CacheLookup
 	WebElement Scroller;
 	
-	@FindBy(xpath = "//tbody/tr[@id='24756']/td[@id='act24756']/a[@id='upgrade']/i[1]")
+	/*
+	 * Select employee  x-path
+	 */
+	
+//	@FindBy(xpath = "//tbody/tr[@id='24756']/td[@id='act24756']/a[@id='upgrade']/i[1]")
+	@FindBy(xpath = "//td[@id='act25642']/a[@id='upgrade']/i[1]")
 	WebElement UpdateTheRole;
 	
 	

@@ -15,11 +15,10 @@ public class DashBoardTest extends TestBase {
 	public void DashBoardTest() throws Exception {
 
 		HomePage homePage = new HomePage(getDriver());
-		Thread.sleep(8000);
 		DashBoardPage DashBoardpage = new DashBoardPage(getDriver());
 //		homePage.SkipPopup();
-		homePage.clickDashboard();
 		homePage.Skip();
+		homePage.clickDashboard();
 		DashBoardpage.DashBoardPage();
 	}
 

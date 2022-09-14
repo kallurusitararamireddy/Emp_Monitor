@@ -34,7 +34,9 @@ public class UseOfApplicationPage extends BasePage {
 		WebElement Department;
 		
 		
-		@FindBy(xpath = "//select[@id='EmployeeData']")
+//		@FindBy(xpath = "//select[@id='EmployeeData']")
+		@FindBy(xpath = "//*[@id='main-wrapper']/div[2]/div[5]/div/div/div/div/div[3]/div/span/span[1]/span/span[2]")
+
 		@CacheLookup
 		WebElement Employee;
 		
@@ -110,7 +112,7 @@ public class UseOfApplicationPage extends BasePage {
 			
 			helper.waitFor(Employee);
 			helper.highLightElement(driver, Employee);
-			helper.selectDropDownValue(Employee, "id", "7333");
+//			helper.selectDropDownValue(Employee, "id", "7333");
 			Employee.click();
 			Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on employee DropDown");
 			Assert.assertTrue(true, "Failed Select employee DropDown");
