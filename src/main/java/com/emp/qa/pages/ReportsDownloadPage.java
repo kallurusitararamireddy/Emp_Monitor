@@ -160,30 +160,30 @@ public class ReportsDownloadPage extends BasePage {
 		
 		
 		
-//		helper.waitFor(CSV);
-//		helper.highLightElement(driver, CSV);
-//		CSV.click();
-//		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on CSV");
-//		Assert.assertTrue(true, "Failed to Select CSV");
-//		
-//		
-//		helper.waitFor(Select_All_checkBox);
-//		helper.highLightElement(driver, Select_All_checkBox);
-//		//helper.jsCLick(Select_All_checkBox);
-//		helper.jsScrollintoview(Select_All_checkBox);
-//		helper.jsCLick(Select_All_checkBox);
-//		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> clicked on Select-All-checkBox");
-//		Assert.assertTrue(true, "Failed to Select Select-All-checkBox");
-//		
-//		
-//		helper.waitFor(Submit_Button);
-//		helper.highLightElement(driver, Submit_Button);
-//		helper.Scrollintoview(Submit_Button);
-//		Actions act=new Actions(driver);
-//		act.moveToElement(Submit_Button).click().build().perform();
-////		Submit_Button.click();
-//		Reporter.log("<B><font color = 'blue'>Step13 .</font></B> clicked on Submit-Button");
-//		Assert.assertTrue(true, "Failed to Click Submit-Button");
+		helper.waitFor(CSV);
+		helper.highLightElement(driver, CSV);
+		CSV.click();
+		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on CSV");
+		Assert.assertTrue(true, "Failed to Select CSV");
+		
+		
+		helper.waitFor(Select_All_checkBox);
+		helper.highLightElement(driver, Select_All_checkBox);
+		//helper.jsCLick(Select_All_checkBox);
+		helper.jsScrollintoview(Select_All_checkBox);
+		helper.jsCLick(Select_All_checkBox);
+		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> clicked on Select-All-checkBox");
+		Assert.assertTrue(true, "Failed to Select Select-All-checkBox");
+		
+		
+		helper.waitFor(Submit_Button);
+		helper.highLightElement(driver, Submit_Button);
+		helper.Scrollintoview(Submit_Button);
+		Actions act=new Actions(driver);
+		act.moveToElement(Submit_Button).click().build().perform();
+//		Submit_Button.click();
+		Reporter.log("<B><font color = 'blue'>Step13 .</font></B> clicked on Submit-Button");
+		Assert.assertTrue(true, "Failed to Click Submit-Button");
 		//driver.navigate().refresh();
 		
 		

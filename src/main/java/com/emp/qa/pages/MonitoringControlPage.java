@@ -49,8 +49,7 @@ Helpers helper=new Helpers();
 	WebElement Banglore;
 	
 	
-//	@FindBy(xpath = "//select[@id='getDepartments0']")
-	@FindBy(xpath = "//select[@id='getDepartments0']//following-sibling::span")
+	@FindBy(xpath = "//select[@id='getDepartments0']")
 	@CacheLookup
 	WebElement Department;
 	
@@ -126,7 +125,7 @@ Helpers helper=new Helpers();
 		
 		helper.waitFor(Department);		
 		helper.highLightElement(driver, Department);
-//		helper.selectDropDownValue(Department, "value", "285");
+		helper.selectDropDownValue(Department, "value", "285");
 		helper.jsCLick(Department);
 		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Department");
 		Assert.assertTrue(true, "Failed To Select Department");

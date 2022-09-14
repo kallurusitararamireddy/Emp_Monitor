@@ -140,7 +140,7 @@ public class EmployeePage extends BasePage {
 		Reporter.log("<B><font color = 'blue'>Step 7 .</font></B> clicked on Browse");
 		Assert.assertTrue(true, "Failed to clickedonBrowse");
 		helper.uploadFile("C:\\Users\\Official\\Downloads\\Employee Registration.xlsx");
-		Thread.sleep(2000);
+		Thread.sleep(6000);
 		
 
 		helper.waitFor(add);
@@ -153,7 +153,16 @@ public class EmployeePage extends BasePage {
 //		Browse.sendKeys("/C:/Users/Official/Desktop/200Licences.xlsx/");
 //      helper.Scrollintoview(scroller);
 		
-		 
+		
+		/** Repeated some Employee register Xml file  using click option
+		 * 
+		 *    Invalid_Users_List  
+		 *    
+		 **/
+		
+//		Invalid_Users_List.click();
+		
+		
 		
 		helper.waitFor(Roles);
 		helper.highLightElement(driver, Roles);
@@ -185,7 +194,7 @@ public class EmployeePage extends BasePage {
 		helper.highLightElement(driver, all_select);
 		all_select.click();
 		Reporter.log("<B><font color = 'blue'>Step 12 .</font></B> clicked all select");
-		Assert.assertTrue(true, "Failed to clicked on all_select");
+		Assert.assertTrue(true, "Failed to clicked on submit");
 		
 		
 
