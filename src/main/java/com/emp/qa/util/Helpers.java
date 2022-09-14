@@ -300,14 +300,15 @@ public class Helpers extends TestBase {
 				StringSelection stringSelection = new StringSelection(fileLocation);
 				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
 				Robot robot = new Robot();	
-				Thread.sleep(10000);
+//				Thread.sleep(10000); 
 				robot.keyPress(KeyEvent.VK_CONTROL);
 				robot.keyPress(KeyEvent.VK_V);
-				Thread.sleep(10000);
-				robot.keyRelease(KeyEvent.VK_V);
-				robot.keyRelease(KeyEvent.VK_CONTROL);
-				Thread.sleep(10000);
+//				Thread.sleep(10000);
 				robot.keyPress(KeyEvent.VK_ENTER);
+				Thread.sleep(10000);
+				
+				robot.keyRelease(KeyEvent.VK_CONTROL);
+				robot.keyRelease(KeyEvent.VK_V); 
 				Thread.sleep(10000);
 				robot.keyRelease(KeyEvent.VK_ENTER);
 		

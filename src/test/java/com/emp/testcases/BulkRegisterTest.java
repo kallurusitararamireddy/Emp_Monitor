@@ -16,8 +16,12 @@ public class BulkRegisterTest extends TestBase {
 		HomePage hp = new HomePage(getDriver());
 
 //		hp.SkipPopup();
-		hp.Skip();
+		hp.Skip(); 
 		hp.clickEmployee();
+		
+		/*
+		 *  checking Employee Reg - Xlsx File 
+		 */
 		Employee.BulkRegister();
 
 		

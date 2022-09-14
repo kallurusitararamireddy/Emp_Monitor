@@ -12,10 +12,11 @@ import com.emp.qa.pages.UseOfTheWebApplicationPage;
 	public class UseOfTheWebApplicationTest extends TestBase {
 		
 		@Test
-		public void UseOfTheWebApplicationTest() throws InterruptedException{
+		public void UseOfTheWebApplicationTest() throws Exception{
 	    UseOfTheWebApplicationPage Useofweb=new UseOfTheWebApplicationPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-		homePage.SkipPopup();
+//		homePage.SkipPopup();
+		homePage.Skip();
 		homePage.ReportsDownloadPage();
 		Useofweb.UseOfTheWebApplicationPage();
 	

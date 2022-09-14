@@ -35,7 +35,8 @@ Helpers helper=new Helpers();
 	WebElement Department;
 	
 	
-	@FindBy(xpath = "//select[@id='EmployeeData']")
+//	@FindBy(xpath = "//select[@id='EmployeeData']")
+	@FindBy(xpath = "//*[@id='main-wrapper']/div[2]/div[5]/div/div/div/div/div[3]/div/span/span[1]/span/span[2]")
 	@CacheLookup
 	WebElement Employee;
 	
@@ -111,7 +112,7 @@ Helpers helper=new Helpers();
 		
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
-		helper.selectDropDownValue(Employee, "id", "7333");
+//		helper.selectDropDownValue(Employee, "id", "7333");
 		Employee.click();
 		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on employee DropDown");
 		Assert.assertTrue(true, "Failed Select employee DropDown");
@@ -123,13 +124,13 @@ Helpers helper=new Helpers();
 		helper.highLightElement(driver, reportrange);
 		helper.jsCLick(reportrange);
 		//reportrange.click();
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on reportrange");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on reportrange");
 		Assert.assertTrue(true, "Failed to Select  reportrange");
 		
 		helper.waitFor(Last30days);
 		helper.highLightElement(driver, Last30days);
 		Last30days.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Last30days");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Last30days");
 		Assert.assertTrue(true, "Failed to Select Last30days");
 		
 
@@ -137,7 +138,7 @@ Helpers helper=new Helpers();
 		helper.waitFor(Website_Button);
 		helper.highLightElement(driver, Website_Button);
 		Website_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Website_Button");
+		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on Website_Button");
 		Assert.assertTrue(true, "Failed to Select Website_Button");
 		
 
@@ -146,9 +147,9 @@ Helpers helper=new Helpers();
 		helper.highLightElement(driver, ExceltButton);
 		helper.Scrollintoview(ExceltButton);
 		ExceltButton.click();
-		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on ExceltButton ");
+		Reporter.log("<B><font color = 'blue'>Step8.</font></B> clicked on ExceltButton ");
 		Assert.assertTrue(true, "Failed to click on ExceltButton");
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		
 
 		
