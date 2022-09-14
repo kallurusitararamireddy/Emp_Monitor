@@ -235,9 +235,10 @@ public class RegisterEmployeePage extends BasePage {
 		Assert.assertTrue(true, "Failed to select AsiaKolkata");
 
 		
+
 		helper.waitFor(selectshift);
 		helper.highLightElement(driver, selectshift);
-		helper.selectDropDownValue(selectshift, "value", "442");
+		helper.selectDropDownValue(selectshift, "value", "115");
 		Reporter.log("<B><font color = 'blue'>Step16.</font></B> clickedonselectshift");
 		Assert.assertTrue(true, "Failed to selecte selectshift");
 

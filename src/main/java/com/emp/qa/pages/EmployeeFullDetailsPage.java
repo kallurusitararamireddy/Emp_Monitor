@@ -32,12 +32,7 @@ public class EmployeeFullDetailsPage extends BasePage {
 	@CacheLookup
 	WebElement ShowEntries;
 
-	/*
-	 *  Select Employee x-path
-	 */
-	
-//	@FindBy(xpath = "//*[@id='fn25629']")
-	@FindBy(xpath = "//*[@id='fn25642']")
+	@FindBy(xpath = "//*[@id='fn25629']")
 	@CacheLookup
 	WebElement AutomationCode;
 
@@ -160,7 +155,7 @@ public class EmployeeFullDetailsPage extends BasePage {
 		helper.highLightElement(driver, AutomationCode);
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='fn25642']"))).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='fn25629']"))).click();
 
 //		AutomationCode.click();
 		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on AutomationCode");

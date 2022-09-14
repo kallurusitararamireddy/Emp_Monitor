@@ -1,8 +1,5 @@
 package com.emp.qa.pages;
 
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
@@ -82,31 +79,26 @@ public class AbsentOptionToTimesheetsPage extends BasePage {
 	
 	
 	
-	public void AbsentOptionToTimesheetsPage()throws InterruptedException, IOException, AWTException{
+	public void AbsentOptionToTimesheetsPage()throws InterruptedException, IOException{
 		
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
-//		helper.selectDropDownValue(Location, "visibletext", "Bangalore");
-		helper.selectDropDownValue(Location, "value", "0");
+		helper.selectDropDownValue(Location, "visibletext", "Bangalore");
 		Reporter.log("<B><font color = 'blue'>Step1 .</font></B>Selected Banglore from the loction Dropdown");
 		Assert.assertTrue(true, "Failed to Select a value from the Locaton Drpdown");
 		
 
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
-		helper.selectDropDownValue(Department, "value", "0");
+		helper.selectDropDownValue(Department, "value", "1");
 		//Department.click();
 		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Department dropdown");
 		Assert.assertTrue(true, "Failed to Select Department");
-		 
-		/*
-		 * employees present in list remove the commit's 
-		 */
 		
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
 		helper.selectDropDownValue(Employee, "value", "0");
-//		Employee.click();
+		//Employee.click();
 		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Employee dropdown");
 		Assert.assertTrue(true, "Failed to Select Employee");
 		
