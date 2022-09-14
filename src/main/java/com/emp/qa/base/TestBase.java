@@ -61,7 +61,7 @@ public class TestBase {
 		
 	}
 
-	public TestBase() { 
+	public TestBase() {
 		try {
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/com/emp" + "/qa/config/config.properties");
@@ -140,7 +140,7 @@ public class TestBase {
 			Screenshot.captureScreenshot(result.getName());
 			takeScreenShot(result);
 		}	
-//		extent.flush();		
+		//extent.flush();		
 		closeBrowser();
 		
 	}
@@ -162,6 +162,5 @@ public class TestBase {
 	private void takeScreenShot(ITestResult result) {
 		// TODO Auto-generated method stub
 
-		
 	}
 }

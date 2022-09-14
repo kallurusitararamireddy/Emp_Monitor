@@ -103,12 +103,8 @@ public class TrackingUserSettingsPage extends BasePage {
 	@CacheLookup
 	WebElement Scroller;
         
-	/*
-	 *  Select employee track id -->  x-path
-	 */
 	
-//	@FindBy(xpath = "//tbody/tr[@id='24858']/td[@id='act24858']/a[1]/i[1]")
-	@FindBy(xpath = "//td[@id='act25642']/a[1]/i[1]")
+	@FindBy(xpath = "//tbody/tr[@id='24858']/td[@id='act24858']/a[1]/i[1]")
 	@CacheLookup
 	WebElement Trackusersettings;
 	
@@ -342,7 +338,7 @@ public class TrackingUserSettingsPage extends BasePage {
 
 		helper.waitFor(selectshift);
 		helper.highLightElement(driver, selectshift);
-		helper.selectDropDownValue(selectshift, "value", "442");
+		helper.selectDropDownValue(selectshift, "value", "115");
 		Reporter.log("<B><font color = 'blue'>Step16.</font></B> clickedonselectshift");
 		Assert.assertTrue(true, "Failed to selecte selectshift");
 

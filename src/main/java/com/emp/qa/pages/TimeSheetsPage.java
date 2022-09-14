@@ -117,8 +117,7 @@ public class TimeSheetsPage extends BasePage {
 		
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
-//		helper.selectDropDownValue(Location, "visibletext", "Bangalore");
-		helper.selectDropDownValue(Location, "value", "0");
+		helper.selectDropDownValue(Location, "visibletext", "Bangalore");
 		Reporter.log("<B><font color = 'blue'>Step1 .</font></B>Selected Banglore from the loction Dropdown");
 		Assert.assertTrue(true, "Failed to Select a value from the Locaton Drpdown");
 		

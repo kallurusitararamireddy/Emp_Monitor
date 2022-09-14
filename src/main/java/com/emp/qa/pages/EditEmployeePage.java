@@ -20,7 +20,7 @@ public class EditEmployeePage extends BasePage {
 
 	public EditEmployeePage(WebDriver driver) {
 		super(TestBase.getDriver());
- 
+
 	}
 
 	Helpers helper = new Helpers();
@@ -34,7 +34,7 @@ public class EditEmployeePage extends BasePage {
 	WebElement Scroller;
 
 //	@FindBy(xpath = "//tbody/tr[@id='24768']/td[@id='act24768']/a[5]/i[1]")
-	@FindBy(xpath = "//td[@id='act25642']/a[5]")
+	@FindBy(xpath = "//td[@id='act25629']/a[5]")
 	@CacheLookup
 	WebElement EditEmployee;
 

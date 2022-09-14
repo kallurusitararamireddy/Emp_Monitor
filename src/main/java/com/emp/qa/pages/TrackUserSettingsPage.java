@@ -27,8 +27,7 @@ public class TrackUserSettingsPage extends BasePage {
 	@CacheLookup
 	WebElement Scroller;
 	
-//	@FindBy(xpath = "//tbody/tr[@id='24756']/td[@id='act24756']/a[1]/i[1]")
-	@FindBy(xpath = "//td[@id='act25642']/a[1]/i[1]")
+	@FindBy(xpath = "//tbody/tr[@id='24756']/td[@id='act24756']/a[1]/i[1]")
 	WebElement TrackuserSettings;
 	
 	@FindBy(xpath = "//select[@id='AppliedSetting']")
@@ -82,7 +81,7 @@ public class TrackUserSettingsPage extends BasePage {
 		helper.waitFor(TrackuserSettings);
 		helper.highLightElement(driver, TrackuserSettings);
 		TrackuserSettings.click();
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on TrackuserSettings");
+		Reporter.log("<B><font color = 'blue'>Step13.</font></B> clicked on TrackuserSettings");
 		Assert.assertTrue(true, "Failed to click on TrackuserSettings");
 		
 		helper.waitFor(SettingsAppliedTotheuser);
@@ -90,21 +89,21 @@ public class TrackUserSettingsPage extends BasePage {
 		helper.Scrollintoview(SettingsAppliedTotheuser);
 		helper.selectDropDownValue(SettingsAppliedTotheuser, "value", "1");
 		SettingsAppliedTotheuser.click();
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on SettingsAppliedTotheuser");
+		Reporter.log("<B><font color = 'blue'>Step14.</font></B> clicked on SettingsAppliedTotheuser");
 		Assert.assertTrue(true, "Failed to click on SettingsAppliedTotheuser");
 		
 		
 		helper.waitFor(Empmonitoriconhiden);
 		helper.highLightElement(driver, Empmonitoriconhiden);
 		Empmonitoriconhiden.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Stealth Button");
+		Reporter.log("<B><font color = 'blue'>Step15.</font></B> clicked on Stealth Button");
 		Assert.assertTrue(true, "Failed to Select  Stealth Radio Button");
 		Thread.sleep(5000);
 		
 		helper.waitFor(ScreenShots_RadioButton_Disable);
 		helper.highLightElement(driver, ScreenShots_RadioButton_Disable);
 		ScreenShots_RadioButton_Disable.click();
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Screen shot RadioButton");
+		Reporter.log("<B><font color = 'blue'>Step16.</font></B> clicked on Screen shot RadioButton");
 		Assert.assertTrue(true, "Failed to Seletect  ScreeShots Radio Button");
 		Thread.sleep(6000);
 		
@@ -114,7 +113,7 @@ public class TrackUserSettingsPage extends BasePage {
 		helper.Scrollintoview(ScreenShotsFrequency);
 		//helper.selectDropDownValue(ScreenShotsFrequency, "value", "3");
 		ScreenShotsFrequency.click();
-		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on Screenshot Frequency DropDown");
+		Reporter.log("<B><font color = 'blue'>Step17.</font></B> clicked on Screenshot Frequency DropDown");
 		Assert.assertTrue(true, "Failed to Select  Screenshot Frequency DropDown");
 	
 		
@@ -122,7 +121,7 @@ public class TrackUserSettingsPage extends BasePage {
 		helper.waitFor(Twelveperhour);
 		helper.highLightElement(driver, Twelveperhour);
 		Twelveperhour.click();
-		Reporter.log("<B><font color = 'blue'>Step8.</font></B> clicked on Twelveperhour");
+		Reporter.log("<B><font color = 'blue'>Step18.</font></B> clicked on Twelveperhour");
 		Assert.assertTrue(true, "Failed to click on Twelveperhour DropDown");
 		
 		helper.waitFor(Videoquality_DropDown);
@@ -130,34 +129,34 @@ public class TrackUserSettingsPage extends BasePage {
 		helper.Scrollintoview(Videoquality_DropDown);
 		//helper.selectDropDownValue(ScreenShotsFrequency, "value", "1280");
 		Videoquality_DropDown.click();
-		Reporter.log("<B><font color = 'blue'>Step9.</font></B> clicked on Videoquality_DropDown");
+		Reporter.log("<B><font color = 'blue'>Step19.</font></B> clicked on Videoquality_DropDown");
 		Assert.assertTrue(true, "Failed to Select  Videoquality_DropDown");
 		
 		helper.waitFor(Medium);
 		helper.highLightElement(driver, Medium);
 		Medium.click();
-		Reporter.log("<B><font color = 'blue'>Step10.</font></B> Selected 1080xMediumQuality");
+		Reporter.log("<B><font color = 'blue'>Step20.</font></B> Selected 1080xMediumQuality");
 		Assert.assertTrue(true, "Failed to Select 1080xMediumQuality");
 		
 		
 		helper.waitFor(AgentAutomaticUpdate);
 		helper.highLightElement(driver, AgentAutomaticUpdate);
 		AgentAutomaticUpdate.click();
-		Reporter.log("<B><font color = 'blue'>Step11.</font></B> Enabled  AgentAutomaticUpdate");
+		Reporter.log("<B><font color = 'blue'>Step21.</font></B> Enabled  AgentAutomaticUpdate");
 		Assert.assertTrue(true, "Failed to Enable  AgentAutomaticUpdate");
 		
 		
 		helper.waitFor(idleTimeDropdown);
 		helper.highLightElement(driver, idleTimeDropdown);
 		idleTimeDropdown.click();
-		Reporter.log("<B><font color = 'blue'>Step12.</font></B> Selected idleTimeDropdown");
+		Reporter.log("<B><font color = 'blue'>Step22.</font></B> Selected idleTimeDropdown");
 		Assert.assertTrue(true, "Failed to Select idleTimeDropdown");
 	
 		
 		helper.waitFor(Fifteenmins);
 		helper.highLightElement(driver, Fifteenmins);
 		Fifteenmins.click();
-		Reporter.log("<B><font color = 'blue'>Step13.</font></B> Selected Fifteenmins");
+		Reporter.log("<B><font color = 'blue'>Step23.</font></B> Selected Fifteenmins");
 		Assert.assertTrue(true, "Failed to Select Fifteenmins");
 		
 		helper.waitFor(Save_Button);
@@ -165,7 +164,7 @@ public class TrackUserSettingsPage extends BasePage {
 		helper.Scrollintoview(Save_Button);
 		Thread.sleep(3000);
 		Save_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step14.</font></B> Cliked on SaveButton");
+		Reporter.log("<B><font color = 'blue'>Step24.</font></B> Cliked on SaveButton");
 		Assert.assertTrue(true, "Failed to Click on Save_Button");
 		
 		

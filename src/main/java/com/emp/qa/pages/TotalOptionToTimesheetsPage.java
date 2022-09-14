@@ -79,15 +79,14 @@ public class TotalOptionToTimesheetsPage extends BasePage{
 		
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
-//		helper.selectDropDownValue(Location, "visibletext", "Bangalore");
-		helper.selectDropDownValue(Location, "value", "0");
+		helper.selectDropDownValue(Location, "visibletext", "Bangalore");
 		Reporter.log("<B><font color = 'blue'>Step1 .</font></B>Selected Banglore from the loction Dropdown");
 		Assert.assertTrue(true, "Failed to Select a value from the Locaton Drpdown");
 		
 
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
-		helper.selectDropDownValue(Department, "value", "0");
+		helper.selectDropDownValue(Department, "value", "1");
 		//Department.click();
 		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Department dropdown");
 		Assert.assertTrue(true, "Failed to Select Department");

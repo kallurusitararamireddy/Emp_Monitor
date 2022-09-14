@@ -10,11 +10,10 @@ import com.emp.qa.pages.ShiftManagementPage;
 public class MonitoringControlTest extends TestBase {
 	
 	@Test
-	public void MonitoringControlTest() throws Exception{
+	public void MonitoringControlTest() throws InterruptedException{
 		MonitoringControlPage MonitorControl=new MonitoringControlPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-//		homePage.SkipPopup();
-		homePage.Skip();
+		homePage.SkipPopup();
 		homePage.ManageLocationsAndDepartmentPage();
 		MonitorControl.MonitoringControlPage();
 		
