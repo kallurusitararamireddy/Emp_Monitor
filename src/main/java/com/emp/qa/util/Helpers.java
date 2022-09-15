@@ -393,4 +393,11 @@ public class Helpers extends TestBase {
 			
 			
 		}
+		public void Double_click(WebElement Element)
+	    {
+	      Actions act= new Actions(getDriver());
+	      act.doubleClick(Element).build().perform();
+	      
+	      
+	    }
 }
