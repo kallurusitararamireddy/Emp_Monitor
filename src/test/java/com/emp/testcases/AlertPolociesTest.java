@@ -15,7 +15,7 @@ public class AlertPolociesTest extends TestBase {
 		homePage.SkipPopup();
 		homePage.behaviourpage();
 		AlertPolocies.AlertPolociesPage();
-
+ 
 }
 }
 

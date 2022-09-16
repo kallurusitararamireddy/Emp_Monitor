@@ -122,6 +122,7 @@ public class TestBase {
 		getDriver().manage().window().maximize();
 		getDriver().manage().deleteAllCookies();		
 		getDriver().get(readconfig.getApplicationURL("Dev"));
+		
 	}	
 	
 	

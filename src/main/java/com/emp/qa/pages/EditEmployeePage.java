@@ -76,7 +76,7 @@ public class EditEmployeePage extends BasePage {
 		helper.waitFor(LastName);
 		helper.highLightElement(driver, LastName);
 		LastName.clear();
-		LastName.sendKeys("CODE");
+		LastName.sendKeys("CODE"); 
 		Reporter.log("<B><font color = 'blue'>Step4.</font></B>  Modified  LastName");
 		Assert.assertTrue(true, "Failed to Modify  LastName");
 		Thread.sleep(3000);

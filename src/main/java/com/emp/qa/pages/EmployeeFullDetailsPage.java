@@ -150,7 +150,7 @@ public class EmployeeFullDetailsPage extends BasePage {
 		Assert.assertTrue(true, "Failed to clickedonShowEntries");
 
 		Thread.sleep(5000);
-		
+		 
 		helper.waitFor(AutomationCode);
 		helper.highLightElement(driver, AutomationCode);
 

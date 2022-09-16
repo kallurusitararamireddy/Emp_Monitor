@@ -24,7 +24,7 @@ public class EmployeeAssignedPage extends BasePage {
 	public EmployeeAssignedPage(WebDriver driver) {
 		super(TestBase.getDriver());
 	}
-			 
+		 	 
 		 
 			Helpers helper=new Helpers();
 			@FindBy(xpath = "//a[@title='Employee-Details']")

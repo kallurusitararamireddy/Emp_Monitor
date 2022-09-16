@@ -73,7 +73,7 @@ public  void EmployeeDetails() throws InterruptedException {
 	Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on DeletedusersHistory_Button");
 	Assert.assertTrue(true, "Failed to click on DeletedusersHistory_Button");
 	//Thread.sleep(8000);
-	
+	 
 	helper.waitFor(close);
 	helper.highLightElement(driver, close);
 	//Thread.sleep(5000);

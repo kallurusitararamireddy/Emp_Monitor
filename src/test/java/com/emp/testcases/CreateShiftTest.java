@@ -16,7 +16,7 @@ public class CreateShiftTest extends TestBase{
 		///homePage.SkipPopup();
 		homePage.ManageLocationsAndDepartmentPage();
 		Shift.CreateShiftPage();
-
+ 
 }
 
 }

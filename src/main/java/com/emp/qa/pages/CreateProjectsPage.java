@@ -207,7 +207,7 @@ Helpers helper=new Helpers();
 		
 		
 		helper.highLightElement(driver,Next_Button);
-		Next_Button.click();
+		Next_Button.click(); 
 		Reporter.log("<B><font color = 'blue'>Step8.</font></B> Selected NextButton");
 		Assert.assertTrue(true, "Failed to selet NextButton");
 		
