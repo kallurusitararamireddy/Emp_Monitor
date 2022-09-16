@@ -395,15 +395,15 @@ public class Helpers extends TestBase {
 //	}
 	
 
-=======
+
 		
-		public void SelectDropdownValue(WebElement element, String string) {
+		public void SelectDropdownValue1(WebElement element, String string) {
 			
 			Select status = new Select(element) ;
 			status.selectByVisibleText(string);
 		}
 		@SuppressWarnings("deprecation")
-		public void waitFor(String textToBeDisplayedOnPage) throws InterruptedException {
+		public void waitFor1(String textToBeDisplayedOnPage) throws InterruptedException {
 			// TODO Auto-generated method stub
 			try {
 				new WebDriverWait((WebDriver) driver,60).until(ExpectedConditions.textToBePresentInElement(driver.get().findElement(By.xpath("//body")), textToBeDisplayedOnPage));
