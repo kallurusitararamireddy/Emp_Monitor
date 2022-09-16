@@ -75,7 +75,7 @@ Helpers helper=new Helpers();
 		helper.waitFor(EmployeeDetailsfilter);
 		helper.highLightElement(driver, EmployeeDetailsfilter);
 		helper.Double_click(EmployeeDetailsfilter);
-		helper.jsCLick(EmployeeDetailsfilter);
+		//helper.jsCLick(EmployeeDetailsfilter);
 		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on EmployeeDetailsfilter");
 		Assert.assertTrue(true, "Failed to click on EmployeeDetailsfilter");
 		Thread.sleep(9000);
@@ -125,7 +125,7 @@ Helpers helper=new Helpers();
 		helper.waitFor(EmployeeDetailsfilterversion);
 		helper.highLightElement(driver, EmployeeDetailsfilterversion);
 		helper.jsCLick(EmployeeDetailsfilterversion);
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on EmployeeDetailsfilterversion");
+		Reporter.log("<B><font color = 'blue'>Step9.</font></B> clicked on EmployeeDetailsfilterversion");
 		Assert.assertTrue(true, "Failed to click on EmployeeDetailsfilterversion");
 		Thread.sleep(3000);
 
