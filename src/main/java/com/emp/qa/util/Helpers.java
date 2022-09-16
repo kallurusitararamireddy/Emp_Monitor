@@ -383,6 +383,7 @@ public class Helpers extends TestBase {
 
 	}
 	
+
 	
 	
 //	public void explicitlyWait(WebElement element, String string)
@@ -393,5 +394,31 @@ public class Helpers extends TestBase {
 //					
 //	}
 	
+
+=======
+		
+		public void SelectDropdownValue(WebElement element, String string) {
+			
+			Select status = new Select(element) ;
+			status.selectByVisibleText(string);
+		}
+		@SuppressWarnings("deprecation")
+		public void waitFor(String textToBeDisplayedOnPage) throws InterruptedException {
+			// TODO Auto-generated method stub
+			try {
+				new WebDriverWait((WebDriver) driver,60).until(ExpectedConditions.textToBePresentInElement(driver.get().findElement(By.xpath("//body")), textToBeDisplayedOnPage));
+						}catch(Exception e) {
+							System.out.println("TEXT WAS NOT FOUND IN THE CURRENT PAGE" );
+						}
+			
+			
+		}
+		public void Double_click(WebElement Element)
+	    {
+	      Actions act= new Actions(getDriver());
+	      act.doubleClick(Element).build().perform();
+	      
+	      
+	    }
 
 }
