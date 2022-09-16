@@ -90,5 +90,21 @@ public static String getProperty(String string) {
 	
 
 
+
+public String m_ApplicationURL(String m_url) throws InterruptedException {
+	String url = null;
+	
+	if(m_url.equalsIgnoreCase("manager_url")) {
+	url = pro.getProperty("manager_TL_Employee_URL");
+	}
+//else if(DevOrUAT.equalsIgnoreCase("UAT")) {
+//	url = pro.getProperty("UATUrl");
+//	}
+	return url;
 }
+
+
+
+}
+
 

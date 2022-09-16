@@ -1,10 +1,12 @@
 package com.emp.qa.pages;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,6 +17,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 
 import com.emp.qa.base.TestBase;
+import com.emp.qa.util.DataUtility;
 import com.emp.qa.util.Helpers;
 
 @Listeners(ITestNGListener.class)
@@ -25,6 +28,8 @@ public class EmployeeInsightsPage extends BasePage {
 
 	}
 
+	DataUtility du=new DataUtility();
+	
 	Helpers helper = new Helpers();
 
 //	@FindBy(xpath = "//a[contains(text(),'Employee Insights')]")
@@ -53,8 +58,18 @@ public class EmployeeInsightsPage extends BasePage {
 
 	@CacheLookup
 	WebElement Employee;
+	
+	@FindBy(xpath = "//*[@id='email']")
+	WebElement user;
+	@FindBy(xpath = "//*[@id='password']")
+	WebElement pwd;
+	
+	@FindBy(xpath = "//*[@id='login-form']/button")
+	WebElement login_button;
+	
+	
 
-	public void EmployeeInsights() throws InterruptedException {
+	public void EmployeeInsights() throws InterruptedException, IOException {
 
 		helper.waitFor(Employeeinsights);
 		helper.highLightElement(driver, Employeeinsights);
@@ -103,6 +118,16 @@ public class EmployeeInsightsPage extends BasePage {
 		Reporter.log("<B><font color = 'blue'>Stepp6.</font></B> clicked on Employee_Dropdown");
 		Assert.assertTrue(true, "Failed to click on Employee__Dropdown");
 
+		driver.switchTo().newWindow(WindowType.TAB);
+		driver.get(du.Data_info("manager_TL_Employee_URL"));
+		
+		
+		
+		user.sendKeys(du.Data_info("manager_TL_Employee_User"));
+		pwd.sendKeys(du.Data_info("manager_TL_Employee_password"));		
+		login_button.click();
+		
+		
 	}
 
 }

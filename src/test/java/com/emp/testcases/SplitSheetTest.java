@@ -11,10 +11,11 @@ import com.emp.qa.pages.SplitSheetPage;
 
 public class SplitSheetTest extends TestBase {
 	@Test
-	public void SplitSheetTest () throws InterruptedException, IOException{
+	public void SplitSheetTest () throws Exception{
 		SplitSheetPage split=new SplitSheetPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-		homePage.SkipPopup();
+//		homePage.SkipPopup();
+		homePage.Skip();
 		homePage.TimeSheets();
 		split.SplitSheetPage();
 	}
