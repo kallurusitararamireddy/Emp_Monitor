@@ -118,7 +118,7 @@ public class Helpers extends TestBase {
 					.invisibilityOfAllElements(getDriver().findElements(By.cssSelector(".preloader"))));
 		} catch (Exception e) {
 		}
-		waitForpage();
+		waitForpage(); 
 	}
 
 	public void waitFor(ExpectedCondition<Boolean> invisibilityOfAllElements) throws InterruptedException {
@@ -420,5 +420,31 @@ public class Helpers extends TestBase {
 	      
 	      
 	    }
+		public void move_to_element(WebElement Element)
+	    {
+	      Actions act= new Actions(getDriver());
+	      act.moveToElement(Element).perform();
+	      
+	      
+	    }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 }

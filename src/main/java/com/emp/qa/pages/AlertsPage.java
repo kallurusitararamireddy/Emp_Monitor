@@ -89,9 +89,20 @@ public class AlertsPage extends  BasePage {
 //	@CacheLookup
 //	WebElement Whomtobenotified;
 	
-	@FindBy(xpath = "//select[@id='usersToBeNotified']")
+//	@FindBy(xpath = "//select[@id='usersToBeNotified']")
+	@FindBy(xpath = "//*[@id='main-wrapper']/div[2]/div/div[2]/div[2]/div[4]/div/span[1]/span[1]/span/ul")
 	@CacheLookup
 	WebElement Whomtobenotified;
+	
+	
+	/*
+	 *  select Employee
+	 */
+	
+	@FindBy(xpath = "//*[@id='select2-usersToBeNotified-results']/li[22]")
+	@CacheLookup
+	WebElement select_usersToBeNotified;
+	
 	
 	@FindBy(xpath = "//body/div[1]/div[1]/div[5]/div[1]/div[2]/div[1]/div[2]/div[2]/div[4]/div[1]/span[1]/span[1]/span[1]/ul[1]/li[1]")
 	@CacheLookup
@@ -151,7 +162,7 @@ public class AlertsPage extends  BasePage {
 		Actions actions2 = new Actions(driver);
 		actions1.moveToElement(Appliesto_Emloyee).click().build().perform();
 		helper.jsCLick(Appliesto_Emloyee);
-		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on Appliesto_Emloyee");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Appliesto_Emloyee");
 		Assert.assertTrue(true, "Failed to select Appliesto_Emloyee");
 		
 //		helper.waitFor(Allemloyees);
@@ -163,7 +174,7 @@ public class AlertsPage extends  BasePage {
 		helper.waitFor(WhattriggerTherule);
 		helper.highLightElement(driver, WhattriggerTherule);
 		helper.selectDropDownValue(WhattriggerTherule, "value", "DWT");
-		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on WhattriggerTherule");
+		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on WhattriggerTherule");
 		Assert.assertTrue(true, "Failed to select WhattriggerTherule");
 		
 //		helper.waitFor(Rule2);
@@ -206,15 +217,26 @@ public class AlertsPage extends  BasePage {
 		helper.highLightElement(driver, AnyNote);
 		AnyNote.sendKeys("abcdef");
 		AnyNote.click();
-		Reporter.log("<B><font color = 'blue'>Step13 .</font></B> clicked on AnyNote");
+		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Any-Note");
 		Assert.assertTrue(true, "Failed to select AnyNote");
 		
 		helper.waitFor(Whomtobenotified);
 		helper.highLightElement(driver, Whomtobenotified);
-		helper.selectDropDownValue(Whomtobenotified, "value", "51247");
-		//Whomtobenotified.click();
-		Reporter.log("<B><font color = 'blue'>Step13 .</font></B> clicked on Whomtobenotified");
+//		helper.selectDropDownValue(Whomtobenotified, "value", "51247");
+//		helper.selectDropDownValue(Whomtobenotified, "value", "1");
+		Whomtobenotified.click(); 
+		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on Whom-to-be-notified");
 		Assert.assertTrue(true, "Failed to select Whomtobenotified");
+		
+		
+		
+		helper.waitFor(select_usersToBeNotified);
+		helper.highLightElement(driver, select_usersToBeNotified);
+		helper.move_to_element(select_usersToBeNotified);
+		select_usersToBeNotified.click();
+		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> Selected on Employee");
+		Assert.assertTrue(true, "Failed to Selected on Employee");
+		
 		
 //		helper.waitFor(Myself);
 //		helper.highLightElement(driver, Myself);
@@ -225,7 +247,7 @@ public class AlertsPage extends  BasePage {
 		helper.waitFor(SaveAndLaunch);
 		helper.highLightElement(driver, SaveAndLaunch);
 		helper.jsCLick(SaveAndLaunch);
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on SaveAndLaunch");
+		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on Save-And-Launch");
 		Assert.assertTrue(true, "Failed to select SaveAndLaunch");
 		Thread.sleep(5000);
 		

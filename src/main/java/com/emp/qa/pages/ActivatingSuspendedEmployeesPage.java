@@ -44,7 +44,7 @@ Helpers helper=new Helpers();
 	
 public  void suspendedemployee() throws InterruptedException, AWTException {
 		
-		
+		 
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();

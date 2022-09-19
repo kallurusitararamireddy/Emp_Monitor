@@ -10,12 +10,14 @@ import com.emp.qa.pages.HomePage;
 public class AlertsNotifiationsTest extends TestBase {
 	
 	@Test
-	public void AlertsNotifiationsPage() throws InterruptedException{
+	public void AlertsNotifiationsPage() throws Exception{
 		AlertsNotificationPage AlertNotification=new AlertsNotificationPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-		homePage.SkipPopup();
+//		homePage.SkipPopup();
+		homePage.Skip();
 		homePage.behaviourpage();
 		AlertNotification.AlertsNotificationPage();
 }
 
+	
 }
