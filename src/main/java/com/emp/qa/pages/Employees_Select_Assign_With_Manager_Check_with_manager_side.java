@@ -118,6 +118,7 @@ public class Employees_Select_Assign_With_Manager_Check_with_manager_side extend
 		Assert.assertTrue(true, "Failed to clicked on Employee_Details");
 
 		s.Skip();
+		
 		Thread.sleep(2000);
 
 		helper.waitFor(one_emp);

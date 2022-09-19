@@ -11,8 +11,11 @@ import org.testng.Reporter;
 import com.emp.qa.base.TestBase;
 import com.emp.qa.util.Helpers;
 
-public class AlertPolociesPage extends BasePage {
-	public AlertPolociesPage(WebDriver driver) {
+public class Alert_Policies_Page extends BasePage {
+	
+
+
+	public Alert_Policies_Page(WebDriver driver) {
 		super(TestBase.getDriver());
 
 }
@@ -99,7 +102,7 @@ public class AlertPolociesPage extends BasePage {
 	WebElement SaveAndLaunch;
 	
 	
-	public void AlertPolociesPage()throws InterruptedException{
+	public void Alert_Policies_Page()throws InterruptedException{
 		
 		helper.waitFor(AlertPolocies);
 		helper.highLightElement(driver, AlertPolocies);
@@ -171,7 +174,7 @@ public class AlertPolociesPage extends BasePage {
 		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> Clcked on  WhattriggerTherule");
 		Assert.assertTrue(true, "Failed to select WhattriggerTherule");
 		
-//		helper.waitFor(Rule2);
+//		helper.waitFor(Rule2); 
 //		helper.highLightElement(driver, Rule2);
 //		Rule2.click();
 //		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on Rule2");
@@ -209,8 +212,10 @@ public class AlertPolociesPage extends BasePage {
 	
 		helper.waitFor(AnyNote);
 		helper.highLightElement(driver, AnyNote);
+	
+//		AnyNote.click();
 		AnyNote.sendKeys("abcdef");
-		AnyNote.click();
+		
 		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> Sending Values to AnyNote");
 		Assert.assertTrue(true, "Failed to Send Values to AnyNote");
 		

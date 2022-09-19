@@ -50,20 +50,20 @@ public class AddingFilterModulePage extends BasePage{
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
 		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on EmployeeDetails");
-		Assert.assertTrue(true, "Failed to click on EmployeeDetails");
+		Assert.assertTrue(true, "Failed to clickd on EmployeeDetails");
 		
 		
 		helper.waitFor(ExportButton);
 		helper.highLightElement(driver, ExportButton);
 		ExportButton.click();
 		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on ExportButton");
-		Assert.assertTrue(true, "Failed to click on ExportButton");
+		Assert.assertTrue(true, "Failed to clickd on ExportButton");
 		
 		helper.waitFor(SelectAll);
 		helper.highLightElement(driver, SelectAll);
 		SelectAll.click();
 		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on SelectAll");
-		Assert.assertTrue(true, "Failed to click on SelectAll");
+		Assert.assertTrue(true, "Failed to clickd on SelectAll");
 		
 		helper.waitFor(Submit);
 		helper.highLightElement(driver, Submit);
@@ -71,10 +71,10 @@ public class AddingFilterModulePage extends BasePage{
 		Submit.click();
 		//Helpers.getChromeOption();
 		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Submit");
-		Assert.assertTrue(true, "Failed to click on Submit");
+		Assert.assertTrue(true, "Failed to clickd on Submit");
 		Thread.sleep(9000);
 		
-		String sheetName = "Employee list";
+//		String sheetName = "Employee list";
 		
 //		
 //		String A2=excel.getCellData(sheetName, 1, 1);

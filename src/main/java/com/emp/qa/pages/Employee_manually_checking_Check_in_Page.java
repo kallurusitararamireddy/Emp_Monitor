@@ -1,12 +1,18 @@
 package com.emp.qa.pages;
 
+import java.time.Duration;
 import java.util.Set;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -25,7 +31,6 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 	Helpers helper = new Helpers();
 
 	/* Admin side Changes Manual Clock In and Clock Out Enable or Disabled */
-	
 
 	@FindBy(xpath = "//span[text()='Employee']/../i[2]")
 	@CacheLookup
@@ -57,13 +62,10 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 	@CacheLookup
 	WebElement save;
 
-	
-	
 	/*
 	 * manager side login Check
 	 */
-	
-	
+
 	@FindBy(xpath = "//*[@id='email']")
 	WebElement user;
 	@FindBy(xpath = "//*[@id='password']")
@@ -89,6 +91,11 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 	@FindBy(xpath = "//*[@id='kt_aside_menu']/ul/li[2]/a/span")
 	WebElement Attendance;
 
+//	@FindBy(xpath = "//*[@id='clock_in']")
+//	@FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/a[1]")
+	@FindBy(xpath = "//a[@class='btn btn-danger float-right']")
+	WebElement checkin_button;
+
 	public void EmployeeFullDetails() throws InterruptedException {
 
 		helper.waitFor(Employee);
@@ -110,44 +117,39 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		Assert.assertTrue(true, "Failed to clicked on Show-Entries");
 
 		Thread.sleep(3000);
-		
+
 		helper.waitFor(employee_select);
 		helper.highLightElement(driver, employee_select);
 		helper.Scrollintoview(employee_select);
 		employee_select.click();
 		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on employee_select");
 		Assert.assertTrue(true, "Failed to click on employee_select");
-		
-		
-		
+
 		Thread.sleep(2000);
-		
+
 		helper.waitFor(settings);
 		helper.highLightElement(driver, settings);
 		settings.click();
 		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on settings");
 		Assert.assertTrue(true, "Failed to click on settings");
-		
+
 		Thread.sleep(3000);
-		
+
 		helper.waitFor(enable);
 		helper.highLightElement(driver, enable);
 		helper.Scrollintoview(enable);
 		enable.click();
 		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on enable");
 		Assert.assertTrue(true, "Failed to click on enable");
-		
-		
+
 		Thread.sleep(1000);
-		
+
 		helper.waitFor(save);
 		helper.highLightElement(driver, save);
 		save.click();
 		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on save-button");
 		Assert.assertTrue(true, "Failed to click on save-button");
-		
-	
-		
+
 	}
 
 	/*
@@ -156,8 +158,8 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 
 	public void _Employee_log_side_HRM_Check_in() throws Exception
 
-	{ 
- 
+	{
+
 		HomePage s1 = new HomePage(driver);
 
 		driver.switchTo().newWindow(WindowType.TAB);
@@ -204,48 +206,56 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		s1.Skip();
 		Thread.sleep(2000);
 
-		
-
 		helper.waitFor(hrm);
 		helper.highLightElement(driver, hrm);
 		hrm.click();
 		Reporter.log("<B><font color = 'blue'>Step15 .</font></B> clicked on hrm");
 		Assert.assertTrue(true, "Failed to clicked on hrm");
-		
-		
+
 		/*
-		 *  Open New Tab - Display HRM 
+		 * Open New Tab - Display HRM
 		 */
-		
-		
-		
-		/*  selected particular TAB Selection **/
-		
+
+		/* selected particular TAB Selection **/
+
 		// store parent window value in string
 		String parentWindow = driver.getWindowHandle();
 
 		// store the set of all windows
 		Set<String> allwindows = driver.getWindowHandles();
 
-		for (String childWindow : allwindows) { 
-		driver.switchTo().window(childWindow);
-		String title =driver.getTitle();
-		System.out.println(title);
-				
+		for (String childWindow : allwindows) {
+			driver.switchTo().window(childWindow);
+			String title = driver.getTitle();
+			System.out.println(title);
+
 			if (!title.contains("HRMS | My Profile")) {
 				driver.close();
-			} 
+			}
 		}
-		
+
 		Thread.sleep(2000);
-		
+
 		helper.waitFor(Attendance);
 		helper.highLightElement(driver, Attendance);
 		Attendance.click();
 		Reporter.log("<B><font color = 'blue'>Step16 .</font></B> clicked on Attendance");
 		Assert.assertTrue(true, "Failed to click on Attendance");
-		
+		Thread.sleep(3000);
 
-	}
+
+		
+		helper.waitFor(checkin_button);
+		helper.highLightElement(driver, checkin_button);
+		checkin_button.click();
+		Reporter.log("<B><font color = 'blue'>Step17 .</font></B> clicked on checkin_button");
+		Assert.assertTrue(true, "Failed to click on checkin_button");
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/a[1]"))).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='btn btn-danger float-right']"))).click();
+		checkin_button.click();
+
+	} 
 
 }
