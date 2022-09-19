@@ -15,10 +15,10 @@ public class TrelloIntegrationTest extends TestBase {
 	public void EmployeeRoleUpdateTest() throws Exception{
 		
 		HomePage homePage =new HomePage(getDriver());
-		TrelloIntegrationPage trellointegration = new TrelloIntegrationPage(getDriver());
+		TrelloIntegrationPage trellointegrations = new TrelloIntegrationPage(getDriver());
 		homePage.ManageLocationsAndDepartmentPage();		
 		homePage.Skip();
-		trellointegration.TrelloIntegration();
+		trellointegrations.TrelloIntegration();
 	}
 
 }
