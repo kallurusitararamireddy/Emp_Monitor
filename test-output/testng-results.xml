@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[<B><font color = 'orange'>Username .</font></B> Entered User ID]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'orange'>Password .</font></B> Entered Password]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'orange'>Sign In Button .</font></B> Clicked on Submit Button]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step1 .</font></B> clicked on Employee]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step2 .</font></B> clicked on EmployeeDetails]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step3 .</font></B> clicked on Show-Entries]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step4 .</font></B> clicked on employee_select]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step5 .</font></B> clicked on settings]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step6 .</font></B> clicked on enable]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step7 .</font></B> clicked on save-button]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step8.</font></B>  Switch to New TAB - Login With Manager]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step9.</font></B>  Manager-TL-Employee - log-page-URL ]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step10.</font></B> Entered the User-name]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step11.</font></B> Entered the password]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step12.</font></B> clicked on login_button]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step13.</font></B> clicked on  role_change-button]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step14.</font></B> Selected the employee]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step15 .</font></B> clicked on hrm]]>
+    </line>
+    <line>
+      <![CDATA[<B><font color = 'blue'>Step16 .</font></B> clicked on Attendance]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2022-09-19T18:29:10 IST" name="Default suite" finished-at="2022-09-19T18:30:40 IST" duration-ms="89808">
+    <groups>
+    </groups>
+    <test started-at="2022-09-19T18:29:10 IST" name="Default test" finished-at="2022-09-19T18:30:40 IST" duration-ms="89808">
+      <class name="com.emp.testcases.Employee_manually_checking_Check_in_Test">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.emp.testcases.Employee_manually_checking_Check_in_Test@503d687a]" started-at="2022-09-19T18:29:10 IST" name="beforeSuite" finished-at="2022-09-19T18:29:10 IST" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:com.emp.testcases.Employee_manually_checking_Check_in_Test@503d687a]" started-at="2022-09-19T18:29:10 IST" name="initialization" finished-at="2022-09-19T18:29:19 IST" duration-ms="8297" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.emp.testcases.Employee_manually_checking_Check_in_Test@503d687a]" started-at="2022-09-19T18:29:19 IST" name="setUp" finished-at="2022-09-19T18:29:24 IST" duration-ms="5551" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<B><font color = 'orange'>Username .</font></B> Entered User ID]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'orange'>Password .</font></B> Entered Password]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'orange'>Sign In Button .</font></B> Clicked on Submit Button]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Employee_manually_check_in()[pri:0, instance:com.emp.testcases.Employee_manually_checking_Check_in_Test@503d687a]" started-at="2022-09-19T18:29:24 IST" name="Employee_manually_check_in" finished-at="2022-09-19T18:30:40 IST" duration-ms="75513" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step1 .</font></B> clicked on Employee]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step2 .</font></B> clicked on EmployeeDetails]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step3 .</font></B> clicked on Show-Entries]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step4 .</font></B> clicked on employee_select]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step5 .</font></B> clicked on settings]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step6 .</font></B> clicked on enable]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step7 .</font></B> clicked on save-button]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step8.</font></B>  Switch to New TAB - Login With Manager]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step9.</font></B>  Manager-TL-Employee - log-page-URL ]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step10.</font></B> Entered the User-name]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step11.</font></B> Entered the password]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step12.</font></B> clicked on login_button]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step13.</font></B> clicked on  role_change-button]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step14.</font></B> Selected the employee]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step15 .</font></B> clicked on hrm]]>
+            </line>
+            <line>
+              <![CDATA[<B><font color = 'blue'>Step16 .</font></B> clicked on Attendance]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Employee_manually_check_in -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.emp.testcases.Employee_manually_checking_Check_in_Test@503d687a]" started-at="2022-09-19T18:30:40 IST" name="tearDown" finished-at="2022-09-19T18:30:40 IST" duration-ms="398" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Employee_manually_check_in status=SUCCESS method=Employee_manually_checking_Check_in_Test.Employee_manually_check_in()[pri:0, instance:com.emp.testcases.Employee_manually_checking_Check_in_Test@503d687a] output=<B><font color = 'blue'>Step1 .</font></B> clicked on Employee]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.emp.testcases.Employee_manually_checking_Check_in_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

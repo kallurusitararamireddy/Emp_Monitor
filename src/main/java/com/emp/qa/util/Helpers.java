@@ -182,7 +182,7 @@ public class Helpers extends TestBase {
 	}
 
 	/**
-	 * This Method can be used to send input as text to input fields on the HRM UI
+	 * This Method can be used to send input as text to input fields 
 	 * 
 	 * @param element
 	 * @param arg

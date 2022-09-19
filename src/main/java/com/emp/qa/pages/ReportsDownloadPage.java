@@ -86,6 +86,22 @@ public class ReportsDownloadPage extends BasePage {
 	@FindBy(xpath = "//*[@id='li_1']/a")
 	@CacheLookup
 	WebElement ApplicationsUsageReport;
+	
+	@FindBy(css = "[onclick='printDetails\\(\\'25679\\'\\,\\'mr abhishek nsbtrrfgb\\'\\)'] [title]")
+	@CacheLookup
+	WebElement ViewReport;
+	
+	@FindBy(xpath = "//select[@id='download']")
+	@CacheLookup
+	WebElement DownloadOptions;
+	
+	@FindBy(xpath = "/html[1]/body[1]/main[1]/div[1]/button[1]")
+	@CacheLookup
+	WebElement IndividualPdfButton;
+	
+	@FindBy(css = ".pt-3 > button[title='Download CSV File']")
+	@CacheLookup
+	WebElement IndividuaCSVButton;
 
 	
 	
@@ -184,7 +200,40 @@ public class ReportsDownloadPage extends BasePage {
 //		Submit_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step13 .</font></B> clicked on Submit-Button");
 		Assert.assertTrue(true, "Failed to Click Submit-Button");
-		//driver.navigate().refresh();
+		Thread.sleep(4000);
+		driver.navigate().refresh();
+		
+		helper.waitFor(DownloadOptions);
+		helper.highLightElement(driver, DownloadOptions);
+		helper.selectDropDownValue(DownloadOptions, "value", "2");
+		DownloadOptions.click();
+		Reporter.log("<B><font color = 'blue'>Step14 .</font></B> clicked on DownloadOptions");
+		Assert.assertTrue(true, "Failed to Select DownloadOptions");
+		
+		helper.waitFor(ViewReport);
+		helper.highLightElement(driver, ViewReport);
+		ViewReport.click();
+		Reporter.log("<B><font color = 'blue'>Step15 .</font></B> clicked on ViewReport");
+		Assert.assertTrue(true, "Failed to Select ViewReport");
+		Thread.sleep(9000);
+		
+//		helper.waitFor(IndividualPdfButton);
+//		helper.highLightElement(driver, IndividualPdfButton);
+//		IndividualPdfButton.click();
+//		Reporter.log("<B><font color = 'blue'>Step16 .</font></B> clicked on IndividualPdfButton");
+//		Assert.assertTrue(true, "Failed to Select IndividualPdfButton");
+//		Thread.sleep(9000);
+//		
+//		helper.waitFor(IndividuaCSVButton);
+//		helper.highLightElement(driver, IndividuaCSVButton);
+//		IndividuaCSVButton.click();
+//		Reporter.log("<B><font color = 'blue'>Step17 .</font></B> clicked on IndividuaCSVButton");
+//		Assert.assertTrue(true, "Failed to Select ViewReport");
+//		Thread.sleep(9000);
+//		
+		
+		
+		
 		
 		
 //		helper.waitFor(DownloadFiles_Button);
