@@ -118,6 +118,10 @@ public class Employees_Select_Assign_With_Manager_Check_with_manager_side extend
 		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Employee_Details");
 		Assert.assertTrue(true, "Failed to clicked on Employee_Details");
 
+
+		s.Skip();
+
+
 		
 		Thread.sleep(2000);
 

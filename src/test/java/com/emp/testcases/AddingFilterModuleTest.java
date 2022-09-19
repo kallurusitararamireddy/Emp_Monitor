@@ -12,11 +12,12 @@ import com.emp.qa.pages.HomePage;
 
 public class AddingFilterModuleTest extends TestBase{
 	@Test
-	public void AddingFilterModuleTest() throws InterruptedException, IOException{
+	public void AddingFilterModuleTest() throws Exception{
 		
 		HomePage homePage =new HomePage(getDriver());
 		AddingFilterModulePage AddingFilter = new AddingFilterModulePage(getDriver());
-		homePage.SkipPopup();
+//		homePage.SkipPopup();
+		homePage.Skip();
 		homePage.clickEmployee();
 		AddingFilter.AddingFilterModule();
 		//File listOfFiles[]=folder.listFiles();

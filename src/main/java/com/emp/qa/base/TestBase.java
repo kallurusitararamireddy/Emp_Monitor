@@ -147,8 +147,6 @@ public class TestBase {
 	}
 	
 	
-
-	
 	public static WebDriver getDriver() 
 	{
 		return driver.get();

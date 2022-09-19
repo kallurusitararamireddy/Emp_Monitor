@@ -3,7 +3,6 @@ package com.emp.testcases;
 import org.testng.annotations.Test;
 
 import com.emp.qa.base.TestBase;
-import com.emp.qa.pages.AlertPolociesPage;
 import com.emp.qa.pages.BehaviourAlertPoliciesPage;
 import com.emp.qa.pages.HomePage;
 
