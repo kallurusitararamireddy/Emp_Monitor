@@ -245,16 +245,41 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 
 
 		
+//		helper.waitFor(checkin_button);
+//		helper.highLightElement(driver, checkin_button);
+//		checkin_button.click();
+//		Reporter.log("<B><font color = 'blue'>Step17 .</font></B> clicked on checkin_button");
+//		Assert.assertTrue(true, "Failed to click on checkin_button");
+		
+         /*
+          *  Check in
+          */
+		
 		helper.waitFor(checkin_button);
 		helper.highLightElement(driver, checkin_button);
-		checkin_button.click();
-		Reporter.log("<B><font color = 'blue'>Step17 .</font></B> clicked on checkin_button");
-		Assert.assertTrue(true, "Failed to click on checkin_button");
-
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 //		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/a[1]"))).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='btn btn-danger float-right']"))).click();
 		checkin_button.click();
+		Reporter.log("<B><font color = 'blue'>Step17 .</font></B> clicked on checkin_button");
+		Assert.assertTrue(true, "Failed to click on checkin_button");
+		
+		
+		
+		/*
+         *  Check out
+         */
+		
+		helper.waitFor(checkin_button);
+		helper.highLightElement(driver, checkin_button);
+		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(20));
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/a[1]"))).click();
+		wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='btn btn-danger float-right']"))).click();
+		checkin_button.click();
+		Reporter.log("<B><font color = 'blue'>Step17 .</font></B> clicked on checkin_button");
+		Assert.assertTrue(true, "Failed to click on checkin_button");
+
+		 
 
 	} 
 
