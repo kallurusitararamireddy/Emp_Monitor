@@ -109,8 +109,8 @@ public  void EmployeeDetailsFilter() throws InterruptedException, AWTException {
 		helper.waitFor(ExitButton);
 		helper.highLightElement(driver, ExitButton);
 		helper.Scrollintoview(ExitButton);
-		ExitButton.click();
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on ExitButton");
+		helper.jsCLick(ExitButton);
+	    Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on ExitButton");
 		Assert.assertTrue(true, "Failed to click on ExitButton");
 		Thread.sleep(4000);
 		

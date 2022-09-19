@@ -24,7 +24,7 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 
 	public Employee_manually_checking_Check_in_Page(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	DataUtility du = new DataUtility();
@@ -91,12 +91,16 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 	@FindBy(xpath = "//*[@id='kt_aside_menu']/ul/li[2]/a/span")
 	WebElement Attendance;
 
+
 //	@FindBy(xpath = "//*[@id='clock_in']")
 //	@FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/a[1]")
 	@FindBy(xpath = "//a[@class='btn btn-danger float-right']")
 	WebElement checkin_button;
 
 	public void EmployeeFullDetails() throws InterruptedException {
+
+	public void Employeecheckin() throws InterruptedException {
+
 
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
@@ -149,6 +153,13 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		save.click();
 		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on save-button");
 		Assert.assertTrue(true, "Failed to click on save-button");
+
+
+
+		Thread.sleep(3000);
+		
+	
+		
 
 	}
 
@@ -241,7 +252,11 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		Attendance.click();
 		Reporter.log("<B><font color = 'blue'>Step16 .</font></B> clicked on Attendance");
 		Assert.assertTrue(true, "Failed to click on Attendance");
+
 		Thread.sleep(3000);
+
+		Thread.sleep(5000);		
+
 
 
 		
