@@ -94,10 +94,12 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 
 //	@FindBy(xpath = "//*[@id='clock_in']")
 //	@FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/a[1]")
-	@FindBy(xpath = "//a[@class='btn btn-danger float-right']")
+	@FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/a[1]")
 	WebElement checkin_button;
 
 	public void EmployeeFullDetails() throws InterruptedException {
+		
+	}
 
 	public void Employeecheckin() throws InterruptedException {
 
