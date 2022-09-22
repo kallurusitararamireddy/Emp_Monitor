@@ -54,7 +54,7 @@ public class ManageLocationsAndDepartmentPage extends BasePage {
 		ManageLocationsAnd_Departmets.click();
 		Reporter.log("<B><font color = 'blue'>Step1.</font></B> clicked on ManageLocationsAnd_Departmets");
 		Assert.assertTrue(true, "Failed to click on ManageLocationsAnd_Departmets");
-		 
+		  
 		helper.waitFor(AddLocationsandDepartments);
 		helper.highLightElement(driver,AddLocationsandDepartments);
 		AddLocationsandDepartments.click();

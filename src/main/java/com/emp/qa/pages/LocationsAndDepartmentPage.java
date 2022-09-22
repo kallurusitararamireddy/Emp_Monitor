@@ -1,5 +1,7 @@
 package com.emp.qa.pages;
 
+import java.util.Random;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -67,13 +69,16 @@ Helpers helper=new Helpers();
 		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on SelectTimezone");
 		Assert.assertTrue(true, "Failed to click on SelectTimezone");
 		
-		
+		/*
+		 *  Checking with  Location name  or  Change the location name
+		 */
 		
 		helper.waitFor(Type_Location);
 		helper.highLightElement(driver,Type_Location);
-		Type_Location.sendKeys("Patna");
+//		Type_Location.sendKeys("Patna");
+		Type_Location.sendKeys("mumbais");
 		//Type_Location.click();
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on Type_Location");
+		Reporter.log("<B><font color = 'blue'>Step4.</font></B> Entered the  Type_Location");
 		Assert.assertTrue(true, "Failed to click on Type_Location");
 		
 		

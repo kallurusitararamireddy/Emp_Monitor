@@ -1,9 +1,14 @@
 package com.emp.qa.pages;
 
+import java.awt.Robot;
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -39,7 +44,8 @@ Helpers helper=new Helpers();
 	@CacheLookup
 	WebElement Department;
 	
-	@FindBy(xpath = "//option[contains(text(),'Node JS Team')]")
+//	@FindBy(xpath = "//option[contains(text(),'Node JS Team')]")
+	@FindBy(xpath = "//span[@class='select2-results']/ul/li[2]")
 	@CacheLookup
 	WebElement Nodejs;
 	
@@ -65,11 +71,13 @@ Helpers helper=new Helpers();
 	
 	
 	
-	@FindBy(xpath = "//tbody/tr[@id='role451']/td[7]/a[3]/i[1]")
+//	@FindBy(xpath = "//tbody/tr[@id='role451']/td[7]/a[3]/i[1]")
+	@FindBy(xpath = "//tbody/tr[@id='role607']/td[7]/a[3]/i[1]")
 	@CacheLookup
 	WebElement Settings;
 	
-	@FindBy(xpath = "//body/div[1]/div[1]/div[8]/div[1]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/a[1]")
+//	@FindBy(xpath = "//body/div[1]/div[1]/div[8]/div[1]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/a[1]")
+	@FindBy(xpath = "//div[@id='EmployeeWebUsageSettings']/a/i")
 	@CacheLookup
 	WebElement EmployeeWebsiteusage;
 	
@@ -127,10 +135,11 @@ Helpers helper=new Helpers();
 		
 		helper.waitFor(Nodejs);		
 		helper.highLightElement(driver,Nodejs);
-		helper.jsCLick(Nodejs);
+//		helper.jsCLick(Nodejs);
+		helper.move_to_element_click(Nodejs);
 		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> selected nodejs");
 		Assert.assertTrue(true, "Failed To Select NodeJs value");
-		Thread.sleep(5000);
+		Thread.sleep(5000); 
 		
 		helper.waitFor(Save_Button);		
 		helper.highLightElement(driver,Save_Button);
@@ -139,8 +148,8 @@ Helpers helper=new Helpers();
 		Assert.assertTrue(true, "Failed To clik on save button");
 		Thread.sleep(5000);
 		driver.navigate().refresh();
-		driver.navigate().refresh();
-		
+//		driver.navigate().refresh();
+		Thread.sleep(2000);
 		
 //		helper.highLightElement(driver, Showentries);
 //		helper.selectDropDownValue(Showentries, "index", "3");
@@ -153,17 +162,33 @@ Helpers helper=new Helpers();
 		LastpageButton.click();
 		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked LastpageButton");
 		Assert.assertTrue(true, "Failed to click LastpageButton");
+		Thread.sleep(3000);
 		
 		
 		helper.highLightElement(driver, write_CheckBox);
 		helper.Scrollintoview(write_CheckBox);
-		write_CheckBox.click();
+//		helper.Select_All_Check_boxs(write_CheckBox);
 		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked write_CheckBox");
 		Assert.assertTrue(true, "Failed to click write_CheckBox");
+		 
+		
 		
 		helper.highLightElement(driver, Delete_CheckBox);
 		helper.Scrollintoview(Delete_CheckBox);
-		Delete_CheckBox.click();
+		
+		List <WebElement> AllCheckboxes = driver.findElements(By.xpath("//input[@id='deleteC']"));
+
+		int size = AllCheckboxes.size();
+
+		System.out.println(size);
+
+		for(int i = 0; i<size; i++) {
+
+		AllCheckboxes.get(i).click();
+
+		}
+		
+//		Delete_CheckBox.click();
 		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked Delete_CheckBox");
 		Assert.assertTrue(true, "Failed to click Delete_CheckBox");
 		
@@ -174,11 +199,12 @@ Helpers helper=new Helpers();
 		helper.jsCLick(Settings);
 		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> selected Settings");
 		Assert.assertTrue(true, "Failed To Select Settings");
-		
+		Thread.sleep(2000);
 		
 		helper.waitFor(EmployeeWebsiteusage);		
 		helper.highLightElement(driver,EmployeeWebsiteusage);
-		helper.jsCLick(EmployeeWebsiteusage);
+//		helper.jsCLick(EmployeeWebsiteusage);
+		EmployeeWebsiteusage.click();
 		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> selected EmployeeWebsiteusage");
 		Assert.assertTrue(true, "Failed To Select EmployeeWebsiteusage");
 		

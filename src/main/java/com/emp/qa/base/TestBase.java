@@ -143,7 +143,7 @@ public class TestBase {
 		}	
 		//extent.flush();		
 		closeBrowser();
-		
+		 
 	}
 	
 	
@@ -154,8 +154,8 @@ public class TestBase {
 	
 	public static void closeBrowser()
 	{
-		driver.get().quit();
-		driver.remove();
+//		driver.get().quit();
+//		driver.remove();
 	}
 	
 	private void takeScreenShot(ITestResult result) {

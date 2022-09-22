@@ -3,7 +3,12 @@
 
 
 
+<suite name="Emp Monitor Suite">
+	<!-- parallel="methods" thread-count="3"-->
+
+
 <suite name="Emp Monitor Suite" >   <!-- parallel="methods" thread-count="3"-->
+
 
 
 
@@ -47,10 +52,15 @@
 			<class name="com.emp.testcases.TimeInMinutesTest"></class>
 			<class name="com.emp.testcases.TotalOptionToTimesheetsTest"></class>
 			<class name="com.emp.testcases.AbsentOptionToTimesheetsTest"></class>
+
+			<class name="com.emp.testcases.AssignedListTest"></class>
+
+
 			<!--*******************   Time-Claim Module   ******************* -->
 			<class name="com.emp.testcases.TimeClaimTest"></class>
 			<!--*******************   Reports Module   ******************* -->
 			<class name="com.emp.testcases.ReportsDownloadTest"></class>
+			<class name="com.emp.testcases.ProductivityofEmployeeTest"></class>
 			<class name="com.emp.testcases.ProductivityReportsTest"></class>
 			<class name="com.emp.testcases.AutoEmailReportsTest"></class>
 			<class name="com.emp.testcases.WebsiteandApplicatonTest"></class>
@@ -63,11 +73,21 @@
 			<class name="com.emp.testcases.StorageTypeTest"></class>
 			<class name="com.emp.testcases.ProductivityRulesTest"></class>
 			<class name="com.emp.testcases.RolesAndPermissionTest"></class>
+			 <class name="com.emp.testcases.RolesPermissionTest"></class>
 			<class name="com.emp.testcases.ShiftManagementTest"></class>
+
+			<class name="com.emp.testcases.LocalizationTest"></class>
+			<class name="com.emp.testcases.LocationsAndDepartmentTest"></class>
+
+
 			<!--******************* Behaviour Module   ******************* -->
 			<class name="com.emp.testcases.Alert_Policies_Test"></class>
 			<class name="com.emp.testcases.AlertsNotifiationsTest"></class>
 			<class name="com.emp.testcases.AlertsTest"></class>
+
+			<class name="com.emp.testcases.BehaviourAlertPoliciesTest"></class>
+
+
 			<!--******* Admin side Any Changes  than go through The  Manager-TL-Employee Log-in page side Checking   ******************* -->
 			<class name="com.emp.testcases.Employees_Select_Assign_WithCheck_with_manager_side"></class>
 			<class name="com.emp.testcases.Employee_manually_checking_Check_in_Test"></class>

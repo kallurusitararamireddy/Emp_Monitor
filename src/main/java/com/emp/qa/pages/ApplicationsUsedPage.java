@@ -1,7 +1,9 @@
 package com.emp.qa.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
@@ -66,13 +68,21 @@ Helpers helper=new Helpers();
 	@CacheLookup
 	WebElement BrowserHistory;
 	
-	@FindBy(xpath = "//button[@id='pdfReportsDownload']")
+//	@FindBy(xpath = "//button[@id='pdfReportsDownload']")
+	@FindBy(xpath = "//*[@id='pdfReportsDownload']")
 	@CacheLookup
 	WebElement PDF;
 	
-	@FindBy(xpath = "//div[@id='csvDropdown']")
+//	@FindBy(xpath = "//div[@id='csvDropdown']")
+	@FindBy(xpath = "//*[@id='csvReportsDownload']/div/a/i")
 	@CacheLookup
 	WebElement CSV;
+	
+	
+	@FindBy(xpath = "//li[@id='li_1']/a/i")
+	@CacheLookup
+	WebElement CSV_Drop_down;
+	
 	
 	@FindBy(xpath = "//body/div[1]/div[1]/div[5]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[7]/ul[1]/li[16]/input[1]")
 	@CacheLookup
@@ -152,7 +162,7 @@ Helpers helper=new Helpers();
 		AppliationsUsed.click();
 		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on AppliationsUsed");
 		Assert.assertTrue(true, "Failed to Select AppliationsUsed");
-		
+		Thread.sleep(2000);
 //		helper.waitFor(PDF);
 //		helper.highLightElement(driver,PDF);
 //		PDF.click();
@@ -165,50 +175,67 @@ Helpers helper=new Helpers();
 		
 		helper.waitFor(CSV);
 		helper.highLightElement(driver, CSV);
-		CSV.click();
+//		helper.move_to_element_click(CSV);
+//		CSV.click();
+		helper.Double_click(CSV);
+		
 		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on CSV");
 		Assert.assertTrue(true, "Failed to Select CSV");
+		Thread.sleep(2000);
+		
+//		WebElement c=driver.findElement(By.xpath("//li[@id='li_1']/a/i"));
+//		Actions act=new Actions(driver);
+//		act.moveToElement(c).doubleClick().build().perform();
+		
+		helper.waitFor(CSV_Drop_down);
+		helper.highLightElement(driver, CSV_Drop_down);
+		helper.Double_click(CSV_Drop_down);
+//		CSV_Drop_down.click();
+		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on CSV_Drop_down");
+		Assert.assertTrue(true, "Failed to Select CSV_Drop_down");
+		Thread.sleep(4000); 
 		
 		
-		helper.waitFor(ApplicationsUsed);
-		helper.highLightElement(driver, ApplicationsUsed);
-		//helper.jsCLick(Select_All_checkBox);
-		helper.jsScrollintoview(ApplicationsUsed);
-		helper.jsCLick(ApplicationsUsed);
-		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on ApplicationsUsed");
-		Assert.assertTrue(true, "Failed to Select ApplicationsUsed");
 		
-		
-		helper.waitFor(Submit_Button);
-		helper.highLightElement(driver, Submit_Button);
-		helper.Scrollintoview(Submit_Button);
-		Submit_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> clicked on Submit_Button");
-		Assert.assertTrue(true, "Failed to Click Submit_Button");
-		driver.navigate().refresh();
-		
-		helper.waitFor(DownloadFiles_Button);
-		helper.highLightElement(driver, DownloadFiles_Button);
-		//helper.Scrollintoview(Submit_Button);
-		helper.jsCLick(DownloadFiles_Button);
-		//DownloadFiles_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step13 .</font></B> clicked on DownloadFiles_Button");
-		Assert.assertTrue(true, "Failed to Click DownloadFiles_Button");
+//		helper.waitFor(ApplicationsUsed);
+//		helper.highLightElement(driver, ApplicationsUsed);
+//		//helper.jsCLick(Select_All_checkBox);
+//		helper.jsScrollintoview(ApplicationsUsed);
+//		helper.jsCLick(ApplicationsUsed);
+//		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on ApplicationsUsed");
+//		Assert.assertTrue(true, "Failed to Select ApplicationsUsed");
+//		
+//		
+//		helper.waitFor(Submit_Button);
+//		helper.highLightElement(driver, Submit_Button);
+//		helper.Scrollintoview(Submit_Button);
+//		Submit_Button.click();
+//		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> clicked on Submit_Button");
+//		Assert.assertTrue(true, "Failed to Click Submit_Button");
+//		driver.navigate().refresh();
+//		
+//		helper.waitFor(DownloadFiles_Button);
+//		helper.highLightElement(driver, DownloadFiles_Button);
+//		//helper.Scrollintoview(Submit_Button);
+//		helper.jsCLick(DownloadFiles_Button);
+//		//DownloadFiles_Button.click();
+//		Reporter.log("<B><font color = 'blue'>Step13 .</font></B> clicked on DownloadFiles_Button");
+//		Assert.assertTrue(true, "Failed to Click DownloadFiles_Button");
 		//driver.navigate().refresh();
 		
-		helper.waitFor(ApplicationsUsageReport);
-		helper.highLightElement(driver, ApplicationsUsageReport);
-		//helper.Scrollintoview(Submit_Button);
-		helper.jsCLick(ApplicationsUsageReport);
-		//ApplicationsUsageReport.click();
-		Reporter.log("<B><font color = 'blue'>Step14 .</font></B> clicked on ApplicationsUsageReport");
-		Assert.assertTrue(true, "Failed to Click ApplicationsUsageReport");
+//		helper.waitFor(ApplicationsUsageReport);
+//		helper.highLightElement(driver, ApplicationsUsageReport);
+//		//helper.Scrollintoview(Submit_Button);
+//		helper.jsCLick(ApplicationsUsageReport);
+//		//ApplicationsUsageReport.click();
+//		Reporter.log("<B><font color = 'blue'>Step14 .</font></B> clicked on ApplicationsUsageReport");
+//		Assert.assertTrue(true, "Failed to Click ApplicationsUsageReport");
 		driver.navigate().refresh();
 		driver.navigate().back();
 		driver.navigate().forward();
 		Thread.sleep(5000);
 		 
-		
+		 
 		
 //         String sheetName = "Sheet 1";
 //		int rowcount = excel.getRowCount(sheetName);

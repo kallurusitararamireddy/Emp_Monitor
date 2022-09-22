@@ -55,10 +55,11 @@ public class LocaliationPage extends BasePage {
 		helper.waitFor(Save_Button);		
 		helper.highLightElement(driver, Save_Button);
 		//helper.selectDropDownValue(Localiation, "value", "English");
-		Save_Button.click();
+	    Save_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Save_Button");
 		Assert.assertTrue(true, "Failed To Select Save_Button");
-	
+		
+ 
 }
 }
 

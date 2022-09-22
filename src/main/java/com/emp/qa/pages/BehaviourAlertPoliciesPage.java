@@ -25,7 +25,8 @@ public class BehaviourAlertPoliciesPage extends BasePage {
 	WebElement AlertPolocies;
 	
 	
-	@FindBy(xpath = "//tbody/tr[@id='tr646']/td[7]/a[1]/i[1]")
+//	@FindBy(xpath = "//tbody/tr[@id='tr646']/td[7]/a[1]/i[1]")
+	@FindBy(xpath = "//tbody/tr[@id='tr688']/td[8]/a/i[1]")
 	@CacheLookup
 	WebElement EditButton;
 	
@@ -33,6 +34,8 @@ public class BehaviourAlertPoliciesPage extends BasePage {
 	@FindBy(xpath = "(//label[@for='isMultiple'])[1]")
 	@CacheLookup
 	WebElement MultipleAlertsInAday;
+	
+	
 	
 	@FindBy(xpath = "//button[@class='btn btn-primary'][contains(.,'Save & Launch')]")
 	@CacheLookup
@@ -46,10 +49,11 @@ public class BehaviourAlertPoliciesPage extends BasePage {
 		AlertPolocies.click();
 		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on AlertPoloces ");
 		Assert.assertTrue(true, "Failed to click on AlertPoloces");	
-		
+		Thread.sleep(2000);
 		
 		helper.waitFor(EditButton);
 		helper.highLightElement(driver, EditButton);
+		helper.move_to_element(EditButton);
 		EditButton.click();
 		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on EditButton ");
 		Assert.assertTrue(true, "Failed to click on EditButton");
@@ -59,6 +63,8 @@ public class BehaviourAlertPoliciesPage extends BasePage {
 		MultipleAlertsInAday.click();
 		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on MultipleAlertsInAday ");
 		Assert.assertTrue(true, "Failed to click on MultipleAlertsInAday");
+		Thread.sleep(5000);
+		
 		
 		helper.waitFor(SaveAndLaunch);
 		helper.highLightElement(driver, SaveAndLaunch);
@@ -66,7 +72,7 @@ public class BehaviourAlertPoliciesPage extends BasePage {
 		helper.jsCLick(SaveAndLaunch);
 		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on SaveAndLaunch_Button");
 		Assert.assertTrue(true, "Failed to select SaveAndLaunch_Button");
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		
 		
 		

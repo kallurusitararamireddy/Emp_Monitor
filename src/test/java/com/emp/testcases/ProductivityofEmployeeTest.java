@@ -12,11 +12,12 @@ import com.emp.qa.pages.ProductivityReportsPage;
 public class ProductivityofEmployeeTest extends TestBase{
 	
 	@Test
-	public void ProductivityofEmployeeTest() throws InterruptedException, AWTException{
+	public void ProductivityofEmployeeTest() throws Exception{
 		
 		ProductivityOfEmployeePage Reports=new ProductivityOfEmployeePage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-		homePage.SkipPopup();
+//		homePage.SkipPopup();
+		homePage.Skip();
 		homePage.ReportsDownloadPage();
 		Reports.ProductivityOfEmployeePage();
 

@@ -1,6 +1,8 @@
 package com.emp.qa.pages;
 
 import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,15 +31,18 @@ public class ProductivityOfEmployeePage extends BasePage{
 	@CacheLookup
 	WebElement ProductivityReports;
 	
-	@FindBy(xpath = "//select[contains(@onchange,'locChanged(this);')]")
+//	@FindBy(xpath = "//select[contains(@onchange,'locChanged(this);')]")
+	@FindBy(xpath = "//input[@placeholder='Select location']")
 	@CacheLookup
 	WebElement AllLocation;
 	
-	@FindBy(xpath = "//select[@id='deptoption']")
+//	@FindBy(xpath = "//select[@id='deptoption']")
+	@FindBy(xpath = "//input[@placeholder='Select department']")
 	@CacheLookup
 	WebElement SelectDepartment;
 	
-	@FindBy(xpath = "//body/div[1]/div[1]/div[5]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/button[1]")
+//	@FindBy(xpath = "//body/div[1]/div[1]/div[5]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/button[1]")
+	@FindBy(xpath = "//input[@placeholder='Select employee']")
 	@CacheLookup
 	WebElement SelectEmployee;
 	
@@ -81,14 +86,22 @@ public class ProductivityOfEmployeePage extends BasePage{
 		
 		helper.waitFor(AllLocation);
 		helper.highLightElement(driver, AllLocation);
-		helper.selectDropDownValue(AllLocation, "visibletext", "Bangalore");
+//		helper.selectDropDownValue(AllLocation, "visibletext", "Bangalore");
+		AllLocation.click();
+		Robot r=new Robot();
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+		
 		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on AllLocation");
 		Assert.assertTrue(true, "Failed To Select AllLocation");
 		
 		helper.waitFor(SelectDepartment);
 		helper.highLightElement(driver, SelectDepartment);
-		helper.selectDropDownValue(SelectDepartment, "value", "1");
+//		helper.selectDropDownValue(SelectDepartment, "value", "1");
 		SelectDepartment.click();
+		Robot r1=new Robot();
+		r1.keyPress(KeyEvent.VK_ENTER);
+		r1.keyRelease(KeyEvent.VK_ENTER);
 		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Department DropDown");
 		Assert.assertTrue(true, "Failed to Select Department DropDown");
 		
@@ -98,28 +111,32 @@ public class ProductivityOfEmployeePage extends BasePage{
 		helper.waitFor(SelectEmployee);
 		helper.highLightElement(driver, SelectEmployee);
 		SelectEmployee.click();
-		helper.jsCLick(SelectEmployee);
+//		helper.jsCLick(SelectEmployee);
+
+		Robot r11=new Robot();
+		r11.keyPress(KeyEvent.VK_ENTER);
+		r11.keyRelease(KeyEvent.VK_ENTER);
 		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on SelectEmployee");
 		Assert.assertTrue(true, "Failed to SelectEmployee");
 		
 		
-		helper.waitFor(Allcheckbox);
-		helper.highLightElement(driver, Allcheckbox);
-		Allcheckbox.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Allcheckbox");
-		Assert.assertTrue(true, "Failed to Select Allcheckbox");
+//		helper.waitFor(Allcheckbox);
+//		helper.highLightElement(driver, Allcheckbox);
+//		Allcheckbox.click();
+//		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Allcheckbox");
+//		Assert.assertTrue(true, "Failed to Select Allcheckbox");
 		
 		
 		helper.waitFor(DateRanges);
 		helper.highLightElement(driver, DateRanges);
 		DateRanges.click();
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on DateRanges");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on DateRanges");
 		Assert.assertTrue(true, "Failed to Select  DateRanges");
 		
 		helper.waitFor(Last30days);
 		helper.highLightElement(driver, Last30days);
 		Last30days.click();
-		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on Last30days");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Last30days");
 		Assert.assertTrue(true, "Failed to Select Last30days");
 		
 		
@@ -127,7 +144,7 @@ public class ProductivityOfEmployeePage extends BasePage{
 		helper.highLightElement(driver, ExportCSV);
 		helper.Scrollintoview(ExportCSV);
 		helper.jsCLick(ExportCSV);
-		Reporter.log("<B><font color = 'blue'>Step9.</font></B> clicked on ExportCSV");
+		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on ExportCSV");
 		Assert.assertTrue(true, "Failed to Select ExportCSV");
 		Thread.sleep(6000);
 		
