@@ -1,5 +1,7 @@
 package com.emp.qa.pages;
 
+import java.util.Random;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -66,6 +68,11 @@ Helpers helper=new Helpers();
 	@CacheLookup
 	WebElement CreateGroup_Button;
 	
+	
+	@FindBy(xpath = "/html/body/div[5]/div/div[3]/button[1]")
+	@CacheLookup
+	WebElement Assign_ok_button;
+	
 	@FindBy(xpath = "//iframe[@id='fc_push']")
 	@CacheLookup
 	WebElement Ok_Button;
@@ -74,7 +81,12 @@ Helpers helper=new Helpers();
 	@CacheLookup
 	WebElement LastPageButton;
 	
-	@FindBy(xpath = "//tbody/tr[@id='699']/td[6]/a[3]/i[1]")
+	/*
+	 *  Change with X-path 
+	 */
+	
+//	@FindBy(xpath = "//tbody/tr[@id='699']/td[6]/a[3]/i[1]")
+	@FindBy(xpath = "//tbody/tr[@id='726']/td[6]/a[3]/i")
 	@CacheLookup
 	WebElement GroupSettings;
 	
@@ -91,7 +103,8 @@ Helpers helper=new Helpers();
 	@CacheLookup
 	WebElement MonitorOnlyThis;
 	
-	@FindBy(xpath = "//a[contains(text(),'Save}')]")
+//	@FindBy(xpath = "//a[contains(text(),'Save}')]")
+	@FindBy(xpath = "//*[@id='Websites_adv']/div/div/div[4]/a[1]")
 	@CacheLookup
 	WebElement Save_Website;
 	
@@ -113,9 +126,15 @@ Helpers helper=new Helpers();
 		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Create_Group");
 		Assert.assertTrue(true, "Failed To Select Create_Group");
 		
+		
+		Random r=new Random();
+		int num=r.nextInt(1000);
+		String act_name="Automation code";
+		String exp_name=act_name+num;
+		
 		helper.waitFor(Group_Name);		
 		helper.highLightElement(driver, Group_Name);
-		Group_Name.sendKeys("Automation code");
+		Group_Name.sendKeys(exp_name);
 		Group_Name.click();
 		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Group_Name");
 		Assert.assertTrue(true, "Failed To Select Group_Name");
@@ -186,6 +205,13 @@ Helpers helper=new Helpers();
 		helper.jsCLick(CreateGroup_Button);
 		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on CreateGroup_Button");
 		Assert.assertTrue(true, "Failed To Select CreateGroup_Button");
+//		Assert.assertFalse(true, "Failed To Select CreateGroup_Button"); 
+		Thread.sleep(2000); 
+		
+		
+//		helper.waitFor(Assign_ok_button);		
+//		helper.highLightElement(driver, Assign_ok_button);
+//		Assign_ok_button.click();
 		
 //		helper.waitFor(Ok_Button);		
 //		helper.highLightElement(driver, CreateGroup_Button);
@@ -200,7 +226,7 @@ Helpers helper=new Helpers();
 		helper.jsCLick(LastPageButton);
 		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on LastPageButton");
 		Assert.assertTrue(true, "Failed To Select LastPageButton");
-		
+		Thread.sleep(2000);
 		
 		helper.waitFor(GroupSettings);		
 		helper.highLightElement(driver, GroupSettings);
@@ -217,13 +243,15 @@ Helpers helper=new Helpers();
 		Assert.assertTrue(true, "Failed To Select TrackingFeatures");
 		
 		
-		helper.waitFor(AdvanceSettings);		
+		helper.waitFor(AdvanceSettings);		 
 		helper.highLightElement(driver, AdvanceSettings);
 		helper.Scrollintoview(AdvanceSettings);
 		helper.jsCLick(AdvanceSettings);
 		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> clicked on AdvanceSettings");
 		Assert.assertTrue(true, "Failed To Select AdvanceSettings");
 		
+//		Assert.assertEquals(AdvanceSettings.click(), "Failed to click on checkin_button",AdvanceSettings.isDisplayed() );
+		 
 		helper.waitFor(MonitorOnlyThis);		
 		helper.highLightElement(driver, MonitorOnlyThis);
 		helper.Scrollintoview(MonitorOnlyThis);

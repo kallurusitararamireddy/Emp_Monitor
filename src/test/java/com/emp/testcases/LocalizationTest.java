@@ -10,10 +10,11 @@ import com.emp.qa.pages.ManageLocationsAndDepartmentPage;
 public class LocalizationTest extends TestBase {
 	
 	@Test
-	public void LocalizationTest() throws InterruptedException{
+	public void LocalizationTest() throws Exception{
 		LocaliationPage Localization=new LocaliationPage(getDriver());
 	HomePage homePage =new HomePage(getDriver());
-	homePage.SkipPopup();
+//	homePage.SkipPopup();
+	homePage.Skip();
 	homePage.ManageLocationsAndDepartmentPage();
 	Localization.LocaliationPage();
 

@@ -125,7 +125,7 @@ public class Helpers extends TestBase {
 
 		Thread.sleep(2000);
 	}
-
+ 
 	public void waitForpage() {
 		try {
 
@@ -428,9 +428,28 @@ public class Helpers extends TestBase {
 	      
 	    }
 		
+		public void move_to_element_click(WebElement Element)
+	    {
+	      Actions act= new Actions(getDriver());
+	      act.moveToElement(Element).click().build().perform();
+	      
+	      
+	    }
 		
 		
 		
+		 public void Select_All_Check_boxs(WebElement Element)
+		 { 
+			 Select  s_All=new Select(Element);
+			 List<WebElement> select_options=s_All.getAllSelectedOptions();
+			 int size = select_options.size();
+ 
+			 for(int i = 0; i<size; i++) {
+	 
+				 select_options.get(i).click();
+
+			 } 
+		 }
 		
 		
 		

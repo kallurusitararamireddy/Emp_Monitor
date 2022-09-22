@@ -16,6 +16,7 @@ public class ApplicatonsUsedTest extends TestBase {
 		//homePage.SkipPopup();
 		homePage.ReportsDownloadPage();
 		App.ApplicationsUsedPage();
+		
 
 }
 

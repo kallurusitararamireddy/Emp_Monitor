@@ -129,7 +129,7 @@ Helpers helper=new Helpers();
 		helper.jsCLick(Department);
 		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Department");
 		Assert.assertTrue(true, "Failed To Select Department");
-		
+		 
 //		helper.waitFor(NodeJs);		
 //		helper.highLightElement(driver, NodeJs);
 //		helper.jsScrollintoview(NodeJs);

@@ -27,25 +27,7 @@ public class AssignedListPage extends BasePage {
 	//Xls_Reader excel = new Xls_Reader("C:\\Users\\Official\\Downloads\\Attendance History - 2021-07-07T132006.363.csv");
 	
 
-	@FindBy(css=".introjs-tooltip-header > a[role='button']")
-	WebElement SkipPopUP;
-	
-	public void SkipPopup( ) {
-		try {
-		helper.waitFor(SkipPopUP);
-		helper.highLightElement(driver, SkipPopUP);
-		helper.Scrollintoview(SkipPopUP);
-		helper.Robotclick(SkipPopUP);
-		Thread.sleep(5000);
-		//helper.click(SkipPopUP);
-		//helper.jsCLick(SkipPopUP);
-		helper.waitForpage();
-		}catch(Exception e) {
-			System.out.println("Skip pop is not Dislayed");
-		}
-		
-}
-	
+
 	
 	@FindBy(xpath = "//i[@class='menu-icon icon-home4']")
 	@CacheLookup
@@ -63,7 +45,8 @@ public class AssignedListPage extends BasePage {
 	@CacheLookup
 	WebElement Employee;
 	
-	@FindBy(xpath = "//div[@id='reportrange']")
+//	@FindBy(xpath = "//div[@id='reportrange']")
+	@FindBy(xpath = "//div[@id='reportranges']/i")
 	@CacheLookup
 	WebElement selectdateranges;
 	
@@ -159,7 +142,7 @@ public class AssignedListPage extends BasePage {
 		
 		
 		
-		         String sheetName = "Attendance History - 2021-07-07";
+//		         String sheetName = "Attendance History - 2021-07-07";
 		         
 				  
 				  

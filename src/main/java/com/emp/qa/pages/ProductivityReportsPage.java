@@ -98,7 +98,6 @@ public class ProductivityReportsPage extends BasePage {
 //			r.keyRelease(KeyEvent.VK_DOWN);
 //			r.keyRelease(KeyEvent.VK_ENTER);
 			
-			
 			Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on All-Location");
 			Assert.assertTrue(true, "Failed To Select All-Location");
 			
