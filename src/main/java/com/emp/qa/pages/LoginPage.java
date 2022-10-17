@@ -28,15 +28,23 @@ public class LoginPage  extends BasePage{
 	
 	
 	//ELEMENTS ON LOGIN PAGE:
-	@FindBy(css = "[name='amember_login']")
+//	@FindBy(css = "[name='amember_login']")
+	@FindBy(css = "[name='username']")
+	
 	WebElement input_username;
 
-	@FindBy(css = ".am-row-login-pass [size]")
+//	@FindBy(css = ".am-row-login-pass [size]")
+	@FindBy(xpath  = "//input[@id='password']")
 	WebElement input_password;
 	
 	
+	@FindBy(css  = "#isNewClientLogin")
+	WebElement  Client_check_Box;
+	
+	
 
-	@FindBy(css = ".am-login-form-form [type='submit']")
+//	@FindBy(css = ".am-login-form-form [type='submit']")
+	@FindBy(css = "#loginButtonDiv")
 	WebElement Button_login;
 	
 
@@ -52,9 +60,13 @@ public class LoginPage  extends BasePage{
 		input_password.sendKeys(pwd);
 		Reporter.log("<B><font color = 'orange'>Password .</font></B> Entered Password");
 		
+		
+		
+		helper.highLightElement(driver, Client_check_Box);
+		helper.move_to_element_click_target(Client_check_Box)	;	
+		Reporter.log("<B><font color = 'orange'>Client_check_Box .</font></B> Clicked on Client_check_Box");
+		
 	
-		
-		
 		
 		helper.highLightElement(driver, Button_login);
 		Button_login.click();		

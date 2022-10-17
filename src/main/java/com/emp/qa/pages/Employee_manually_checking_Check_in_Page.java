@@ -51,6 +51,7 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 	WebElement employee_select;
 
 	@FindBy(xpath = "//*[@id='main-wrapper']/div[1]/a[2]")
+	String X_path="//*[@id='main-wrapper']/div[1]/a[2]";
 	@CacheLookup
 	WebElement settings;
 
@@ -135,6 +136,7 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 
 		helper.waitFor(settings);
 		helper.highLightElement(driver, settings);
+		helper.expility_Wait_2(X_path);
 		settings.click();
 		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on settings");
 		Assert.assertTrue(true, "Failed to click on settings");

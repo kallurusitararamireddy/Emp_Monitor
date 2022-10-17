@@ -62,7 +62,7 @@
 			<class name="com.emp.testcases.StorageTypeTest"></class>
 			<class name="com.emp.testcases.ProductivityRulesTest"></class>
 			<class name="com.emp.testcases.RolesAndPermissionTest"></class>
-			 <class name="com.emp.testcases.RolesPermissionTest"></class>
+			<class name="com.emp.testcases.RolesPermissionTest"></class>
 			<class name="com.emp.testcases.ShiftManagementTest"></class>
 			<class name="com.emp.testcases.LocalizationTest"></class>
 			<class name="com.emp.testcases.LocationsAndDepartmentTest"></class>
