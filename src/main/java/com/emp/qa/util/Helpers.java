@@ -20,6 +20,7 @@ import java.util.Random;
 import java.util.Set;
 
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -118,14 +119,14 @@ public class Helpers extends TestBase {
 					.invisibilityOfAllElements(getDriver().findElements(By.cssSelector(".preloader"))));
 		} catch (Exception e) {
 		}
-		waitForpage(); 
+		waitForpage();
 	}
 
 	public void waitFor(ExpectedCondition<Boolean> invisibilityOfAllElements) throws InterruptedException {
 
 		Thread.sleep(2000);
 	}
- 
+
 	public void waitForpage() {
 		try {
 
@@ -182,7 +183,7 @@ public class Helpers extends TestBase {
 	}
 
 	/**
-	 * This Method can be used to send input as text to input fields 
+	 * This Method can be used to send input as text to input fields
 	 * 
 	 * @param element
 	 * @param arg
@@ -382,10 +383,7 @@ public class Helpers extends TestBase {
 		}
 
 	}
-	
 
-	
-	
 //	public void explicitlyWait(WebElement element, String string)
 //	{
 //		  WebDriverWait wait=new WebDriverWait((WebDriver) driver, Duration.ofSeconds(20));
@@ -393,77 +391,240 @@ public class Helpers extends TestBase {
 //		
 //					
 //	}
+
+	public void SelectDropdownValue1(WebElement element, String string) {
+
+		Select status = new Select(element);
+		status.selectByVisibleText(string);
+	}
+
+	@SuppressWarnings("deprecation")
+	public void waitFor1(String textToBeDisplayedOnPage) throws InterruptedException {
+		// TODO Auto-generated method stub
+		try {
+			new WebDriverWait((WebDriver) driver, 60).until(ExpectedConditions
+					.textToBePresentInElement(driver.get().findElement(By.xpath("//body")), textToBeDisplayedOnPage));
+		} catch (Exception e) {
+			System.out.println("TEXT WAS NOT FOUND IN THE CURRENT PAGE");
+		}
+
+	}
+
+	/*
+	 * BY Using Actions and mouse over
+	 */
+
+	public void move_to_element(WebElement Element) {
+		Actions act = new Actions(getDriver());
+		act.moveToElement(Element).perform();
+
+	}
+
+	public void move_to_element_click(WebElement Element) {
+		Actions act = new Actions(getDriver());
+		act.moveToElement(Element).click().build().perform();
+
+	}
+
+	public void move_to_element_click_target(WebElement Element) {
+		Actions act = new Actions(getDriver());
+		act.moveToElement(Element).click(Element).build().perform();
+
+	}
+
+	public void Double_click(WebElement Element) {
+		Actions act = new Actions(getDriver());
+		act.doubleClick(Element).perform();
+
+	}
+
+	public void Double_click_target(WebElement Element) {
+		Actions act = new Actions(getDriver());
+		act.doubleClick(Element).build().perform();
+
+	}
+
+	public void contextClick(WebElement Element) {
+		Actions act = new Actions(getDriver());
+		act.contextClick(Element).perform();
+
+	}
+
+	public void contextClick_target(WebElement Element) {
+		Actions act = new Actions(getDriver());
+		act.contextClick(Element).build().perform();
+
+	}
+
+	public void drag_And_Drop(WebElement Element) {
+		Actions act = new Actions(getDriver());
+		act.dragAndDrop(Element, Element).build().perform();
+
+	}
+
+	public void drag_And_Drop_BY(WebElement Element, WebElement xOffset_vaule, WebElement yOffset_vaule) {
+		Actions act = new Actions(getDriver());
+		act.dragAndDropBy(Element, 0, 0).build().perform();
+
+	}
+
+	public void clickAndHold(WebElement Element) {
+		Actions act = new Actions(getDriver());
+		act.release(Element).perform();
+
+	}
+
+	public void clickAndHold_target(WebElement Element) {
+		Actions act = new Actions(getDriver());
+		act.release(Element).perform();
+
+	}
+
+	public void release(WebElement Element) {
+		Actions act = new Actions(getDriver());
+		act.release(Element).perform();
+
+	}
+
+	public void release_target(WebElement Element) {
+		Actions act = new Actions(getDriver());
+		act.release(Element).build().perform();
+
+	}
+
+	/*
+	 * Select Class using
+	 */
+
+	public void Select_All_Check_boxs(WebElement Element) {
+		Select s_All = new Select(Element);
+		List<WebElement> select_options = s_All.getAllSelectedOptions();
+		int size = select_options.size();
+
+		for (int i = 0; i < size; i++) {
+
+			select_options.get(i).click();
+
+		}
+	}
+
+	public void Select(WebElement Element) {
+		Select s_All = new Select(Element);
+		s_All.getFirstSelectedOption();
+
+	}
+	
 	
 
+	/*
+	 *   X-path  Write in String format
+	 */
+	public void expility_Wait_2(String X_path_full) {
+		WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(2000));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(X_path_full))).click();
 
+	}
+	
+	
+	
+	/*
+	 *   Alert-Pop-up
+	 */
+	
+	
+	 public void Alert_Accept()
+	 {
+		 Alert alt=(Alert) getDriver().switchTo().alert();
+		 alt.accept();
 		
-		public void SelectDropdownValue1(WebElement element, String string) {
-			
-			Select status = new Select(element) ;
-			status.selectByVisibleText(string);
-		}
-		@SuppressWarnings("deprecation")
-		public void waitFor1(String textToBeDisplayedOnPage) throws InterruptedException {
-			// TODO Auto-generated method stub
-			try {
-				new WebDriverWait((WebDriver) driver,60).until(ExpectedConditions.textToBePresentInElement(driver.get().findElement(By.xpath("//body")), textToBeDisplayedOnPage));
-						}catch(Exception e) {
-							System.out.println("TEXT WAS NOT FOUND IN THE CURRENT PAGE" );
-						}
-			
-			
-		}
-		public void Double_click(WebElement Element)
-	    {
-	      Actions act= new Actions(getDriver());
-	      act.doubleClick(Element).build().perform();
-	      
-	      
-	    }
-		public void move_to_element(WebElement Element)
-	    {
-	      Actions act= new Actions(getDriver());
-	      act.moveToElement(Element).perform();
-	      
-	      
-	    }
-		
-		public void move_to_element_click(WebElement Element)
-	    {
-	      Actions act= new Actions(getDriver());
-	      act.moveToElement(Element).click().build().perform();
-	      
-	      
-	    }
-		
-		
-		
-		 public void Select_All_Check_boxs(WebElement Element)
-		 { 
-			 Select  s_All=new Select(Element);
-			 List<WebElement> select_options=s_All.getAllSelectedOptions();
-			 int size = select_options.size();
- 
-			 for(int i = 0; i<size; i++) {
+	 }
 	 
-				 select_options.get(i).click();
-
-			 } 
-		 }
+	 public void Alert_Dismiss()
+	 {
+		 Alert alt=(Alert) getDriver().switchTo().alert();
+		 alt.dismiss();
 		
+	 }
+	 
+	 public void Alert_getText()
+	 {
+		 Alert alt=(Alert) getDriver().switchTo().alert();
+		 alt.getText();
 		
+	 }
+	 
+	 public void Alert_Send_Keys(String message)
+	 {
+		 Alert alt=(Alert) getDriver().switchTo().alert();
+		 alt.sendKeys(message);
 		
+	 }
+	 
+	 /*
+	  *  Open New Window 
+	  */
+	 
+	 public void open_new_Window()
+	 {
+		 getDriver().switchTo().newWindow(WindowType.WINDOW);
 		
+	 }
+	 
+	 /*
+	  *  Open New Tab 
+	  */
+	 
+	 public void open_new_Tab()
+	 {
+		 getDriver().switchTo().newWindow(WindowType.TAB);
 		
+	 }
+	 
+	 
+	 /*
+	  *  Take Screen Shot full page
+	  */
+	 
+	 public void Screen_Shot_full_page(String Folder_name,String Screenshot_page_name) throws IOException
+	 {
+		 TakesScreenshot ts=(TakesScreenshot) driver;
+		 File source=ts.getScreenshotAs(OutputType.FILE);
+		 File target=new File("./"+Folder_name+Screenshot_page_name+".png");
+		 FileUtils.copyFile(source, target);
+		 
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	 }
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
