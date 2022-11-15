@@ -1,5 +1,7 @@
 package com.emp.qa.pages;
 
+import java.awt.AWTException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -28,20 +30,20 @@ public BrowserHistoryPage(WebDriver driver) {
 	@CacheLookup
 	WebElement ReportsDownload;
 	
-	@FindBy(xpath = "//select[@id='role']")
+	@FindBy(xpath = "//*[@id='role']")
 	@CacheLookup
 	WebElement Role;
 	
-	@FindBy(xpath = "//*[@id=\"role\"]/option[1]")
+	@FindBy(xpath = "//*[@id='role']/option[1]")
 	@CacheLookup
 	WebElement SelectAll;
 	
 	
-	@FindBy(xpath = "//select[@id='locations']")
+	@FindBy(xpath = "//*[@id='locations']")
 	@CacheLookup
 	WebElement Location;
 	
-	@FindBy(xpath = "//select[@id='departmentAppend']")
+	@FindBy(xpath = "//*[@id='departmentAppend']")
 	@CacheLookup
 	WebElement Department;
 	
@@ -73,15 +75,15 @@ public BrowserHistoryPage(WebDriver driver) {
 	@CacheLookup
 	WebElement CSV;
 	
-	@FindBy(xpath = "//body/div[1]/div[1]/div[5]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[7]/ul[1]/li[16]/input[1]")
+	@FindBy(xpath = "//*[@id=\"mytimesheetdataDownload\"]/li[16]/input")
 	@CacheLookup
 	WebElement Domain;
 	
-	@FindBy(xpath = "//body/div[1]/div[1]/div[5]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[7]/ul[1]/li[17]/input[1]")
+	@FindBy(xpath = "//*[@id=\"mytimesheetdataDownload\"]/li[17]/input")
 	@CacheLookup
 	WebElement Browser;
 	
-	@FindBy(xpath = "//body/div[1]/div[1]/div[5]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[7]/ul[1]/li[18]/input[1]")
+	@FindBy(xpath = "//*[@id=\"mytimesheetdataDownload\"]/li[18]/input")
 	@CacheLookup
 	WebElement URL;
 	
@@ -100,7 +102,7 @@ public BrowserHistoryPage(WebDriver driver) {
 	
 	
 	
-	public void BrowserHistoryPage()throws InterruptedException{
+	public void BrowserHistoryPage()throws InterruptedException, AWTException{
 		
 		helper.waitFor(ReportsDownload);
 		helper.highLightElement(driver, ReportsDownload);
@@ -122,14 +124,14 @@ public BrowserHistoryPage(WebDriver driver) {
 		
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
-		helper.selectDropDownValue(Location, "value", "2");
+		helper.robot_Zero_option_selectClick();
 		Location.click();
 		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clickedonSelectLocation");
 		Assert.assertTrue(true, "Failed clickeonSelectLocation");
 		
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
-		helper.selectDropDownValue(Department, "value", "1");
+		helper.robot_Zero_option_selectClick();
 		Department.click();
 		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Department");
 		Assert.assertTrue(true, "Failed to clicked on Department");
@@ -159,7 +161,7 @@ public BrowserHistoryPage(WebDriver driver) {
 		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on BrowserHistory");
 		Assert.assertTrue(true, "Failed to Select BrowserHistory");
 		
-		
+		 
 		
 		helper.waitFor(CSV);
 		helper.highLightElement(driver, CSV);
@@ -202,22 +204,19 @@ public BrowserHistoryPage(WebDriver driver) {
 		Submit_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> clicked on Submit_Button");
 		Assert.assertTrue(true, "Failed to Click Submit_Button");
+		
 		driver.navigate().refresh();
 		
 		helper.waitFor(DownloadFiles_Button);
 		helper.highLightElement(driver, DownloadFiles_Button);
-		//helper.Scrollintoview(Submit_Button);
 		helper.jsCLick(DownloadFiles_Button);
-		//DownloadFiles_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step13 .</font></B> clicked on DownloadFiles_Button");
 		Assert.assertTrue(true, "Failed to Click DownloadFiles_Button");
 		//driver.navigate().refresh();
 		
 		helper.waitFor(ApplicationsUsageReport);
 		helper.highLightElement(driver, ApplicationsUsageReport);
-		//helper.Scrollintoview(Submit_Button);
 		helper.jsCLick(ApplicationsUsageReport);
-		//ApplicationsUsageReport.click();
 		Reporter.log("<B><font color = 'blue'>Step14 .</font></B> clicked on ApplicationsUsageReport");
 		Assert.assertTrue(true, "Failed to Click ApplicationsUsageReport");
 		driver.navigate().refresh();

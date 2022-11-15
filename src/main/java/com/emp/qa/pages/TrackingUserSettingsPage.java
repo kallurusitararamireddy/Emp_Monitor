@@ -1,5 +1,6 @@
 package com.emp.qa.pages;
 
+import java.awt.AWTException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -59,7 +60,8 @@ public class TrackingUserSettingsPage extends BasePage {
 	@CacheLookup
 	WebElement Location;
 
-	@FindBy(xpath = "//select[@id='role-addEmp']")
+//	@FindBy(xpath = "//select[@id='role-addEmp']")
+	@FindBy(xpath = "//*[@id=\"emp-register\"]/div[1]/div/div[9]/div/span[1]/span[1]/span/ul")
 	@CacheLookup
 	WebElement Role;
 	
@@ -99,12 +101,18 @@ public class TrackingUserSettingsPage extends BasePage {
 	WebElement SoftwareDev;
 	
 
-	@FindBy(xpath = "//body/div[1]/div[1]/div[8]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]")
+//	@FindBy(xpath = "//body/div[1]/div[1]/div[8]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]")
+	@FindBy(xpath = "//*[@id=\"main-wrapper\"]/div[2]/div[2]/div[2]/div/div/div[4]")
 	@CacheLookup
 	WebElement Scroller;
-        
 	
-	@FindBy(xpath = "//tbody/tr[@id='24858']/td[@id='act24858']/a[1]/i[1]")
+	
+    /*
+     *  Must be Change id number     
+     */
+	
+//	@FindBy(xpath = "//tbody/tr[@id='24858']/td[@id='act24858']/a[1]/i[1]")
+	@FindBy(xpath = "//*[@id='act25502']/a[1]/i")
 	@CacheLookup
 	WebElement Trackusersettings;
 	
@@ -213,7 +221,7 @@ public class TrackingUserSettingsPage extends BasePage {
 	WebElement Save_Button;
 
 	
-	public void TrackingUserSettingsPage() throws InterruptedException {
+	public void TrackingUserSettingsPage() throws InterruptedException, AWTException {
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
@@ -271,7 +279,6 @@ public class TrackingUserSettingsPage extends BasePage {
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
 		helper.selectDropDownValue(Location, "visibletext", "Bangalore");
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clickedonLocation");
 		Assert.assertTrue(true, "Failed to selecte location");
 		
@@ -279,8 +286,11 @@ public class TrackingUserSettingsPage extends BasePage {
 
 		helper.waitFor(Role);
 		helper.highLightElement(driver, Role);
-		helper.selectDropDownValue(Role, "value", "2");
-		helper.jsCLick(Role);
+		helper.jsCLick(Role); 
+		helper.move_to_element(Role);
+		helper.robot_Second_option_selectClick();
+//		helper.selectDropDownValue(Role, "value", "2");
+//		helper.jsCLick(Role);
 		//Role.click();
 		Reporter.log("<B><font color = 'blue'>Step11.</font></B> clicked on Role");
 		Assert.assertTrue(true, "Failed to clickeonRole");
@@ -338,7 +348,7 @@ public class TrackingUserSettingsPage extends BasePage {
 
 		helper.waitFor(selectshift);
 		helper.highLightElement(driver, selectshift);
-		helper.selectDropDownValue(selectshift, "value", "115");
+		helper.selectDropDownValue(selectshift, "value", "475");
 		Reporter.log("<B><font color = 'blue'>Step16.</font></B> clickedonselectshift");
 		Assert.assertTrue(true, "Failed to selecte selectshift");
 

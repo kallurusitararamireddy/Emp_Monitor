@@ -17,11 +17,8 @@ public class BulkUpdateTest extends TestBase {
 		
 		HomePage homePage =new HomePage(getDriver());
 		BulkUpdatePage Bulk=new BulkUpdatePage(getDriver());
-//		homePage.SkipPopup();
-		homePage.Skip
-		();
+
 		homePage.clickEmployee();
-		//empDpage	.EmployeeDetails();
 		Bulk.BulkUpdate();
 		
 }

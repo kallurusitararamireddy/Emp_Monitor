@@ -64,14 +64,7 @@ public class EmailMonitoringPage extends BasePage {
 	
 	public void EmailMonitoringPage()throws InterruptedException, AWTException{
 		
-//		helper.waitFor(SkipPopUP);
-//		helper.highLightElement(driver, SkipPopUP);
-//		helper.Scrollintoview(SkipPopUP);
-//		helper.Robotclick(SkipPopUP);
-//		
-//		//helper.click(SkipPopUP);
-//        helper.jsCLick(SkipPopUP);
-//        Thread.sleep(5000);
+
 		
 		helper.waitFor(EmailMonitoring);
 		helper.highLightElement(driver, EmailMonitoring);

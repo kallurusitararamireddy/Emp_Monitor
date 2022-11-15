@@ -1,5 +1,6 @@
 package com.emp.qa.pages;
 
+import java.awt.AWTException;
 import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
@@ -31,32 +32,24 @@ Helpers helper=new Helpers();
 	@CacheLookup
 	WebElement Group_Name;
 	
-	@FindBy(xpath = "//select[@id='role0']")
+	@FindBy(xpath = "//*[@id='select2-role0-container']")
 	@CacheLookup
 	WebElement Role;
+	
+	@FindBy(xpath = "//*[@id='select2-locationdept0-container']")
+	@CacheLookup
+	WebElement Location;
 	
 	@FindBy(xpath = "//span[@id='select2-role0-container']")
 	@CacheLookup
 	WebElement Employee;
+
 	
-	@FindBy(xpath = "//select[@id='locationdept0']")
-	@CacheLookup
-	WebElement Location;
-	
-	@FindBy(xpath = "//span[@title='Bangalore']")
-	@CacheLookup
-	WebElement Banglore;
-	
-	
-	@FindBy(xpath = "//select[@id='getDepartments0']")
+	@FindBy(xpath = "//*[@id=\"select2-getDepartments0-container\"]")
 	@CacheLookup
 	WebElement Department;
 	
-	@FindBy(xpath = "//option[contains(text(),'Node JS Team')]")
-	@CacheLookup
-	WebElement NodeJs;
-	
-	@FindBy(xpath = "//select[@id='employee0']")
+	@FindBy(xpath = "//*[@id=\"hide_Div\"]/div[4]/div/span/span[1]/span/ul")
 	@CacheLookup
 	WebElement Employees;
 	
@@ -85,7 +78,6 @@ Helpers helper=new Helpers();
 	 *  Change with X-path 
 	 */
 	
-//	@FindBy(xpath = "//tbody/tr[@id='699']/td[6]/a[3]/i[1]")
 	@FindBy(xpath = "//tbody/tr[@id='726']/td[6]/a[3]/i")
 	@CacheLookup
 	WebElement GroupSettings;
@@ -103,7 +95,6 @@ Helpers helper=new Helpers();
 	@CacheLookup
 	WebElement MonitorOnlyThis;
 	
-//	@FindBy(xpath = "//a[contains(text(),'Save}')]")
 	@FindBy(xpath = "//*[@id='Websites_adv']/div/div/div[4]/a[1]")
 	@CacheLookup
 	WebElement Save_Website;
@@ -112,7 +103,7 @@ Helpers helper=new Helpers();
 	@CacheLookup
 	WebElement Save_Button;
 	
-	public void MonitorControlPage()throws InterruptedException{
+	public void MonitorControlPage()throws InterruptedException, AWTException{
 		
 		helper.waitFor(MonitoringControl);		
 		helper.highLightElement(driver, MonitoringControl);
@@ -141,63 +132,36 @@ Helpers helper=new Helpers();
 		
 		helper.waitFor(Role);		
 		helper.highLightElement(driver, Role);
-		//helper.jsCLick(Role);
-		helper.selectDropDownValue(Role, "value","roles+2");
-		helper.jsCLick(Role);
-		//Role.click();
+	    helper.move_to_element_click_target(Role);  
+		helper.robot_Second_option_selectClick();
 		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Role");
 		Assert.assertTrue(true, "Failed To Select Role");
 		
-//		helper.waitFor(Employee);		
-//		helper.highLightElement(driver, Employee);
-//		helper.jsCLick(Employee);
-//		//helper.Scrollintoview(Employee);
-//		Employee.click();
-//		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Employee");
-//		Assert.assertTrue(true, "Failed To Select Employee");
-//		
+		
 		
 		helper.waitFor(Location);		
 		helper.highLightElement(driver, Location);
-		helper.selectDropDownValue(Location, "value", "location+2");
-		helper.jsCLick(Location);
+	    helper.move_to_element_click_target(Location);
+		helper.robot_Second_option_selectClick();
 		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Location");
 		Assert.assertTrue(true, "Failed To Select Location");
 		
-//		helper.waitFor(Banglore);		
-//		helper.highLightElement(driver,Banglore);
-//		helper.jsCLick(Banglore);
-//		//Banglore.click();
-//		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on Banglore");
-//		Assert.assertTrue(true, "Failed To Select Banglore");
-		
+
 		helper.waitFor(Department);		
 		helper.highLightElement(driver, Department);
-		helper.selectDropDownValue(Department, "value", "285");
-		helper.jsCLick(Department);
+	    helper.move_to_element_click_target(Department);
+		helper.robot_frist_option_selectClick();
 		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Department");
 		Assert.assertTrue(true, "Failed To Select Department");
 		
-//		helper.waitFor(NodeJs);		
-//		helper.highLightElement(driver, NodeJs);
-//		helper.jsScrollintoview(NodeJs);
-//		NodeJs.click();
-//		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on NodeJs");
-//		Assert.assertTrue(true, "Failed To Select NodeJs");
-//		
 		helper.waitFor(Employees);		
 		helper.highLightElement(driver,Employees);
-		//Employees.clear();
-		helper.selectDropDownValue(Employees, "values", "9342");
-		helper.jsCLick(Employees);
+	    helper.move_to_element_click_target(Employees);
+		helper.robot_frist_option_selectClick();
 		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on Employees");
 		Assert.assertTrue(true, "Failed To Select Employees");
 		
-//		helper.waitFor(GLB);		
-//		helper.highLightElement(driver,  GLB);
-//		 GLB.click();
-//		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on  GLB");
-//		Assert.assertTrue(true, "Failed To Select  GLB");
+
 		
 		helper.waitFor(CreateGroup_Button);		
 		helper.highLightElement(driver, CreateGroup_Button);
@@ -205,14 +169,13 @@ Helpers helper=new Helpers();
 		helper.jsCLick(CreateGroup_Button);
 		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on CreateGroup_Button");
 		Assert.assertTrue(true, "Failed To Select CreateGroup_Button");
-//		Assert.assertFalse(true, "Failed To Select CreateGroup_Button"); 
 		Thread.sleep(2000); 
 		
 		
 //		helper.waitFor(Assign_ok_button);		
 //		helper.highLightElement(driver, Assign_ok_button);
 //		Assign_ok_button.click();
-		
+//		
 //		helper.waitFor(Ok_Button);		
 //		helper.highLightElement(driver, CreateGroup_Button);
 //		helper.Scrollintoview(Ok_Button);

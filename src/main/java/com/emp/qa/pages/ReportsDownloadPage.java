@@ -1,5 +1,7 @@
 package com.emp.qa.pages;
 
+import java.awt.AWTException;
+
 import javax.swing.JScrollBar;
 
 import org.openqa.selenium.WebDriver;
@@ -35,11 +37,13 @@ public class ReportsDownloadPage extends BasePage {
 	WebElement SelectAll;
 	
 	
-	@FindBy(xpath = "//select[@id='locations']")
+//	@FindBy(xpath = "//select[@id='locations']")
+	@FindBy(xpath = "//*[@id='locations']")
 	@CacheLookup
 	WebElement Location;
 	
-	@FindBy(xpath = "//select[@id='departmentAppend']")
+//	@FindBy(xpath = "//select[@id='departmentAppend']")
+	@FindBy(xpath = "//*[@id='departmentAppend']")
 	@CacheLookup
 	WebElement Department;
 	
@@ -68,6 +72,7 @@ public class ReportsDownloadPage extends BasePage {
 	WebElement PDF;
 	
 	@FindBy(xpath = "//div[@id='csvDropdown']")
+//	@FindBy(xpath = "//*[@id=\"csvReportsDownload\"]/div/a")
 	@CacheLookup
 	WebElement CSV;
 	
@@ -87,7 +92,8 @@ public class ReportsDownloadPage extends BasePage {
 	@CacheLookup
 	WebElement ApplicationsUsageReport;
 	
-	@FindBy(css = "[onclick='printDetails\\(\\'25679\\'\\,\\'mr abhishek nsbtrrfgb\\'\\)'] [title]")
+//	@FindBy(css = "[onclick='printDetails\\(\\'25679\\'\\,\\'mr abhishek nsbtrrfgb\\'\\)'] [title]")
+	@FindBy(xpath = "//*[@id=\"25485\"]/td[7]/button")
 	@CacheLookup
 	WebElement ViewReport;
 	
@@ -106,7 +112,7 @@ public class ReportsDownloadPage extends BasePage {
 	
 	
 	
-	public void ReportsDownloadPage()throws InterruptedException{
+	public void ReportsDownloadPage()throws InterruptedException, AWTException{
 		
 		helper.waitFor(ReportsDownload);
 		helper.highLightElement(driver, ReportsDownload);
@@ -128,15 +134,16 @@ public class ReportsDownloadPage extends BasePage {
 		
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
-		helper.selectDropDownValue(Location, "value", "2");
+//		helper.selectDropDownValue(Location, "value", "0");
 		Location.click();
 		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked_on_Select_Location");
 		Assert.assertTrue(true, "Failed clicke_on_Select_Location");
 		
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
-		helper.selectDropDownValue(Department, "value", "1");
-		
+//		helper.selectDropDownValue(Department, "value", "0");
+		helper.selectDropDownValue(Department, "id", "0");
+
 		Department.click();
 		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Department");
 		Assert.assertTrue(true, "Failed to clicked on Department");
@@ -171,7 +178,7 @@ public class ReportsDownloadPage extends BasePage {
 		PDF.click();
 		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on PDF");
 		Assert.assertTrue(true, "Failed to Select PDF");
-		Thread.sleep(30000);
+		Thread.sleep(3000);
 	
 		
 		
@@ -215,7 +222,7 @@ public class ReportsDownloadPage extends BasePage {
 		ViewReport.click();
 		Reporter.log("<B><font color = 'blue'>Step15 .</font></B> clicked on ViewReport");
 		Assert.assertTrue(true, "Failed to Select ViewReport");
-		Thread.sleep(9000);
+		Thread.sleep(9000); 
 		
 //		helper.waitFor(IndividualPdfButton);
 //		helper.highLightElement(driver, IndividualPdfButton);

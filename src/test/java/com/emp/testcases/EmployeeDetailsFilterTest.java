@@ -4,7 +4,6 @@ import org.testng.annotations.Test;
 
 import com.emp.qa.base.TestBase;
 import com.emp.qa.pages.EmployeeDetailsFilterPage;
-import com.emp.qa.pages.EmployeeDetailspage;
 import com.emp.qa.pages.HomePage;
 
 public class EmployeeDetailsFilterTest extends TestBase {
@@ -14,8 +13,8 @@ public class EmployeeDetailsFilterTest extends TestBase {
 		
 		HomePage homePage =new HomePage(getDriver());
 		EmployeeDetailsFilterPage empDetailspage = new EmployeeDetailsFilterPage(getDriver());
+		
 		homePage.clickEmployee();
-		homePage.Skip();
 		empDetailspage.EmployeeDetailsFilter();
 	}
 

@@ -31,6 +31,12 @@ public class EmployeePage extends BasePage {
 		super(TestBase.getDriver());
 	}
 
+	/*
+	 *   Change with
+	 */
+	
+	
+	
 	Helpers helper = new Helpers();
 
 	@FindBy(xpath = "//a[@title='Employee-Details']")
@@ -81,8 +87,7 @@ public class EmployeePage extends BasePage {
 	@FindBy(id =  "checklocDownload")
 	WebElement all_select;
 
-//	@FindBy(xpath = "//input[contains(@value,'submit')]")
-	@FindBy(xpath =   "//*[@id='mytimesheetdataDownload']/li[17]/input")
+	@FindBy(xpath =   "//*[@value='submit']")
 	WebElement submit;
 
 	public void BulkRegister() throws AWTException, InterruptedException {
@@ -140,7 +145,7 @@ public class EmployeePage extends BasePage {
 		Reporter.log("<B><font color = 'blue'>Step 7 .</font></B> clicked on Browse");
 		Assert.assertTrue(true, "Failed to clickedonBrowse");
 		helper.uploadFile("C:\\Users\\Official\\Downloads\\Employee Registration.xlsx");
-		Thread.sleep(6000);
+		Thread.sleep(3000);
 		
 
 		helper.waitFor(add);
@@ -195,10 +200,7 @@ public class EmployeePage extends BasePage {
 		all_select.click();
 		Reporter.log("<B><font color = 'blue'>Step 12 .</font></B> clicked all select");
 		Assert.assertTrue(true, "Failed to clicked on submit");
-		
-		
-
-		
+	
 		helper.waitFor(submit);
 		helper.highLightElement(driver, submit);
 		submit.click();

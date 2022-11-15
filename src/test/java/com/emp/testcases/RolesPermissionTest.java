@@ -13,8 +13,8 @@ public class RolesPermissionTest extends TestBase {
 	public void RolesPermissionTest() throws Exception{
 		RolesPermissionPage Rolespermission=new RolesPermissionPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-//		homePage.SkipPopup();
-		homePage.Skip();
+
+		
 		homePage.ManageLocationsAndDepartmentPage();
 		Rolespermission.RolesPermissionPage();
 

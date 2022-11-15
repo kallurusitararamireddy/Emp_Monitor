@@ -3,6 +3,7 @@ package com.emp.qa.pages;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,7 +24,6 @@ public class WebsiteandApplicationPage extends BasePage {
 	}
 	
 Helpers helper=new Helpers();
-//Xls_Reader excel = new Xls_Reader ("‪C:\\Users\\Official\\Downloads\\Websites And Application (6).xlsx");
 	
 	@FindBy(xpath = "//a[contains(text(),'Web App Usage')]")
 	@CacheLookup
@@ -38,7 +38,6 @@ Helpers helper=new Helpers();
 	WebElement Department;
 	
 	
-//	@FindBy(xpath = "//select[@id='EmployeeData']")
 	@FindBy(xpath = "//span[@id='select2-EmployeeData-container']")
 	@CacheLookup
 	WebElement Employee;
@@ -85,12 +84,18 @@ Helpers helper=new Helpers();
 	WebElement Show_entries_Dropdown;
 	
 
+	@FindBy(xpath = "//button[@id='ExportButton']")
+	@CacheLookup
+	WebElement web_and_app_Export_Excel;
+	
+	
+
 	@FindBy(xpath = "//button[@id='exportReport']")
 	@CacheLookup
-	WebElement Export_Excel;
+	WebElement full_details_Export_Excel;
 	
 	
-	public void WebsiteandApplicationPage()throws InterruptedException, AWTException{
+	public void WebsiteandApplicationPage() throws InterruptedException, AWTException, IOException{
 		
 		
 		helper.waitFor(WebAPPusage);
@@ -101,73 +106,75 @@ Helpers helper=new Helpers();
  
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
-		helper.selectDropDownValue(Location, "visibletext", "Bangalore");
+		helper.selectDropDownValue(Location, "visibletext", "See All Location");
 		Location.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Select Location DropDown");
-		Assert.assertTrue(true, "Failed To Select Location Drop-Down");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Location DropDown & Select See All Location ");
+		Assert.assertTrue(true, "Failed To click on Location DropDown & Select See All Location ");
 		
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
-		helper.selectDropDownValue(Department, "index", "1");
+		helper.selectDropDownValue(Department, "visibletext", "See All Department");
 		Department.click();
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Department DropDown");
-		Assert.assertTrue(true, "Failed to Select Department DropDown");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Department DropDown & Select Department ");
+		Assert.assertTrue(true, "Failed to click on Department DropDown & Select Department");
 		
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
-//		helper.selectDropDownValue(Employee, "id", "7333");
-		
 		Employee.click();
-		
-		Robot r=new Robot();
-		r.keyPress(KeyEvent.VK_ENTER);
-		r.keyRelease(KeyEvent.VK_ENTER);
-		
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on employee DropDown");
-		Assert.assertTrue(true, "Failed Select employee DropDown");
+	    helper.robot_Zero_option_selectClick();
+		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on employee DropDown Select Employee ");
+		Assert.assertTrue(true, "Failed to  click on employee DropDown Select Employee");
 	
 	
 		
 		helper.waitFor(reportrange);
 		helper.highLightElement(driver, reportrange);
 		helper.jsCLick(reportrange);
-		//reportrange.click();
 		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on report-range");
 		Assert.assertTrue(true, "Failed to Select  report-range");
+		
 		
 		helper.waitFor(Last30days);
 		helper.highLightElement(driver, Last30days);
 		Last30days.click();
 		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Last-30-days");
 		Assert.assertTrue(true, "Failed to Select Last-30-days");
+		Thread.sleep(2000);
 		
 		helper.waitFor(Both_Button);
 		helper.highLightElement(driver, Both_Button);
 		Both_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on Both_Button");
 		Assert.assertTrue(true, "Failed to Select Both_Button");
+		Thread.sleep(2000); 
 		
-		
-		helper.waitFor(ExceltButton);
-		helper.highLightElement(driver, ExceltButton);
-		helper.Scrollintoview(ExceltButton);
-		ExceltButton.click();
+		helper.waitFor(web_and_app_Export_Excel);
+		helper.highLightElement(driver, web_and_app_Export_Excel);
+		helper.Scrollintoview(web_and_app_Export_Excel);
+		web_and_app_Export_Excel.click();
 		Reporter.log("<B><font color = 'blue'>Step8.</font></B> clicked on ExceltButton ");
 		Assert.assertTrue(true, "Failed to click on ExceltButton");
-		Thread.sleep(5000);
+		Thread.sleep(3000);
+		
+        helper.Both_web_app__button();
+		
+		Thread.sleep(4000);
+		
+		System.out.print("                                      ");
+		
+		helper.waitFor(full_details_Export_Excel);
+		helper.highLightElement(driver, full_details_Export_Excel);
+		helper.Scrollintoview(full_details_Export_Excel);
+		full_details_Export_Excel.click();
+		Reporter.log("<B><font color = 'blue'>Step9.</font></B> clicked on full_details_Export_Button ");
+		Assert.assertTrue(true, "Failed to click on full_details_Export_Button");
+		Thread.sleep(3000);
+		
+		 helper.Cumulative_Report_Sheet_button();
+			
+	     Thread.sleep(6000);
 		
 				
-
-		
-//		 String sheetName = "	Sheet 1";
-//		    
-//		    
-//			int rowcount = excel.getRowCount(sheetName);
-//			System.out.println("The number of rows in the Sheet is:"  + rowcount);
-//			int cellcount=excel.getColumnCount(sheetName);
-//			System.out.println("The number of cellcount in the Sheet is:"  + cellcount);			
-//			int S2= excel.getRowvalues(sheetName, 0,1);
-//			System.out.println(S2);
 }
 
 }

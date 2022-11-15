@@ -13,7 +13,7 @@ public class CreateShiftTest extends TestBase{
 	public void CreateShiftTest() throws InterruptedException{
 		CreateShiftPage Shift=new CreateShiftPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-		///homePage.SkipPopup();
+
 		homePage.ManageLocationsAndDepartmentPage();
 		Shift.CreateShiftPage();
  

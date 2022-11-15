@@ -32,7 +32,7 @@ public class EmployeeFullDetailsPage extends BasePage {
 	@CacheLookup
 	WebElement ShowEntries;
 
-	@FindBy(xpath = "//*[@id='fn25629']")
+	@FindBy(xpath = "//*[@id=\"fn25486\"]")
 	@CacheLookup
 	WebElement AutomationCode;
 
@@ -155,13 +155,13 @@ public class EmployeeFullDetailsPage extends BasePage {
 		helper.highLightElement(driver, AutomationCode);
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='fn25629']"))).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"fn25486\"]"))).click();
 
 //		AutomationCode.click();
 		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on AutomationCode");
 		Assert.assertTrue(true, "Failed to click on AutomationCode");
 
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		
 		helper.waitFor(productivity);
 		helper.highLightElement(driver, productivity);
@@ -186,11 +186,11 @@ public class EmployeeFullDetailsPage extends BasePage {
 		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Screenshots Button");
 		Assert.assertTrue(true, "Failed to clicke on Screenshots Button");
 
-		helper.waitFor(ScreenRecorder);
-		helper.highLightElement(driver, ScreenRecorder);
-		ScreenRecorder.click();
-		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on ScreenRecorder Button");
-		Assert.assertTrue(true, "Failed to clicke on ScreenRecorder Button");
+//		helper.waitFor(ScreenRecorder);
+//		helper.highLightElement(driver, ScreenRecorder);
+//		ScreenRecorder.click();
+//		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on ScreenRecorder Button");
+//		Assert.assertTrue(true, "Failed to clicke on ScreenRecorder Button");
 
 		helper.waitFor(Webhistory);
 		helper.highLightElement(driver, Webhistory);
@@ -211,14 +211,14 @@ public class EmployeeFullDetailsPage extends BasePage {
 		Assert.assertTrue(true, "Failed to click on Keystrokes Button");
         Thread.sleep(9000);
 		
-		helper.waitFor(Analysis);
-		helper.highLightElement(driver, Analysis);
-		Analysis.click();
-		Reporter.log("<B><font color = 'blue'>Step11.</font></B> clicked on Analysis Button");
-		Assert.assertTrue(true, "Failed to click on Analysis Button");
-		
-		driver.navigate().back();
-
+//		helper.waitFor(Analysis);
+//		helper.highLightElement(driver, Analysis);
+//		Analysis.click();
+//		Reporter.log("<B><font color = 'blue'>Step11.</font></B> clicked on Analysis Button");
+//		Assert.assertTrue(true, "Failed to click on Analysis Button");
+//		
+//		driver.navigate().back();
+//
 //		helper.waitFor(Scroller);
 //		helper.highLightElement(driver,Scroller);
 //		helper.Scrollintoview(Scroller);

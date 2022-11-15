@@ -17,10 +17,10 @@ public void EmployeeAssignedTest() throws InterruptedException, AWTException{
 	
 	HomePage homePage =new HomePage(getDriver());
 	EmployeeAssignedPage EMPAssigned = new EmployeeAssignedPage(getDriver());
-	//homePage.SkipPopup();
+
 	homePage.clickEmployee();
 	EMPAssigned.EmployeeAssigned();
 		
-
+ 
 }
 }

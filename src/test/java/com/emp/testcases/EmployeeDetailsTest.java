@@ -13,9 +13,8 @@ public void EmployeeDetailsTest() throws Exception{
 	
 	HomePage homePage =new HomePage(getDriver());
 	EmployeeDetailspage empDpage = new EmployeeDetailspage(getDriver());
-	//homePage.SkipPopup();
+
 	homePage.clickEmployee();
-	homePage.Skip();
 	empDpage.EmployeeDetails();
 		
 

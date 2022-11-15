@@ -63,65 +63,59 @@ public class Attandence_tool_tip_check_Page extends BasePage
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
 		Employee.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on employee_select");
-		Assert.assertTrue(true, "Failed to click on employee_select");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee Module ");
+		Assert.assertTrue(true, "Failed to click on Employee Module ");
 		
-		 
+		  
 		helper.waitFor(EmployeeAttendance);
 		helper.highLightElement(driver, EmployeeAttendance);
 		EmployeeAttendance.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on EmployeeAttendance");
-		Assert.assertTrue(true, "Failed to click on employee_select");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Employee Attendance Sub-Module ");
+		Assert.assertTrue(true, "Failed to click on Employee Attendance Sub-Module");
 		
 		Thread.sleep(4000);
 		helper.waitFor(present_show);
 		helper.highLightElement(driver, present_show);
 		helper.move_to_element(present_show);
-//		present_show.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> moveto on present_show");
-		Assert.assertTrue(true, "Failed to click on employee_select");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Move-to on present_show");
+		Assert.assertTrue(true, "Failed to Move-to on present_show");
 		
 		Thread.sleep(4000);
 		helper.waitFor(absent_show);
 		helper.highLightElement(driver, absent_show);
 		helper.move_to_element(absent_show);
-//		absent_show.click();
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B>  moveto on absent_show");
-		Assert.assertTrue(true, "Failed to click on employee_select");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B>  Move-to on absent_show");
+		Assert.assertTrue(true, "Failed to Move-to on absent_show");
 		Thread.sleep(4000);
 		
 		
 		helper.waitFor(half_day_show);
 		helper.highLightElement(driver, half_day_show);
 		helper.move_to_element(half_day_show);
-//		half_day_show.click();
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B>  moveto on half_day_show");
-		Assert.assertTrue(true, "Failed to click on employee_select");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B>  Move-to on half_day_show");
+		Assert.assertTrue(true, "Failed to Move-to on half_day_show");
 		Thread.sleep(4000);
 		
 		
 		helper.waitFor(over_time);
 		helper.highLightElement(driver, over_time);
 		helper.move_to_element(over_time);
-//		over_time.click();
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> moveto on over_time");
-		Assert.assertTrue(true, "Failed to click on employee_select");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> move-to on over_time");
+		Assert.assertTrue(true, "Failed to move-to on over_time");
 		
 		Thread.sleep(4000);
 		helper.waitFor(day_off_show);
 		helper.highLightElement(driver, day_off_show);
 		helper.move_to_element(day_off_show);
-//		day_off_show.click();
-		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> moveto on day_off_show");
-		Assert.assertTrue(true, "Failed to click on employee_select");
+		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> Move-to on day_off_show");
+		Assert.assertTrue(true, "Failed to Move-to on day_off_show");
 		
 		Thread.sleep(4000);
 		helper.waitFor(late_show);
 		helper.highLightElement(driver, late_show);
 		helper.move_to_element(late_show);
-//		late_show.click();
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> moveto on late_show");
-		Assert.assertTrue(true, "Failed to click on employee_select");
+		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> Move-to on late_show");
+		Assert.assertTrue(true, "Failed to Move-to on late_show");
 		
 		Thread.sleep(4000);
 	

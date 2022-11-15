@@ -1,11 +1,9 @@
 package com.emp.testcases;
 
-import java.io.IOException;
 
 import org.testng.annotations.Test;
 
 import com.emp.qa.base.TestBase;
-import com.emp.qa.pages.AbsentOptionToTimesheetsPage;
 import com.emp.qa.pages.HomePage;
 import com.emp.qa.pages.SplitSheetPage;
 
@@ -14,8 +12,7 @@ public class SplitSheetTest extends TestBase {
 	public void SplitSheetTest () throws Exception{
 		SplitSheetPage split=new SplitSheetPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-//		homePage.SkipPopup();
-		homePage.Skip();
+ 
 		homePage.TimeSheets();
 		split.SplitSheetPage();
 	}

@@ -1,5 +1,6 @@
 package com.emp.qa.pages;
 
+import java.awt.AWTException;
 import java.io.IOException;
 import java.time.Duration;
 
@@ -28,48 +29,35 @@ public class EmployeeInsightsPage extends BasePage {
 
 	}
 
-	DataUtility du=new DataUtility();
-	
+	DataUtility du = new DataUtility();
+
 	Helpers helper = new Helpers();
 
-//	@FindBy(xpath = "//a[contains(text(),'Employee Insights')]")
 	@FindBy(xpath = "//a[text()='Employee Insights']")
 	@CacheLookup
 	WebElement Employeeinsights;
 
-	@FindBy(xpath = "//input[contains(@id,'select_date_id')]")
+	@FindBy(xpath = "//input[@id='select_date_id']")
 	@CacheLookup
 	WebElement SelectDateRanges;
 
-	@FindBy(xpath = "//select[@id='roleid']")
+	@FindBy(xpath = "//span[@id='select2-roleid-container']")
 	@CacheLookup
 	WebElement Role;
 
-	@FindBy(xpath = "//select[@id='locationid']")
+	@FindBy(xpath = "//span[@id='select2-locationid-container']")
 	@CacheLookup
 	WebElement Location;
 
-	@FindBy(xpath = "//select[@id='departmentid']")
+	@FindBy(xpath = "//span[@id='select2-departmentid-container']")
 	@CacheLookup
 	WebElement Department;
 
-//	@FindBy(xpath = "//select[@id='employeeid']")
 	@FindBy(xpath = "//span[@id='select2-employeeid-container']")
-
 	@CacheLookup
 	WebElement Employee;
-	
-	@FindBy(xpath = "//*[@id='email']")
-	WebElement user;
-	@FindBy(xpath = "//*[@id='password']")
-	WebElement pwd;
-	
-	@FindBy(xpath = "//*[@id='login-form']/button")
-	WebElement login_button;
-	
-	
 
-	public void EmployeeInsights() throws InterruptedException, IOException {
+	public void EmployeeInsights() throws InterruptedException, IOException, AWTException {
 
 		helper.waitFor(Employeeinsights);
 		helper.highLightElement(driver, Employeeinsights);
@@ -80,54 +68,46 @@ public class EmployeeInsightsPage extends BasePage {
 		helper.waitFor(SelectDateRanges);
 		helper.highLightElement(driver, SelectDateRanges);
 		SelectDateRanges.clear();
-		SelectDateRanges.sendKeys("05062021");
+		SelectDateRanges.sendKeys("05112022");
 		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Monthyear");
 		Assert.assertTrue(true, "Failed to send data to Monthyear");
+		Thread.sleep(2000);
 
 		helper.waitFor(Role);
 		helper.highLightElement(driver, Role);
-		helper.selectDropDownValue(Role, "value", "roles+0");
+        Role.click();
+        helper.robot_Zero_option_selectClick();
 		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Roles_Dropdown");
 		Assert.assertTrue(true, "Failed to clicked on Roles_Drop_Down");
 
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
-		helper.selectDropDownValue(Location, "value", "locs+2");
+		Location.click();
+		helper.robot_Zero_option_selectClick();
 		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Location_Drop_Down");
 		Assert.assertTrue(true, "Failed to click on Location_Drop_Down");
 
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
-		helper.selectDropDownValue(Department, "value", "depts+1");
-		// Department.click();
+		Department.click();
+		helper.robot_Zero_option_selectClick();
+		Department.click();
 		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Department_DropDown");
 		Assert.assertTrue(true, "Failed to click on Department_Dropdown");
 
-		
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id='select2-employeeid-container']"))).click();
-
+		wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id='select2-employeeid-container']")))
+				.click();
 		Employee.click();
+		helper.robot_Zero_option_selectClick();
 		
-//		helper.selectDropDownValue(Employee, "value", "24712");
-
-		// Employee.click();
-		Reporter.log("<B><font color = 'blue'>Stepp6.</font></B> clicked on Employee_Dropdown");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Employee_Dropdown");
 		Assert.assertTrue(true, "Failed to click on Employee__Dropdown");
 
-		driver.switchTo().newWindow(WindowType.TAB);
-		driver.get(du.Data_info("manager_TL_Employee_URL"));
-		
-		
-		
-		user.sendKeys(du.Data_info("manager_TL_Employee_User"));
-		pwd.sendKeys(du.Data_info("manager_TL_Employee_password"));		
-		login_button.click();
-		
-		
 	}
 
 }

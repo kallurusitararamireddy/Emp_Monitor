@@ -53,14 +53,14 @@ public class StorageTypePage extends BasePage {
 		helper.highLightElement(driver,  Add_Storage_Button);
 		Add_Storage_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step2 .</font></B>Clicked on  Add_Storage_Button ");
-		Assert.assertTrue(true, "Failed to Select  Add_Storage_Button");
+		Assert.assertTrue(true, "Failed to click on   Add_Storage_Button");
 		
 		
 		helper.waitFor(Select_Storagetype_Dropdown);
 		helper.highLightElement(driver, Select_Storagetype_Dropdown);
 		helper.selectDropDownValue(Select_Storagetype_Dropdown, "visibletext", "Google Drive");
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B>Clicked on  Select_Storagetype_Dropdown ");
-		Assert.assertTrue(true, "Failed to Select  Select_Storagetype_Dropdown");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on  Storagetype_Dropdown & Select Strorage Type");
+		Assert.assertTrue(true, "Failed to Click on  Storagetype_Dropdown & Select Strorage Type");
 		Thread.sleep(5000);
 	
 }

@@ -11,10 +11,9 @@ public class LocationsAndDepartmentTest extends TestBase {
 	
 	@Test
 	public void LocationsAndDepartmentTest() throws Exception{
-		LocationsAndDepartmentPage 	Location=new LocationsAndDepartmentPage(getDriver());
+	LocationsAndDepartmentPage 	Location=new LocationsAndDepartmentPage(getDriver());
 	HomePage homePage =new HomePage(getDriver());
-//	homePage.SkipPopup();
-	homePage.Skip();
+
 	homePage.ManageLocationsAndDepartmentPage();
 	Location.LocationsAndDepartmentPage();
 }

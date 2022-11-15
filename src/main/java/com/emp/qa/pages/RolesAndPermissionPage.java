@@ -1,5 +1,8 @@
 package com.emp.qa.pages;
 
+import java.awt.AWTException;
+import java.util.Random;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -32,7 +35,7 @@ public class RolesAndPermissionPage extends BasePage {
 	@CacheLookup
 	WebElement Rolename;
 	
-	@FindBy(xpath = "//select[@name='locationDept[1][location]']")
+	@FindBy(xpath = "//*[@id='inputFormRow']/div[1]/div/span/span[1]/span")
 	@CacheLookup
 	WebElement Location;
 	
@@ -47,7 +50,9 @@ public class RolesAndPermissionPage extends BasePage {
 	@FindBy(xpath = "//button[@id='addeditRole']")
 	@CacheLookup
 	WebElement Save_Button;
-	public void RolesAndPermissionPage()throws InterruptedException{
+	
+	
+	public void RolesAndPermissionPage()throws InterruptedException, AWTException{
 		 
 		helper.waitFor(RolesAndPermission);		
 		helper.highLightElement(driver, RolesAndPermission);
@@ -58,43 +63,42 @@ public class RolesAndPermissionPage extends BasePage {
 		helper.waitFor(Addnewrole_Button);		
 		helper.highLightElement(driver, Addnewrole_Button);
 		Addnewrole_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Addnewrole_Button");
-		Assert.assertTrue(true, "Failed To Select Addnewrole_Button");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Add new role_Button");
+		Assert.assertTrue(true, "Failed To click on  Add new role_Button");
+		
+		Random g=new Random();
+		int num=g.nextInt(100);
+		String Act_g="AutomationCode";
+		String Exp_g=Act_g+num;
 		
 		helper.waitFor(Rolename);		
 		helper.highLightElement(driver,Rolename);
-		Rolename.sendKeys("AutomationCode");
+		Rolename.sendKeys(Exp_g);
 		Rolename.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Rolename");
-		Assert.assertTrue(true, "Failed To Select Rolename");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Role-name test field & Entered Role Name ");
+		Assert.assertTrue(true, "Failed To click on Role-name test field & Entered Role Name");
 		
 		helper.waitFor(Location);		
 		helper.highLightElement(driver,Location);
-		helper.selectDropDownValue(Location, "value", "2");
-		//helper.waitFor(Location);
-		helper.jsCLick(Location);
-		//Location.click();
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Location");
-		Assert.assertTrue(true, "Failed To Select Location");
+		helper.move_to_element_click_target(Location);
+		helper.robot_Second_option_selectClick();
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Location Drop-Down & Select Location ");
+		Assert.assertTrue(true, "Failed To click on Location Drop-Down & Select Location");
 		
 		
 		helper.waitFor(Department);		
 		helper.highLightElement(driver,Department);
-		//helper.selectDropDownValue(Department, "value", "1");
-		//helper.jsCLick(Department);
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Department");
-		Assert.assertTrue(true, "Failed To Select Department");
+		helper.move_to_element_click_target(Department);
+		Thread.sleep(1000);
+		helper.robot_frist_option_selectClick();
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Department Drop-Down & Select Department");
+		Assert.assertTrue(true, "Failed To click on Department Drop-Down & Select Department");
 		
-		helper.waitFor(Nodejs);		
-		helper.highLightElement(driver,Nodejs);
-		helper.jsCLick(Nodejs);
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> selected nodejs");
-		Assert.assertTrue(true, "Failed To Select NodeJs value");
 		
 		helper.waitFor(Save_Button);		
 		helper.highLightElement(driver,Save_Button);
-		Save_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on save butto");
+		helper.move_to_element_click_target(Save_Button);
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on save butto");
 		Assert.assertTrue(true, "Failed To clik on save button");
 	
 }

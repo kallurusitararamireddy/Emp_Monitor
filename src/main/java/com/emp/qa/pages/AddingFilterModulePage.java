@@ -23,7 +23,6 @@ public class AddingFilterModulePage extends BasePage{
 	}
 	
 	Helpers helper=new Helpers();
-	//Xls_Reader excel = new Xls_Reader("C:\\Users\\Official\\Downloads\\Employee list - 2021-06-30T121059.194.xlsx");
 	
 	@FindBy(xpath = "//a[@title='Employee-Details']")
 	@CacheLookup
@@ -49,52 +48,34 @@ public class AddingFilterModulePage extends BasePage{
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on EmployeeDetails");
-		Assert.assertTrue(true, "Failed to clickd on EmployeeDetails");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee Module and Selected Employee Details Sub-Module ");
+		Assert.assertTrue(true, "Failed to click on Employee Module and Selected Employee Details Sub-Module");
 		
-		
+		 
 		helper.waitFor(ExportButton);
 		helper.highLightElement(driver, ExportButton);
 		ExportButton.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on ExportButton");
-		Assert.assertTrue(true, "Failed to clickd on ExportButton");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Export Button");
+		Assert.assertTrue(true, "Failed to click on Export Button");
 		
 		helper.waitFor(SelectAll);
 		helper.highLightElement(driver, SelectAll);
 		SelectAll.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on SelectAll");
-		Assert.assertTrue(true, "Failed to clickd on SelectAll");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Select All check Box option");
+		Assert.assertTrue(true, "Failed to Click on Select All check Box option");
 		
 		helper.waitFor(Submit);
 		helper.highLightElement(driver, Submit);
 		helper.Scrollintoview(Submit);
 		Submit.click();
-		//Helpers.getChromeOption();
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Submit");
-		Assert.assertTrue(true, "Failed to clickd on Submit");
-		Thread.sleep(9000);
+
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Submit button");
+		Assert.assertTrue(true, "Failed to click on Submit button");
+		Thread.sleep(6000);
 		
-//		String sheetName = "Employee list";
+		helper.Employees_List_Excel_data();
 		
-//		
-//		String A2=excel.getCellData(sheetName, 1, 1);
-//		System.out.println(A2);
-//		
-//		int rowcount = excel.getRowCount(sheetName);
-//		System.out.println("The number of rows in the Sheet is:"  + rowcount);
-//		int cellcount=excel.getColumnCount(sheetName);
-//		System.out.println("The number of cellcount in the Sheet is:"  + cellcount);
-////		
-////		int s1=excel.getRowvalues(sheetName, 0, 0);
-////		System.out.println(s1);
-////		
-		
-		   
-			
-			
-//			 String s1= excel.IterateRow(sheetName);    
-//			  System.out.println(s1);
-//			
+		Thread.sleep(6000);
 		
 	}
 }

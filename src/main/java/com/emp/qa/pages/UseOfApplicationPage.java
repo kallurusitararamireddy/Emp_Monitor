@@ -1,5 +1,7 @@
 package com.emp.qa.pages;
 
+import java.awt.AWTException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -19,7 +21,6 @@ public class UseOfApplicationPage extends BasePage {
 	}
 	Helpers helper=new Helpers();
 
-	//Xls_Reader excel = new Xls_Reader ("‪C:\\Users\\Official\\Downloads\\NaNDetails (25).xlsx");
 		
 		@FindBy(xpath = "//a[contains(text(),'Web App Usage')]")
 		@CacheLookup
@@ -34,7 +35,7 @@ public class UseOfApplicationPage extends BasePage {
 		WebElement Department;
 		
 		
-		@FindBy(xpath = "//select[@id='EmployeeData']")
+		@FindBy(xpath = "//span[@role='presentation']")
 		@CacheLookup
 		WebElement Employee;
 		
@@ -85,7 +86,7 @@ public class UseOfApplicationPage extends BasePage {
 		WebElement Export_Excel;
 		
 		
-		public void UseOfApplicationPage()throws InterruptedException{
+		public void UseOfApplicationPage()throws InterruptedException, AWTException{
 			
 			
 			helper.waitFor(WebAPPusage);
@@ -96,24 +97,25 @@ public class UseOfApplicationPage extends BasePage {
 
 			helper.waitFor(Location);
 			helper.highLightElement(driver, Location);
-			helper.selectDropDownValue(Location, "visibletext", "Bangalore");
-			Location.click();
-			Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Select Location DropDown");
-			Assert.assertTrue(true, "Failed To Select Location DropDown");
+			helper.move_to_element_click_target(Location);
+			helper.robot_Zero_option_selectClick();
+			Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Select Location DropDown & Select LOcation ");
+			Assert.assertTrue(true, "Failed To Select Location DropDown & Select LOcation  ");
 			
 			helper.waitFor(Department);
 			helper.highLightElement(driver, Department);
-			helper.selectDropDownValue(Department, "index", "1");
-			Department.click();
-			Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Department DropDown");
-			Assert.assertTrue(true, "Failed to Select Department DropDown");
+			helper.move_to_element_click_target(Department);
+			helper.robot_Zero_option_selectClick();
+			Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Department DropDown & Select Department ");
+			Assert.assertTrue(true, "Failed to Select Department DropDown & Select Department");
 			
 			helper.waitFor(Employee);
 			helper.highLightElement(driver, Employee);
-			helper.selectDropDownValue(Employee, "id", "7333");
+//			helper.selectDropDownValue(Employee, "visibletext", "See All Employee");
 			Employee.click();
-			Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on employee DropDown");
-			Assert.assertTrue(true, "Failed Select employee DropDown");
+			helper.robot_Zero_option_selectClick();
+			Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on employee DropDown & Select Employee");
+			Assert.assertTrue(true, "Failed Select employee DropDown & Select Employee");
 			
 
 			
@@ -121,23 +123,24 @@ public class UseOfApplicationPage extends BasePage {
 			helper.waitFor(reportrange);
 			helper.highLightElement(driver, reportrange);
 			helper.jsCLick(reportrange);
-			//reportrange.click();
 			Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on reportrange");
-			Assert.assertTrue(true, "Failed to Select  reportrange");
+			Assert.assertTrue(true, "Failed to click   reportrange");
 			
 			helper.waitFor(Last30days);
 			helper.highLightElement(driver, Last30days);
 			Last30days.click();
 			Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Last30days");
 			Assert.assertTrue(true, "Failed to Select Last30days");
-
+            Thread.sleep(2000);
+			
 			
 			helper.waitFor(Aplication_Button);
 			helper.highLightElement(driver, Aplication_Button);
 			Aplication_Button.click();
 			Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on Aplication_Button");
 			Assert.assertTrue(true, "Failed to Select Aplication_Button");
-			
+            Thread.sleep(2000);
+
 			helper.waitFor(ExceltButton);
 			helper.highLightElement(driver, ExceltButton);
 			helper.Scrollintoview(ExceltButton);
@@ -148,29 +151,6 @@ public class UseOfApplicationPage extends BasePage {
 			
 					
 
-			
-			
-			
-//			 String sheetName = "NaNDetails";
-//			    
-//			    
-//				int rowcount = excel.getRowCount(sheetName);
-//				System.out.println("The number of rows in the Sheet is:"  + rowcount);
-//				int cellcount=excel.getColumnCount(sheetName);
-//				System.out.println("The number of cellcount in the Sheet is:"  + cellcount);			
-//				int S2= excel.getRowvalues(sheetName, 0,1);
-//				System.out.println(S2);
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 			
 	}
 }

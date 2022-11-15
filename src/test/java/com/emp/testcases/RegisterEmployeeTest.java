@@ -14,11 +14,9 @@ public class RegisterEmployeeTest extends TestBase {
 		
 		HomePage homePage =new HomePage(getDriver());
 		RegisterEmployeePage REP=new RegisterEmployeePage(getDriver());
-		//homePage.SkipPopup();
-		homePage.Skip();
-		homePage.clickEmployee();
 		
+		homePage.clickEmployee();
 		REP.RegisterEmployee();
 	}
-
+  
 }

@@ -1,5 +1,6 @@
 package com.emp.qa.pages;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -46,13 +47,17 @@ public class EmployeeAttendanePage extends BasePage {
 	@FindBy(xpath = "//select[@id='DepartementData']")
 	@CacheLookup
 	WebElement Department;
+	
+	@FindBy(xpath = "//select[@id='ShowEntriesList']")
+	@CacheLookup
+	WebElement Select_list;
 
 	@FindBy(xpath = "//button[@id='DownloadButton']")
 	@CacheLookup
 	WebElement ExportExcel;
 
-//	@FindBy(xpath = "//a[contains(text(),'DESKTOP-9EVJM5N - Gohar')]")
-	@FindBy(xpath = "//a[contains(text(),'HCL-PC - Globussoft')]")
+
+	@FindBy(xpath = "//*[@id='AttendanceListData']/tr[3]/td[1]/a")
 	@CacheLookup
 	WebElement Employeename;
 
@@ -88,7 +93,7 @@ public class EmployeeAttendanePage extends BasePage {
 	@CacheLookup
 	WebElement Analysis;
 
-	public void EmployeeAttendance() throws InterruptedException {
+	public void EmployeeAttendance() throws InterruptedException, IOException {
 
 		helper.waitFor(EmployeeAttendance);
 		helper.highLightElement(driver, EmployeeAttendance);
@@ -111,27 +116,37 @@ public class EmployeeAttendanePage extends BasePage {
 
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
-		helper.selectDropDownValue(Location, "visibletext", "Bangalore");
+		helper.selectDropDownValue(Location, "value", "null");
 		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Location_DropDown");
 		Assert.assertTrue(true, "Failed click on Location_DropDown");
 
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
-		helper.selectDropDownValue(Department, "index", "1");
+		helper.selectDropDownValue(Department, "id", "null");
 		Department.click();
 		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Department_DropDown");
 		Assert.assertTrue(true, "Failed to click on Department_DropDown");
+		
+		helper.waitFor(Select_list);
+		helper.highLightElement(driver, Select_list);
+		helper.selectDropDownValue(Department, "id", "null");
+		Select_list.click();
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Select_list");
+		Assert.assertTrue(true, "Failed to click on Select_list");
+		
 
 		helper.waitFor(ExportExcel);
 		helper.highLightElement(driver, ExportExcel);
-
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@id='DownloadButton']"))).click();
 
 		ExportExcel.click();
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on ExportExcel_Button");
+		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on ExportExcel_Button");
 		Assert.assertTrue(true, "Failed to click on ExportExcel_Button");
 		Thread.sleep(7000);
+		
+		
+		
 
 		/*
 		 *  Select Employee
@@ -140,32 +155,27 @@ public class EmployeeAttendanePage extends BasePage {
 		helper.waitFor(Employeename);
 		helper.highLightElement(driver, Employeename);
 		Employeename.click();
-		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> click on Employeename");
+		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> click on Employeename");
 		Assert.assertTrue(true, "Failed to click on Employeename");
 
 		helper.waitFor(productivity);
 		helper.highLightElement(driver, productivity);
 		productivity.click();
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on productivity_Button");
+		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on productivity_Button");
 		Assert.assertTrue(true, "Failed to click on productivity_Button");
 
 		helper.waitFor(Timesheets);
 		helper.highLightElement(driver, Timesheets);
 		Timesheets.click();
-		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> click on Timesheets_Button");
+		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> click on Timesheets_Button");
 		Assert.assertTrue(true, "Failed to click onTimesheets_Button");
 
 		helper.waitFor(Screenshots);
 		helper.highLightElement(driver, Screenshots);
 		Screenshots.click();
-		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on Screenshots_Button");
+		Reporter.log("<B><font color = 'blue'>Step11.</font></B> clicked on Screenshots_Button");
 		Assert.assertTrue(true, "Failed to click Screenshots_Button");
 
-		helper.waitFor(ScreenRecorder);
-		helper.highLightElement(driver, ScreenRecorder);
-		ScreenRecorder.click();
-		Reporter.log("<B><font color = 'blue'>Step11.</font></B> clicked on ScreenRecorder_Button");
-		Assert.assertTrue(true, "Failed to click on ScreenRecorder_Button");
 
 		helper.waitFor(Webhistory);
 		helper.highLightElement(driver, Webhistory);
@@ -184,12 +194,15 @@ public class EmployeeAttendanePage extends BasePage {
 		Keystrokes.click();
 		Reporter.log("<B><font color = 'blue'>Step14.</font></B> clicked on Keystrokes");
 		Assert.assertTrue(true, "Failed to click on Keystrokes_Button");
+		
+		
+		Thread.sleep(3000);
+		
+		helper.Employee_Attendance_sheet_Excel_data();
+		
+		Thread.sleep(6000);
+ 
 
-		helper.waitFor(Analysis);
-		helper.highLightElement(driver, Analysis);
-		Analysis.click();
-		Reporter.log("<B><font color = 'blue'>Step15.</font></B> clicked on Analysis_Button");
-		Assert.assertTrue(true, "Failed to click on Analysis_Button");
 
 	}
 

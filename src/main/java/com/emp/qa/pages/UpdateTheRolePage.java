@@ -1,5 +1,7 @@
 package com.emp.qa.pages;
 
+import java.awt.AWTException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -24,15 +26,18 @@ public class UpdateTheRolePage extends BasePage{
 	@CacheLookup
 	WebElement EmployeeDetails;
 	
-	@FindBy(xpath = "//body/div[1]/div[1]/div[8]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]")
+//	@FindBy(xpath = "//body/div[1]/div[1]/div[8]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]")
+	@FindBy(xpath = "//*[@id=\"main-wrapper\"]/div[2]/div[2]/div[2]/div/div/div[4]")
 	@CacheLookup
 	WebElement Scroller;
 	
-	@FindBy(xpath = "//tbody/tr[@id='24756']/td[@id='act24756']/a[@id='upgrade']/i[1]")
+//	@FindBy(xpath = "//tbody/tr[@id='24756']/td[@id='act24756']/a[@id='upgrade']/i[1]")
+	@FindBy(xpath = "//*[@id=\"upgrade\" and @data-id=\"25499\"]/i")
 	WebElement UpdateTheRole;
 	
 	
-	@FindBy(xpath = "//select[@id='AllRolesAppend']")
+//	@FindBy(xpath = "//select[@id='AllRolesAppend']") 
+	@FindBy(xpath = "//*[@id=\"upgradeManagerModal\"]/div/div/div[2]/span[1]/span[1]/span/ul")
 	WebElement WhichRole;
 	
 	@FindBy(xpath = "//button[@id='UpgradeHide']")
@@ -41,7 +46,7 @@ public class UpdateTheRolePage extends BasePage{
 	
 	
 	
-	public  void UpdateTheRole() throws InterruptedException {
+	public  void UpdateTheRole() throws InterruptedException, AWTException {
 		
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
@@ -58,19 +63,20 @@ public class UpdateTheRolePage extends BasePage{
 		
 		helper.waitFor(UpdateTheRole);
 		helper.highLightElement(driver, UpdateTheRole);
-		helper.jsCLick(UpdateTheRole);
+		helper.jsCLick(UpdateTheRole); 
 		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Updated the role");
 		Assert.assertTrue(true, "Failed to Update the role");
 		
 		
 		helper.waitFor(WhichRole);
 		helper.highLightElement(driver, WhichRole);
-		helper.jsCLick(WhichRole);
-		helper.selectDropDownValue(WhichRole, "value", "230");
+//		helper.jsCLick(WhichRole);
+//		helper.selectDropDownValue(WhichRole, "value", "230");
+		helper.robot_Second_option_selectClick();
 		Reporter.log("<B><font color = 'blue'>Step30.</font></B> Selected  the role");
 		Assert.assertTrue(true, "Failed to Select the role");
 		
-		
+		   
 		helper.waitFor(Yes_Button);
 		helper.highLightElement(driver, Yes_Button);
 		helper.jsCLick(Yes_Button);

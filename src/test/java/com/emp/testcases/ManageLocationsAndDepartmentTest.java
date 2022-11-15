@@ -15,8 +15,7 @@ public class ManageLocationsAndDepartmentTest extends TestBase{
 	public void ManageLocationsAndDepartmentTest() throws Exception{
 	ManageLocationsAndDepartmentPage ManageLocations=new ManageLocationsAndDepartmentPage(getDriver());
 	HomePage homePage =new HomePage(getDriver());
-//	homePage.SkipPopup();
-	homePage.Skip();
+
 	homePage.ManageLocationsAndDepartmentPage();
 	ManageLocations.ManageLocationsAndDepartmentPage();
 }

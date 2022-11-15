@@ -1,5 +1,6 @@
 package com.emp.qa.pages;
 
+import java.awt.AWTException;
 import java.time.Duration;
 import java.util.Set;
 
@@ -16,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-import com.emp.qa.base.TestBase;
+import com.emp.qa.base.TestBase; 
 import com.emp.qa.util.DataUtility;
 import com.emp.qa.util.Helpers;
 
@@ -26,6 +27,10 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		super(driver);
 		
 	}
+	
+	/*
+	 *  HRMS Checking 
+	 */
 
 	DataUtility du = new DataUtility();
 	Helpers helper = new Helpers();
@@ -46,12 +51,11 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 
 	/* Change with employee Id */
 
-	@FindBy(xpath = "//*[@id='fn25642']")
+	@FindBy(xpath = "//*[@id='fn25453']")
 	@CacheLookup
 	WebElement employee_select;
 
-	@FindBy(xpath = "//*[@id='main-wrapper']/div[1]/a[2]")
-	String X_path="//*[@id='main-wrapper']/div[1]/a[2]";
+	@FindBy(xpath = "(//a[contains(text(),'Settings')])[2]")
 	@CacheLookup
 	WebElement settings;
 
@@ -93,8 +97,6 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 	WebElement Attendance;
 
 
-//	@FindBy(xpath = "//*[@id='clock_in']")
-//	@FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/a[1]")
 	@FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/a[1]")
 	WebElement checkin_button;
 
@@ -102,7 +104,7 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		
 	}
 
-	public void Employeecheckin() throws InterruptedException {
+	public void Employeecheckin() throws InterruptedException, AWTException {
 
 
 		helper.waitFor(Employee);
@@ -110,7 +112,8 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		Employee.click();
 		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee");
 		Assert.assertTrue(true, "Failed to click on Employee");
-
+        Thread.sleep(1000);
+        
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
@@ -118,12 +121,12 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		Assert.assertTrue(true, "Failed to click on EmployeeDetails");
 
 		helper.highLightElement(driver, ShowEntries);
-		helper.selectDropDownValue(ShowEntries, "index", "2");
 		ShowEntries.click();
+        helper.robot_fourth_option_selectClick();
 		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Show-Entries");
 		Assert.assertTrue(true, "Failed to clicked on Show-Entries");
 
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 
 		helper.waitFor(employee_select);
 		helper.highLightElement(driver, employee_select);
@@ -136,8 +139,7 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 
 		helper.waitFor(settings);
 		helper.highLightElement(driver, settings);
-		helper.expility_Wait_2(X_path);
-		settings.click();
+		helper.move_to_element_click_target(settings);
 		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on settings");
 		Assert.assertTrue(true, "Failed to click on settings");
 
@@ -257,7 +259,6 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		Reporter.log("<B><font color = 'blue'>Step16 .</font></B> clicked on Attendance");
 		Assert.assertTrue(true, "Failed to click on Attendance");
 
-		Thread.sleep(3000);
 
 		Thread.sleep(5000);		
 
@@ -277,7 +278,6 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		helper.waitFor(checkin_button);
 		helper.highLightElement(driver, checkin_button);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-//		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/a[1]"))).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='btn btn-danger float-right']"))).click();
 		checkin_button.click();
 		Reporter.log("<B><font color = 'blue'>Step17 .</font></B> clicked on checkin_button");
@@ -292,7 +292,6 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		helper.waitFor(checkin_button);
 		helper.highLightElement(driver, checkin_button);
 		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(20));
-//		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/a[1]"))).click();
 		wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='btn btn-danger float-right']"))).click();
 		checkin_button.click();
 		Reporter.log("<B><font color = 'blue'>Step17 .</font></B> clicked on checkin_button");

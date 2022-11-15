@@ -15,7 +15,6 @@ public class ActivatingSuspendedEmployeesTest extends TestBase {
 		HomePage homePage =new HomePage(getDriver());
 		ActivatingSuspendedEmployeesPage activatesuspend = new ActivatingSuspendedEmployeesPage(getDriver());
 		homePage.clickEmployee();
-		homePage.Skip();
 		activatesuspend.suspendedemployee();
 	}
 

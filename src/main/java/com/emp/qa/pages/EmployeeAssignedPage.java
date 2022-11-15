@@ -31,28 +31,23 @@ public class EmployeeAssignedPage extends BasePage {
 			@CacheLookup
 			WebElement EmployeeDetails;
 			
-			@FindBy(xpath = "//body/div[1]/div[1]/div[8]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]")
+			@FindBy(xpath = "//*[@id='main-wrapper']/div[2]/div[2]/div[2]/div/div/div[4]/div")
 			@CacheLookup
 			WebElement Scroller;
 			
-//			@FindBy(xpath = "//tbody/tr[@id='24756']/td[@id='act24756']/a[3]/i[1]")
 			@FindBy(xpath = "(//*[@id='editedId']/i)[2]")
 			WebElement EmployeeAssigned;
 			
 			@FindBy(xpath = "//select[@id='CompletRoles1']")
-			WebElement SelectRole;
+			WebElement SelectRole_dropdown_list; 
 			
-			@FindBy(xpath = "//select[@id='CompletRoles1']//option[@id='340']")
-			WebElement ABCDEFHKK;
+			@FindBy(xpath = "//*[@id='CompletRoles1']/option[@id='560']")
+			WebElement select_role;
 			
-//			@FindBy(xpath = "//select[@id='AppendManagerList']")
 			@FindBy(xpath = "(//ul[@class='select2-selection__rendered'])[7]")
 			WebElement SelectEmployee;
 			
-			
-//			@FindBy(xpath = "//li[@id='select2-AppendManagerList-result-s02g-24614']")
-//			WebElement TestBulk;
-			
+		
 			
 			@FindBy(xpath = "//*[@id='AssignButton']")
 			WebElement Assign_Button;
@@ -65,15 +60,15 @@ public class EmployeeAssignedPage extends BasePage {
 				    helper.waitFor(EmployeeDetails);
 					helper.highLightElement(driver, EmployeeDetails);
 					EmployeeDetails.click();
-					Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on EmployeeDetails");
-					Assert.assertTrue(true, "Failed to click on EmployeeDetails");	 
+					Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee_Details");
+					Assert.assertTrue(true, "Failed to click on Employee_Details");	 
 		             
 					
-					helper.waitFor(Scroller);
+					helper.waitFor(Scroller); 
 					helper.highLightElement(driver,Scroller);
 					helper.Scrollintoview(Scroller);
-					Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Scroller");
-					Assert.assertTrue(true, "Failed to click on Scroller");
+					Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Scroller view ");
+					Assert.assertTrue(true, "Failed to click on Scroller view ");
 					
 					
 					helper.waitFor(EmployeeAssigned);
@@ -83,23 +78,21 @@ public class EmployeeAssignedPage extends BasePage {
 					Reporter.log("<B><font color = 'blue'>Step3.</font></B> Selected EmployeeAssigned");
 					Assert.assertTrue(true, "Failed to Select EmployeeAssigned");
 					
-					helper.waitFor(SelectRole);
-					helper.highLightElement(driver, SelectRole);
-					helper.Scrollintoview(SelectRole);
+					helper.waitFor(SelectRole_dropdown_list);
+					helper.highLightElement(driver, SelectRole_dropdown_list);
+					helper.Scrollintoview(SelectRole_dropdown_list);
 					Reporter.log("<B><font color = 'blue'>Step4.</font></B> Selected The Role");
 					Assert.assertTrue(true, "Failed to Select The Role");
 					
-					
-					helper.waitFor(ABCDEFHKK);
-					helper.highLightElement(driver, ABCDEFHKK);
-					ABCDEFHKK.click();
-					Reporter.log("<B><font color = 'blue'>Step5.</font></B> Selected ABCDEFHKK");
-					Assert.assertTrue(true, "Failed to Select ABCDEFHKK");
+					 
+					helper.waitFor(select_role);
+					helper.highLightElement(driver, select_role);
+					select_role.click();
+					Reporter.log("<B><font color = 'blue'>Step5.</font></B> Selected Employee");
+					Assert.assertTrue(true, "Failed to Select Employee");
 					
 					helper.waitFor(SelectEmployee);
-					helper.highLightElement(driver, SelectEmployee);
-//					helper.selectDropDownValue(SelectEmployee, "value", "24614");
-					
+					helper.highLightElement(driver, SelectEmployee);	
 					SelectEmployee.click();
 					Robot r=new Robot();
 					r.keyPress(KeyEvent.VK_DOWN);

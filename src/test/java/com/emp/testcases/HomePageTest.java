@@ -10,7 +10,6 @@ public class HomePageTest extends TestBase{
 	@Test
 	public void HomepageDisplaytest() throws InterruptedException{		
 		HomePage homePage =new HomePage(getDriver());
-		//homePage.SkipPopup();
 		homePage.clickDashboard();
 
 }
