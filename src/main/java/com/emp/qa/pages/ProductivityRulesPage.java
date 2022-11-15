@@ -136,14 +136,10 @@ public class ProductivityRulesPage extends BasePage {
 		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on New_Button");
 		Assert.assertTrue(true, "Failed To Select New_Button");
 		Thread.sleep(5000);
+		
 		driver.navigate().refresh();
 		
-//		helper.waitFor(Website_Button);		
-//		helper.highLightElement(driver, Website_Button);
-//		Website_Button.click();
-//		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on Website_Button");
-//		Assert.assertTrue(true, "Failed To Select Website_Button");
-//		Thread.sleep(5000);
+
 		
 		
 		helper.waitFor(Addnew_Domain);		
@@ -172,13 +168,6 @@ public class ProductivityRulesPage extends BasePage {
 		Assert.assertTrue(true, "Failed To Click Save_Button");
 		Thread.sleep(5000);
 		
-		
-//		helper.waitFor(SearchBar);		
-//		helper.highLightElement(driver, SearchBar);
-//		SearchBar.sendKeys("www.seleniumhq.com");
-//		SearchBar.click();
-//		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on SearchBar");
-//		Assert.assertTrue(true, "Failed To SearchBar");
 		
 		helper.waitFor(Export_Button);		
 		helper.highLightElement(driver, Export_Button);

@@ -1,0 +1,58 @@
+--------- Manager -  TL -  Employees Login_Credentials  ------------
+ 
+manager_TL_Employee_URL=https://app.dev.empmonitor.com/login
+manager_TL_Employee_User=karam@gmail.com
+manager_TL_Employee_password=Karam@123
+ 
+ 
+ 
+==============*********    Excel   files paths  *********===================================
+
+          1)  Module Name :- DashBoard  (Down_loaded Files )
+ 
+Total_Enrollments=C:\\EMP Monitor\\Emp_Monitor\\screenshots\\Dashboard_.xlsx
+Dashboard_Currently_active_Users=C:\\EMP Monitor\\Emp_Monitor\\screenshots\\Dashboard_Currently active Users.xlsx
+Currently_idle=C:\\EMP Monitor\\Emp_Monitor\\screenshots\\Dashboard_Idle Users.xlsx
+Currently_offline=C:\\EMP Monitor\\Emp_Monitor\\screenshots\\Dashboard_offline Users.xlsx
+Absent_Users=C:\\EMP Monitor\\Emp_Monitor\\screenshots\\Dashboard_Absent Users.xlsx
+Suspended_Users=C:\\EMP Monitor\\Emp_Monitor\\screenshots\\Dashboard_Suspended Users.xlsx
+
+
+
+           2)  Module Name :- Employee  (Down_loaded Files )
+           
+Employees_List=C:\\EMP Monitor\\Emp_Monitor\\screenshots\\Employee list.xlsx
+Employee_Attendance_sheet=C:\\EMP Monitor\\Emp_Monitor\\screenshots\\Employees Attendance(November_2022) .xlsx           
+ 
+ 
+           6)  Module Name :- Reports  (Down_loaded Files )
+    
+Both_button=C:\\EMP Monitor\\Emp_Monitor\\screenshots\\Website And Applications.xlsx           
+CumulativeReportSheet=C:\\EMP Monitor\\Emp_Monitor\\screenshots\\CumulativeReportSheet.xlsx        
+ 
+ 
+ ===============********  PDF  files  Paths  ************==========================================
+ 
+ 
+              3)  Module Name :- Time Sheets   (Down_loaded Files )
+Time_Sheets_data_PDF_file=C:\\EMP Monitor\\Emp_Monitor\\screenshots\\Attendance History.pdf
+
+             6)  Module Name :- Reports  (Down_loaded Files )
+Productivity_Reports_pdf=C:\\EMP Monitor\\Emp_Monitor\\screenshots\\Productivity Reports.pdf             
+pdf_web_and_app=C:\\EMP Monitor\\Emp_Monitor\\screenshots\\Websites Details.pdf       
+ 
+ 
+ 
+ 
+ 
+ ---------------------   CSV Files paths  -----------------------------------
+ 
+       3)  Module Name :- Time Sheets   (Down_loaded Files )
+Time_Sheets_data=C:\\EMP Monitor\\Emp_Monitor\\screenshots\\Attendance History.csv
+Attendance_History=C:\\EMP Monitor\\Emp_Monitor\\screenshots\\Attendance History.xlsx
+
+
+
+        6)  Module Name :- Reports  (Down_loaded Files )
+Productivity_Reports_csv=C:\\EMP Monitor\\Emp_Monitor\\screenshots\\Productivity Reports.csv
+ 

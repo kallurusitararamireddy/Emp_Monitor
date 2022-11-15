@@ -13,8 +13,7 @@ public class TimeClaimTest extends TestBase {
 	public void TimeClaimTest() throws Exception{
 		TimeClaimPage Timeclaim=new TimeClaimPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-//		homePage.SkipPopup();
-		homePage.Skip();
+
 		homePage.TimeClaim();
 		Timeclaim.TimeClaimPage();
 	

@@ -12,7 +12,7 @@ public class Attandence_tool_tip_check_Test extends  TestBase
 	public void Attendance_Tool_tip_Showing() throws InterruptedException
 	{
 		Attandence_tool_tip_check_Page tool=new Attandence_tool_tip_check_Page(getDriver());
-		tool.Tool_Tip_showing();
+		tool.Tool_Tip_showing(); 
 	}
 
 }

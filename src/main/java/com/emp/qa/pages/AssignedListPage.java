@@ -1,5 +1,6 @@
 package com.emp.qa.pages;
 
+import java.awt.AWTException;
 import java.io.FileInputStream;
 import java.io.IOException;
 
@@ -12,6 +13,7 @@ import org.testng.Reporter;
 
 import com.emp.qa.base.TestBase;
 import com.emp.qa.util.Helpers;
+import com.opencsv.exceptions.CsvException;
 
 
 
@@ -24,11 +26,10 @@ public class AssignedListPage extends BasePage {
 	
 	
 	Helpers helper=new Helpers();
-	//Xls_Reader excel = new Xls_Reader("C:\\Users\\Official\\Downloads\\Attendance History - 2021-07-07T132006.363.csv");
 	
 
 
-	
+
 	@FindBy(xpath = "//i[@class='menu-icon icon-home4']")
 	@CacheLookup
 	WebElement Timesheets;
@@ -41,11 +42,10 @@ public class AssignedListPage extends BasePage {
 	@CacheLookup
 	WebElement Department;
 	
-	@FindBy(xpath = "//select[@id='employee']")
+	@FindBy(xpath = "//*[@id='select2-employee-container']")
 	@CacheLookup
 	WebElement Employee;
 	
-//	@FindBy(xpath = "//div[@id='reportrange']")
 	@FindBy(xpath = "//div[@id='reportranges']/i")
 	@CacheLookup
 	WebElement selectdateranges;
@@ -68,7 +68,7 @@ public class AssignedListPage extends BasePage {
 	@CacheLookup
 	WebElement selectall;
 	
-	@FindBy(xpath = "//body/div[1]/div[1]/form[1]/div[1]/div[1]/div[2]/div[2]/ul[1]/li[5]/input[1]")
+	@FindBy(xpath = "//*[@id='Manager_List_Id']/input")
 	@CacheLookup
 	WebElement AssignedList;
 	
@@ -76,43 +76,40 @@ public class AssignedListPage extends BasePage {
 	@CacheLookup
 	WebElement Submit;
 	
-	public  void AssignedList() throws InterruptedException, IOException {
+	public  void AssignedList() throws InterruptedException, IOException, AWTException, CsvException {
 		
 		
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
-		helper.selectDropDownValue(Location, "visibletext", "Bangalore");
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B>Selected Banglore from the loction Dropdown");
-		Assert.assertTrue(true, "Failed to Select a value from the Locaton Drpdown");
-		
+		helper.selectDropDownValue(Location, "visibletext", " See All");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Location Drop-down and Selected Any Location");
+		Assert.assertTrue(true, "Failed to Click on Location Drop-down and Selected Any Location");
+		  
 
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
-		helper.selectDropDownValue(Department, "value", "1");
-		//Department.click();
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Department dropdown");
-		Assert.assertTrue(true, "Failed to Select Department");
+		helper.selectDropDownValue(Department, "value", "0");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Department dropdown & Select Any Department");
+		Assert.assertTrue(true, "Failed to click on Department dropdown & Select Any Department");
 		
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
-		helper.selectDropDownValue(Employee, "value", "0");
-		//Employee.click();
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Employee dropdown");
-		Assert.assertTrue(true, "Failed to Select Employee");
+		helper.move_to_element_click_target(Employee);
+		helper.robot_Zero_option_selectClick();
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Employee dropdown & Select Any  Employee");
+		Assert.assertTrue(true, "Failed to Select Employee & Select Any Employee ");
 		
 		helper.waitFor(selectdateranges);
 		helper.highLightElement(driver, selectdateranges);
-		//helper.selectDropDownValue(Date, "visibletext", "Yesterday");
 		selectdateranges.click();
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on selectdateranges");
-		Assert.assertTrue(true, "Failed toselectdateranges");
+		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on Calendar Drop-down and Selected Day's");
+		Assert.assertTrue(true, "Failed to click on  Calendar Drop-down and Selected Day's");
 		
 		helper.waitFor(Last30days);
 		helper.highLightElement(driver, Last30days);
-		//helper.selectDropDownValue(Date, "visibletext", "Yesterday");
 		Last30days.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Last30days");
-		Assert.assertTrue(true, "Failed to select Last30days");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> Selected   Last-30-days");
+		Assert.assertTrue(true, "Failed to select Last-30-days");
 		
 		
 		
@@ -126,36 +123,23 @@ public class AssignedListPage extends BasePage {
 		helper.highLightElement(driver, AssignedList);
 		helper.Scrollintoview(AssignedList);
 		AssignedList.click();
-		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on AssignedList  checkBox");
-		Assert.assertTrue(true, "Failed to click on AssignedList ChekBox");
-		
-
+		Reporter.log("<B><font color = 'blue'>Step7.</font></B> Selected  Assigned-List  (check-Box click)");
+		Assert.assertTrue(true, "Failed to Select  Assigned-List  (check-Box click)");
 		
 		helper.waitFor(Submit);
 		helper.highLightElement(driver, Submit);
 		helper.Scrollintoview(Submit);
 		Thread.sleep(3000);
 		helper.jsCLick(Submit);
-		//Submit.click();
-		Reporter.log("<B><font color = 'blue'>Step8.</font></B> clicked on Submit Button");
-		Assert.assertTrue(true, "Failed to click on Submit Button");
+		Reporter.log("<B><font color = 'blue'>Step8.</font></B> clicked on Submit-Button");
+		Assert.assertTrue(true, "Failed to click on Submit-Button");
+		Thread.sleep(3000);
 		
+		helper.Time_Sheets_CSV_Dot_files();
 		
-		
-//		         String sheetName = "Attendance History - 2021-07-07";
-		         
-				  
-				  
-//				    int rowcount = excel.getRowCount(sheetName);
-//					System.out.println("The number of rows in the Sheet is:"  + rowcount);
-//					int columncount=excel.getColumnCount(sheetName);
-//					System.out.println("The number of columns  in the Sheet is:"  + columncount);
-//					
-//					int S2= excel.getRowvalues(sheetName, 0,0);
-//					  System.out.println(S2);
-//					  
-//					 
+		Thread.sleep(3000);
 
+		         
       
 
 		

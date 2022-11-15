@@ -21,11 +21,13 @@ public class TrackUserSettingsFixedPage extends BasePage{
 	@CacheLookup
 	WebElement EmployeeDetails;
 	
-	@FindBy(xpath = "//body/div[1]/div[1]/div[8]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]")
+//	@FindBy(xpath = "//body/div[1]/div[1]/div[8]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]")
+	@FindBy(xpath = "//*[@id=\"main-wrapper\"]/div[2]/div[2]/div[2]/div/div/div[4]")
 	@CacheLookup
 	WebElement Scroller;
 	
-	@FindBy(xpath = "//tbody/tr[@id='24756']/td[@id='act24756']/a[1]/i[1]")
+//	@FindBy(xpath = "//tbody/tr[@id='24756']/td[@id='act24756']/a[1]/i[1]")
+	@FindBy(xpath = "//*[@id=\"act25499\"]/a[1]/i")
 	WebElement TrackuserSettings;
 	
 	@FindBy(xpath = "//select[@id='AppliedSetting']")

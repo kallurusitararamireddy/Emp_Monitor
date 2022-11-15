@@ -13,7 +13,7 @@ public class AutoEmailReportsTest extends TestBase {
 	public void AutoEmailReportsTest() throws InterruptedException{
 		AutoEmailReportsPage AutoemailR=new AutoEmailReportsPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-		//shomePage.SkipPopup();
+ 
 		homePage.ReportsDownloadPage();
 		AutoemailR.AutoEmailReportsPage();
 	

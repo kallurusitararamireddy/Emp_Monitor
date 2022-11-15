@@ -13,8 +13,8 @@ public class LocalizationTest extends TestBase {
 	public void LocalizationTest() throws Exception{
 		LocaliationPage Localization=new LocaliationPage(getDriver());
 	HomePage homePage =new HomePage(getDriver());
-//	homePage.SkipPopup();
-	homePage.Skip();
+
+	
 	homePage.ManageLocationsAndDepartmentPage();
 	Localization.LocaliationPage();
 

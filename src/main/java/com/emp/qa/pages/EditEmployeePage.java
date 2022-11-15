@@ -29,12 +29,9 @@ public class EditEmployeePage extends BasePage {
 	@CacheLookup
 	WebElement EmployeeDetails;
 
-	@FindBy(xpath = "//body/div[1]/div[1]/div[8]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]")
-	@CacheLookup
-	WebElement Scroller;
 
-//	@FindBy(xpath = "//tbody/tr[@id='24768']/td[@id='act24768']/a[5]/i[1]")
-	@FindBy(xpath = "//td[@id='act25629']/a[5]")
+
+	@FindBy(xpath = "//*[@id='one25486']/td[10]/a[5]")
 	@CacheLookup
 	WebElement EditEmployee;
 
@@ -58,19 +55,13 @@ public class EditEmployeePage extends BasePage {
 		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on EmployeeDetails");
 		Assert.assertTrue(true, "Failed to click on EmployeeDetails");
 
-		helper.waitFor(Scroller);
-		helper.highLightElement(driver, Scroller);
-		helper.Scrollintoview(Scroller);
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Scroller");
-		Assert.assertTrue(true, "Failed to click on Scroller");
+
 
 		helper.waitFor(EditEmployee);
 		helper.highLightElement(driver, EditEmployee);
-		helper.jsCLick(EditEmployee);
-		helper.Scrollintoview(EditEmployee);
+		helper.move_to_element_click(EditEmployee); 
 		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on EditEmployee");
 		Assert.assertTrue(true, "Failed to click on EditEmployee");
-
 
 
 		helper.waitFor(LastName);

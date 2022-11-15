@@ -8,12 +8,15 @@ import com.emp.qa.pages.HomePage;
 
 public class Employee_manually_checking_Check_in_Test extends  TestBase
 {
+	@SuppressWarnings("unused")
 	@Test
 	public void  Employee_manually_check_in() throws Exception
 	{
+		/*
+		 *  HRMS Checking 
+		 */
 	HomePage homePage =new HomePage(getDriver());
-	homePage.Skip();
-
+	homePage.clickEmployee();
 	Employee_manually_checking_Check_in_Page admin_change=new Employee_manually_checking_Check_in_Page(getDriver());
 	admin_change.Employeecheckin();
 		

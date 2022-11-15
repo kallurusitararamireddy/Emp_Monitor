@@ -16,8 +16,7 @@ public class EditEmployeeTest extends TestBase {
 		
 		HomePage homePage =new HomePage(getDriver());
 		EditEmployeePage EditEmployee = new EditEmployeePage(getDriver());
-//		homePage.SkipPopup();
-		homePage.Skip();
+
 		homePage.clickEmployee();
 		EditEmployee.EditEmployee();
 			

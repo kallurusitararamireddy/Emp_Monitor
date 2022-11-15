@@ -1,5 +1,7 @@
 package com.emp.testcases;
 
+import java.awt.AWTException;
+
 import org.testng.annotations.Test;
 
 import com.emp.qa.base.TestBase;
@@ -9,10 +11,10 @@ import com.emp.qa.pages.TimeClaimPage;
 
 public class ReportsDownloadTest extends TestBase {
 	@Test
-	public void ReportsDownloadTes() throws InterruptedException{
+	public void ReportsDownloadTes() throws InterruptedException, AWTException{
 		ReportsDownloadPage ReportD=new ReportsDownloadPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-		//homePage.SkipPopup();
+
 		homePage.ReportsDownloadPage();
 		ReportD.ReportsDownloadPage();
 

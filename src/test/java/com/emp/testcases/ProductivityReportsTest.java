@@ -1,24 +1,32 @@
 package com.emp.testcases;
 
-import java.awt.AWTException;
 
 import org.testng.annotations.Test;
 
 import com.emp.qa.base.TestBase;
 import com.emp.qa.pages.HomePage;
 import com.emp.qa.pages.ProductivityReportsPage;
-import com.emp.qa.pages.ReportsDownloadPage;
 
 public class ProductivityReportsTest extends TestBase {
 	
-	@Test
-	public void ProductivityReportsTest() throws Exception{
+	@Test(priority = 1)
+	public void ProductivityReportsTest1() throws Exception{
 		ProductivityReportsPage productivityR=new ProductivityReportsPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-//		homePage.SkipPopup();
-		homePage.Skip();
+
 		homePage.ReportsDownloadPage();
-		productivityR.ProductivityReportsPage();
+		productivityR.ProductivityReports_pdf();
 
 }
+	
+	@Test(priority = 2)
+	public void ProductivityReportsTest2() throws Exception{
+		ProductivityReportsPage productivityR=new ProductivityReportsPage(getDriver());
+		HomePage homePage =new HomePage(getDriver());
+
+		homePage.ReportsDownloadPage();
+		productivityR.ProductivityReports_CSV();
+
+}
+	
 }

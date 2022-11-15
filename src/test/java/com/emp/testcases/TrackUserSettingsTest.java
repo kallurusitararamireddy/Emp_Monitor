@@ -12,10 +12,14 @@ public class TrackUserSettingsTest extends TestBase {
 	@Test
 	public void TrackUserSettingsTest() throws InterruptedException{
 		
+		/* NOTE:- 
+		 *  must be Change or  find TrackingUserSettings  id=---?
+		 */
+		
 		HomePage homePage =new HomePage(getDriver());
 		TrackUserSettingsPage Trackuser = new TrackUserSettingsPage(getDriver());
-		homePage.SkipPopup();
-		homePage.clickEmployee();
+//		homePage.SkipPopup();
+		homePage.clickEmployee(); 
 		Trackuser.TrackUserSettings();
 	
 }

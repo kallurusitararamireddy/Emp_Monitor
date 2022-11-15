@@ -105,16 +105,16 @@ public class AutoEmailReportsPage extends BasePage {
 		helper.highLightElement(driver,ShowEntries);
 		helper.selectDropDownValue(ShowEntries, "index", "4");
 		ShowEntries.click();
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Show-Entries Drop-Down");
-		Assert.assertTrue(true, "Failed to click on Show-Entries Drop-Down");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Show-Entries Drop-Down Selected Value ");
+		Assert.assertTrue(true, "Failed to click on on Show-Entries Drop-Down Selected Value");
 		
 		helper.waitFor(SelectNewReport);
 		helper.highLightElement(driver,SelectNewReport);
 		SelectNewReport.click();
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Select-New-Report");
-		Assert.assertTrue(true, "Failed to click on Select-New-Report");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Select-New-Report Button");
+		Assert.assertTrue(true, "Failed to click on Select-New-Report Button ");
 		
-		
+		 
 		Random r=new Random();
 		int num=r.nextInt(100);
 		String Act_name="AutomationCode";
@@ -124,20 +124,20 @@ public class AutoEmailReportsPage extends BasePage {
 		helper.highLightElement(driver,ReportsTitle);
 		ReportsTitle.sendKeys(Exp_name);
 		ReportsTitle.click();
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B>  Given title name as Automation-Code");
-		Assert.assertTrue(true, "Failed to Give name to Reports-Title");
+		Reporter.log("<B><font color = 'blue'>Step4.</font></B>  Clecked on Text Field & Entered Report Name ");
+		Assert.assertTrue(true, "Failed to Cleck on Text Field & Entered Report Nam");
 		
 		helper.waitFor(Frequency_Daily_RadioButton);
 		helper.highLightElement(driver, Frequency_Daily_RadioButton);
 		Frequency_Daily_RadioButton.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on  Frequency_Daily_RadioButton");
-		Assert.assertTrue(true, "Failed to click on  Frequency_Daily_RadioButton");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on  Frequency_Daily_Radio Button");
+		Assert.assertTrue(true, "Failed to click on  Frequency_Daily_Radio Button");
 		
 		helper.waitFor(Recipients_Email);
 		helper.highLightElement(driver,Recipients_Email);
 		Recipients_Email.sendKeys("sithukalluru@gmail.com");
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B> Given Recipients_Email name as abcde@gmail.com ");
-		Assert.assertTrue(true, "Failed Give  Recipients_Email data");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> Clicked on E-mail Text filed & Entered E-mail ");
+		Assert.assertTrue(true, "Failed to Click on E-mail Text filed & Entered E-mail ");
 		
 		
 		helper.waitFor( I_want_to_recieve_email_checkBox);
@@ -197,12 +197,9 @@ public class AutoEmailReportsPage extends BasePage {
 		helper.highLightElement(driver, Save_Button);
 		helper.Scrollintoview(Save_Button);
 		helper.jsCLick(Save_Button);
-		//Save_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step14.</font></B> clicked on  Save_Button");
 		Assert.assertTrue(true, "Failed to click on  Save_Button");
 		Thread.sleep(2000);
-		
-		
 		
 		
 		helper.waitFor(OK);

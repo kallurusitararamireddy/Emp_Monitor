@@ -16,11 +16,10 @@ public class AddingFilterModuleTest extends TestBase{
 		
 		HomePage homePage =new HomePage(getDriver());
 		AddingFilterModulePage AddingFilter = new AddingFilterModulePage(getDriver());
-//		homePage.SkipPopup();
-		homePage.Skip();
-		homePage.clickEmployee();
+
+		homePage.clickEmployee(); 
 		AddingFilter.AddingFilterModule();
-		//File listOfFiles[]=folder.listFiles();
+		  
 
 }
 }

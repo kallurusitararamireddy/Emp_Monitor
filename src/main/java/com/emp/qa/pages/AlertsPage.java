@@ -47,10 +47,7 @@ public class AlertsPage extends  BasePage {
 	@FindBy(xpath = "//button[@type='button'][contains(.,'Employee')]")
 	@CacheLookup
 	WebElement Appliesto_Emloyee;
-	
-//	@FindBy(xpath = "//input[@id='allEmployees']")
-//	@CacheLookup
-//	WebElement Allemloyees;
+
 	
 	@FindBy(xpath = "//input[@value='24768']")
 	@CacheLookup
@@ -85,11 +82,8 @@ public class AlertsPage extends  BasePage {
 	@CacheLookup
 	WebElement AnyNote;
 	
-//	@FindBy(xpath = "//select[@id='usersToBeNotified']")
-//	@CacheLookup
-//	WebElement Whomtobenotified;
+
 	
-//	@FindBy(xpath = "//select[@id='usersToBeNotified']")
 	@FindBy(xpath = "//*[@id='main-wrapper']/div[2]/div/div[2]/div[2]/div[4]/div/span[1]/span[1]/span/ul")
 	@CacheLookup
 	WebElement Whomtobenotified;
@@ -119,113 +113,66 @@ public class AlertsPage extends  BasePage {
 		helper.waitFor(Alerts);
 		helper.highLightElement(driver, Alerts);
 		Alerts.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Alerts");
-		Assert.assertTrue(true, "Failed to click on Alerts");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Behavior Module and Selected Alerts Sub-Module ");
+		Assert.assertTrue(true, "Failed to click on Behavior Module and Selected Alerts Sub-Module");
 		
-		helper.waitFor(RuleName);
+		helper.waitFor(RuleName); 
 		helper.highLightElement(driver, RuleName);
 		RuleName.sendKeys("Rule-AbcDef");
 		RuleName.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on RuleName");
-		Assert.assertTrue(true, "Failed to click on RuleName");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on RuleName Text Field & Entered Rule Name");
+		Assert.assertTrue(true, "Failed to click  on RuleName Text Field & Entered Rule Name ");
 		
 		helper.waitFor(AppliestoLocation);
 		helper.highLightElement(driver, AppliestoLocation);
 		Actions actions = new Actions(driver);
 		actions.moveToElement(AppliestoLocation).click().build().perform();		
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on AppliestoLocation");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Applies-to-Location ");
 		Assert.assertTrue(true, "Failed to select Location");
 
 		
 		helper.waitFor(SelectAll);
 		helper.highLightElement(driver, SelectAll);
 		helper.jsCLick(SelectAll);
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Appliesto_Department");
-		Assert.assertTrue(true, "Failed to select Department");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> Selected All Option ");
+		Assert.assertTrue(true, "Failed to Select All Option");
 		
 		helper.waitFor(Appliesto_Department);
 		helper.highLightElement(driver, Appliesto_Department);
 		Actions actions1 = new Actions(driver);
 		actions1.moveToElement(Appliesto_Department).click().build().perform();
 		Appliesto_Department.click();
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Appliesto_Department");
-		Assert.assertTrue(true, "Failed to select Department");
-		
-//		helper.waitFor(AllDepartments);
-//		helper.highLightElement(driver, AllDepartments);
-//		helper.jsCLick(AllDepartments);
-//		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on AllDepartments");
-//		Assert.assertTrue(true, "Failed to select AllDepartments");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Applies-to-Department");
+		Assert.assertTrue(true, "Failed to click on Department");
+
 		
 		helper.waitFor(Appliesto_Emloyee);
 		helper.highLightElement(driver, Appliesto_Emloyee);
 		Actions actions2 = new Actions(driver);
 		actions1.moveToElement(Appliesto_Emloyee).click().build().perform();
 		helper.jsCLick(Appliesto_Emloyee);
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Appliesto_Emloyee");
-		Assert.assertTrue(true, "Failed to select Appliesto_Emloyee");
-		
-//		helper.waitFor(Allemloyees);
-//		helper.highLightElement(driver, Allemloyees);
-//		helper.jsCLick(Allemloyees);
-//		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Allemloyees");
-//		Assert.assertTrue(true, "Failed to select Allemloyees");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Applies-to-Employee");
+		Assert.assertTrue(true, "Failed to click on Employee");
+
 		
 		helper.waitFor(WhattriggerTherule);
 		helper.highLightElement(driver, WhattriggerTherule);
 		helper.selectDropDownValue(WhattriggerTherule, "value", "DWT");
-		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on WhattriggerTherule");
-		Assert.assertTrue(true, "Failed to select WhattriggerTherule");
-		
-//		helper.waitFor(Rule2);
-//		helper.highLightElement(driver, Rule2);
-//		Rule2.click();
-//		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on Rule2");
-//		Assert.assertTrue(true, "Failed to select Rule2");
-		
-		
-//		helper.waitFor(ConditionHrs);
-//		helper.highLightElement(driver, ConditionHrs);
-//		ConditionHrs.click();
-//		helper.Scrollintoview(ConditionHrs);
-//		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on ConditionHrs");
-//		Assert.assertTrue(true, "Failed to select ConditionHrs");
-//		
-//		helper.waitFor(minutes);
-//		helper.highLightElement(driver, minutes);
-//		minutes.click();
-//		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on minutes");
-//		Assert.assertTrue(true, "Failed to select minutes");
-//		
-//		helper.waitFor(operators);
-//		helper.highLightElement(driver, operators);
-//		//helper.selectDropDownValue(operators, "value", "<=");
-//		operators.click();
-//		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> clicked on operators");
-//		Assert.assertTrue(true, "Failed to select operators");
-//		
-//		helper.waitFor(greaterthanoperator);
-//		helper.highLightElement(driver, greaterthanoperator);
-//		//helper.selectDropDownValue(operators, "value", "<=");
-//		greaterthanoperator.click();
-//		Reporter.log("<B><font color = 'blue'>Step13 .</font></B> clicked on greaterthanoperator");
-//		Assert.assertTrue(true, "Failed to select greaterthanoperator");
-//		
-		
+		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on What-trigger-The-rule Drop-down and Slected Trigger option");
+		Assert.assertTrue(true, "Failed to click on What-trigger-The-rule Drop-down and Slected Trigger option");
+
 	
 		helper.waitFor(AnyNote);
 		helper.highLightElement(driver, AnyNote);
 		AnyNote.sendKeys("abcdef");
 		AnyNote.click();
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Any-Note");
-		Assert.assertTrue(true, "Failed to select AnyNote");
+		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> Writing  Any Note (passing  Data)");
+		Assert.assertTrue(true, "Failed to Write  Any Note (passing  Data)");
 		
 		helper.waitFor(Whomtobenotified);
 		helper.highLightElement(driver, Whomtobenotified);
-//		helper.selectDropDownValue(Whomtobenotified, "value", "51247");
-//		helper.selectDropDownValue(Whomtobenotified, "value", "1");
 		Whomtobenotified.click(); 
-		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on Whom-to-be-notified");
+		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> Slected on Whom-to-be-notified");
 		Assert.assertTrue(true, "Failed to select Whomtobenotified");
 		
 		
@@ -234,22 +181,16 @@ public class AlertsPage extends  BasePage {
 		helper.highLightElement(driver, select_usersToBeNotified);
 		helper.move_to_element(select_usersToBeNotified);
 		select_usersToBeNotified.click();
-		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> Selected on Employee");
-		Assert.assertTrue(true, "Failed to Selected on Employee");
+		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> Selected on Any  Employee");
+		Assert.assertTrue(true, "Failed to Select on Any Employee");
 		
-		
-//		helper.waitFor(Myself);
-//		helper.highLightElement(driver, Myself);
-//		Myself.click();
-//		Reporter.log("<B><font color = 'blue'>Step14 .</font></B> clicked on Myself");
-//		Assert.assertTrue(true, "Failed to select Myself");
 		
 		helper.waitFor(SaveAndLaunch);
 		helper.highLightElement(driver, SaveAndLaunch);
 		helper.jsCLick(SaveAndLaunch);
 		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on Save-And-Launch");
 		Assert.assertTrue(true, "Failed to select SaveAndLaunch");
-		Thread.sleep(5000);
+		Thread.sleep(5000); 
 		
 	}
 }

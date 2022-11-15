@@ -12,7 +12,7 @@ public class AlertsTest extends TestBase {
 	public void AlertsTest() throws Exception{
 		AlertsPage Alerts=new AlertsPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-		homePage.Skip();
+
 		homePage.behaviourpage();
 		Alerts.AlertsPage();
 

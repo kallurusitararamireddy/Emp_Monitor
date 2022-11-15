@@ -11,8 +11,7 @@ public class Alert_Policies_Test extends TestBase {
 	public void Alert_Policies_Test() throws Exception{
 		Alert_Policies_Page AlertPolocies=new Alert_Policies_Page(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-//		homePage.SkipPopup();
-		homePage.Skip();
+
 		homePage.behaviourpage();
 		AlertPolocies.Alert_Policies_Page();
  

@@ -2,6 +2,7 @@ package com.emp.qa.pages;
 
 import java.util.Random;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -35,11 +36,13 @@ public class ShiftManagementPage extends BasePage{
 	@CacheLookup
 	WebElement ShiftName;
 	
-	@FindBy(xpath = "//input[@id='lateLogin']")
+//	@FindBy(xpath = "//input[@id='lateLogin']") 
+	@FindBy(xpath = "//*[@id='monStart']")
 	@CacheLookup
 	WebElement LateLogin;
 	
-	@FindBy(xpath = "//input[@id='earlyLoginAndLogout']")
+//	@FindBy(xpath = "//input[@id='earlyLoginAndLogout']")
+	@FindBy(xpath = "//*[@id='monEnd']")
 	@CacheLookup
 	WebElement EarlyLogin;
 	
@@ -62,6 +65,10 @@ public class ShiftManagementPage extends BasePage{
 	@FindBy(xpath = "//button[@id='save']")
 	@CacheLookup
 	WebElement Save_Button;
+	
+	@FindBy(xpath = "/html/body/div[4]/div/div[3]/button[1]")
+	@CacheLookup
+	WebElement OK_Button;
 	
 	
 	public void ShiftManagementPage()throws InterruptedException{
@@ -106,6 +113,7 @@ public class ShiftManagementPage extends BasePage{
 		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on EarlyLogin");
 		Assert.assertTrue(true, "Failed To Select EarlyLogin");
 		
+		
 		helper.waitFor(Selectcolor_RadioButton);		
 		helper.highLightElement(driver,Selectcolor_RadioButton);
 		Selectcolor_RadioButton.click();
@@ -115,14 +123,14 @@ public class ShiftManagementPage extends BasePage{
 		
 		helper.waitFor(mon_checkBox);		
 		helper.highLightElement(driver,mon_checkBox);
-		//EarlyLogin.sendKeys("09-50");
+//		EarlyLogin.sendKeys("09-50");
 		mon_checkBox.click();
 		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on mon_checkBox");
 		Assert.assertTrue(true, "Failed To Select mon_checkBox");
 		
 		helper.waitFor(Monday_StartTime);		
 		helper.highLightElement(driver,Monday_StartTime);
-		Monday_StartTime.sendKeys("10-00");
+//		Monday_StartTime.sendKeys("10-00");
 		Monday_StartTime.click();
 		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Monday_StartTime");
 		Assert.assertTrue(true, "Failed To Select LateLogin");
@@ -138,10 +146,17 @@ public class ShiftManagementPage extends BasePage{
 		helper.highLightElement(driver,Save_Button);
 		helper.Scrollintoview(Save_Button);
 		helper.jsCLick(Save_Button);
-		Thread.sleep(8000);
+		Thread.sleep(3000);
 		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on Save_Button");
 		Assert.assertTrue(true, "Failed To Select Save_Button");
-		Thread.sleep(80000);
+		Thread.sleep(2000);
+		
+		helper.waitFor(OK_Button);		
+		helper.highLightElement(driver,OK_Button);
+		OK_Button.click();
+		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on ok_button");
+		Assert.assertTrue(true, "Failed To clicked on ok_button");
+		
 		
 	}
 }

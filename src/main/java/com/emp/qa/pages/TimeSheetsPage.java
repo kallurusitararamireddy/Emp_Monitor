@@ -1,5 +1,6 @@
 package com.emp.qa.pages;
 
+import java.awt.AWTException;
 import java.io.IOException;
 
 import org.apache.poi.ss.usermodel.Row;
@@ -14,6 +15,7 @@ import org.testng.annotations.Listeners;
 
 import com.emp.qa.base.TestBase;
 import com.emp.qa.util.Helpers;
+import com.opencsv.exceptions.CsvException;
 
 @Listeners(ITestNGListener.class)
 public class TimeSheetsPage extends BasePage {
@@ -24,7 +26,6 @@ public class TimeSheetsPage extends BasePage {
 	
 }
 	Helpers helper=new Helpers();
-	//Xls_Reader excel = new Xls_Reader("C:\\Users\\Official\\Downloads\\Attendance History (47).xlsx");
 	
 	@FindBy(xpath = "//i[@class='menu-icon icon-home4']")
 	@CacheLookup
@@ -111,40 +112,41 @@ public class TimeSheetsPage extends BasePage {
 	
 
 	
-	public void TimeSheetsPage()throws InterruptedException, IOException{
+	public void Time_Sheets_Page_CSV_File()throws InterruptedException, IOException, CsvException, AWTException{
 		
 		
 		
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
-		helper.selectDropDownValue(Location, "visibletext", "Bangalore");
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B>Selected Banglore from the loction Dropdown");
-		Assert.assertTrue(true, "Failed to Select a value from the Locaton Drpdown");
-		
+		helper.selectDropDownValue(Location, "visibletext", " See All");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Selected  See All from the loction Dropdown");
+		Assert.assertTrue(true, "Failed to Select a  See All from the Locaton Drpdown");
+		 
 
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
 		helper.selectDropDownValue(Department, "value", "0");
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Department dropdown");
-		Assert.assertTrue(true, "Failed to Select Department");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Department dropdown & Select Department");
+		Assert.assertTrue(true, "Failed to click on Department dropdown & Select Department");
 		
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
-		helper.selectDropDownValue(Employee, "value", "0");
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Employee dropdown");
-		Assert.assertTrue(true, "Failed to Select Employee");
+		helper.move_to_element_click_target(Employee);
+		helper.robot_Zero_option_selectClick();
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Employee dropdown & Select Employee");
+		Assert.assertTrue(true, "Failed to Select Employee & Select Employee ");
 		
 		helper.waitFor(selectdateranges);
 		helper.highLightElement(driver, selectdateranges);
 		selectdateranges.click();
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on selectdateranges");
-		Assert.assertTrue(true, "Failed toselectdateranges");
+		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on select-Date-Ranges");
+		Assert.assertTrue(true, "Failed to click on  select-date-Ranges");
 		
 		helper.waitFor(Last30days);
 		helper.highLightElement(driver, Last30days);
 		Last30days.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Last30days");
-		Assert.assertTrue(true, "Failed to select Last30days");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Last-30-days");
+		Assert.assertTrue(true, "Failed to select Last-30-days");
 		
 		 
 		
@@ -167,93 +169,80 @@ public class TimeSheetsPage extends BasePage {
 		helper.jsCLick(Submit);
 		Reporter.log("<B><font color = 'blue'>Step8.</font></B> clicked on Submit Button");
 		Assert.assertTrue(true, "Failed to click on Submit Button");
-		Thread.sleep(8000);
+		Thread.sleep(5000);
+		
+		helper.Time_Sheets_CSV_Dot_files();
+		
+		Thread.sleep(5000);
+	
 		
 		
-		        // String sheetName = "Attendance History 2021-05-12";
-			
-			//	System.out.println(reader.getCellData(sheetName, "username", 3));
-//				int data = excel.getRowCount(sheetName);
-//				System.out.println("The number of columns in the Sheet is:"   +data);
-		         
-		         
-		         
-			
-//				String A1=excel.getCellData(sheetName, 0, 1);
-//				System.out.println("A1"+A1);
-//				String A2=excel.getCellData(sheetName, 1, 1);
-//				System.out.println(A2);
-//				String A3=excel.getCellData(sheetName, 2, 1);
-//				System.out.println(A3);
-//				String A4=excel.getCellData(sheetName, 3, 1);
-//				System.out.println(A4);
-//				String A5=excel.getCellData(sheetName, 4, 1);
-//				System.out.println(A5);
-//				String A6=excel.getCellData(sheetName, 5, 1);
-//				System.out.println(A6);
-//				String A7=excel.getCellData(sheetName, 6, 1);
-//				System.out.println(A7);
-//				String A8=excel.getCellData(sheetName, 7, 1);
-//				System.out.println(A8);
-//				String A9=excel.getCellData(sheetName, 8, 1);
-//				System.out.println(A9);
-				
-//			String s1=	excel.readExcel("Attendance History (47)", "Attendance History 2021-05-12");
-//			System.out.println(s1);
-			
+	}
+public void Time_Sheets_Page_PDF_File()throws InterruptedException, IOException, CsvException, AWTException{
+		
+		
+		
+	helper.waitFor(Location);
+	helper.highLightElement(driver, Location);
+	helper.selectDropDownValue(Location, "visibletext", " See All");
+	Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Selected  See All from the loction Dropdown");
+	Assert.assertTrue(true, "Failed to Select a  See All from the Locaton Drpdown");
+	 
 
-//			 try {
-//				String cell =excel.readExcel("Attendance History (47)", sheetName);
-//			} catch (IOException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//			 int S1=excel.getRowvalues(sheetName, cellcount);
-//			 System.out.println(S1);         
-//			 
-//		  int S2= excel.getRowvalues(sheetName, 0,0);
-//		  System.out.println(S2);
-////////		  
-////		    String s1= excel.IterateRow(sheetName);    
-////			  System.out.println(s1);
-////			  
-//			  
-//			  
-//			  
-//			int rowcount = excel.getRowCount(sheetName);
-//			System.out.println("The number of rows in the Sheet is:"  + rowcount);
-//			int columncount=excel.getColumnCount(sheetName);
-//			System.out.println("The number of columns  in the Sheet is:"  + columncount);
+	helper.waitFor(Department);
+	helper.highLightElement(driver, Department);
+	helper.selectDropDownValue(Department, "value", "0");
+	Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Department dropdown & Select Department");
+	Assert.assertTrue(true, "Failed to click on Department dropdown & Select Department");
+	
+	helper.waitFor(Employee);
+	helper.highLightElement(driver, Employee);
+	helper.move_to_element_click_target(Employee);
+	helper.robot_Zero_option_selectClick();
+	Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Employee dropdown & Select Employee");
+	Assert.assertTrue(true, "Failed to Select Employee & Select Employee ");
+	
+	helper.waitFor(selectdateranges);
+	helper.highLightElement(driver, selectdateranges);
+	selectdateranges.click();
+	Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on select-Date-Ranges");
+	Assert.assertTrue(true, "Failed to click on  select-date-Ranges");
+	
+	helper.waitFor(Last30days);
+	helper.highLightElement(driver, Last30days);
+	Last30days.click();
+	Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Last-30-days");
+	Assert.assertTrue(true, "Failed to select Last-30-days");
+
+		/*
+		 * pdf
+		 */
 		
+
 		helper.waitFor( PDF);
 		helper.highLightElement(driver,  PDF);
 		helper.Scrollintoview(PDF);
 		helper.jsCLick(PDF);
-		Reporter.log("<B><font color = 'blue'>Step9.</font></B> clicked on PDF Button");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on PDF Button");
 		Assert.assertTrue(true, "Failed to click on PDF Button");
 		
 		helper.waitFor(selectall);
 		helper.highLightElement(driver, selectall);
 		helper.jsCLick(selectall);
-		Reporter.log("<B><font color = 'blue'>Step10.</font></B> clicked on select All CheckBox ");
+		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on select All CheckBox ");
 		Assert.assertTrue(true, "Failed to click on selectall CheckBox");
-		
-		
-		
+		 
 		helper.waitFor(Submit);
 		helper.Scrollintoview(Submit);
 		helper.highLightElement(driver, Submit);
 		helper.jsCLick(Submit);
-		Reporter.log("<B><font color = 'blue'>Step11.</font></B> clicked on Submit Button");
+		Reporter.log("<B><font color = 'blue'>Step8.</font></B> clicked on Submit Button");
 		Assert.assertTrue(true, "Failed to click on Submit Button");
-		Thread.sleep(8000);
+		Thread.sleep(5000);
 		
+		helper.Time_sheet_PDF_Reader();
 		
-         
-		
-		
-		
-		
-	}
+		Thread.sleep(3000);
+}
 }
 

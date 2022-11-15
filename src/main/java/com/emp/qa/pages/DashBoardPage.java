@@ -44,9 +44,9 @@ public class DashBoardPage extends BasePage {
 	@CacheLookup
 	WebElement CurrentlyACtive_CsvButton;
 
-	@FindBy(xpath = "//button[contains(@class,'close float-right')]")
+	@FindBy(xpath = "//*[@id='Online_count']/div/div/div[3]/button[2]")
 	@CacheLookup
-	WebElement CurrentlyACtive_Close_Button;
+	WebElement CurrentlyACtive_Close_Button; 
 
 	@FindBy(xpath = "//h3[@id='offline-employees']")
 	@CacheLookup
@@ -56,7 +56,7 @@ public class DashBoardPage extends BasePage {
 	@CacheLookup
 	WebElement CurrentlyIdle_csv_Button;
 
-	@FindBy(xpath = "//button[@class='close float-right']")
+	@FindBy(xpath = "//*[@id='Offline_count']/div/div/div[3]/button[2]")
 	@CacheLookup
 	WebElement CurrentlyIdle_close_Button;
 
@@ -64,11 +64,11 @@ public class DashBoardPage extends BasePage {
 	@CacheLookup
 	WebElement Currently_Offline;
 
-	@FindBy(xpath = "//button[contains(text(),'Generate CSV')]")
+	@FindBy(xpath = "//*[@id='Currently_Offline_count']/div/div/div[3]/button[1]")
 	@CacheLookup
 	WebElement Currently_offline_csv_Button;
 
-	@FindBy(xpath = "//button[@class='close float-right']")
+	@FindBy(xpath = "//*[@id='Currently_Offline_count']/div/div/div[3]/button[2]")
 	@CacheLookup
 	WebElement Currentlyoffline_close_Button;
 
@@ -76,11 +76,11 @@ public class DashBoardPage extends BasePage {
 	@CacheLookup
 	WebElement Absent_Users;
 
-	@FindBy(xpath = "//button[contains(text(),'Generate CSV')]")
+	@FindBy(xpath = "//*[@id=\"Absent_count\"]/div/div/div[3]/button[1]")
 	@CacheLookup
 	WebElement Absent_Users_Generate_csvButton;
 
-	@FindBy(xpath = "//button[@class='close float-right']")
+	@FindBy(xpath = "//*[@id=\"Absent_count\"]/div/div/div[3]/button[2]")
 	@CacheLookup
 	WebElement Absent_Users_closeButton;
 
@@ -88,18 +88,18 @@ public class DashBoardPage extends BasePage {
 	@CacheLookup
 	WebElement Suspended_Users;
 
-//	@FindBy(xpath = "//button[contains(text(),'Generate CSV')]")
-	@FindBy(xpath = "//button[text()='Generate CSV']")
+	@FindBy(xpath = "//*[@id=\"suspended_count\"]/div/div/div[3]/button[1]")
 	@CacheLookup
 	WebElement Suspended_Users_csvButton;
 
-	@FindBy(xpath = "//button[@class='close float-right']")
+	@FindBy(xpath = "//*[@id='suspended_count']/div/div/div[3]/button[2]")
 	@CacheLookup
 	WebElement Suspende_Users_closeButton;
 
-	@FindBy(xpath = "//select[@id='productive_location']")
+	@FindBy(xpath = "//*[@id=\"productive_location\"]")
+	
 	@CacheLookup
-	WebElement Top10ProductiveEmployees_Locations;
+	WebElement Top10ProductiveEmployees_Locations; 
 
 	@FindBy(xpath = "//select[@id='productive_department']")
 	@CacheLookup
@@ -173,7 +173,7 @@ public class DashBoardPage extends BasePage {
 	@CacheLookup
 	WebElement Top10Websitesusages_Today;
 
-	@FindBy(xpath = "//button[@id='yesterdayTopWebs']")
+	@FindBy(xpath = "//*[@id=\"yesterdayTopWebs\"]")
 	@CacheLookup
 	WebElement Top10Websitesusages_Yesterday;
 
@@ -193,11 +193,12 @@ public class DashBoardPage extends BasePage {
 	@CacheLookup
 	WebElement Top10_Application_Usage_Today;
 
-	@FindBy(xpath = "//button[@id='yesterdayTopApps']")
+	@FindBy(xpath = "//*[@id=\"yesterdayTopApps\"]")
+	
 	@CacheLookup
 	WebElement Top10_Application_Usage_Yesterday;
 
-	@FindBy(xpath = "//button[@id='weekTopApps']")
+	@FindBy(xpath = "//*[@id=\"weekTopApps\"]")
 	@CacheLookup
 	WebElement Top10_Application_Usage_Thisweek;
 
@@ -214,73 +215,71 @@ public class DashBoardPage extends BasePage {
 		helper.waitFor(TotalEnrollments);
 		helper.highLightElement(driver, TotalEnrollments);
 		TotalEnrollments.click();
-		//helper.jsCLick(TotalEnrollments);
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on TotalEnrollments ");
-		Assert.assertTrue(true, "Failed to Click on Total TotalEnrollments");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Total_Enrollments_Button ");
+		Assert.assertTrue(true, "Failed to Click on  Total_Enrollments_Button ");
 		
 		helper.waitFor(TotalEnrollments_csvButton);
 		helper.highLightElement(driver, TotalEnrollments_csvButton);
 		Thread.sleep(7000);
 		TotalEnrollments_csvButton.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on TotalEnrollments_csvButton ");
-		Assert.assertTrue(true, "Failed to Click on Total TotalEnrollments_csvButton");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Total_Enrollments_csvButton ");
+		Assert.assertTrue(true, "Failed to Click on Total Total_Enrollments_csvButton");
 		Thread.sleep(7000); 
 		
 		helper.waitFor(TotalEnrollments_CloseButtton);
 		helper.highLightElement(driver, TotalEnrollments_CloseButtton);
 		TotalEnrollments_CloseButtton.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on TotalEnrollments_CloseButtton ");
-		Assert.assertTrue(true, "Failed to Click on Total TotalEnrollments_CloseButtton");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Total_Enrollments_CloseButtton ");
+		Assert.assertTrue(true, "Failed to Click on Total Total_Enrollments_CloseButtton");
 		Thread.sleep(7000);
 		
 		helper.waitFor(CurrentlyACtive);
 		helper.highLightElement(driver, CurrentlyACtive);
 		Thread.sleep(4000);
 		CurrentlyACtive.click();
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> Clicked on CurrentlyACtive ");
-		Assert.assertTrue(true, "Failed to Click on  CurrentlyACtive");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> Clicked on Currently_ACtive Button");
+		Assert.assertTrue(true, "Failed to Click on  Currently_ACtive Button");
 		
 		
 		helper.waitFor(CurrentlyACtive_CsvButton);
 		helper.highLightElement(driver, CurrentlyACtive_CsvButton);
 		helper.jsCLick(CurrentlyACtive_CsvButton);
 		Thread.sleep(7000);
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on CurrentlyACtive_CsvButton ");
-		Assert.assertTrue(true, "Failed to Click on  CurrentlyACtive_CsvButton");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Currently_ACtive_CsvButton ");
+		Assert.assertTrue(true, "Failed to Click on  Currently_ACtive_CsvButton");
 		
 		helper.waitFor(CurrentlyACtive_Close_Button);
 		helper.highLightElement(driver, CurrentlyACtive_Close_Button);
 		CurrentlyACtive_Close_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on CurrentlyACtive_Close_Button ");
-		Assert.assertTrue(true, "Failed to Click on  CurrentlyACtive_Close_Button");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on Currently_ACtive_Close_Button ");
+		Assert.assertTrue(true, "Failed to Click on  Currently_ACtive_Close_Button");
 		
 		helper.waitFor(CurrentlyIdle);
 		helper.highLightElement(driver, CurrentlyIdle);
 		CurrentlyIdle.click();
-		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> Clicked on CurrentlyIdle ");
-		Assert.assertTrue(true, "Failed to Click on  CurrentlyIdle");
+		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> Clicked on Currently_Idle ");
+		Assert.assertTrue(true, "Failed to Click on  Currently_Idle");
 		
 		helper.waitFor(CurrentlyIdle_csv_Button);
 		helper.highLightElement(driver, CurrentlyIdle_csv_Button);
 		helper.jsCLick(CurrentlyIdle_csv_Button);
-		//CurrentlyIdle_csv_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> Clicked on CurrentlyIdle_csv_Button ");
-		Assert.assertTrue(true, "Failed to Click on  CurrentlyIdle_csv_Button");
+		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> Clicked on Currently_Idle_csv_Button ");
+		Assert.assertTrue(true, "Failed to Click on  Currently_Idle_csv_Button");
 		Thread.sleep(5000);
 		
 		helper.waitFor(CurrentlyIdle_close_Button);
 		helper.highLightElement(driver, CurrentlyIdle_close_Button);
 		CurrentlyIdle_close_Button.click();
 		Thread.sleep(5000);
-		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> Clicked on CurrentlyIdle_close_Button ");
-		Assert.assertTrue(true, "Failed to Click on  CurrentlyIdle_close_Button");
+		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> Clicked on Currently_Idle_close_Button ");
+		Assert.assertTrue(true, "Failed to Click on  Currently_Idle_close_Button");
 		
 		helper.waitFor(Currently_Offline);
 		helper.highLightElement(driver, Currently_Offline);
 		Currently_Offline.click();
 		Thread.sleep(5000);
-		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> Clicked on Currently_Offline ");
-		Assert.assertTrue(true, "Failed to Click on  Currently_Offline");
+		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> Clicked on Currently_Offline Button");
+		Assert.assertTrue(true, "Failed to Click on  Currently_Offline  Button");
 		
 		
 		helper.waitFor(Currently_offline_csv_Button);
@@ -302,95 +301,93 @@ public class DashBoardPage extends BasePage {
 		helper.highLightElement(driver, Absent_Users);
 		Absent_Users.click();
 		Thread.sleep(5000);
-		Reporter.log("<B><font color = 'blue'>Step13 .</font></B> Clicked on Absent_Users ");
-		Assert.assertTrue(true, "Failed to Click on  Absent_Users");
+		Reporter.log("<B><font color = 'blue'>Step13 .</font></B> Clicked on Absent_Users Button");
+		Assert.assertTrue(true, "Failed to Click on  Absent_Users Button");
 		
 		helper.waitFor(Absent_Users_Generate_csvButton);
 		helper.highLightElement(driver, Absent_Users_Generate_csvButton);
 		Absent_Users_Generate_csvButton.click();
-		Reporter.log("<B><font color = 'blue'>Step14 .</font></B> Clicked on Absent_Users_Generate_csvButton ");
-		Assert.assertTrue(true, "Failed to Click on  Absent_Users_Generate_csvButton");
+		Reporter.log("<B><font color = 'blue'>Step14 .</font></B> Clicked on Absent_Users_Generate csv Button ");
+		Assert.assertTrue(true, "Failed to Click on  Absent_Users_Generate csv Button");
 		Thread.sleep(5000);
 		
 		helper.waitFor(Absent_Users_closeButton);
 		helper.highLightElement(driver, Absent_Users_closeButton);
 		Thread.sleep(5000);
 		Absent_Users_closeButton.click();
-		Reporter.log("<B><font color = 'blue'>Step15 .</font></B> Clicked on Absent_Users_closeButton ");
-		Assert.assertTrue(true, "Failed to Click on  Absent_Users_closeButton");
+		Reporter.log("<B><font color = 'blue'>Step15 .</font></B> Clicked on Absent_Users close Button ");
+		Assert.assertTrue(true, "Failed to Click on  Absent_Users close Button");
 
 		helper.waitFor(Suspended_Users);
 		helper.highLightElement(driver, Suspended_Users);
 		Suspended_Users.click();
 		Thread.sleep(5000);
-		Reporter.log("<B><font color = 'blue'>Step16 .</font></B> Clicked on Suspended_Users ");
-		Assert.assertTrue(true, "Failed to Click on  Suspended_Users");
+		Reporter.log("<B><font color = 'blue'>Step16 .</font></B> Clicked on Suspended_Users Button ");
+		Assert.assertTrue(true, "Failed to Click on  Suspended_Users Button ");
 
 		helper.waitFor(Suspended_Users_csvButton);
 		helper.highLightElement(driver, Suspended_Users_csvButton);
-		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Generate CSV']"))).click();
-
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"suspended_count\"]/div/div/div[3]/button[1]"))).click();
 		Suspended_Users_csvButton.click();
-		Reporter.log("<B><font color = 'blue'>Step17 .</font></B> Clicked on Suspended_Users_csvButton ");
-		Assert.assertTrue(true, "Failed to Click on  Suspended_Users_csvButton");
+		Reporter.log("<B><font color = 'blue'>Step17 .</font></B> Clicked on Suspended_Users csv Button ");
+		Assert.assertTrue(true, "Failed to Click on  Suspended_Users csv Button");
 		Thread.sleep(5000);
 
 		helper.waitFor(Suspende_Users_closeButton);
 		helper.highLightElement(driver, Suspende_Users_closeButton);
 		Thread.sleep(5000);
 		Suspende_Users_closeButton.click();
-		Reporter.log("<B><font color = 'blue'>Step18 .</font></B> Clicked on Suspende_Users_closeButton ");
-		Assert.assertTrue(true, "Failed to Click on  Suspende_Users_closeButton");
+		Reporter.log("<B><font color = 'blue'>Step18 .</font></B> Clicked on Suspende_Users close Button ");
+		Assert.assertTrue(true, "Failed to Click on  Suspende_Users close Button");
 
 		helper.waitFor(Top10ProductiveEmployees_Locations);
 		helper.highLightElement(driver, Top10ProductiveEmployees_Locations);
 		helper.Scrollintoview(Top10ProductiveEmployees_Locations);
-		helper.selectDropDownValue(Top10ProductiveEmployees_Locations, "value", "2");
+		helper.selectDropDownValue(Top10ProductiveEmployees_Locations, "value", "0"); 
 		Top10ProductiveEmployees_Locations.click();
-		Reporter.log("<B><font color = 'blue'>Step19 .</font></B> Clicked on Top10ProductiveEmployees_Locations ");
+		Reporter.log("<B><font color = 'blue'>Step19 .</font></B> Clicked on Top_10_Productive_Employees_Locations ");
 		Assert.assertTrue(true, "Failed to Click on  Top10ProductiveEmployees_Locations");
 
 		helper.waitFor(Top10ProductiveEmployees_Departments);
 		helper.highLightElement(driver, Top10ProductiveEmployees_Departments);
 		helper.Scrollintoview(Top10ProductiveEmployees_Departments);
-		helper.selectDropDownValue(Top10ProductiveEmployees_Departments, "value", "1");
+		helper.selectDropDownValue(Top10ProductiveEmployees_Departments, "value", "null");
 		Top10ProductiveEmployees_Departments.click();
-		Reporter.log("<B><font color = 'blue'>Step20 .</font></B> Clicked on Top10ProductiveEmployees_Departments ");
-		Assert.assertTrue(true, "Failed to Click on  Top10ProductiveEmployees_Departments");
+		Reporter.log("<B><font color = 'blue'>Step20 .</font></B> Clicked on Top_10_Productive_Employees_Departments ");
+		Assert.assertTrue(true, "Failed to Click on  Top_10_Productive_Employees_Departments");
 
 		helper.waitFor(Top10ProductiveEmployeesToday);
 		helper.highLightElement(driver, Top10ProductiveEmployeesToday);
 		helper.Scrollintoview(Top10ProductiveEmployeesToday);
 		Top10ProductiveEmployeesToday.click();
-		Reporter.log("<B><font color = 'blue'>Step21 .</font></B> Clicked on Top10ProductiveEmployeesToday ");
-		Assert.assertTrue(true, "Failed to Click on  Top10ProductiveEmployeesToday");
+		Reporter.log("<B><font color = 'blue'>Step21 .</font></B> Clicked on Top_10_Productive_Employees_Today ");
+		Assert.assertTrue(true, "Failed to Click on  Top_10_Productive_Employees_Today");
 		Thread.sleep(2000);
 
 		helper.waitFor(Top10ProductiveEmployeesyesterday);
 		helper.highLightElement(driver, Top10ProductiveEmployeesyesterday);
 		helper.Scrollintoview(Top10ProductiveEmployeesyesterday);
 		Top10ProductiveEmployeesyesterday.click();
-		Reporter.log("<B><font color = 'blue'>Step22 .</font></B> Clicked on Top10ProductiveEmployeesyesterday ");
-		Assert.assertTrue(true, "Failed to Click on  Top10ProductiveEmployeesyesterday");
+		Reporter.log("<B><font color = 'blue'>Step22 .</font></B> Clicked on Top_10_Productive_Employees_yesterday ");
+		Assert.assertTrue(true, "Failed to Click on  Top_10_Productive_Employees_yesterday");
 		Thread.sleep(2000);
 
 		helper.waitFor(Top10ProductiveEmployees_Thisweek);
 		helper.highLightElement(driver, Top10ProductiveEmployees_Thisweek);
 		helper.Scrollintoview(Top10ProductiveEmployees_Thisweek);
 		Top10ProductiveEmployees_Thisweek.click();
-		Reporter.log("<B><font color = 'blue'>Step23 .</font></B> Clicked on Top10ProductiveEmployees_Thisweek ");
-		Assert.assertTrue(true, "Failed to Click on  Top10ProductiveEmployees_Thisweek");
+		Reporter.log("<B><font color = 'blue'>Step23 .</font></B> Clicked on Top 10 Productive_Employees_This week ");
+		Assert.assertTrue(true, "Failed to Click on  Top 10 Productive_Employees_This week");
 		Thread.sleep(2000);
 
 		helper.waitFor(Top10NonProductiveEmployees_Location);
 		helper.highLightElement(driver, Top10NonProductiveEmployees_Location);
 		helper.Scrollintoview(Top10NonProductiveEmployees_Location);
-		helper.selectDropDownValue(Top10NonProductiveEmployees_Location, "value", "2");
+		helper.selectDropDownValue(Top10NonProductiveEmployees_Location, "value", "0");
 		Top10NonProductiveEmployees_Location.click();
-		Reporter.log("<B><font color = 'blue'>Step24 .</font></B> Clicked on Top10NonProductiveEmployees_Location ");
-		Assert.assertTrue(true, "Failed to Click on  Top10NonProductiveEmployees_Location");
+		Reporter.log("<B><font color = 'blue'>Step24 .</font></B> Clicked on Top_10_NonProductive_Employees_Location ");
+		Assert.assertTrue(true, "Failed to Click on  Top_10_NonProductive_Employees_Location");
 
 		helper.waitFor(Top10NonProductiveEmployees_Department);
 		helper.highLightElement(driver, Top10NonProductiveEmployees_Department);
@@ -398,31 +395,31 @@ public class DashBoardPage extends BasePage {
 		Thread.sleep(1000);
 		helper.selectDropDownValue(Top10NonProductiveEmployees_Department, "value", "null");
 		Top10NonProductiveEmployees_Department.click();
-		Reporter.log("<B><font color = 'blue'>Step25 .</font></B> Clicked on Top10NonProductiveEmployees_Department ");
-		Assert.assertTrue(true, "Failed to Click on  Top10NonProductiveEmployees_Department");
+		Reporter.log("<B><font color = 'blue'>Step25 .</font></B> Clicked on Top_10_NonProductive_Employees_Department ");
+		Assert.assertTrue(true, "Failed to Click on  Top_10_NonProductive_Employees_Department");
 
 		helper.waitFor(Top10NonProductiveEmployees_Today);
 		helper.highLightElement(driver, Top10NonProductiveEmployees_Today);
 		helper.Scrollintoview(Top10NonProductiveEmployees_Today);
 		Top10NonProductiveEmployees_Today.click();
-		Reporter.log("<B><font color = 'blue'>Step26 .</font></B> Clicked on Top10NonProductiveEmployees_Today ");
-		Assert.assertTrue(true, "Failed to Click on  Top10NonProductiveEmployees_Today");
+		Reporter.log("<B><font color = 'blue'>Step26 .</font></B> Clicked on Top_10_NonProductive_Employees_Today ");
+		Assert.assertTrue(true, "Failed to Click on  Top_10_NonProductive_Employees_Today");
 		Thread.sleep(2000);
 
 		helper.waitFor(Top10NonProductiveEmployees_Yesterday);
 		helper.highLightElement(driver, Top10NonProductiveEmployees_Yesterday);
 		helper.Scrollintoview(Top10NonProductiveEmployees_Yesterday);
 		Top10NonProductiveEmployees_Yesterday.click();
-		Reporter.log("<B><font color = 'blue'>Step27 .</font></B> Clicked on Top10NonProductiveEmployees_Yesterday ");
-		Assert.assertTrue(true, "Failed to Click on  Top10NonProductiveEmployees_Yesterday");
+		Reporter.log("<B><font color = 'blue'>Step27 .</font></B> Clicked on Top_10_NonProductive_Employees_Yesterday ");
+		Assert.assertTrue(true, "Failed to Click on  Top_10_NonProductive_Employees_Yesterday");
 		Thread.sleep(2000);
 
 		helper.waitFor(Top10NonProductiveEmployees_Thisweek);
 		helper.highLightElement(driver, Top10NonProductiveEmployees_Thisweek);
 		helper.Scrollintoview(Top10NonProductiveEmployees_Thisweek);
 		Top10NonProductiveEmployees_Thisweek.click();
-		Reporter.log("<B><font color = 'blue'>Step28 .</font></B> Clicked on Top10NonProductiveEmployees_Thisweek ");
-		Assert.assertTrue(true, "Failed to Click on  Top10NonProductiveEmployees_Thisweek");
+		Reporter.log("<B><font color = 'blue'>Step28 .</font></B> Clicked on Top_10_NonProductive_Employees_Thisweek ");
+		Assert.assertTrue(true, "Failed to Click on  Top_10_NonProductive_Employees_Thisweek");
 		Thread.sleep(2000);
 
 		helper.waitFor(Location_Performance_Productive);
@@ -493,32 +490,32 @@ public class DashBoardPage extends BasePage {
 		helper.highLightElement(driver, Top10Websitesusages_Today);
 		helper.Scrollintoview(Top10Websitesusages_Today);
 		Top10Websitesusages_Today.click();
-		Reporter.log("<B><font color = 'blue'>Step37 .</font></B> Clicked on Top10Websitesusages_Today ");
-		Assert.assertTrue(true, "Failed to Click on  Top10Websitesusages_Today");
+		Reporter.log("<B><font color = 'blue'>Step37 .</font></B> Clicked on Top_10_Websites_usages_Today ");
+		Assert.assertTrue(true, "Failed to Click on  Top_10_Websites_usages_Today");
 		Thread.sleep(2000);
 
 		helper.waitFor(Top10Websitesusages_Yesterday);
 		helper.highLightElement(driver, Top10Websitesusages_Yesterday);
 		helper.Scrollintoview(Top10Websitesusages_Yesterday);
 		Top10Websitesusages_Yesterday.click();
-		Reporter.log("<B><font color = 'blue'>Step38 .</font></B> Clicked on Top10Websitesusages_Yesterday ");
-		Assert.assertTrue(true, "Failed to Click on  Top10Websitesusages_Yesterday");
+		Reporter.log("<B><font color = 'blue'>Step38 .</font></B> Clicked on Top_10_Websites_usages_Yesterday ");
+		Assert.assertTrue(true, "Failed to Click on  Top_10_Websites_usages_Yesterday");
 		Thread.sleep(2000);
 
 		helper.waitFor(Top10Websitesusages_Thisweek);
 		helper.highLightElement(driver, Top10Websitesusages_Thisweek);
 		helper.Scrollintoview(Top10Websitesusages_Thisweek);
 		Top10Websitesusages_Thisweek.click();
-		Reporter.log("<B><font color = 'blue'>Step39 .</font></B> Clicked on Top10Websitesusages_Thisweek ");
-		Assert.assertTrue(true, "Failed to Click on  Top10Websitesusages_Thisweek");
+		Reporter.log("<B><font color = 'blue'>Step39 .</font></B> Clicked on Top_10_Websites_usages_Thisweek ");
+		Assert.assertTrue(true, "Failed to Click on  Top_10_Websites_usages_Thisweek");
 		Thread.sleep(2000);
 
 		helper.waitFor(Top10Websitesusages_Viewdetails);
 		helper.highLightElement(driver, Top10Websitesusages_Viewdetails);
 		helper.Scrollintoview(Top10Websitesusages_Viewdetails);
 		helper.jsCLick(Top10Websitesusages_Viewdetails);
-		Reporter.log("<B><font color = 'blue'>Step40 .</font></B> Clicked on Top10Websitesusages_Viewdetails ");
-		Assert.assertTrue(true, "Failed to Click on  Top10Websitesusages_Viewdetails");
+		Reporter.log("<B><font color = 'blue'>Step40 .</font></B> Clicked on Top_10_Websites_usages_Viewdetails ");
+		Assert.assertTrue(true, "Failed to Click on  Top_10_Websites_usages_Viewdetails");
 		Thread.sleep(2000);
 
 		helper.waitFor(Viewdetails_CloseButton);
@@ -538,14 +535,14 @@ public class DashBoardPage extends BasePage {
 		helper.waitFor(Top10_Application_Usage_Yesterday);
 		helper.highLightElement(driver, Top10_Application_Usage_Yesterday);
 		helper.Scrollintoview(Top10_Application_Usage_Yesterday);
-		Top10_Application_Usage_Yesterday.click();
+		helper.move_to_element_click(Top10Websitesusages_Yesterday);
 		Reporter.log("<B><font color = 'blue'>Step43 .</font></B> Clicked on Top10_Application_Usage_Yesterday ");
 		Assert.assertTrue(true, "Failed to Click on  Top10_Application_Usage_Yesterday");
 
 		helper.waitFor(Top10_Application_Usage_Thisweek);
 		helper.highLightElement(driver, Top10_Application_Usage_Thisweek);
 		helper.Scrollintoview(Top10_Application_Usage_Thisweek);
-		Top10_Application_Usage_Thisweek.click();
+		helper.move_to_element_click(Top10_Application_Usage_Thisweek);
 		Reporter.log("<B><font color = 'blue'>Step44 .</font></B> Clicked on Top10_Application_Usage_Thisweek ");
 		Assert.assertTrue(true, "Failed to Click on  Top10_Application_Usage_Thisweek");
 

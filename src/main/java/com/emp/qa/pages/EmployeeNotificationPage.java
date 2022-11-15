@@ -85,7 +85,7 @@ public class EmployeeNotificationPage extends BasePage {
 		helper.waitFor(Allemployee);
 		helper.highLightElement(driver, Allemployee);
 		// helper.selectDropDownValue(Allemployee, "value", "All Employee");
-		Allemployee.click();
+		Allemployee.click(); 
 		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on Allemployee DropDown");
 		Assert.assertTrue(true, "Failed Select Allemployee DropDown");
 

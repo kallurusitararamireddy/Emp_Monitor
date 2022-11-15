@@ -32,7 +32,7 @@ public class EmployeeRoleUpdatePage extends BasePage {
 	@CacheLookup
 	WebElement UpdateRoleButton;
 	
-	@FindBy(css = "select#AllRolesAppend")
+	@FindBy(css = "(//select[@id='AllRolesAppend']/..//preceding-sibling::span)[1]")
 	@CacheLookup
 	WebElement UpdateRoleSearchbar;
 	
@@ -77,11 +77,12 @@ public  void EmployeeDetailsFilter() throws InterruptedException, AWTException {
 		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on UpdateRoleButton");
 		Assert.assertTrue(true, "Failed to click on UpdateRoleButton");
 		
-		helper.waitFor(UpdateRoleSearchbar);
-		helper.highLightElement(driver, UpdateRoleSearchbar);
-		helper.selectDropDownValue(UpdateRoleSearchbar, "value", "6");
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> selected data into  and updated the role");
-		Assert.assertTrue(true, "Failed to Update the role");
+//		helper.waitFor(UpdateRoleSearchbar);
+//		helper.highLightElement(driver, UpdateRoleSearchbar);
+//		UpdateRoleSearchbar.click();
+//		helper.robot_Second_option_selectClick();
+//		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> selected data into  and updated the role");
+//		Assert.assertTrue(true, "Failed to Update the role");
 		
 		helper.waitFor(UpdateRoleSaveButton);
 		helper.highLightElement(driver, UpdateRoleSaveButton);

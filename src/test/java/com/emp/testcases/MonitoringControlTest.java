@@ -13,8 +13,7 @@ public class MonitoringControlTest extends TestBase {
 	public void MonitoringControlTest() throws Exception{
 		MonitoringControlPage MonitorControl=new MonitoringControlPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-//		homePage.SkipPopup();
-		homePage.Skip();
+
 		homePage.ManageLocationsAndDepartmentPage();
 		MonitorControl.MonitoringControlPage();
 		

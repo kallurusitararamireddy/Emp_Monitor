@@ -30,23 +30,26 @@
 			<class name="com.emp.testcases.DashBoardTest"></class>
 			<!--*******************   Employee Module   ******************* -->
 			<class name="com.emp.testcases.RegisterEmployeeTest"></class>
+			<class name="com.emp.testcases.Register_employees_and_Deleted_also_test"></class>
 			<class name="com.emp.testcases.BulkRegisterTest"></class>
 			<class name="com.emp.testcases.BulkUpdateTest"></class>
 			<class name="com.emp.testcases.EmployeeDetailsTest"></class>
-			<class name="com.emp.testcases.EditEmployeeTest"></class>
+			<!--<class name="com.emp.testcases.EditEmployeeTest"></class>-->
 			<class name="com.emp.testcases.EmployeeFullDetailsTest"></class>
 			<class name="com.emp.testcases.ActivatingSuspendedEmployeesTest"></class>
 			<class name="com.emp.testcases.AddingFilterModuleTest"></class>
 			<class name="com.emp.testcases.EmployeeAttendanceTest"></class>
-			<class name="com.emp.testcases.EmailMonitoringTest"></class>
+			<!--<class name="com.emp.testcases.EmailMonitoringTest"></class>-->
 			<class name="com.emp.testcases.EmployeeAssignedTest"></class>
 			<class name="com.emp.testcases.EmployeeNotificationTest"></class>
 			<class name="com.emp.testcases.EmployeeInsightsTest"></class>
+			<class name="com.emp.testcases.EmployeeDetailsFilterTest"></class>
 			<!--*********  Employee - Actions- Module  ********* -->
 			<class name="com.emp.testcases.TrackingUserSettingsTest"></class>
 			<class name="com.emp.testcases.TrackUserSettingsFixedTest"></class>
 			<class name="com.emp.testcases.TrackUserSettingsTest"></class>
 			<class name="com.emp.testcases.UpdateTheRoleTest"></class>
+			<class name="com.emp.testcases.Employee_View_Superior_Details_test"></class>
 			<!--*******************   Time-Sheets Module   ******************* -->
 			<class name="com.emp.testcases.TimeSheetsTest"></class>
 			<class name="com.emp.testcases.TimeInMinutesTest"></class>
@@ -55,11 +58,20 @@
 
 			<class name="com.emp.testcases.AssignedListTest"></class>
 
+			<class name="com.emp.testcases.SplitSheetTest"></class>
+
+
+
 
 			<!--*******************   Time-Claim Module   ******************* -->
 			<class name="com.emp.testcases.TimeClaimTest"></class>
+
+			<!--*******************   project Module   ******************* -->
+			<class name="com.emp.testcases.CreateProjectsTest"></class>
+			<class name="com.emp.testcases.ProjectsTest"></class>
+			<class name="com.emp.testcases.Project_Add_project_Details_Test"></class>
 			<!--*******************   Reports Module   ******************* -->
-			<class name="com.emp.testcases.ReportsDownloadTest"></class>
+			<!--<class name="com.emp.testcases.ReportsDownloadTest"></class>-->
 			<class name="com.emp.testcases.ProductivityofEmployeeTest"></class>
 			<class name="com.emp.testcases.ProductivityReportsTest"></class>
 			<class name="com.emp.testcases.AutoEmailReportsTest"></class>
@@ -79,6 +91,13 @@
 			<class name="com.emp.testcases.LocalizationTest"></class>
 			<class name="com.emp.testcases.LocationsAndDepartmentTest"></class>
 
+			<class name="com.emp.testcases.CreateShiftTest"></class>
+			
+			
+			
+			
+
+
 
 			<!--******************* Behaviour Module   ******************* -->
 			<class name="com.emp.testcases.Alert_Policies_Test"></class>
@@ -88,9 +107,11 @@
 			<class name="com.emp.testcases.BehaviourAlertPoliciesTest"></class>
 
 
+
+
 			<!--******* Admin side Any Changes  than go through The  Manager-TL-Employee Log-in page side Checking   ******************* -->
-			<class name="com.emp.testcases.Employees_Select_Assign_WithCheck_with_manager_side"></class>
-			<class name="com.emp.testcases.Employee_manually_checking_Check_in_Test"></class>
+			<!--<class name="com.emp.testcases.Employees_Select_Assign_WithCheck_with_manager_side"></class>-->
+			<!--<class name="com.emp.testcases.Employee_manually_checking_Check_in_Test"></class>-->
 
 
 		</classes>

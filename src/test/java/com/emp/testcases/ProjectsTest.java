@@ -12,13 +12,17 @@ public class ProjectsTest extends TestBase {
 	
 	@Test
 	public void ProjectsTest() throws Exception{
+		
+		/*
+		 * Must be change with project data's range   
+		 */
+		
 		ProjectsPage ProjectsPage=new ProjectsPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-//		homePage.SkipPopup();
-		homePage.Skip();
+
 		homePage.ProjectsPage();
 		ProjectsPage.ProjectsPage();
-
+  
 }
 }
 

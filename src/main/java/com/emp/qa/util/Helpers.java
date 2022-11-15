@@ -9,6 +9,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.Duration;
@@ -21,6 +22,13 @@ import java.util.Set;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.FileUtils;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -43,6 +51,8 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 
 import com.emp.qa.base.TestBase;
+import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvException;
 
 /**
  * 
@@ -51,7 +61,6 @@ import com.emp.qa.base.TestBase;
  */
 
 public class Helpers extends TestBase {
-
 	private static final long TimeOut = 0;
 	/**
 	 * Takes a ScreenShot
@@ -86,7 +95,7 @@ public class Helpers extends TestBase {
 		// waitForPageToLoad();
 		// log("Waiting 60 seconds for element :" + ele + " to be visible");
 		try {
-			new WebDriverWait((WebDriver) driver, 60).until(ExpectedConditions.visibilityOf(ele));
+			new WebDriverWait((WebDriver) driver, Duration.ofSeconds(2000)).until(ExpectedConditions.visibilityOf(ele));
 		} catch (Exception e) {
 		}
 	}
@@ -96,7 +105,8 @@ public class Helpers extends TestBase {
 		// waitForPageToLoad();
 		// log("Waiting 60 seconds for element :" + ele + " to be visible");
 		try {
-			new WebDriverWait((WebDriver) driver, 60).until(ExpectedConditions.elementToBeClickable(ele));
+			new WebDriverWait((WebDriver) driver, Duration.ofSeconds(2000))
+					.until(ExpectedConditions.elementToBeClickable(ele));
 		} catch (Exception e) {
 
 		}
@@ -107,7 +117,7 @@ public class Helpers extends TestBase {
 	public void waitFor(WebElement ele, int time) {
 		waitForPageToLoad();
 		try {
-			new WebDriverWait((WebDriver) driver, time).until(ExpectedConditions.visibilityOf(ele));
+			new WebDriverWait((WebDriver) driver, Duration.ofSeconds(2000)).until(ExpectedConditions.visibilityOf(ele));
 		} catch (Exception e) {
 		}
 	}
@@ -141,7 +151,7 @@ public class Helpers extends TestBase {
 		executor.executeScript("arguments[0].click();", ele);
 	}
 
-	public static void jsScrollintoview(WebElement Element) throws InterruptedException {
+	public void jsScrollintoview(WebElement Element) throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("arguments[0].scrollIntoView();", Element);
 	}
@@ -160,7 +170,7 @@ public class Helpers extends TestBase {
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
-
+ 
 			System.out.println(e.getMessage());
 		}
 
@@ -169,11 +179,11 @@ public class Helpers extends TestBase {
 	}
 
 	@SuppressWarnings("deprecation")
-	public static boolean explicitlyWait(WebElement element) {
+	public boolean explicitlyWait(WebElement element) {
 
 		try {
 
-			new WebDriverWait(getDriver(), TimeOut).until(ExpectedConditions.visibilityOf(element));
+			new WebDriverWait(getDriver(), Duration.ofSeconds(2000)).until(ExpectedConditions.visibilityOf(element));
 			return true;
 		} catch (NoSuchElementException e)
 
@@ -202,19 +212,6 @@ public class Helpers extends TestBase {
 		}
 	}
 
-	public String getRandomString() {
-		String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-		StringBuilder salt = new StringBuilder();
-		Random rnd = new Random();
-		while (salt.length() < 10) { // length of the random string.
-			int index = (int) (rnd.nextFloat() * SALTCHARS.length());
-			salt.append(SALTCHARS.charAt(index));
-		}
-		String saltStr = salt.toString();
-		return saltStr;
-
-	}
-
 	public boolean containsAKeyword(String myString, String[] linkText) {
 		for (String keyword : linkText) {
 			if (myString.contains(keyword)) {
@@ -227,7 +224,9 @@ public class Helpers extends TestBase {
 
 	public void Scrollintoview(WebElement element) throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
-		// This will scroll the page till the element is found
+		/*
+		 * This will scroll the page till the element is found
+		 */
 		js.executeScript("arguments[0].scrollIntoView();", element);
 
 	}
@@ -268,7 +267,7 @@ public class Helpers extends TestBase {
 	}
 
 	public void SwitchOutOf_iFrame() {
-		try {
+		try { 
 			getDriver().switchTo().defaultContent();
 		} catch (NoSuchFrameException e) {
 			System.out.println(e.getMessage());
@@ -288,19 +287,19 @@ public class Helpers extends TestBase {
 
 	public boolean uploadFile(String fileLocation) throws InterruptedException, AWTException {
 		try {
-			Thread.sleep(10000);
+			Thread.sleep(1000);
 			StringSelection stringSelection = new StringSelection(fileLocation);
 			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
 			Robot robot = new Robot();
-			Thread.sleep(10000);
+			Thread.sleep(1000);
 			robot.keyPress(KeyEvent.VK_CONTROL);
 			robot.keyPress(KeyEvent.VK_V);
-			Thread.sleep(10000);
+			Thread.sleep(1000);
 			robot.keyRelease(KeyEvent.VK_V);
 			robot.keyRelease(KeyEvent.VK_CONTROL);
-			Thread.sleep(10000);
+			Thread.sleep(1000);
 			robot.keyPress(KeyEvent.VK_ENTER);
-			Thread.sleep(10000);
+			Thread.sleep(1000);
 			robot.keyRelease(KeyEvent.VK_ENTER);
 
 			return true;
@@ -337,7 +336,23 @@ public class Helpers extends TestBase {
 		Thread.sleep(2000);
 	}
 
-	public void SelectSecondValuefromRightClick() throws InterruptedException, AWTException {
+	public void robot_Zero_option_selectClick() throws InterruptedException, AWTException {
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_ENTER);
+		Thread.sleep(1000);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+	}
+
+	public void robot_frist_option_selectClick() throws InterruptedException, AWTException {
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_DOWN);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		Thread.sleep(1000);
+		robot.keyRelease(KeyEvent.VK_DOWN);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+	}
+
+	public void robot1_SelectSecondValuefromRightClick() throws InterruptedException, AWTException {
 		Robot robot = new Robot();
 		Thread.sleep(2000);
 		robot.keyPress(KeyEvent.VK_DOWN);
@@ -346,8 +361,49 @@ public class Helpers extends TestBase {
 		Thread.sleep(1000);
 		robot.keyPress(KeyEvent.VK_ENTER);
 		Thread.sleep(2000);
-//			robot.keyPress(KeyEvent.VK_ENTER);
-//			Thread.sleep(10000);
+
+	}
+
+	public void robot_Second_option_selectClick() throws InterruptedException, AWTException {
+		Robot robot = new Robot();
+		Thread.sleep(2000);
+		robot.keyPress(KeyEvent.VK_DOWN);
+		robot.keyPress(KeyEvent.VK_DOWN);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		Thread.sleep(2000);
+		robot.keyRelease(KeyEvent.VK_DOWN);
+		robot.keyRelease(KeyEvent.VK_DOWN);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+	}
+
+	public void robot_third_option_selectClick() throws InterruptedException, AWTException {
+		Robot robot = new Robot();
+		Thread.sleep(2000);
+		robot.keyPress(KeyEvent.VK_DOWN);
+		robot.keyPress(KeyEvent.VK_DOWN);
+		robot.keyPress(KeyEvent.VK_DOWN);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		Thread.sleep(2000);
+		robot.keyRelease(KeyEvent.VK_DOWN);
+		robot.keyRelease(KeyEvent.VK_DOWN);
+		robot.keyRelease(KeyEvent.VK_DOWN);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+	}
+
+	public void robot_fourth_option_selectClick() throws InterruptedException, AWTException {
+		Robot robot = new Robot();
+		Thread.sleep(2000);
+		robot.keyPress(KeyEvent.VK_DOWN);
+		robot.keyPress(KeyEvent.VK_DOWN);
+		robot.keyPress(KeyEvent.VK_DOWN);
+		robot.keyPress(KeyEvent.VK_DOWN);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		Thread.sleep(2000);
+		robot.keyRelease(KeyEvent.VK_DOWN);
+		robot.keyRelease(KeyEvent.VK_DOWN);
+		robot.keyRelease(KeyEvent.VK_DOWN);
+		robot.keyRelease(KeyEvent.VK_DOWN);
+		robot.keyRelease(KeyEvent.VK_ENTER);
 	}
 
 	public void Robotclick(WebElement Element) throws AWTException, InterruptedException {
@@ -372,11 +428,10 @@ public class Helpers extends TestBase {
 		status.selectByVisibleText(string);
 	}
 
-	@SuppressWarnings("deprecation")
 	public void waitFor(String textToBeDisplayedOnPage) throws InterruptedException {
 		// TODO Auto-generated method stub
 		try {
-			new WebDriverWait((WebDriver) driver, 60).until(ExpectedConditions
+			new WebDriverWait((WebDriver) driver, Duration.ofSeconds(2000)).until(ExpectedConditions
 					.textToBePresentInElement(driver.get().findElement(By.xpath("//body")), textToBeDisplayedOnPage));
 		} catch (Exception e) {
 			System.out.println("TEXT WAS NOT FOUND IN THE CURRENT PAGE");
@@ -398,11 +453,10 @@ public class Helpers extends TestBase {
 		status.selectByVisibleText(string);
 	}
 
-	@SuppressWarnings("deprecation")
 	public void waitFor1(String textToBeDisplayedOnPage) throws InterruptedException {
 		// TODO Auto-generated method stub
 		try {
-			new WebDriverWait((WebDriver) driver, 60).until(ExpectedConditions
+			new WebDriverWait((WebDriver) driver, Duration.ofSeconds(2000)).until(ExpectedConditions
 					.textToBePresentInElement(driver.get().findElement(By.xpath("//body")), textToBeDisplayedOnPage));
 		} catch (Exception e) {
 			System.out.println("TEXT WAS NOT FOUND IN THE CURRENT PAGE");
@@ -513,118 +567,569 @@ public class Helpers extends TestBase {
 		s_All.getFirstSelectedOption();
 
 	}
-	
-	
 
 	/*
-	 *   X-path  Write in String format
+	 * X-path Write in String format
 	 */
 	public void expility_Wait_2(String X_path_full) {
 		WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(2000));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(X_path_full))).click();
 
 	}
+
+	/*
+	 * Alert-Pop-up
+	 */
+
+	public void Alert_Accept() {
+		Alert alt = (Alert) getDriver().switchTo().alert();
+		alt.accept();
+
+	}
+
+	public void Alert_Dismiss() {
+		Alert alt = (Alert) getDriver().switchTo().alert();
+		alt.dismiss();
+
+	}
+
+	public void Alert_getText() {
+		Alert alt = (Alert) getDriver().switchTo().alert();
+		alt.getText();
+
+	}
+
+	public void Alert_Send_Keys(String message) {
+		Alert alt = (Alert) getDriver().switchTo().alert();
+		alt.sendKeys(message);
+
+	}
+
+	/*
+	 * Open New Window
+	 */
+
+	public void open_new_Window() {
+		getDriver().switchTo().newWindow(WindowType.WINDOW);
+
+	}
+
+	/*
+	 * Open New Tab
+	 */
+
+	public void open_new_Tab() {
+		getDriver().switchTo().newWindow(WindowType.TAB);
+
+	}
+
+	/*
+	 * Take Screen Shot full page
+	 */
+
+	public void Screen_Shot_full_page(String Folder_name, String Screenshot_page_name) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		File target = new File("./" + Folder_name + Screenshot_page_name + ".png");
+		FileUtils.copyFile(source, target);
+
+	}
+
+	public String getRandomString() {
+		String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+		StringBuilder salt = new StringBuilder();
+		Random rnd = new Random();
+		while (salt.length() < 10) { // length of the random string.
+			int index = (int) (rnd.nextFloat() * SALTCHARS.length());
+			salt.append(SALTCHARS.charAt(index));
+		}
+		String saltStr = salt.toString();
+		return saltStr;
+
+	}
+
+	/*
+	 * Excel ,CSV and PDF Files Validating Code
+	 */
+
+	/*******
+	 * DashBoard Module 
+	 *******/
 	
+	/*
+	 * DashBoard Currently_Active
+	 */
+
+	@SuppressWarnings("resource")
+	public void Total_Enrollments_Excel_data() throws IOException, InterruptedException {
+
+		String excel_File_path = DU.Data_info("Total_Enrollments");
+		FileInputStream fis = new FileInputStream(excel_File_path);
+		Workbook workbook = new XSSFWorkbook(fis);
+		Sheet sheet = workbook.getSheetAt(0);
+		int lastrow = sheet.getLastRowNum();
+		for (int i = 0; i <= lastrow; i++) {
+			Row row = sheet.getRow(i);
+			for (int j = 0; j < row.getLastCellNum(); j++) {
+				DataFormatter format = new DataFormatter();
+				String data = format.formatCellValue(row.getCell(j));
+				Reporter.log("<B><font color = 'blue'> .</font></B>  " + data);
+
+				System.out.print(data + " || ");
+			}
+			System.out.println();
+		}
+
+	}
+
+	/*
+	 * DashBoard Currently_Active
+	 */
+
+	@SuppressWarnings("resource")
+	public void Currently_Active_Xsxl_Data_Complete_Print_ALL() throws IOException, InterruptedException {
+
+		String excel_File_path = DU.Data_info("Dashboard_Currently_active_Users");
+		FileInputStream fis = new FileInputStream(excel_File_path);
+		Workbook workbook = new XSSFWorkbook(fis);
+		Sheet sheet = workbook.getSheetAt(0);
+		int lastrow = sheet.getLastRowNum();
+		for (int i = 0; i <= lastrow; i++) {
+			Row row = sheet.getRow(i);
+			for (int j = 0; j < row.getLastCellNum(); j++) {
+				DataFormatter format = new DataFormatter();
+				String data = format.formatCellValue(row.getCell(j));
+				Reporter.log("<B><font color = 'blue'> .</font></B>  " + data);
+
+				System.out.print(data + " || ");
+			}
+			System.out.println();
+		}
+
+	}
+
+	/*
+	 * DashBoard Currently_Idle
+	 */
+
+	@SuppressWarnings("resource")
+	public void Currently_Idle_Xsxl_Data_Complete_Print_ALL() throws IOException, InterruptedException {
+		String excel_File_path = DU.Data_info("Currently_idle");
+		FileInputStream fis = new FileInputStream(excel_File_path);
+		Workbook workbook = new XSSFWorkbook(fis);
+		Sheet sheet = workbook.getSheetAt(0);
+		int lastrow = sheet.getLastRowNum();
+		for (int i = 0; i <= lastrow; i++) {
+			Row row = sheet.getRow(i);
+			for (int j = 0; j < row.getLastCellNum(); j++) {
+				DataFormatter format = new DataFormatter();
+				String data = format.formatCellValue(row.getCell(j));
+				Reporter.log("<B><font color = 'blue'> .</font></B>  " + data);
+
+				System.out.print(data + " || ");
+			}
+			System.out.println();
+		}
+
+	}
+
+	/*
+	 * DashBoard Currently_offline
+	 */
+
+	@SuppressWarnings("resource")
+	public void Currently_offline_Xsxl_Data_Complete_Print_ALL() throws IOException, InterruptedException {
+		String excel_File_path = DU.Data_info("Currently_offline");
+		FileInputStream fis = new FileInputStream(excel_File_path);
+		Workbook workbook = new XSSFWorkbook(fis);
+		Sheet sheet = workbook.getSheetAt(0);
+		int lastrow = sheet.getLastRowNum();
+		for (int i = 0; i <= lastrow; i++) {
+			Row row = sheet.getRow(i);
+			for (int j = 0; j < row.getLastCellNum(); j++) {
+				DataFormatter format = new DataFormatter();
+				String data = format.formatCellValue(row.getCell(j));
+				Reporter.log("<B><font color = 'blue'> .</font></B>  " + data);
+
+				System.out.print(data + " || ");
+			}
+			System.out.println();
+		}
+
+	}
+
+	/*
+	 * DashBoard Absent_Users
+	 */
+
+	@SuppressWarnings("resource")
+	public void Absent_Users_Xsxl_Data_Complete_Print_ALL() throws IOException, InterruptedException {
+		String excel_File_path = DU.Data_info("Absent_Users");
+		FileInputStream fis = new FileInputStream(excel_File_path);
+		Workbook workbook = new XSSFWorkbook(fis);
+		Sheet sheet = workbook.getSheetAt(0);
+		int lastrow = sheet.getLastRowNum();
+		for (int i = 0; i <= lastrow; i++) {
+			Row row = sheet.getRow(i);
+			for (int j = 0; j < row.getLastCellNum(); j++) {
+				DataFormatter format = new DataFormatter();
+				String data = format.formatCellValue(row.getCell(j));
+				Reporter.log("<B><font color = 'blue'> .</font></B>  " + data);
+
+				System.out.print(data + " || ");
+			}
+			System.out.println();
+		}
+
+	}
+
+	/*
+	 * DashBoard Suspended_Users
+	 */
+
+	@SuppressWarnings("resource")
+	public void Suspended_Users_Xsxl_Data_Complete_Print_ALL() throws IOException, InterruptedException {
+		String excel_File_path = DU.Data_info("Suspended_Users");
+		FileInputStream fis = new FileInputStream(excel_File_path);
+		Workbook workbook = new XSSFWorkbook(fis);
+		Sheet sheet = workbook.getSheetAt(0);
+		int lastrow = sheet.getLastRowNum();
+		for (int i = 0; i <= lastrow; i++) {
+			Row row = sheet.getRow(i);
+			for (int j = 0; j < row.getLastCellNum(); j++) {
+				DataFormatter format = new DataFormatter();
+				String data = format.formatCellValue(row.getCell(j));
+				Reporter.log("<B><font color = 'blue'> .</font></B>  " + data);
+
+				System.out.print(data + " || ");
+			}
+			System.out.println();
+		}
+  
+	}
+	
+	
+	
+	
+	/************************************************************
+	 * Employees Module  
+	 *************************************************************/
+	
+
+	@SuppressWarnings("resource")
+	public void Employees_List_Excel_data() throws IOException, InterruptedException {
+
+		String excel_File_path = DU.Data_info("Employees_List");
+		FileInputStream fis = new FileInputStream(excel_File_path);
+		Workbook workbook = new XSSFWorkbook(fis);
+		Sheet sheet = workbook.getSheetAt(0);
+		int lastrow = sheet.getLastRowNum();
+		for (int i = 0; i <= lastrow; i++) {
+			Row row = sheet.getRow(i);
+			for (int j = 0; j < row.getLastCellNum(); j++) {
+				DataFormatter format = new DataFormatter();
+				String data = format.formatCellValue(row.getCell(j));
+				Reporter.log("<B><font color = 'blue'> .</font></B>  " + data);
+
+				System.out.print(data + " || ");
+			}
+			System.out.println();
+		}
+
+	}
+	
+	
+	
+	
+	@SuppressWarnings("resource")
+	public void Employee_Attendance_sheet_Excel_data() throws IOException, InterruptedException {
+
+		String excel_File_path = DU.Data_info("Employee_Attendance_sheet");
+		FileInputStream fis = new FileInputStream(excel_File_path);
+		Workbook workbook = new XSSFWorkbook(fis);
+		Sheet sheet = workbook.getSheetAt(0);
+		int lastrow = sheet.getLastRowNum();
+		for (int i = 0; i <= lastrow; i++) {
+			Row row = sheet.getRow(i);
+			for (int j = 0; j < row.getLastCellNum(); j++) {
+				DataFormatter format = new DataFormatter();
+				String data = format.formatCellValue(row.getCell(j));
+				Reporter.log("<B><font color = 'blue'> .</font></B>  -" + data);
+
+				System.out.print(data + " || ");
+			}
+			System.out.println(); 
+		} 
+
+	}
+	
+	
+	
+	
+	
+
+	/************************************************************
+	 * Time Sheets  Module  
+	 *************************************************************/
 	
 	
 	/*
-	 *   Alert-Pop-up
+	 *   this is CSV reader code 
+	 */
+
+	@SuppressWarnings("resource")
+public void Time_Sheets_CSV_Dot_files() throws IOException, CsvException {
+		
+		
+		/*
+		 *  This Code Only to Accept Excel sheets but  in Path End  .CSV  files only read the data
+		 *  ex:- "C:\Users\Official\Downloads\Tasks List (Sep 28, 2022).csv"
+		 */
+		/*
+		 *   Complete Data Read   
+		 */
+		
+		CSVReader reader = new CSVReader(
+				new FileReader(DU.Data_info("Time_Sheets_data")));
+
+		List<String[]> list = reader.readAll();
+		System.out.println("Total rows which we have is " + list.size());
+
+		// create Iterator reference
+		Iterator<String[]> iterator = list.iterator();
+
+		// Iterate all values
+		while (iterator.hasNext()) {
+
+			String[] str = iterator.next();
+
+			System.out.print(" - ");
+
+			for (int i = 0; i < str.length; i++) {
+
+				System.out.print(" " + str[i]);
+				Reporter.log("<B><font color = 'blue'> .</font></B>  -" + str[i]);
+ 
+			}
+			System.out.println("||");  
+
+		}
+	}
+	
+	
+	
+	
+	@SuppressWarnings("resource")
+	public void Attendance_History_sheet_Excel_data() throws IOException, InterruptedException {
+
+		String excel_File_path = DU.Data_info("Attendance_History");
+		FileInputStream fis = new FileInputStream(excel_File_path);
+		Workbook workbook = new XSSFWorkbook(fis);
+		Sheet sheet = workbook.getSheetAt(0);
+		int lastrow = sheet.getLastRowNum();
+		for (int i = 0; i <= lastrow; i++) {
+			Row row = sheet.getRow(i);
+			for (int j = 0; j < row.getLastCellNum(); j++) {
+				DataFormatter format = new DataFormatter();
+				String data = format.formatCellValue(row.getCell(j));
+				Reporter.log("<B><font color = 'blue'> .</font></B>  -" + data);
+
+				System.out.print(data + " || ");
+			}
+			System.out.println(); 
+		} 
+
+	}
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	/*
+	 *  this is PDF reader code 
 	 */
 	
+	public void Time_sheet_PDF_Reader() throws IOException, CsvException, InterruptedException {
+
+		/*
+		 * This Code Only to Accept Excel sheets but in Path End .CSV files only read
+		 * 
+		 */
+
+		File f = new File(DU.Data_info("Time_Sheets_data_PDF_file"));
+
+		PDDocument pd;
+		pd = PDDocument.load(f);
+		System.out.println("Total Number Of pages :" + pd.getNumberOfPages());
+		PDFTextStripper pdf1 = new PDFTextStripper();
+		System.out.print(pdf1.getText(pd));
+		Reporter.log("<B><font color = 'orange'> </font>  " + pdf1.getText(pd));
+		Thread.sleep(2000);
+		f.deleteOnExit();
+
+	} 
 	
-	 public void Alert_Accept()
-	 {
-		 Alert alt=(Alert) getDriver().switchTo().alert();
-		 alt.accept();
+	
+	
+	
+	
+	
+	/************************************************************
+	 * Reports Module  
+	 *************************************************************/
+	
+
+	@SuppressWarnings("resource")
+	public void Both_web_app__button() throws IOException, InterruptedException {
+
+		String excel_File_path = DU.Data_info("Both_button");
+		FileInputStream fis = new FileInputStream(excel_File_path);
+		Workbook workbook = new XSSFWorkbook(fis);
+		Sheet sheet = workbook.getSheetAt(0);
+		int lastrow = sheet.getLastRowNum();
+		for (int i = 0; i <= lastrow; i++) {
+			Row row = sheet.getRow(i);
+			for (int j = 0; j < row.getLastCellNum(); j++) {
+				DataFormatter format = new DataFormatter();
+				String data = format.formatCellValue(row.getCell(j));
+				Reporter.log("<B><font color = 'blue'> .</font></B>  " + data);
+
+				System.out.print(data + " || ");
+			}
+			System.out.println();
+		}
+
+	}
+	
+	
+	
+	
+	@SuppressWarnings("resource")
+	public void Cumulative_Report_Sheet_button() throws IOException, InterruptedException {
+
+		String excel_File_path = DU.Data_info("CumulativeReportSheet");
+		FileInputStream fis = new FileInputStream(excel_File_path);
+		Workbook workbook = new XSSFWorkbook(fis);
+		Sheet sheet = workbook.getSheetAt(0);
+		int lastrow = sheet.getLastRowNum();
+		for (int i = 0; i <= lastrow; i++) {
+			Row row = sheet.getRow(i);
+			for (int j = 0; j < row.getLastCellNum(); j++) {
+				DataFormatter format = new DataFormatter();
+				String data = format.formatCellValue(row.getCell(j));
+				Reporter.log("<B><font color = 'blue'> .</font></B>  " + data);
+
+				System.out.print(data + " || ");
+			}
+			System.out.println();
+		}
+
+	}
+	
+	
+	public void Web_and_App_PDF_Reader() throws IOException, CsvException, InterruptedException {
+
+		/*
+		 * This Code Only to Accept Excel sheets but in Path End .CSV files only read
+		 * 
+		 */
+
+		File f = new File(DU.Data_info("pdf_web_and_app"));
+
+		PDDocument pd;
+		pd = PDDocument.load(f);
+		System.out.println("Total Number Of pages :" + pd.getNumberOfPages());
+		PDFTextStripper pdf1 = new PDFTextStripper();
+		System.out.print(pdf1.getText(pd));
+		Reporter.log("<B><font color = 'orange'> </font>  " + pdf1.getText(pd));
+		Thread.sleep(2000);
+		f.deleteOnExit();
+
+	} 	 
+	
+	
+	
+	public void Productivity_Reports_pdf() throws IOException, CsvException, InterruptedException {
+
+		/*
+		 * This Code Only to Accept Excel sheets but in Path End .CSV files only read
+		 * 
+		 */
+
+		File f = new File(DU.Data_info("Productivity_Reports_pdf"));
+
+		PDDocument pd;
+		pd = PDDocument.load(f);
+		System.out.println("Total Number Of pages :" + pd.getNumberOfPages());
+		PDFTextStripper pdf1 = new PDFTextStripper();
+		System.out.print(pdf1.getText(pd));
+		Reporter.log("<B><font color = 'orange'> </font>  " + pdf1.getText(pd));
+		Thread.sleep(2000);
+		f.deleteOnExit();
+
+	}
+	
+	
+	
+	@SuppressWarnings("resource")
+public void Productivity_Reports_CSV_Dot_files() throws IOException, CsvException {
 		
-	 }
-	 
-	 public void Alert_Dismiss()
-	 {
-		 Alert alt=(Alert) getDriver().switchTo().alert();
-		 alt.dismiss();
 		
-	 }
-	 
-	 public void Alert_getText()
-	 {
-		 Alert alt=(Alert) getDriver().switchTo().alert();
-		 alt.getText();
+		/*
+		 *  This Code Only to Accept Excel sheets but  in Path End  .CSV  files only read the data
+		 *  ex:- "C:\Users\Official\Downloads\Tasks List (Sep 28, 2022).csv"
+		 */
+		/*
+		 *   Complete Data Read   
+		 */
 		
-	 }
-	 
-	 public void Alert_Send_Keys(String message)
-	 {
-		 Alert alt=(Alert) getDriver().switchTo().alert();
-		 alt.sendKeys(message);
-		
-	 }
-	 
-	 /*
-	  *  Open New Window 
-	  */
-	 
-	 public void open_new_Window()
-	 {
-		 getDriver().switchTo().newWindow(WindowType.WINDOW);
-		
-	 }
-	 
-	 /*
-	  *  Open New Tab 
-	  */
-	 
-	 public void open_new_Tab()
-	 {
-		 getDriver().switchTo().newWindow(WindowType.TAB);
-		
-	 }
-	 
-	 
-	 /*
-	  *  Take Screen Shot full page
-	  */
-	 
-	 public void Screen_Shot_full_page(String Folder_name,String Screenshot_page_name) throws IOException
-	 {
-		 TakesScreenshot ts=(TakesScreenshot) driver;
-		 File source=ts.getScreenshotAs(OutputType.FILE);
-		 File target=new File("./"+Folder_name+Screenshot_page_name+".png");
-		 FileUtils.copyFile(source, target);
-		 
-		
-	 }
+		CSVReader reader = new CSVReader(
+				new FileReader(DU.Data_info("Productivity_Reports_csv")));
+
+		List<String[]> list = reader.readAll();
+		System.out.println("Total rows which we have is " + list.size());
+
+		// create Iterator reference
+		Iterator<String[]> iterator = list.iterator();
+
+		// Iterate all values
+		while (iterator.hasNext()) {
+
+			String[] str = iterator.next();
+
+			System.out.print(" - ");
+
+			for (int i = 0; i < str.length; i++) {
+
+				System.out.print(" " + str[i]);
+				Reporter.log("<B><font color = 'blue'> .</font></B>  -" + str[i]);
+ 
+			}
+			System.out.println("||");  
+
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	 
 	 
-	 
-	 
-	 
-	 
-	 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

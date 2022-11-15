@@ -10,9 +10,14 @@ public class BehaviourAlertPoliciesTest extends TestBase {
 	
 	@Test
 	public void BehaviourAlertPoliciesTest() throws InterruptedException{
+		
+		/*
+		 *  Change the Edit option xpath 
+		 */
+		
 		BehaviourAlertPoliciesPage AlertPol=new BehaviourAlertPoliciesPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-		//homePage.SkipPopup();
+		
 		homePage.behaviourpage();
 		AlertPol.BehaviourAlertPoliciesPage();
 

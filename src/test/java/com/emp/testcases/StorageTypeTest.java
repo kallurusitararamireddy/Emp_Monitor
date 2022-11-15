@@ -13,8 +13,7 @@ public class StorageTypeTest extends TestBase{
 	public void StorageTypeTest() throws Exception{
 	StorageTypePage StorageType=new StorageTypePage(getDriver());
 	HomePage homePage =new HomePage(getDriver());
-//	homePage.SkipPopup();
-	homePage.Skip();
+
 	homePage.ManageLocationsAndDepartmentPage();
 	StorageType.StorageTypePage();
 

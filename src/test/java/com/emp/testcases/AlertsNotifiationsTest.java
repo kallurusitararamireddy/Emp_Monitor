@@ -13,8 +13,7 @@ public class AlertsNotifiationsTest extends TestBase {
 	public void AlertsNotifiationsPage() throws Exception{
 		AlertsNotificationPage AlertNotification=new AlertsNotificationPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-//		homePage.SkipPopup();
-		homePage.Skip();
+
 		homePage.behaviourpage();
 		AlertNotification.AlertsNotificationPage();
 }

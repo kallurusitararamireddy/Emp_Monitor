@@ -13,7 +13,7 @@ public class ApplicatonsUsedTest extends TestBase {
 	public void ApplicatonsUsedTest() throws InterruptedException{
 		ApplicationsUsedPage App=new ApplicationsUsedPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
-		//homePage.SkipPopup();
+
 		homePage.ReportsDownloadPage();
 		App.ApplicationsUsedPage();
 		

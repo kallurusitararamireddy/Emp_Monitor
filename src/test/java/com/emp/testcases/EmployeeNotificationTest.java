@@ -1,4 +1,4 @@
-package com.emp.testcases;
+ package com.emp.testcases;
 
 import java.awt.AWTException;
 
@@ -14,8 +14,8 @@ public class EmployeeNotificationTest extends TestBase {
 
 	public void EmployeeNotificationTest() throws InterruptedException, AWTException{		
 		EmployeeNotificationPage Empn =new EmployeeNotificationPage(getDriver());
-		HomePage hp=new HomePage(getDriver());		 
-		//hp.SkipPopup();
+		HomePage hp=new HomePage(getDriver());	
+		
 		hp.clickEmployee();
 		Empn.EmployeeNotification();
 	
