@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
+              <span class="suite-name border-passed">Default suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
+                    <span>C:\Users\Official\AppData\Local\Temp\testng-eclipse--907376854\testng-customsuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">6 methods,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.emp.testcases.Dashboardtest8_Department_Performance_Checking_Test" class="method navigator-link" hash-for-method="Department_Performance_Checking_page_Test">Department_Performance_Checking_page_Test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.emp.testcases.Dashboardtest5_Top_10_Active_Employees_Checking_Test" class="method navigator-link" hash-for-method="Top_10_Active_Employees_Test">Top_10_Active_Employees_Test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.emp.testcases.Dashboardtest4_Top_10_Non_Productive_Employees_Checking_Test" class="method navigator-link" hash-for-method="Top_10_Non_Productive_Employees_Test">Top_10_Non_Productive_Employees_Test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.emp.testcases.Dashboardtest3_Top_10_Productive_Employees_Checking_Test" class="method navigator-link" hash-for-method="Top_10_Productive_Employees_Test">Top_10_Productive_Employees_Test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.emp.testcases.Dashboardtest6_Top_10_Non_Active_Employees_Checking_Test" class="method navigator-link" hash-for-method="Top_10_Un_Active_Employees_Locations_Test">Top_10_Un_Active_Employees_Locations_Test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.emp.testcases.Dashboardtest7_Location_Performance_Checking_Test2" class="method navigator-link" hash-for-method="location_Performance_Checking_page_Test">location_Performance_Checking_page_Test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.emp.testcases.Dashboardtest6_Top_10_Non_Active_Employees_Checking_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Top_10_Un_Active_Employees_Locations_Test">
+                  </a> <!-- Top_10_Un_Active_Employees_Locations_Test -->
+                  <span class="method-name">Top_10_Un_Active_Employees_Locations_Test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.emp.testcases.Dashboardtest4_Top_10_Non_Productive_Employees_Checking_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Top_10_Non_Productive_Employees_Test">
+                  </a> <!-- Top_10_Non_Productive_Employees_Test -->
+                  <span class="method-name">Top_10_Non_Productive_Employees_Test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.emp.testcases.Dashboardtest8_Department_Performance_Checking_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Department_Performance_Checking_page_Test">
+                  </a> <!-- Department_Performance_Checking_page_Test -->
+                  <span class="method-name">Department_Performance_Checking_page_Test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.emp.testcases.Dashboardtest7_Location_Performance_Checking_Test2</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="location_Performance_Checking_page_Test">
+                  </a> <!-- location_Performance_Checking_page_Test -->
+                  <span class="method-name">location_Performance_Checking_page_Test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.emp.testcases.Dashboardtest3_Top_10_Productive_Employees_Checking_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Top_10_Productive_Employees_Test">
+                  </a> <!-- Top_10_Productive_Employees_Test -->
+                  <span class="method-name">Top_10_Productive_Employees_Test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.emp.testcases.Dashboardtest5_Top_10_Active_Employees_Checking_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Top_10_Active_Employees_Test">
+                  </a> <!-- Top_10_Active_Employees_Test -->
+                  <span class="method-name">Top_10_Active_Employees_Test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+        </div> <!-- panel Default_suite -->
+        <div panel-name="test-xml-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\Official\AppData\Local\Temp\testng-eclipse--907376854\testng-customsuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.emp.testcases.Dashboardtest3_Top_10_Productive_Employees_Checking_Test&quot;/&gt;
+      &lt;class name=&quot;com.emp.testcases.Dashboardtest6_Top_10_Non_Active_Employees_Checking_Test&quot;/&gt;
+      &lt;class name=&quot;com.emp.testcases.Dashboardtest5_Top_10_Active_Employees_Checking_Test&quot;/&gt;
+      &lt;class name=&quot;com.emp.testcases.Dashboardtest4_Top_10_Non_Productive_Employees_Checking_Test&quot;/&gt;
+      &lt;class name=&quot;com.emp.testcases.Dashboardtest7_Location_Performance_Checking_Test2&quot;/&gt;
+      &lt;class name=&quot;com.emp.testcases.Dashboardtest8_Department_Performance_Checking_Test&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Default test --&gt;
+&lt;/suite&gt; &lt;!-- Default suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Default test (6 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Default_suite');
+function tableData_Default_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(6);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'Department_Performance_Checking_page_Test')
+data.setCell(0, 2, 'com.emp.testcases.Dashboardtest8_Department_Performance_Checking_Test')
+data.setCell(0, 3, 60154);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'location_Performance_Checking_page_Test')
+data.setCell(1, 2, 'com.emp.testcases.Dashboardtest7_Location_Performance_Checking_Test2')
+data.setCell(1, 3, 59709);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'Top_10_Un_Active_Employees_Locations_Test')
+data.setCell(2, 2, 'com.emp.testcases.Dashboardtest6_Top_10_Non_Active_Employees_Checking_Test')
+data.setCell(2, 3, 23976);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'Top_10_Non_Productive_Employees_Test')
+data.setCell(3, 2, 'com.emp.testcases.Dashboardtest4_Top_10_Non_Productive_Employees_Checking_Test')
+data.setCell(3, 3, 23884);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'Top_10_Active_Employees_Test')
+data.setCell(4, 2, 'com.emp.testcases.Dashboardtest5_Top_10_Active_Employees_Checking_Test')
+data.setCell(4, 3, 23800);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'Top_10_Productive_Employees_Test')
+data.setCell(5, 2, 'com.emp.testcases.Dashboardtest3_Top_10_Productive_Employees_Checking_Test')
+data.setCell(5, 3, 19137);
+window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <div id="times-div-Default_suite">
+              </div> <!-- times-div-Default_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Top_10_Active_Employees_Test</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><B><font color = 'blue'>Step1 .</font></B> Clicked on Top-10-Active-Employees-Employees_Location Drop-down and Selected Any Location </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step2 .</font></B> Clicked on Top-10-Active Employees_Department Drop-down and Selected Any Department</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step3 .</font></B> Clicked on Top-10-Active Employees Today Button</span>
+                <span class="reporter-method-output"><B><font color = 'green'>  </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'green'>  Today  Active Employees Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Employee Name--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Abhishek Four tf test--00:00:49 hrs</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step4 .</font></B> Clicked on Top-10-Active Employees_Yesterday Button</span>
+                <span class="reporter-method-output"><B><font color = 'green'>  </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'green'> Yesterday  Active  Employees Data </font></B>   </span>
+                <span class="reporter-method-output"><B><font color = 'blue'> </font></B>    Employee Name--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Abhishek Four tf test--00:00:12 hrs</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Guest User--00:00:12 hrs</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step5 .</font></B> Clicked on Top-10-Active Employees_Thisweek Button</span>
+                <span class="reporter-method-output"><B><font color = 'green'>  </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'green'>  This Week  Active Employees Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'> </font></B>    Employee Name--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    GLB-BLR-010-PC - GLB-BLR-010--00:14:59 hrs</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Guest User--00:14:59 hrs</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Aryan raj--00:14:59 hrs</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Abhishek Four tf test--00:14:59 hrs</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    SS Keystrokes--00:14:59 hrs</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Department_Performance_Checking_page_Test</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><B><font color = 'blue'>Step1 .</font></B> Clicked on Department_Performance_Today Button</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'green'> (a).Productive Department Performance Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Location--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Default--00:00:49 hrs (0.17%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'red'> (b).Un-Productive Department Performance Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Location--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    No data found !--null</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'orange'> (c).Neutral Department_performance Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Location--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    No data found !--null</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step2 .</font></B> Clicked on Department_Performance_Yesterday Button</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'green'> (a).Productive Department_Performance Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Location--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Default--00:00:12 hrs (0.04%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Php--00:00:12 hrs (0.04%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'red'> (b).Un-Productive Department performance Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Location--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    No data found !--null</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'orange'> (c).Neutral Department_Performance Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Location--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    No data found !--null</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step3 .</font></B> Clicked on Department_Performance_Thisweek Button</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'green'> (a).Productive Department_Performance Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Location--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Testing--01:22:43 hrs (5.74%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Php--01:22:43 hrs (5.74%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Default--01:22:43 hrs (5.74%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'red'> (b).Un-Productive Department_Performance Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Location--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Testing--00:14:08 hrs (0.74%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'orange'> (c).Neutral Department_Performance Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Location--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    No data found !--null</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Top_10_Productive_Employees_Test</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><B><font color = 'blue'>Step1 .</font></B> Clicked on  Top_10_Productive_Employees_Locations Drop-down and Selected Any Location </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step2 .</font></B> Clicked on Top10ProductiveEmployees_Departments Drop-down and Selected Any Department</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step3 .</font></B> Clicked on Top10ProductiveEmployeesToday Button</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    </span>
+                <span class="reporter-method-output"><B><font color = 'green'> Today Top-10-Productive-Employees  </font></B>    </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Employee Name--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>    </font></B>    Abhishek Four tf test--00:00:49 hrs (0.17%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step4 .</font></B> Clicked on Top_10_Productive_Employees-yesterday Button</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    </span>
+                <span class="reporter-method-output"><B><font color = 'green'> yesterday Top-10-Productive-Employees </font></B>    </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Employee Name--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>    </font></B>    Abhishek Four tf test--00:00:12 hrs (0.04%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>    </font></B>    Guest User--00:00:12 hrs (0.04%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step5 .</font></B> Clicked on Top10ProductiveEmployees_Thisweek Button</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    </span>
+                <span class="reporter-method-output"><B><font color = 'red'> This Week Top-10-Productive-Employees  </font></B>    </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Employee Name--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>    </font></B>    GLB-BLR-010-PC - GLB-BLR-010--00:14:59 hrs (0.45%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>    </font></B>    Guest User--00:14:59 hrs (0.45%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>    </font></B>    Aryan raj--00:14:59 hrs (0.45%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>    </font></B>    Abhishek Four tf test--00:14:59 hrs (0.45%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>    </font></B>    SS Keystrokes--00:14:59 hrs (0.45%)</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Top_10_Un_Active_Employees_Locations_Test</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><B><font color = 'blue'>Step1 .</font></B> Clicked on Top-10-un_Active-Employees-Employees_Location Drop-down and Selected Any Location </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step2 .</font></B> Clicked on Top-10-un_Active Employees_Department Drop-down and Selected Any Department</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step3 .</font></B> Clicked on Top-10-un_Active Employees Today Button</span>
+                <span class="reporter-method-output"><B><font color = 'green'>  </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'red'>  Today  Active Employees Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Employee Name--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Abhishek Four tf test--00:00:49 hrs</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step4 .</font></B> Clicked on Top-10-un_Active Employees_Yesterday Button</span>
+                <span class="reporter-method-output"><B><font color = 'green'>  </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'red'> Yesterday  Active  Employees Data </font></B>   </span>
+                <span class="reporter-method-output"><B><font color = 'blue'> </font></B>    Employee Name--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Guest User--01:06:55 hrs</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Abhishek Four tf test--01:06:55 hrs</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step5 .</font></B> Clicked on Top-10-un_Active Employees_Thisweek Button</span>
+                <span class="reporter-method-output"><B><font color = 'green'>  </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'red'>  This Week  Active Employees Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'> </font></B>    Employee Name--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    SS Keystrokes--06:27:55 hrs</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Abhishek Four tf test--06:27:55 hrs</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Aryan raj--06:27:55 hrs</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Guest User--06:27:55 hrs</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    GLB-BLR-010-PC - GLB-BLR-010--06:27:55 hrs</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">location_Performance_Checking_page_Test</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><B><font color = 'blue'>Step1 .</font></B> Clicked on Location_Performance_Today Button</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'green'> (a).Productive Employees Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Location--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Default--00:00:49 hrs (0.17%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'red'> (b).Un-Productive Employees Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Location--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    No data found !--null</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'orange'> (c).Neutral Employees Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Location--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    No data found !--null</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step2 .</font></B> Clicked on Location_Performance_Yesterday Button</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'green'> (a).Productive Employees Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Location--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Default--00:00:12 hrs (0.04%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Bhilai--00:00:12 hrs (0.04%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'red'> (b).Un-Productive Employees Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Location--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    No data found !--null</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'orange'> (c).Neutral Employees Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Location--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    No data found !--null</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step3 .</font></B> Clicked on Location_Performance_Thisweek Button</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'green'> (a).Productive Employees Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Location--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    bengaluru--01:22:43 hrs (5.74%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Bhilai--01:22:43 hrs (5.74%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Bangalore--01:22:43 hrs (5.74%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Default--01:22:43 hrs (5.74%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'red'> (b).Un-Productive Employees Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Location--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    bengaluru--00:05:00 hrs (0.52%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Bangalore--00:05:00 hrs (0.52%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'orange'> (c).Neutral Employees Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Location--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    No data found !--null</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>                    </font></B>  </span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Top_10_Non_Productive_Employees_Test</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><B><font color = 'blue'>Step1 .</font></B> Clicked on Top-10-Non_Productive_Employees Location Drop-down and Selected Any Location </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step2 .</font></B> Clicked on Top-10-Non_Productive_Employees Department Drop-down and Selected Any Department</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step3 .</font></B> Clicked on Top10NonProductiveEmployees_Today Button</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'red'>  Today  unproductive Employees Data </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Employee Name--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step4 .</font></B> Clicked on Top10NonProductiveEmployees_Yesterday Button</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'red'> Yesterday  unproductive Employees Data </font></B>   </span>
+                <span class="reporter-method-output"><B><font color = 'blue'> </font></B>    Employee Name--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>Step5 .</font></B> Clicked on Top10NonProductiveEmployees_Thisweek Button</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'red'>  This Week  unproductive Employees Dat </font></B>  </span>
+                <span class="reporter-method-output"><B><font color = 'blue'> </font></B>    Employee Name--Time (Hours)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    GLB-BLR-010-PC - GLB-BLR-010--00:05:00 hrs (0.15%)</span>
+                <span class="reporter-method-output"><B><font color = 'blue'>  </font></B>    Aryan raj--00:05:00 hrs (0.15%)</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">5 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.emp.testcases.Dashboardtest6_Top_10_Non_Active_Employees_Checking_Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.emp.testcases.Dashboardtest4_Top_10_Non_Productive_Employees_Checking_Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.emp.testcases.Dashboardtest8_Department_Performance_Checking_Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.emp.testcases.Dashboardtest7_Location_Performance_Checking_Test2</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.emp.testcases.Dashboardtest5_Top_10_Active_Employees_Checking_Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.emp.testcases.Dashboardtest3_Top_10_Productive_Employees_Checking_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">beforeSuite</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">initialization</span>
+                <span class="method-start">30 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Top_10_Productive_Employees_Test</span>
+                <span class="method-start">10497 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=Top_10_Productive_Employees_Test status=SUCCESS method=Dashboardtest3_Top_10_Produc...)</span>
+                <span class="method-start">29639 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.emp.testcases.Dashboardtest6_Top_10_Non_Active_Employees_Checking_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initialization</span>
+                <span class="method-start">29958 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Top_10_Un_Active_Employees_Locations_Test</span>
+                <span class="method-start">38403 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=Top_10_Un_Active_Employees_Locations_Test status=SUCCESS method=Dashboardtest6_Top_...)</span>
+                <span class="method-start">62380 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.emp.testcases.Dashboardtest5_Top_10_Active_Employees_Checking_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initialization</span>
+                <span class="method-start">62626 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Top_10_Active_Employees_Test</span>
+                <span class="method-start">70691 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=Top_10_Active_Employees_Test status=SUCCESS method=Dashboardtest5_Top_10_Active_Emp...)</span>
+                <span class="method-start">94492 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.emp.testcases.Dashboardtest4_Top_10_Non_Productive_Employees_Checking_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initialization</span>
+                <span class="method-start">94720 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Top_10_Non_Productive_Employees_Test</span>
+                <span class="method-start">102835 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=Top_10_Non_Productive_Employees_Test status=SUCCESS method=Dashboardtest4_Top_10_No...)</span>
+                <span class="method-start">126720 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.emp.testcases.Dashboardtest7_Location_Performance_Checking_Test2</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initialization</span>
+                <span class="method-start">126956 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">location_Performance_Checking_page_Test</span>
+                <span class="method-start">135160 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=location_Performance_Checking_page_Test status=SUCCESS method=Dashboardtest7_Locati...)</span>
+                <span class="method-start">194870 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.emp.testcases.Dashboardtest8_Department_Performance_Checking_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initialization</span>
+                <span class="method-start">195175 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Department_Performance_Checking_page_Test</span>
+                <span class="method-start">203070 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=Department_Performance_Checking_page_Test status=SUCCESS method=Dashboardtest8_Depa...)</span>
+                <span class="method-start">263225 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

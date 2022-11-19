@@ -34,9 +34,6 @@ public class Employee_View_Superior_Details_page extends BasePage
 	@FindBy(xpath = "//*[@id='act25617']/a[7]/i")
 	WebElement superior_Details;
 	
-	
-
-	
 	@FindBy(xpath = "//*[@id='superiorRolesModal']/div/div/div[1]/button/span")
 	WebElement Close;
 	
@@ -48,28 +45,28 @@ public class Employee_View_Superior_Details_page extends BasePage
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
-		Reporter.log("<B><font color = 'blue'>Step1 </font></B> clicked on EmployeeDetails");
-		Assert.assertTrue(true, "Failed to click on EmployeeDetails");
+		Reporter.log("<B><font color = 'blue'>Step1 </font></B> clicked on Employee Module and Selected Employee Details Sub-Module ");
+		Assert.assertTrue(true, "Failed to click on Employee Module and Selected Employee Details Sub-Module");
 		
 		helper.waitFor(Scroller);
 		helper.highLightElement(driver,Scroller); 
 		helper.Scrollintoview(Scroller);
-		Reporter.log("<B><font color = 'blue'>Step2 </font></B> clicked on Scroller_view employee");
-		Assert.assertTrue(true, "Failed to click on Scroller view employee");
+		Reporter.log("<B><font color = 'blue'>Step2 </font></B> clicked on Any  Employee");
+		Assert.assertTrue(true, "Failed to click on Any  Employee");
 		
 		
 		helper.waitFor(superior_Details);
 		helper.highLightElement(driver, superior_Details);
 		helper.jsCLick(superior_Details); 
 		Reporter.log("<B><font color = 'blue'>Step3 </font></B> clicked on superior_Details icon");
-		Assert.assertTrue(true, "Failed to Update the role");
+		Assert.assertTrue(true, "Failed to Click  on superior_Details icon");
 		
 		   
 		helper.waitFor(Close);
 		helper.highLightElement(driver, Close);
 		helper.jsCLick(Close);
-		Reporter.log("<B><font color = 'blue'>Step4 </font></B> Clicked on Close");
-		Assert.assertTrue(true, "Failed to Select YESbutton");
+		Reporter.log("<B><font color = 'blue'>Step4 </font></B> Clicked on Close Button");
+		Assert.assertTrue(true, "Failed to Click on Close Button");
 	
 		
 	}

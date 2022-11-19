@@ -54,17 +54,17 @@ public class RolesAndPermissionPage extends BasePage {
 	
 	public void RolesAndPermissionPage()throws InterruptedException, AWTException{
 		 
-		helper.waitFor(RolesAndPermission);		
+		helper.waitFor(RolesAndPermission);		 
 		helper.highLightElement(driver, RolesAndPermission);
 		RolesAndPermission.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Roles-And-Permission");
-		Assert.assertTrue(true, "Failed To Select Roles-And-Permission");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Settings Module and Selected  Roles-And-Permission Sub-module ");
+		Assert.assertTrue(true, "Failed To click on Settings Module and Selected  Roles-And-Permission Sub-module");
 		
 		helper.waitFor(Addnewrole_Button);		
 		helper.highLightElement(driver, Addnewrole_Button);
 		Addnewrole_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Add new role_Button");
-		Assert.assertTrue(true, "Failed To click on  Add new role_Button");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Add New-Role Button");
+		Assert.assertTrue(true, "Failed To click on Add New-Role Button");
 		
 		Random g=new Random();
 		int num=g.nextInt(100);
@@ -75,15 +75,15 @@ public class RolesAndPermissionPage extends BasePage {
 		helper.highLightElement(driver,Rolename);
 		Rolename.sendKeys(Exp_g);
 		Rolename.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Role-name test field & Entered Role Name ");
-		Assert.assertTrue(true, "Failed To click on Role-name test field & Entered Role Name");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Role-name Test Field and  Entered Role Name ");
+		Assert.assertTrue(true, "Failed To click on Role-name Test Field and  Entered Role Name");
 		
 		helper.waitFor(Location);		
 		helper.highLightElement(driver,Location);
 		helper.move_to_element_click_target(Location);
 		helper.robot_Second_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Location Drop-Down & Select Location ");
-		Assert.assertTrue(true, "Failed To click on Location Drop-Down & Select Location");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Location Drop-down and  Selected Location ");
+		Assert.assertTrue(true, "Failed To click on Location Drop-down and  Selected Location");
 		
 		
 		helper.waitFor(Department);		
@@ -91,15 +91,15 @@ public class RolesAndPermissionPage extends BasePage {
 		helper.move_to_element_click_target(Department);
 		Thread.sleep(1000);
 		helper.robot_frist_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Department Drop-Down & Select Department");
-		Assert.assertTrue(true, "Failed To click on Department Drop-Down & Select Department");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Department Drop-down and  Selected Department");
+		Assert.assertTrue(true, "Failed To click on Department Drop-down and Selected Department");
 		
 		
 		helper.waitFor(Save_Button);		
 		helper.highLightElement(driver,Save_Button);
 		helper.move_to_element_click_target(Save_Button);
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on save butto");
-		Assert.assertTrue(true, "Failed To clik on save button");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on save Button");
+		Assert.assertTrue(true, "Failed To clik on save Button");
 	
 }
 }

@@ -46,21 +46,21 @@ public class StorageTypePage extends BasePage {
 		helper.waitFor( StorageType);
 		helper.highLightElement(driver,  StorageType);
 		 StorageType.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B>Clicked on  StorageType Field ");
-		Assert.assertTrue(true, "Failed to Select  StorageType Field");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Settings Module and Selected StorageType Sub-Module ");
+		Assert.assertTrue(true, "Failed to click on Settings Module and Selected StorageType Sub-Module");
 		
 		helper.waitFor( Add_Storage_Button); 
 		helper.highLightElement(driver,  Add_Storage_Button);
 		Add_Storage_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B>Clicked on  Add_Storage_Button ");
-		Assert.assertTrue(true, "Failed to click on   Add_Storage_Button");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on  Add_Storage Button ");
+		Assert.assertTrue(true, "Failed to click on   Add_Storage Button");
 		
 		
 		helper.waitFor(Select_Storagetype_Dropdown);
 		helper.highLightElement(driver, Select_Storagetype_Dropdown);
 		helper.selectDropDownValue(Select_Storagetype_Dropdown, "visibletext", "Google Drive");
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on  Storagetype_Dropdown & Select Strorage Type");
-		Assert.assertTrue(true, "Failed to Click on  Storagetype_Dropdown & Select Strorage Type");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on  Storage-Type_Dropdown and  Selected Strorage Type");
+		Assert.assertTrue(true, "Failed to Click on  Storage-Type_Dropdown and Selected Strorage Type");
 		Thread.sleep(5000);
 	
 }

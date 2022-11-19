@@ -66,71 +66,61 @@ public class EmployeeNotificationPage extends BasePage {
 		helper.waitFor(EmployeeNotification);
 		helper.highLightElement(driver, EmployeeNotification);
 		EmployeeNotification.click();
-		Reporter.log("<B><font color = 'blue'>Step1.</font></B> clicked on Employee Notification Tab");
-		Assert.assertTrue(true, "Failed to clicke on Employee Notification Tab");
+		Reporter.log("<B><font color = 'blue'>Step1.</font></B> clicked on Employee Module and  Employee Notification Sub-Module ");
+		Assert.assertTrue(true, "Failed to click on Employee Module and  Employee Notification Sub-Module");
 
 		helper.waitFor(SelectLocation);
 		helper.highLightElement(driver, SelectLocation);
 		helper.selectDropDownValue(SelectLocation, "visibletext", "Bangalore");
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Select Location DropDown");
-		Assert.assertTrue(true, "Failed To Select Location DropDown");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Location Drop-down and Selected Any Location ");
+		Assert.assertTrue(true, "Failed To click on  Location Drop-down and Selected Any Location ");
 
 		helper.waitFor(SelectDepartment);
 		helper.highLightElement(driver, SelectDepartment);
 		helper.selectDropDownValue(SelectDepartment, "index", "2");
 		SelectDepartment.click();
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Department DropDown");
-		Assert.assertTrue(true, "Failed to Select Department DropDown");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Department Drop-down and Selected Any Department");
+		Assert.assertTrue(true, "Failed to click on  Department Drop-down and Selected Any Department");
 
 		helper.waitFor(Allemployee);
 		helper.highLightElement(driver, Allemployee);
-		// helper.selectDropDownValue(Allemployee, "value", "All Employee");
 		Allemployee.click(); 
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on Allemployee DropDown");
-		Assert.assertTrue(true, "Failed Select Allemployee DropDown");
+		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on Employee Drop-down  ");
+		Assert.assertTrue(true, "Failed to click on Employee Drop-down a");
 
 		helper.waitFor(Allemploye);
 		helper.highLightElement(driver, Allemploye);
-		// helper.selectDropDownValue(Allemployee, "value", "All Employee");
 		Allemploye.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Allemploye DropDown");
-		Assert.assertTrue(true, "Failed Select Allemploye DropDown");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Selected Any Employee");
+		Assert.assertTrue(true, "Failed to Select Any Employee");
 
 		helper.waitFor(Date);
 		helper.highLightElement(driver, Date);
-		// helper.selectDropDownValue(Date, "visibletext", "Yesterday");
 		Date.click();
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Date");
-		Assert.assertTrue(true, "Failed to Select  Date");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Calendar and Selected Day's");
+		Assert.assertTrue(true, "Failed to click  on Calendar and Selected Day's");
 
 		helper.waitFor(Lastmonth);
 		helper.highLightElement(driver, Lastmonth);
-		// helper.selectDropDownValue(Date, "visibletext", "Yesterday");
 		Lastmonth.click();
-		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on Lastmonth");
-		Assert.assertTrue(true, "Failed to Select Lastmonth");
+		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on Last-month");
+		Assert.assertTrue(true, "Failed to click on  Last-month");
 
 		helper.waitFor(CSV);
 		helper.highLightElement(driver, CSV);
-
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='btn btn-success']"))).click();
-
 		CSV.click();
 		Reporter.log("<B><font color = 'blue'>Step8.</font></B> clicked on CSV Button");
 		Assert.assertTrue(true, "Failed to click on CSV Button");
 
 		helper.waitFor(PDF);
 		helper.highLightElement(driver, PDF);
-		
 		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='btn btn-danger']"))).click();
-
-		
 		PDF.click();
 		Reporter.log("<B><font color = 'blue'>Step9.</font></B> clicked on PDF Button");
 		Assert.assertTrue(true, "Failed to click on PDF Button");
-		
 		Thread.sleep(6000);
 
 	}

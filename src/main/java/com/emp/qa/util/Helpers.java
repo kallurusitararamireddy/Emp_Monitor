@@ -155,7 +155,7 @@ public class Helpers extends TestBase {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("arguments[0].scrollIntoView();", Element);
 	}
-
+ 
 	public void jsXYCoordinates() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollTo(0,937.6)");
@@ -170,7 +170,7 @@ public class Helpers extends TestBase {
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
- 
+  
 			System.out.println(e.getMessage());
 		}
 
@@ -956,10 +956,6 @@ public void Time_Sheets_CSV_Dot_files() throws IOException, CsvException {
 	
 	public void Time_sheet_PDF_Reader() throws IOException, CsvException, InterruptedException {
 
-		/*
-		 * This Code Only to Accept Excel sheets but in Path End .CSV files only read
-		 * 
-		 */
 
 		File f = new File(DU.Data_info("Time_Sheets_data_PDF_file"));
 
@@ -1034,17 +1030,13 @@ public void Time_Sheets_CSV_Dot_files() throws IOException, CsvException {
 	
 	public void Web_and_App_PDF_Reader() throws IOException, CsvException, InterruptedException {
 
-		/*
-		 * This Code Only to Accept Excel sheets but in Path End .CSV files only read
-		 * 
-		 */
 
 		File f = new File(DU.Data_info("pdf_web_and_app"));
 
 		PDDocument pd;
 		pd = PDDocument.load(f);
 		System.out.println("Total Number Of pages :" + pd.getNumberOfPages());
-		PDFTextStripper pdf1 = new PDFTextStripper();
+		PDFTextStripper pdf1 = new PDFTextStripper(); 
 		System.out.print(pdf1.getText(pd));
 		Reporter.log("<B><font color = 'orange'> </font>  " + pdf1.getText(pd));
 		Thread.sleep(2000);
@@ -1056,10 +1048,7 @@ public void Time_Sheets_CSV_Dot_files() throws IOException, CsvException {
 	
 	public void Productivity_Reports_pdf() throws IOException, CsvException, InterruptedException {
 
-		/*
-		 * This Code Only to Accept Excel sheets but in Path End .CSV files only read
-		 * 
-		 */
+		
 
 		File f = new File(DU.Data_info("Productivity_Reports_pdf"));
 
@@ -1102,8 +1091,8 @@ public void Productivity_Reports_CSV_Dot_files() throws IOException, CsvExceptio
 
 			String[] str = iterator.next();
 
-			System.out.print(" - ");
-
+			System.out.print("  ||  ");
+ 
 			for (int i = 0; i < str.length; i++) {
 
 				System.out.print(" " + str[i]);

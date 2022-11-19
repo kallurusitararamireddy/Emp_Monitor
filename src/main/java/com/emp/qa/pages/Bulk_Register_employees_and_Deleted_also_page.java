@@ -82,7 +82,7 @@ public class Bulk_Register_employees_and_Deleted_also_page extends BasePage {
 		add.click();
 		Reporter.log("<B><font color = 'blue'>Step 4 .</font></B> clicked on Add_Option");
 		Assert.assertTrue(true, "Failed to clicked on Add_option");
-
+ 
 		Thread.sleep(4000);
 
 		helper.waitFor(one_emp);

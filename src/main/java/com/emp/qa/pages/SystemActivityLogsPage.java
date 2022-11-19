@@ -87,41 +87,41 @@ public class SystemActivityLogsPage extends BasePage {
 		helper.waitFor(SystemActivityLogs);		
 		helper.highLightElement(driver, SystemActivityLogs);
 		SystemActivityLogs.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on SystemActivityLogs");
-		Assert.assertTrue(true, "Failed To Select SystemActivityLogs");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Reports Module and Selected System-Activity-Logs Button ");
+		Assert.assertTrue(true, "Failed To click  on Reports Module and Selected System-Activity-Logs Button");
 		
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
 		helper.move_to_element_click_target(Location);
 		helper.robot_Zero_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Location Drop-Down & Select Location ");
-		Assert.assertTrue(true, "Failed To click  Location Drop-Down & Select Location");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Location Drop-down and  Selected Location ");
+		Assert.assertTrue(true, "Failed To click  Location Drop-down and Selected Location");
 		
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department); 
 		helper.move_to_element_click_target(Department);
 		helper.robot_Zero_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Department Drop-Down & Select Department ");
-		Assert.assertTrue(true, "Failed To click  Department Drop-Down & Select Department");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Department Drop-down and Selected Department ");
+		Assert.assertTrue(true, "Failed To click on Department Drop-down and Selected Department");
 		
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
 		helper.selectDropDownValue(Employee, "visibletext", "See All Employee");
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Employee Drop-down & Select Employee");
-		Assert.assertTrue(true, "Failed To Select Employee");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Employee Drop-down and Selected Any Employee");
+		Assert.assertTrue(true, "Failed To click on Employee Drop-down and Selected Any Employee");
 		
 		
 		helper.waitFor(DateRange);
 		helper.highLightElement(driver, DateRange);
 		DateRange.click();
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Date-Range");
-		Assert.assertTrue(true, "Failed To click  DateRange");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Calendar Drop-down and Selected Day's");
+		Assert.assertTrue(true, "Failed To click  on Calendar Drop-down and Selected Day's");
 		
 		helper.waitFor(Last_30Days);
 		helper.highLightElement(driver,Last_30Days);
 		Last_30Days.click();
 		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Last-30-Days");
-		Assert.assertTrue(true, "Failed To Select Last-30-Days");
+		Assert.assertTrue(true, "Failed To click on  Last-30-Days");
 		Thread.sleep(3000);
 		
 		 
@@ -129,7 +129,7 @@ public class SystemActivityLogsPage extends BasePage {
 		helper.highLightElement(driver, Excel_Button);
 		Excel_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on Excel-Button");
-		Assert.assertTrue(true, "Failed To Select Excel-Button");
+		Assert.assertTrue(true, "Failed To click on  Excel-Button");
 		Thread.sleep(5000);
 	
 		
@@ -137,35 +137,11 @@ public class SystemActivityLogsPage extends BasePage {
 		helper.highLightElement(driver, Pdf_Button);
 		Pdf_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Pdf-Button");
-		Assert.assertTrue(true, "Failed To  Select Pdf-Button");
+		Assert.assertTrue(true, "Failed To  click on  Pdf-Button");
 		Thread.sleep(5000);
 	
 		
-		
-		/*
-		 *  this_month data
-		 */
-		
-//		helper.waitFor(This_month);
-//		helper.highLightElement(driver,This_month);
-//		This_month.click();
-//		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on This_month");
-//		Assert.assertTrue(true, "Failed To Select This_month");
-//		
-//		helper.waitFor(Excel_Button_1);
-//		helper.highLightElement(driver, Excel_Button_1);
-//		Excel_Button_1.click();
-//		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on Excel-Button-1");
-//		Assert.assertTrue(true, "Failed To Select Excel-Button-1");
-//		Thread.sleep(5000);
-//	
-//		
-//		helper.waitFor(Pdf_Button_1);
-//		helper.highLightElement(driver, Pdf_Button_1);
-//		Pdf_Button_1.click();
-//		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> clicked on Pdf-Button-1");
-//		Assert.assertTrue(true, "Failed To  Select Pdf-Button-1");
-//		Thread.sleep(5000);
+	
 	
 		
 }

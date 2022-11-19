@@ -28,12 +28,10 @@ public class LoginPage  extends BasePage{
 	
 	
 	//ELEMENTS ON LOGIN PAGE:
-//	@FindBy(css = "[name='amember_login']")
 	@FindBy(css = "[name='username']")
 	
 	WebElement input_username;
 
-//	@FindBy(css = ".am-row-login-pass [size]")
 	@FindBy(xpath  = "//input[@id='password']")
 	WebElement input_password;
 	
@@ -43,7 +41,6 @@ public class LoginPage  extends BasePage{
 	
 	
 
-//	@FindBy(css = ".am-login-form-form [type='submit']")
 	@FindBy(css = "#loginButtonDiv")
 	WebElement Button_login;
 	

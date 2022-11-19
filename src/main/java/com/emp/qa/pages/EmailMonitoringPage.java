@@ -72,7 +72,7 @@ public class EmailMonitoringPage extends BasePage {
 		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on EmailMonitoring");
 		Assert.assertTrue(true, "Failed to click on EmailMonitoring ");
 		
-		helper.waitFor(Location);
+		helper.waitFor(Location); 
 		helper.highLightElement(driver, Location);
 		helper.selectDropDownValue(Location, "visibletext", "Bangalore");
 		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Location Dropdown");

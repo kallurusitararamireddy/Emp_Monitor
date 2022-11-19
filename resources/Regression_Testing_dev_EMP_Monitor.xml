@@ -19,75 +19,70 @@
 		<classes>
 
 			<!--*******************   Dashboard Module   *******************-->
-			<class name="com.emp.testcases.DashBoardTest"></class>                                                     <!--Regression Test 1-->
-			<class name="com.emp.testcases.DashBoardTest1_One_off_one_checking"></class>                               <!--Regression Test 2-->
-			<class name="com.emp.testcases.DashBoardTest2_Data_vaildating_and_print_data_demo_Test"></class>           <!--Regression Test 3-->
-			<class name="com.emp.testcases.Dashboardtest3_Top_10_Productive_Employees_Checking_Test"></class>          <!--Regression Test 4-->
-			<class name="com.emp.testcases.Dashboardtest4_Top_10_Non_Productive_Employees_Checking_Test"></class>      <!--Regression Test 5-->
+			<!--<class name="com.emp.testcases.DashBoardTest"></class> --> <!--Regression Test 1-->
+			<!--<class name="com.emp.testcases.DashBoardTest1_One_off_one_checking"></class>  --><!--Regression Test 2-->
+			<class name="com.emp.testcases.DashBoardTest2_Data_vaildating_and_print_data_demo_Test"></class> <!--Regression Test 3-->
+			<class name="com.emp.testcases.Dashboardtest3_Top_10_Productive_Employees_Checking_Test"></class> <!--Regression Test 4-->
+			<class name="com.emp.testcases.Dashboardtest4_Top_10_Non_Productive_Employees_Checking_Test"></class> <!--Regression Test 5-->
 
 			<!--*******************   Employee Module   ******************* -->
-			<class name="com.emp.testcases.ActivatingSuspendedEmployeesTest"></class>                       <!--Regression Test 2-->
-            <class name="com.emp.testcases.AddingFilterModuleTest"></class>                                 <!--Regression Test 3-->
-            <class name="com.emp.testcases.EmployeeAttendanceTest"></class>                       <!--Regression Test 8-->
-             <class name="com.emp.testcases.EmployeeDetailsFilterTest"></class>                       <!--Regression Test 9-->
-          <class name="com.emp.testcases.EmployeeDetailsTest"></class>                       <!--Regression Test 10-->
-           <class name="com.emp.testcases.EmployeeInsightsTest"></class>                       <!--Regression Test 12-->
-            <class name="com.emp.testcases.EmployeeNotificationTest"></class>                       <!--Regression Test 13-->
-               <class name="com.emp.testcases.RegisterEmployeeTest"></class>                       <!--Regression Test 15-->
+			<class name="com.emp.testcases.ActivatingSuspendedEmployeesTest"></class> <!--Regression Test 2-->
+			<class name="com.emp.testcases.AddingFilterModuleTest"></class> <!--Regression Test 3-->
+			<class name="com.emp.testcases.EmployeeAttendanceTest"></class> <!--Regression Test 8-->
+			<class name="com.emp.testcases.EmployeeDetailsFilterTest"></class> <!--Regression Test 9-->
+			<class name="com.emp.testcases.EmployeeDetailsTest"></class> <!--Regression Test 10-->
+			<class name="com.emp.testcases.EmployeeInsightsTest"></class> <!--Regression Test 12-->
+			<class name="com.emp.testcases.EmployeeNotificationTest"></class> <!--Regression Test 13-->
+			<class name="com.emp.testcases.RegisterEmployeeTest"></class> <!--Regression Test 15-->
 
 			<!--*********  Time-Sheets  Module   *********** -->
-			<class name="com.emp.testcases.AbsentOptionToTimesheetsTest"></class>                        <!--Regression Test 1-->
-			<class name="com.emp.testcases.TimeInMinutesTest"></class>                        <!--Regression Test 2-->
-			<class name="com.emp.testcases.TotalOptionToTimesheetsTest"></class>                        <!--Regression Test 3-->
-			  <class name="com.emp.testcases.AssignedListTest"></class>                        <!--Regression Test 4-->
-				<class name="com.emp.testcases.SplitSheetTest"></class>    <!--Regression Test 5 its open xlsx format-->
-				<class name="com.emp.testcases.TimeSheetsTest"></class>    <!--Regression Test 6 -->
+			<class name="com.emp.testcases.AbsentOptionToTimesheetsTest"></class> <!--Regression Test 1-->
+			<class name="com.emp.testcases.TimeInMinutesTest"></class> <!--Regression Test 2-->
+			<class name="com.emp.testcases.TotalOptionToTimesheetsTest"></class> <!--Regression Test 3-->
+			<class name="com.emp.testcases.AssignedListTest"></class> <!--Regression Test 4-->
+			<class name="com.emp.testcases.SplitSheetTest"></class> <!--Regression Test 5 its open xlsx format-->
+			<class name="com.emp.testcases.TimeSheetsTest"></class> <!--Regression Test 6 -->
 
 			<!--*********  Time-Claim Module   *********** -->
-			  <class name="com.emp.testcases.TimeClaimTest"></class>    <!--Regression Test 1 -->
+			<class name="com.emp.testcases.TimeClaimTest"></class> <!--Regression Test 1 -->
 
 
 			<!--*******************   project Module   ******************* -->
-			<class name="com.emp.testcases.Project_Add_project_Details_Test"></class>    <!--Regression Test 2-->
-			 <class name="com.emp.testcases.CreateProjectsTest"></class>    <!--Regression Test 3-->
-			
+			<class name="com.emp.testcases.Project_Add_project_Details_Test"></class> <!--Regression Test 2-->
+			<class name="com.emp.testcases.CreateProjectsTest"></class> <!--Regression Test 3-->
+
 
 			<!--*******************   Reports Module   ******************* -->
-			<class name="com.emp.testcases.ReportsDownloadTest"></class>    <!--Regression Test 1   not downloaded pdf and csv file take 19 min to 20 min -->
-			<class name="com.emp.testcases.ProductivityReportsTest"></class>  <!--Regression Test 2-->
-			<class name="com.emp.testcases.ProductivityReportsTest"> </class>    <!--Regression Test 3-->
-			<class name="com.emp.testcases.AutoEmailReportsTest"></class>    <!--Regression Test 4-->
-		    <class name="com.emp.testcases.WebsiteandApplicatonTest"></class>    <!--Regression Test 5-->
-			 <class name="com.emp.testcases.SystemActivityLogsTest"></class>    <!--Regression Test 6-->
-			 <class name="com.emp.testcases.UseOfApplicationTest"></class>    <!--Regression Test 7-->
-             <class name="com.emp.testcases.UseOfTheWebApplicationTest"></class>    <!--Regression Test 8-->
-        
-             
-             
+			<class name="com.emp.testcases.ReportsDownloadTest"></class> <!--Regression Test 1   not downloaded pdf and csv file take 19 min to 20 min -->
+			<class name="com.emp.testcases.ProductivityReportsTest"></class> <!--Regression Test 2-->
+			<class name="com.emp.testcases.ProductivityReportsTest"></class> <!--Regression Test 3-->
+			<class name="com.emp.testcases.AutoEmailReportsTest"></class> <!--Regression Test 4-->
+			<class name="com.emp.testcases.WebsiteandApplicatonTest"></class> <!--Regression Test 5-->
+			<class name="com.emp.testcases.SystemActivityLogsTest"></class> <!--Regression Test 6-->
+			<class name="com.emp.testcases.UseOfApplicationTest"></class> <!--Regression Test 7-->
+			<class name="com.emp.testcases.UseOfTheWebApplicationTest"></class> <!--Regression Test 8-->
+
+
 			<!--*******************   Settings Module   ******************* -->
-			   <class name="com.emp.testcases.ManageLocationsAndDepartmentTest"></class>    <!--Regression Test 1-->
-			   <class name="com.emp.testcases.StorageTypeTest"></class>    <!--Regression Test 2-->
-			   <class name="com.emp.testcases.ProductivityRulesTest"></class>    <!--Regression Test 3-->
-			   <class name="com.emp.testcases.RolesAndPermissionTest"></class>    <!--Regression Test 4-->
-			   <class name="com.emp.testcases.RolesPermissionTest"></class>    <!--Regression Test 5-->
-			   <class name="com.emp.testcases.ShiftManagementTest"></class>    <!--Regression Test 6-->
-			   <class name="com.emp.testcases.LocalizationTest"></class>    <!--Regression Test 7-->
-			   <class name="com.emp.testcases.CreateShiftTest"></class>    <!--Regression Test 9-->
-			   
-			   
-			   
-			   
-			   
-			   
+			<class name="com.emp.testcases.ManageLocationsAndDepartmentTest"></class> <!--Regression Test 1-->
+			<class name="com.emp.testcases.StorageTypeTest"></class> <!--Regression Test 2-->
+			<class name="com.emp.testcases.ProductivityRulesTest"></class> <!--Regression Test 3-->
+			<class name="com.emp.testcases.RolesAndPermissionTest"></class> <!--Regression Test 4-->
+			<class name="com.emp.testcases.RolesPermissionTest"></class> <!--Regression Test 5-->
+			<class name="com.emp.testcases.ShiftManagementTest"></class> <!--Regression Test 6-->
+			<class name="com.emp.testcases.LocalizationTest"></class> <!--Regression Test 7-->
+			<class name="com.emp.testcases.CreateShiftTest"></class> <!--Regression Test 9-->
+
 
 			<!--******************* Behaviour Module   ******************* -->
-			<class name="com.emp.testcases.AlertsTest"></class>                                               <!--Regression Test 1-->
-            <class name="com.emp.testcases.Alert_Policies_Test"></class>                                      <!--Regression Test 2-->
-            <class name="com.emp.testcases.AlertsNotifiationsTest"></class>                                   <!--Regression Test 3-->
-           <!-- <class name="com.emp.testcases.BehaviourAlertPoliciesTest"></class>-->                        <!--Regression Test 4-->
+			<class name="com.emp.testcases.AlertsTest"></class> <!--Regression Test 1-->
+			<class name="com.emp.testcases.Alert_Policies_Test"></class> <!--Regression Test 2-->
+			<class name="com.emp.testcases.AlertsNotifiationsTest"></class> <!--Regression Test 3-->
+			<!-- <class name="com.emp.testcases.BehaviourAlertPoliciesTest"></class>-->
+			<!--Regression Test 4-->
 
 			<!--******* Admin side Any Changes  than go through The  Manager-TL-Employee Log-in page side Checking   ******************* -->
-			
+
 
 		</classes>
 	</test>

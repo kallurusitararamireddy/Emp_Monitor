@@ -97,7 +97,6 @@ public class ProjectsPage extends BasePage {
 	WebElement taskUpdateStatus;
 	
 	
-//	@FindBy(xpath="//*[@id='newTaskStartDate' and  @ type='date' ]")
 	@FindBy(xpath="//*[contains(@id,'TaskStartDate')]")
 	@CacheLookup
 	WebElement Task_StartDate;
@@ -122,61 +121,61 @@ public class ProjectsPage extends BasePage {
 		helper.highLightElement(driver,ShowEntries);
 		helper.selectDropDownValue(ShowEntries, "index", "3");
 		ShowEntries.click(); 
-		Reporter.log("<B><font color = 'blue'>Step1.</font></B> clicked on ShowEntries DropDown");
-		Assert.assertTrue(true, "Failed to click on ShowEntries Drop Down");
+		Reporter.log("<B><font color = 'blue'>Step1.</font></B> clicked on Project Module and Clicked on Show-Entries DropDown and Selected value");
+		Assert.assertTrue(true, "Failed to click on Project Module and Clicked on Show-Entries DropDown and Selected value");
 		
 		helper.highLightElement(driver,SelectStatus);
 		Thread.sleep(1000);
 		helper.selectDropDownValue(SelectStatus, "value", "All");
 		ShowEntries.click();
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on SelectStatus Drop Down");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Status Drop-down and Selected Status ");
 		Assert.assertTrue(true, "Failed to click on SelectStatus Drop Down");
 		Thread.sleep(2000);
 		
 		helper.highLightElement(driver,ProjectName);
 		helper.move_to_element_click_target(ProjectName);
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on ProjectName");
-		Assert.assertTrue(true, "Failed to click on ProjectName");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Project-Name Text Field and Entered Project Name ");
+		Assert.assertTrue(true, "Failed to click on Project-Name Text Field and Entered Project Name");
 		
 		helper.highLightElement(driver,ShowMore);
 		ShowMore.click();
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on ShowMore");
-		Assert.assertTrue(true, "Failed to click on ShowMore");
+		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on Show-More option ");
+		Assert.assertTrue(true, "Failed to click on Show-More option ");
 		
 		helper.highLightElement(driver,AddModule);
 		AddModule.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on AddModule");
-		Assert.assertTrue(true, "Failed to click on AddModule");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Add-Module ");
+		Assert.assertTrue(true, "Failed to click on Add-Module");
 		 
 		helper.highLightElement(driver,AddModule_Button);
 		AddModule_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on AddModule_Button");
-		Assert.assertTrue(true, "Failed to click on AddModule_Button");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Add-Module Button");
+		Assert.assertTrue(true, "Failed to click on Add-Module Button");
 		
 		
 		helper.highLightElement(driver,Project_name);
 		helper.selectDropDownValue(Project_name, "value", "951");
-		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on projectname");
-		Assert.assertTrue(true, "Failed to click on projectname");
+		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on project-name Text Field and Entered Project Name ");
+		Assert.assertTrue(true, "Failed to click on project-name Text Field and Entered Project Name");
 		
 		
 		helper.highLightElement(driver,ModuleName);
 		ModuleName.sendKeys("AutomationCode");
-		Reporter.log("<B><font color = 'blue'>Step8.</font></B> clicked on ModuleName");
-		Assert.assertTrue(true, "Failed to click on ModuleName");
+		Reporter.log("<B><font color = 'blue'>Step8.</font></B> clicked on Module-Name Text Field and Entered Module Name ");
+		Assert.assertTrue(true, "Failed to click on Module-Name Text Field and Entered Module Name");
 		
 		
 		helper.highLightElement(driver,StartDate);
 		StartDate.click();
 		StartDate.sendKeys("15112022");
-		Reporter.log("<B><font color = 'blue'>Step9.</font></B> clicked on StartDate");
-		Assert.assertTrue(true, "Failed to click on StartDate");
+		Reporter.log("<B><font color = 'blue'>Step9.</font></B> clicked on Claendar and Entered Start-Date");
+		Assert.assertTrue(true, "Failed to click on Claendar and Entered Start-Date");
 		
 		helper.highLightElement(driver,EndDate);
 		EndDate.click();
 		EndDate.sendKeys("25112022");
-		Reporter.log("<B><font color = 'blue'>Step10.</font></B> clicked on EndDate");
-		Assert.assertTrue(true, "Failed to click on EndDate");
+		Reporter.log("<B><font color = 'blue'>Step10.</font></B> clicked on Claendar and Entered End-Date");
+		Assert.assertTrue(true, "Failed to click on Claendar and Entered End-Date");
 	 
 		helper.highLightElement(driver,Save);
 		Save.click();
@@ -195,19 +194,19 @@ public class ProjectsPage extends BasePage {
 		
 		helper.highLightElement(driver,task_name);
         task_name.sendKeys("Demo");
-		Reporter.log("<B><font color = 'blue'>Step12.</font></B> clicked on Add_plus Button");
-		Assert.assertTrue(true, "Failed to click on Add_plus Button");
+		Reporter.log("<B><font color = 'blue'>Step12.</font></B> clicked on Task Name Text Field and Entered Task Name ");
+		Assert.assertTrue(true, "Failed to click on Task Name Text Field and Entered Task Name");
 		
 		helper.highLightElement(driver,Assignee);
 		helper.robot_frist_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step13.</font></B> clicked on Add_plus Button");
-		Assert.assertTrue(true, "Failed to click on Add_plus Button");
+		Reporter.log("<B><font color = 'blue'>Step13.</font></B> clicked on Assig Drop-down and Selected Any Employee");
+		Assert.assertTrue(true, "Failed to click on Assig Drop-down and Selected Any Employee");
 		
 		helper.highLightElement(driver,Task_Priority);
 		Task_Priority.click();
 		helper.robot_frist_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step14.</font></B> clicked on Add_plus Button");
-		Assert.assertTrue(true, "Failed to click on Add_plus Button");
+		Reporter.log("<B><font color = 'blue'>Step14.</font></B> clicked on Task Priority Drop-down and Slected Value ");
+		Assert.assertTrue(true, "Failed to click on Task Priority Drop-down and Slected Value");
 		
 		
 		helper.highLightElement(driver,taskUpdateStatus);
@@ -220,14 +219,14 @@ public class ProjectsPage extends BasePage {
 		helper.highLightElement(driver,Task_StartDate);
 		Task_StartDate.click();
 		Task_StartDate.sendKeys("17112022");
-		Reporter.log("<B><font color = 'blue'>Step16.</font></B> clicked on StartDate");
-		Assert.assertTrue(true, "Failed to click on StartDate");
+		Reporter.log("<B><font color = 'blue'>Step16.</font></B> clicked on Calendar and Entered Start-Date");
+		Assert.assertTrue(true, "Failed to click on Calendar and Entered Start-Date");
 		 
 		helper.highLightElement(driver,Task_EndDate);
 		Task_EndDate.click();
 		Task_EndDate.sendKeys("20112022");
-		Reporter.log("<B><font color = 'blue'>Step17.</font></B> clicked on EndDate");
-		Assert.assertTrue(true, "Failed to click on EndDate");
+		Reporter.log("<B><font color = 'blue'>Step17.</font></B> clicked on Calendar and Entered End-Date");
+		Assert.assertTrue(true, "Failed to click on Calendar and Entered End-Date");
 	 
 		helper.highLightElement(driver,Task_save);
 		Task_save.click();

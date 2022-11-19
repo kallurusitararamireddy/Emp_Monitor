@@ -62,51 +62,49 @@ public class EmployeeInsightsPage extends BasePage {
 		helper.waitFor(Employeeinsights);
 		helper.highLightElement(driver, Employeeinsights);
 		Employeeinsights.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employeeinsights");
-		Assert.assertTrue(true, "Failed to click on Employeeinsights");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee Module and Selected  Employee-insights Sub-Module ");
+		Assert.assertTrue(true, "Failed to click on Employee Module and Selected  Employee-insights Sub-Module");
 
 		helper.waitFor(SelectDateRanges);
 		helper.highLightElement(driver, SelectDateRanges);
 		SelectDateRanges.clear();
 		SelectDateRanges.sendKeys("05112022");
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Monthyear");
-		Assert.assertTrue(true, "Failed to send data to Monthyear");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Month-year Calendar ");
+		Assert.assertTrue(true, "Failed to Click on  Month-year Calendar");
 		Thread.sleep(2000);
 
 		helper.waitFor(Role);
 		helper.highLightElement(driver, Role);
         Role.click();
         helper.robot_Zero_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Roles_Dropdown");
-		Assert.assertTrue(true, "Failed to clicked on Roles_Drop_Down");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Roles Drop-down and Selected Any Role option");
+		Assert.assertTrue(true, "Failed to click on Roles Drop-down and Selected Any Role option");
 
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
 		Location.click();
 		helper.robot_Zero_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Location_Drop_Down");
-		Assert.assertTrue(true, "Failed to click on Location_Drop_Down");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Location Drop-down");
+		Assert.assertTrue(true, "Failed to click on Location Drop-down");
 
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
 		Department.click();
 		helper.robot_Zero_option_selectClick();
 		Department.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Department_DropDown");
-		Assert.assertTrue(true, "Failed to click on Department_Dropdown");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Department Drop-down and Selected Any Department");
+		Assert.assertTrue(true, "Failed to click on Department Drop-down and Selected Any Department");
 
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
-
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id='select2-employeeid-container']")))
 				.click();
 		Employee.click();
 		helper.robot_Zero_option_selectClick();
-		
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Employee_Dropdown");
-		Assert.assertTrue(true, "Failed to click on Employee__Dropdown");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Employee Drop-down and Selected Any Employee");
+		Assert.assertTrue(true, "Failed to click on Employee Drop-down and Selected Any Employee");
 
 	}
 

@@ -51,11 +51,11 @@ public class Dashboardpage4_Top_10_Non_Productive_Employees_Checking_page extend
 	@CacheLookup
 	WebElement header_2;
 	
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//tbody[@id='unproductive_employees_data']/tr/td/a")
 	@CacheLookup
 	WebElement Data;
 
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//tbody[@id='unproductive_employees_data']/tr/td[2]")
 	@CacheLookup
 	WebElement Data2;
 	
@@ -69,24 +69,51 @@ public class Dashboardpage4_Top_10_Non_Productive_Employees_Checking_page extend
 		helper.selectDropDownValue(Top10NonProductiveEmployees_Location, "value", "0");
 		Top10NonProductiveEmployees_Location.click();
 		Reporter.log(
-				"<B><font color = 'blue'>Step1 .</font></B> Clicked on Top10NonProductiveEmployees_Location option");
-		Assert.assertTrue(true, "Failed to Click on  Top10NonProductiveEmployees_Location");
+				"<B><font color = 'blue'>Step1 .</font></B> Clicked on Top-10-Non_Productive_Employees Location Drop-down and Selected Any Location ");
+		Assert.assertTrue(true, "Failed to Click on  Top-10-Non_Productive_Employees Location Drop-down and Selected Any Location");
 		helper.waitFor(Top10NonProductiveEmployees_Department);
 		helper.highLightElement(driver, Top10NonProductiveEmployees_Department);
 		helper.Scrollintoview(Top10NonProductiveEmployees_Department);
-		Thread.sleep(1000);
+		Thread.sleep(1000); 
 		helper.selectDropDownValue(Top10NonProductiveEmployees_Department, "value", "null");
-		Top10NonProductiveEmployees_Department.click();
+		Top10NonProductiveEmployees_Department.click(); 
 		Reporter.log(
-				"<B><font color = 'blue'>Step2 .</font></B> Clicked on Top10NonProductiveEmployees_Department option");
-		Assert.assertTrue(true, "Failed to Click on  Top10NonProductiveEmployees_Department");
-
+				"<B><font color = 'blue'>Step2 .</font></B> Clicked on Top-10-Non_Productive_Employees Department Drop-down and Selected Any Department");
+		Assert.assertTrue(true, "Failed to Click on  Top-10-Non_Productive_Employees Department Drop-down and Selected Any Department");
+ 
 		helper.waitFor(Top10NonProductiveEmployees_Today);
 		helper.highLightElement(driver, Top10NonProductiveEmployees_Today);
 		helper.Scrollintoview(Top10NonProductiveEmployees_Today);
 		Top10NonProductiveEmployees_Today.click();
 		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Top10NonProductiveEmployees_Today Button");
 		Assert.assertTrue(true, "Failed to Click on  Top10NonProductiveEmployees_Today");
+		Thread.sleep(2000);
+		
+		System.out.println(header_1.getText() + " --  " + header_2.getText());
+		Reporter.log("<B><font color = 'blue'>  </font></B>  " );
+		Reporter.log("<B><font color = 'red'>  Today  unproductive Employees Data </font></B>  " );
+		Reporter.log("<B><font color = 'blue'>  </font></B>    " + header_1.getText() +"--"+  header_2.getText());
+ 
+		List<WebElement> l=driver.findElements(By.xpath("//tbody[@id='unproductive_employees_data']/tr/td/a"));
+		List<WebElement> l2=driver.findElements(By.xpath("//tbody[@id='unproductive_employees_data']/tr/td[2]"));
+
+		String s1 = null;
+		String s2 = null;
+		for(WebElement d1:l )
+		{
+			 s2=d1.getText(); 
+		for(WebElement d2:l2 )
+		{
+			s1=d2.getText(); 
+		}
+		String s3=s2+"--" +s1;
+		System.out.println(s3);
+		Reporter.log("<B><font color = 'blue'>  </font></B>    " + s3);
+		}
+		
+		
+		
+		
 		Thread.sleep(2000);
 
 		helper.waitFor(Top10NonProductiveEmployees_Yesterday);
@@ -97,9 +124,33 @@ public class Dashboardpage4_Top_10_Non_Productive_Employees_Checking_page extend
 				"<B><font color = 'blue'>Step4 .</font></B> Clicked on Top10NonProductiveEmployees_Yesterday Button");
 		Assert.assertTrue(true, "Failed to Click on  Top10NonProductiveEmployees_Yesterday");
 		Thread.sleep(2000);
+		
+		System.out.println(header_1.getText() + " --  " + header_2.getText());
+		Reporter.log("<B><font color = 'blue'>  </font></B>  " );
+		Reporter.log("<B><font color = 'red'> Yesterday  unproductive Employees Data </font></B>   " );
+		Reporter.log("<B><font color = 'blue'> </font></B>    " + header_1.getText() +"--"+  header_2.getText());
+
+		List<WebElement> l1=driver.findElements(By.xpath("//tbody[@id='unproductive_employees_data']/tr/td/a"));
+		List<WebElement> l21=driver.findElements(By.xpath("//tbody[@id='unproductive_employees_data']/tr/td[2]"));
+
+		String s11 = null;
+		String s21 = null;
+		for(WebElement d1:l1 )
+		{
+			 s21=d1.getText(); 
+		for(WebElement d2:l21 )
+		{
+			s11=d2.getText(); 
+		}
+		String s3=s21+"--" +s11;
+		System.out.println(s3);
+		Reporter.log("<B><font color = 'blue'>  </font></B>    " + s3);
+		}
+		
+		Thread.sleep(2000);
  
 		helper.waitFor(Top10NonProductiveEmployees_Thisweek);
-		helper.highLightElement(driver, Top10NonProductiveEmployees_Thisweek);
+		helper.highLightElement(driver, Top10NonProductiveEmployees_Thisweek); 
 		helper.Scrollintoview(Top10NonProductiveEmployees_Thisweek);
 		Top10NonProductiveEmployees_Thisweek.click();
 		Reporter.log(
@@ -109,24 +160,25 @@ public class Dashboardpage4_Top_10_Non_Productive_Employees_Checking_page extend
 		
 		
 		System.out.println(header_1.getText() + " --  " + header_2.getText());
-		Reporter.log("<B><font color = 'blue'> step6 .</font></B>    " + header_1.getText() +"--"+  header_2.getText());
+		Reporter.log("<B><font color = 'blue'>  </font></B>  " );
+		Reporter.log("<B><font color = 'red'>  This Week  unproductive Employees Dat </font></B>  " );
+		Reporter.log("<B><font color = 'blue'> </font></B>    " + header_1.getText() +"--"+  header_2.getText());
 
-		List<WebElement> l=driver.findElements(By.xpath("//tbody[@id='productive_employees_data']/tr/td/a"));
-		List<WebElement> l2=driver.findElements(By.xpath("//tbody[@id='productive_employees_data']/tr/td[2]"));
+		List<WebElement> l11=driver.findElements(By.xpath("//tbody[@id='unproductive_employees_data']/tr/td/a"));
+		List<WebElement> l211=driver.findElements(By.xpath("//tbody[@id='unproductive_employees_data']/tr/td[2]"));
 
-		String s1 = null;
-		String s2 = null;
-		for(WebElement d1:l )
+		String s111 = null;
+		String s211 = null;
+		for(WebElement d1:l11 )
+		{ 
+			 s211=d1.getText(); 
+		for(WebElement d2:l211 )
 		{
-			 s2=d1.getText();
-		for(WebElement d2:l2 )
-		{
-			s1=d2.getText();
+			s111=d2.getText(); 
 		}
-		String s3=s2+"--" +s1;
+		String s3=s211+"--" +s111;
 		System.out.println(s3);
 		Reporter.log("<B><font color = 'blue'>  </font></B>    " + s3);
-
 		}
 		
 

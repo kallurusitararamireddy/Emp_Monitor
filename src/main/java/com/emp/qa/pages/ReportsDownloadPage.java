@@ -37,12 +37,10 @@ public class ReportsDownloadPage extends BasePage {
 	WebElement SelectAll;
 	
 	
-//	@FindBy(xpath = "//select[@id='locations']")
-	@FindBy(xpath = "//*[@id='locations']")
+	@FindBy(xpath = "//*[@id=\"locations\"]/option[1]")
 	@CacheLookup
 	WebElement Location;
 	
-//	@FindBy(xpath = "//select[@id='departmentAppend']")
 	@FindBy(xpath = "//*[@id='departmentAppend']")
 	@CacheLookup
 	WebElement Department;
@@ -72,7 +70,6 @@ public class ReportsDownloadPage extends BasePage {
 	WebElement PDF;
 	
 	@FindBy(xpath = "//div[@id='csvDropdown']")
-//	@FindBy(xpath = "//*[@id=\"csvReportsDownload\"]/div/a")
 	@CacheLookup
 	WebElement CSV;
 	
@@ -92,7 +89,6 @@ public class ReportsDownloadPage extends BasePage {
 	@CacheLookup
 	WebElement ApplicationsUsageReport;
 	
-//	@FindBy(css = "[onclick='printDetails\\(\\'25679\\'\\,\\'mr abhishek nsbtrrfgb\\'\\)'] [title]")
 	@FindBy(xpath = "//*[@id=\"25485\"]/td[7]/button")
 	@CacheLookup
 	WebElement ViewReport;
@@ -117,43 +113,41 @@ public class ReportsDownloadPage extends BasePage {
 		helper.waitFor(ReportsDownload);
 		helper.highLightElement(driver, ReportsDownload);
 		ReportsDownload.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Reports-Download");
-		Assert.assertTrue(true, "Failed to click on Reports-Download");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Reports Module and Selected Reports-Download Sub-Module ");
+		Assert.assertTrue(true, "Failed to click on Reports Module and Selected Reports-Download Sub-Module");
 		
 	
 		helper.waitFor(Role);
 		helper.highLightElement(driver, Role);
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked-on-Roles");
-		Assert.assertTrue(true, "Failed to clicked-on-Role");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Role Drop-down ");
+		Assert.assertTrue(true, "Failed to click on Role Drop-down");
 		
 		helper.waitFor(SelectAll);
 		helper.highLightElement(driver, SelectAll);
 		SelectAll.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on  Select-All");
-		Assert.assertTrue(true, "Failed to click on Select-All");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Select-All option ");
+		Assert.assertTrue(true, "Failed to click on Select-All option ");
 		
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
-//		helper.selectDropDownValue(Location, "value", "0");
+		//helper.selectDropDownValue(Location, "value", "0");
 		Location.click();
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked_on_Select_Location");
-		Assert.assertTrue(true, "Failed clicke_on_Select_Location");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Location Drop-down ans Slected Any Location  ");
+		Assert.assertTrue(true, "Failed to click on Location Drop-down ans Slected Any Location");
 		
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
-//		helper.selectDropDownValue(Department, "value", "0");
 		helper.selectDropDownValue(Department, "id", "0");
-
 		Department.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Department");
-		Assert.assertTrue(true, "Failed to clicked on Department");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Department Drop-down and Selected Any Department");
+		Assert.assertTrue(true, "Failed to click on Department Drop-down and Selected Any Department");
 		
 		helper.waitFor(SelectDateRanges);
 		helper.highLightElement(driver, SelectDateRanges);
 		SelectDateRanges.click();
 		//SelectDateRanges.sendKeys("26-05-2021");
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> click on Select-Date-Ranges");
-		Assert.assertTrue(true, "Failed to Click on Select-Date-Ranges");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> click on Calendar Drop-down and Slected Day's");
+		Assert.assertTrue(true, "Failed to Click on Calendar Drop-down and Slected Day's");
 		
 		helper.waitFor(Last30days);
 		helper.highLightElement(driver, Last30days);
@@ -165,20 +159,21 @@ public class ReportsDownloadPage extends BasePage {
 		helper.highLightElement(driver, DownloadOption);
 		DownloadOption.click();
 		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Download-Option");
-		Assert.assertTrue(true, "Failed to Select Download-Option");
+		Assert.assertTrue(true, "Failed to click on  Download-Option");
 		
 		helper.waitFor(AppliationsUsed);
 		helper.highLightElement(driver, AppliationsUsed);
 		AppliationsUsed.click();
 		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on Appliations-Used");
-		Assert.assertTrue(true, "Failed to Select Appliations-Used");
+		Assert.assertTrue(true, "Failed to click on  Appliations-Used");
 		
-		helper.waitFor(PDF);
-		helper.highLightElement(driver,PDF);
-		PDF.click();
-		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on PDF");
-		Assert.assertTrue(true, "Failed to Select PDF");
-		Thread.sleep(3000);
+		
+//		helper.waitFor(PDF);
+//		helper.highLightElement(driver,PDF);
+//		PDF.click();
+//		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on PDF Button ");
+//		Assert.assertTrue(true, "Failed to click on  PDF Button ");
+//		Thread.sleep(3000);
 	
 		
 		
@@ -186,8 +181,8 @@ public class ReportsDownloadPage extends BasePage {
 		helper.waitFor(CSV);
 		helper.highLightElement(driver, CSV);
 		CSV.click();
-		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on CSV");
-		Assert.assertTrue(true, "Failed to Select CSV");
+		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on CSV Button ");
+		Assert.assertTrue(true, "Failed to click on  CSV Button ");
 		
 		
 		helper.waitFor(Select_All_checkBox);
@@ -195,8 +190,8 @@ public class ReportsDownloadPage extends BasePage {
 		//helper.jsCLick(Select_All_checkBox);
 		helper.jsScrollintoview(Select_All_checkBox);
 		helper.jsCLick(Select_All_checkBox);
-		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> clicked on Select-All-checkBox");
-		Assert.assertTrue(true, "Failed to Select Select-All-checkBox");
+		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> clicked on Select-All option  (check Box click)");
+		Assert.assertTrue(true, "Failed to click on Select-All option  (check Box click)");
 		
 		
 		helper.waitFor(Submit_Button);
@@ -204,114 +199,25 @@ public class ReportsDownloadPage extends BasePage {
 		helper.Scrollintoview(Submit_Button);
 		Actions act=new Actions(driver);
 		act.moveToElement(Submit_Button).click().build().perform();
-//		Submit_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step13 .</font></B> clicked on Submit-Button");
 		Assert.assertTrue(true, "Failed to Click Submit-Button");
 		Thread.sleep(4000);
 		driver.navigate().refresh();
 		
-		helper.waitFor(DownloadOptions);
-		helper.highLightElement(driver, DownloadOptions);
-		helper.selectDropDownValue(DownloadOptions, "value", "2");
-		DownloadOptions.click();
-		Reporter.log("<B><font color = 'blue'>Step14 .</font></B> clicked on DownloadOptions");
-		Assert.assertTrue(true, "Failed to Select DownloadOptions");
+//		helper.waitFor(DownloadOptions);
+//		helper.highLightElement(driver, DownloadOptions);
+//		helper.selectDropDownValue(DownloadOptions, "value", "2");
+//		DownloadOptions.click();
+//		Reporter.log("<B><font color = 'blue'>Step14 .</font></B> clicked on Download-Options");
+//		Assert.assertTrue(true, "Failed to Select Download-Options");
 		
 		helper.waitFor(ViewReport);
 		helper.highLightElement(driver, ViewReport);
 		ViewReport.click();
-		Reporter.log("<B><font color = 'blue'>Step15 .</font></B> clicked on ViewReport");
-		Assert.assertTrue(true, "Failed to Select ViewReport");
+		Reporter.log("<B><font color = 'blue'>Step15 .</font></B> clicked on View-Report");
+		Assert.assertTrue(true, "Failed to Select View-Report");
 		Thread.sleep(9000); 
 		
-//		helper.waitFor(IndividualPdfButton);
-//		helper.highLightElement(driver, IndividualPdfButton);
-//		IndividualPdfButton.click();
-//		Reporter.log("<B><font color = 'blue'>Step16 .</font></B> clicked on IndividualPdfButton");
-//		Assert.assertTrue(true, "Failed to Select IndividualPdfButton");
-//		Thread.sleep(9000);
-//		
-//		helper.waitFor(IndividuaCSVButton);
-//		helper.highLightElement(driver, IndividuaCSVButton);
-//		IndividuaCSVButton.click();
-//		Reporter.log("<B><font color = 'blue'>Step17 .</font></B> clicked on IndividuaCSVButton");
-//		Assert.assertTrue(true, "Failed to Select ViewReport");
-//		Thread.sleep(9000);
-//		
-		
-		
-		
-		
-		
-//		helper.waitFor(DownloadFiles_Button);
-//		helper.highLightElement(driver, DownloadFiles_Button);
-//		//helper.Scrollintoview(Submit_Button);
-//		helper.jsCLick(DownloadFiles_Button);
-//		//DownloadFiles_Button.click();
-//		Reporter.log("<B><font color = 'blue'>Step14 .</font></B> clicked on DownloadFiles_Button");
-//		Assert.assertTrue(true, "Failed to Click DownloadFiles_Button");
-//		//driver.navigate().refresh();
-//		
-//		helper.waitFor(ApplicationsUsageReport);
-//		helper.highLightElement(driver, ApplicationsUsageReport);
-//		//helper.Scrollintoview(Submit_Button);
-//		helper.jsCLick(ApplicationsUsageReport);
-//		//ApplicationsUsageReport.click();
-//		Reporter.log("<B><font color = 'blue'>Step15 .</font></B> clicked on ApplicationsUsageReport");
-//		Assert.assertTrue(true, "Failed to Click ApplicationsUsageReport");
-//		driver.navigate().refresh();
-//		driver.navigate().back();
-//		driver.navigate().forward();
-//		Thread.sleep(5000);
-		
-		
-		
-//		helper.waitFor(ReportsDownload);
-//		helper.highLightElement(driver, ReportsDownload);
-//		ReportsDownload.click();
-//		Reporter.log("<B><font color = 'blue'>SteP16 .</font></B> clicked on ReportsDownload");
-//		Assert.assertTrue(true, "Failed to click on ReportsDownload");
-////		
-//		helper.waitFor(DownloadOption);
-//		helper.highLightElement(driver, DownloadOption);
-//		DownloadOption.click();
-//		Reporter.log("<B><font color = 'blue'>Step17 .</font></B> clicked on DownloadOption");
-//		Assert.assertTrue(true, "Failed to Select DownloadOption");
-//		
-//		helper.waitFor(BrowserHistory);
-//		helper.highLightElement(driver, BrowserHistory);
-//		BrowserHistory.click();
-//		Reporter.log("<B><font color = 'blue'>Step18 .</font></B> clicked on BrowserHistory");
-//		Assert.assertTrue(true, "Failed to Select BrowserHistory");
-//		
-//		helper.waitFor(PDF);
-//		helper.highLightElement(driver,PDF);
-//		PDF.click();
-//		Reporter.log("<B><font color = 'blue'>Step19 .</font></B> clicked on PDF");
-//		Assert.assertTrue(true, "Failed to Select PDF");
-//		Thread.sleep(5000);
-//		
-//		helper.waitFor(CSV);
-//		helper.highLightElement(driver, CSV);
-//		CSV.click();
-//		Reporter.log("<B><font color = 'blue'>Step20 .</font></B> clicked on CSV");
-//		Assert.assertTrue(true, "Failed to Select CSV");
-//		
-//		
-//		helper.waitFor(Select_All_checkBox);
-//		helper.highLightElement(driver, Select_All_checkBox);
-//		helper.jsScrollintoview(Select_All_checkBox);
-//		Select_All_checkBox.click();
-//		Reporter.log("<B><font color = 'blue'>Step21 .</font></B> clicked on Select_All_checkBox");
-//		Assert.assertTrue(true, "Failed to Select Select_All_checkBox");
-//		Thread.sleep(5000);
-//		
-//		helper.waitFor(Submit_Button);
-//		helper.highLightElement(driver, Submit_Button);
-//		helper.Scrollintoview(Submit_Button);
-//		Submit_Button.click();
-//		Reporter.log("<B><font color = 'blue'>Step22 .</font></B> clicked on Submit_Button");
-//		Assert.assertTrue(true, "Failed to Click Submit_Button");
 	
 }
 	

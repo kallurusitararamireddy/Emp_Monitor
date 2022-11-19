@@ -10,11 +10,12 @@ public class Dashboardtest4_Top_10_Non_Productive_Employees_Checking_Test extend
 {
 
 	@Test(priority  = 1)
-	public void Top10ProductiveEmployees_Locations_Test() throws Exception {
+	public void Top_10_Non_Productive_Employees_Test() throws Exception {
 
 		HomePage homePage = new HomePage(getDriver());
 		Thread.sleep(8000);
 		Dashboardpage4_Top_10_Non_Productive_Employees_Checking_page DashBoardpage = new Dashboardpage4_Top_10_Non_Productive_Employees_Checking_page(getDriver());
+		
 		homePage.clickDashboard();
 		DashBoardpage.Top_10_Non_Productiv();
 	} 

@@ -19,16 +19,10 @@
 		<classes>
 
 
-            <!--*******************   Settings Module   ******************* -->
-			   <class name="com.emp.testcases.ManageLocationsAndDepartmentTest"></class>    <!--Regression Test 1-->
-			   <class name="com.emp.testcases.StorageTypeTest"></class>    <!--Regression Test 2-->
-			   <class name="com.emp.testcases.ProductivityRulesTest"></class>    <!--Regression Test 3-->
-			   <class name="com.emp.testcases.RolesAndPermissionTest"></class>    <!--Regression Test 4-->
-			   <class name="com.emp.testcases.RolesPermissionTest"></class>    <!--Regression Test 5-->
-			   <class name="com.emp.testcases.ShiftManagementTest"></class>    <!--Regression Test 6-->
-			   <class name="com.emp.testcases.LocalizationTest"></class>    <!--Regression Test 7-->
-			   <class name="com.emp.testcases.CreateShiftTest"></class>    <!--Regression Test 9-->
-			
+           <!--*******************   Module   *******************-->
+			<class name="com.emp.testcases.RegisterEmployeeTest"></class> <!--Regression Test 15-->
+			<class name="com.emp.testcases.BulkRegisterTest"></class>
+			<class name="com.emp.testcases.BulkUpdateTest"></class>
 			
 
 

@@ -10,7 +10,7 @@ public class Dashboardtest3_Top_10_Productive_Employees_Checking_Test extends  T
 {
 
 	@Test(priority  = 1)
-	public void Top10ProductiveEmployees_Locations_Test() throws Exception {
+	public void Top_10_Productive_Employees_Test() throws Exception {
 
 		HomePage homePage = new HomePage(getDriver());
 		Thread.sleep(8000);

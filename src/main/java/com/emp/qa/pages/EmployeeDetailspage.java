@@ -47,34 +47,34 @@ public  void EmployeeDetails() throws InterruptedException {
 	helper.waitFor(EmployeeDetails);
 	helper.highLightElement(driver, EmployeeDetails);
 	EmployeeDetails.click();
-	Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee_Details");
-	Assert.assertTrue(true, "Failed to clicked on Employee_Details");
+	Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee Module and Selected  Employee_Details Sub-Module ");
+	Assert.assertTrue(true, "Failed to click on Employee Module and Selected  Employee_Details Sub-Module");
 	
 	helper.waitFor(Active);
 	helper.highLightElement(driver, Active);
 	Active.click();
 	Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Active_Button");
-	Assert.assertTrue(true, "Failed to clicked on Active_Button");
+	Assert.assertTrue(true, "Failed to click on Active_Button");
 	
 	helper.waitFor(Suspended);
 	helper.highLightElement(driver, Suspended);
 	Suspended.click();
 	Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Suspended_Button");
-	Assert.assertTrue(true, "Failed to clicked on Suspended_Button");
+	Assert.assertTrue(true, "Failed to click on Suspended_Button");
 	
 
 	helper.waitFor(DeletedusersHistory);
 	helper.highLightElement(driver, DeletedusersHistory);
 	DeletedusersHistory.click();
 	Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on DeletedusersHistory_Button");
-	Assert.assertTrue(true, "Failed to clicked on DeletedusersHistory_Button");
+	Assert.assertTrue(true, "Failed to click on DeletedusersHistory_Button");
 	 
 	helper.waitFor(close);
 	helper.highLightElement(driver, close);
 	Thread.sleep(2000);
 	close.click();
 	Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on close_Button");
-	Assert.assertTrue(true, "Failed to clicked on close_Button");
+	Assert.assertTrue(true, "Failed to click on close_Button");
 	
 	
 }

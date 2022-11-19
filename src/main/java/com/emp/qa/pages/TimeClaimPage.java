@@ -28,8 +28,6 @@ public class TimeClaimPage extends BasePage  {
 	@CacheLookup
 	WebElement ShowEntries;
 	
-	
-	
 	@FindBy(xpath = "//li[contains(text(),'Last 30 Days')]")
 	@CacheLookup
 	WebElement Last30days;
@@ -58,36 +56,36 @@ public class TimeClaimPage extends BasePage  {
 		helper.highLightElement(driver,ShowEntries);
 		helper.selectDropDownValue(ShowEntries, "index", "4");
 		ShowEntries.click();
-		Reporter.log("<B><font color = 'blue'>Step1.</font></B> clicked on ShowEntries");
-		Assert.assertTrue(true, "Failed to clickeonShowEntries");
+		Reporter.log("<B><font color = 'blue'>Step1.</font></B> clicked on Time-Claim Module and Clicked on Show-Entries Drop-down and selected value  ");
+		Assert.assertTrue(true, "Failed to click on Time-Claim Module and Clicked on Show-Entries Drop-down and selected value ");
 		
 		helper.waitFor(SelctDateRanges);
 		helper.highLightElement(driver, SelctDateRanges);
 		SelctDateRanges.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B>Selected  Date ranges DropDown Button");
-		Assert.assertTrue(true, "Failed to Select SelctDateRanges Drop Down Button");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Calendar Drop-down and Selected Day's ");
+		Assert.assertTrue(true, "Failed to click on Calendar Drop-down and Selected Day's ");
 		
 		helper.waitFor(Last30days);
 		helper.highLightElement(driver, Last30days);
 		Last30days.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B>Selected  Last30days Button");
-		Assert.assertTrue(true, "Failed to Select Last30days Button");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on  Last-30-days Button");
+		Assert.assertTrue(true, "Failed to click on  Last-30-days Button");
 		
 		helper.waitFor(Status);
 		helper.highLightElement(driver, Status);
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B>Selected  Status Drop Down ");
-		Assert.assertTrue(true, "Failed to Select Status DropDown");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Status Drop-down and Selected Status option");
+		Assert.assertTrue(true, "Failed to click on Status Drop-down and Selected Status option");
 		
 		helper.waitFor(Idle_Radio_Button);
 		helper.highLightElement(driver, Idle_Radio_Button);
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B>Selected Idle_Radio_Button ");
-		Assert.assertTrue(true, "Failed to Select Idle_Radio_Button");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on  Idle_Radio Button ");
+		Assert.assertTrue(true, "Failed to click on  Idle_Radio Button");
 		
 		helper.waitFor(offline_Radio_Button);
 		helper.highLightElement(driver, offline_Radio_Button);
 		offline_Radio_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B>Selected offline_Radio_Button ");
-		Assert.assertTrue(true, "Failed to Select offline_Radio_Button");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on  offline_Radio Button ");
+		Assert.assertTrue(true, "Failed to click on  offline_Radio Button");
 		Thread.sleep(5000);
 		
 		

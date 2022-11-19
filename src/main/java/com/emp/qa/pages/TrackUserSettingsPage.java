@@ -23,12 +23,10 @@ public class TrackUserSettingsPage extends BasePage {
 	@CacheLookup
 	WebElement EmployeeDetails;
 	
-//	@FindBy(xpath = "//body/div[1]/div[1]/div[8]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]")
 	@FindBy(xpath = "//*[@id=\"main-wrapper\"]/div[2]/div[2]/div[2]/div/div/div[4]")
 	@CacheLookup
 	WebElement Scroller;
 	
-//	@FindBy(xpath = "//tbody/tr[@id='24756']/td[@id='act24756']/a[1]/i[1]")
 	@FindBy(xpath = "//*[@id=\"act25499\"]/a[1]/i")
 	WebElement TrackuserSettings;
 	
@@ -70,29 +68,29 @@ public class TrackUserSettingsPage extends BasePage {
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on EmployeeDetails");
-		Assert.assertTrue(true, "Failed to click on EmployeeDetails");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee Module and Selected  Employee_Details Sub-Module ");
+		Assert.assertTrue(true, "Failed to click on Employee Module and Selected  Employee_Details Sub-Module ");
 		
 		
 		helper.waitFor(Scroller);
 		helper.highLightElement(driver,Scroller);
 		helper.Scrollintoview(Scroller);
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Scroller");
-		Assert.assertTrue(true, "Failed to click on Scroller");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Scroller view ");
+		Assert.assertTrue(true, "Failed to click on Scroller view ");
 		
 		helper.waitFor(TrackuserSettings);
 		helper.highLightElement(driver, TrackuserSettings);
 		TrackuserSettings.click();
-		Reporter.log("<B><font color = 'blue'>Step13.</font></B> clicked on TrackuserSettings");
-		Assert.assertTrue(true, "Failed to click on TrackuserSettings");
+		Reporter.log("<B><font color = 'blue'>Step13.</font></B> clicked on Track_user_Settings field ");
+		Assert.assertTrue(true, "Failed to click on Track_user_Settings field");
 		
 		helper.waitFor(SettingsAppliedTotheuser);
 		helper.highLightElement(driver, SettingsAppliedTotheuser);
 		helper.Scrollintoview(SettingsAppliedTotheuser);
 		helper.selectDropDownValue(SettingsAppliedTotheuser, "value", "3");
 		SettingsAppliedTotheuser.click();
-		Reporter.log("<B><font color = 'blue'>Step14.</font></B> clicked on SettingsAppliedTotheuser");
-		Assert.assertTrue(true, "Failed to click on SettingsAppliedTotheuser");
+		Reporter.log("<B><font color = 'blue'>Step14.</font></B> clicked on Settings_Applied_To_the_user Drop-down and Selcted Any Value ");
+		Assert.assertTrue(true, "Failed to click on Settings_Applied_To_the_user Drop-down and Selcted Any Value");
 		
 		
 		helper.waitFor(Empmonitoriconhiden);
@@ -105,8 +103,8 @@ public class TrackUserSettingsPage extends BasePage {
 		helper.waitFor(ScreenShots_RadioButton_Disable);
 		helper.highLightElement(driver, ScreenShots_RadioButton_Disable);
 		ScreenShots_RadioButton_Disable.click();
-		Reporter.log("<B><font color = 'blue'>Step16.</font></B> clicked on Screen shot RadioButton");
-		Assert.assertTrue(true, "Failed to Seletect  ScreeShots Radio Button");
+		Reporter.log("<B><font color = 'blue'>Step16.</font></B> clicked on Screen-shot Radio Button");
+		Assert.assertTrue(true, "Failed to click on   Scree-Shots Radio Button");
 		Thread.sleep(6000);
 		
 		
@@ -115,24 +113,24 @@ public class TrackUserSettingsPage extends BasePage {
 		helper.Scrollintoview(ScreenShotsFrequency);
 		//helper.selectDropDownValue(ScreenShotsFrequency, "value", "3");
 		ScreenShotsFrequency.click();
-		Reporter.log("<B><font color = 'blue'>Step17.</font></B> clicked on Screenshot Frequency DropDown");
-		Assert.assertTrue(true, "Failed to Select  Screenshot Frequency DropDown");
+		Reporter.log("<B><font color = 'blue'>Step17.</font></B> clicked on Screenshot Frequency Drop-down");
+		Assert.assertTrue(true, "Failed to click on Screenshot Frequency Drop-down");
 	
 		
 		
 		helper.waitFor(Twelveperhour);
 		helper.highLightElement(driver, Twelveperhour);
 		Twelveperhour.click();
-		Reporter.log("<B><font color = 'blue'>Step18.</font></B> clicked on Twelveperhour");
-		Assert.assertTrue(true, "Failed to click on Twelveperhour DropDown");
+		Reporter.log("<B><font color = 'blue'>Step18.</font></B> clicked on Twelveper-hour option");
+		Assert.assertTrue(true, "Failed to click on Twelveperhour option");
 		
 		helper.waitFor(Videoquality_DropDown);
 		helper.highLightElement(driver, Videoquality_DropDown);
 		helper.Scrollintoview(Videoquality_DropDown);
 		//helper.selectDropDownValue(ScreenShotsFrequency, "value", "1280");
 		Videoquality_DropDown.click();
-		Reporter.log("<B><font color = 'blue'>Step19.</font></B> clicked on Videoquality_DropDown");
-		Assert.assertTrue(true, "Failed to Select  Videoquality_DropDown");
+		Reporter.log("<B><font color = 'blue'>Step19.</font></B> clicked on Video-Quality Drop-down");
+		Assert.assertTrue(true, "Failed to Select  Video-Quality Drop-down");
 		
 		helper.waitFor(Medium);
 		helper.highLightElement(driver, Medium);
@@ -144,30 +142,30 @@ public class TrackUserSettingsPage extends BasePage {
 		helper.waitFor(AgentAutomaticUpdate);
 		helper.highLightElement(driver, AgentAutomaticUpdate);
 		AgentAutomaticUpdate.click();
-		Reporter.log("<B><font color = 'blue'>Step21.</font></B> Enabled  AgentAutomaticUpdate");
-		Assert.assertTrue(true, "Failed to Enable  AgentAutomaticUpdate");
+		Reporter.log("<B><font color = 'blue'>Step21.</font></B> clicked on Enabled  Agent_Automatic_Update");
+		Assert.assertTrue(true, "Failed to click on  Enable  Agent_Automatic_Update");
 		
 		
 		helper.waitFor(idleTimeDropdown);
 		helper.highLightElement(driver, idleTimeDropdown);
 		idleTimeDropdown.click();
-		Reporter.log("<B><font color = 'blue'>Step22.</font></B> Selected idleTimeDropdown");
-		Assert.assertTrue(true, "Failed to Select idleTimeDropdown");
+		Reporter.log("<B><font color = 'blue'>Step22.</font></B> clicked on idle-Time Drop-down");
+		Assert.assertTrue(true, "Failed to click on  idle-Time Drop-down");
 	
 		
 		helper.waitFor(Fifteenmins);
 		helper.highLightElement(driver, Fifteenmins);
 		Fifteenmins.click();
-		Reporter.log("<B><font color = 'blue'>Step23.</font></B> Selected Fifteenmins");
-		Assert.assertTrue(true, "Failed to Select Fifteenmins");
+		Reporter.log("<B><font color = 'blue'>Step23.</font></B> clicked on  Fifteen-mins");
+		Assert.assertTrue(true, "Failed to click on  Fifteen-mins");
 		
 		helper.waitFor(Save_Button);
 		helper.highLightElement(driver, Save_Button);
 		helper.Scrollintoview(Save_Button);
 		Thread.sleep(3000);
 		Save_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step24.</font></B> Cliked on SaveButton");
-		Assert.assertTrue(true, "Failed to Click on Save_Button");
+		Reporter.log("<B><font color = 'blue'>Step24.</font></B> Cliked on Save Button");
+		Assert.assertTrue(true, "Failed to Click on Save Button");
 		
 		
 

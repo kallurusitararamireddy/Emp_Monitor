@@ -81,7 +81,7 @@ public class HomePage extends BasePage {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
+	} 
 
 	public void SkipPopup() throws InterruptedException {
 

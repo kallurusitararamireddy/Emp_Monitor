@@ -325,21 +325,21 @@ public class DashBoardPage2__Details_Validating_and_Print_Data_Demo_page extends
 			Reporter.log("<B><font color = 'orange'> Step4 .</font> actual TotalEnrollments_main_page = " + " " + TotalEnrollments_main_page
 					+ " equal " + " expected TotalEnrollments_modal_page =  " + expected_data_value);
 			break;
-		}
+		} 
 
 		helper.waitFor(TotalEnrollments_csvButton);
 		helper.highLightElement(driver, TotalEnrollments_csvButton);
 		Thread.sleep(7000);
 		TotalEnrollments_csvButton.click();
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Total_Enrollments csvButton ");
-		Assert.assertTrue(true, "Failed to Click on Total Total_Enrollments csvButton");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Total_Enrollments csv Button ");
+		Assert.assertTrue(true, "Failed to Click on Total Total_Enrollments csv Button");
 		Thread.sleep(7000);
 
 		helper.waitFor(TotalEnrollments_CloseButtton);
 		helper.highLightElement(driver, TotalEnrollments_CloseButtton);
 		TotalEnrollments_CloseButtton.click();
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on TotalEnrollments Close_Buttton ");
-		Assert.assertTrue(true, "Failed to Click on Total TotalEnrollments  Close_Buttton");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on TotalEnrollments Close Buttton ");
+		Assert.assertTrue(true, "Failed to Click on Total TotalEnrollments  Close Buttton");
 		Thread.sleep(4000);
 
 		helper.Total_Enrollments_Excel_data();
@@ -393,14 +393,14 @@ public class DashBoardPage2__Details_Validating_and_Print_Data_Demo_page extends
 		helper.highLightElement(driver, CurrentlyACtive_CsvButton);
 		helper.jsCLick(CurrentlyACtive_CsvButton);
 		Thread.sleep(7000);
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Currently_ACtive CsvButton ");
-		Assert.assertTrue(true, "Failed to Click on  Currently_ACtive CsvButton");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Currently_ACtive Csv Button ");
+		Assert.assertTrue(true, "Failed to Click on  Currently_ACtive Csv Button");
 
 		helper.waitFor(CurrentlyACtive_Close_Button);
 		helper.highLightElement(driver, CurrentlyACtive_Close_Button);
 		CurrentlyACtive_Close_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on Currently_ACtive Close_Button ");
-		Assert.assertTrue(true, "Failed to Click on  Currently_ACtive Close_Button");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on Currently_ACtive Close Button ");
+		Assert.assertTrue(true, "Failed to Click on  Currently_ACtive Close Button");
 		Thread.sleep(4000);
 
 		helper.Currently_Active_Xsxl_Data_Complete_Print_ALL();
@@ -452,16 +452,16 @@ public class DashBoardPage2__Details_Validating_and_Print_Data_Demo_page extends
 		helper.waitFor(CurrentlyIdle_csv_Button);
 		helper.highLightElement(driver, CurrentlyIdle_csv_Button);
 		helper.jsCLick(CurrentlyIdle_csv_Button);
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Currently_Idle csv_Button ");
-		Assert.assertTrue(true, "Failed to Click on  Currently_Idle csv_Button");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Currently_Idle csv Button ");
+		Assert.assertTrue(true, "Failed to Click on  Currently_Idle csv Button");
 		Thread.sleep(5000);
 
 		helper.waitFor(CurrentlyIdle_close_Button);
 		helper.highLightElement(driver, CurrentlyIdle_close_Button);
 		CurrentlyIdle_close_Button.click();
 		Thread.sleep(5000);
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on CurrentlyIdle_close_Button ");
-		Assert.assertTrue(true, "Failed to Click on  CurrentlyIdle_close_Button");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on CurrentlyIdle close Button ");
+		Assert.assertTrue(true, "Failed to Click on  CurrentlyIdle close Button");
 		
 		Thread.sleep(4000);
 
@@ -514,7 +514,7 @@ public class DashBoardPage2__Details_Validating_and_Print_Data_Demo_page extends
 		helper.waitFor(Currently_offline_csv_Button);
 		helper.highLightElement(driver, Currently_offline_csv_Button);
 		Currently_offline_csv_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Currently_offline csv_Button ");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Currently_offline csv Button ");
 		Assert.assertTrue(true, "Failed to Click on  Currently_offline csv_Button");
 		Thread.sleep(5000);
 
@@ -522,8 +522,8 @@ public class DashBoardPage2__Details_Validating_and_Print_Data_Demo_page extends
 		helper.highLightElement(driver, Currentlyoffline_close_Button);
 		Thread.sleep(5000);
 		Currentlyoffline_close_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on Currently_offline close_Button ");
-		Assert.assertTrue(true, "Failed to Click on  Currently_offline close_Button");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on Currently_offline close Button ");
+		Assert.assertTrue(true, "Failed to Click on  Currently_offline close Button");
 		Thread.sleep(5000);
 		Thread.sleep(4000);
 
@@ -576,7 +576,7 @@ public class DashBoardPage2__Details_Validating_and_Print_Data_Demo_page extends
 		helper.waitFor(Absent_Users_Generate_csvButton);
 		helper.highLightElement(driver, Absent_Users_Generate_csvButton);
 		Absent_Users_Generate_csvButton.click();
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Absent_Users_Generate_csvButton ");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Absent_Users_Generate csv Button ");
 		Assert.assertTrue(true, "Failed to Click on  Absent_Users_Generate_csvButton");
 		Thread.sleep(5000);
 
@@ -584,8 +584,8 @@ public class DashBoardPage2__Details_Validating_and_Print_Data_Demo_page extends
 		helper.highLightElement(driver, Absent_Users_closeButton);
 		Thread.sleep(5000);
 		Absent_Users_closeButton.click();
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on Absent_Users_closeButton ");
-		Assert.assertTrue(true, "Failed to Click on  Absent_Users_closeButton");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on Absent_Users close Button ");
+		Assert.assertTrue(true, "Failed to Click on  Absent_Users close Button");
 		Thread.sleep(4000);
 
 		helper.Absent_Users_Xsxl_Data_Complete_Print_ALL();
@@ -642,21 +642,21 @@ public class DashBoardPage2__Details_Validating_and_Print_Data_Demo_page extends
 				.visibilityOfElementLocated(By.xpath("//*[@id=\"suspended_count\"]/div/div/div[3]/button[1]"))).click();
 
 		Suspended_Users_csvButton.click();
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Suspended_Users_csvButton ");
-		Assert.assertTrue(true, "Failed to Click on  Suspended_Users_csvButton");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Suspended_Users csv Button ");
+		Assert.assertTrue(true, "Failed to Click on  Suspended_Users csv Button");
 		Thread.sleep(5000);
 
 		helper.waitFor(Suspende_Users_closeButton);
 		helper.highLightElement(driver, Suspende_Users_closeButton);
 		Thread.sleep(5000);
 		Suspende_Users_closeButton.click();
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on Suspende_Users close_Button ");
-		Assert.assertTrue(true, "Failed to Click on  Suspende_Users close_Button");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on Suspende_Users close Button ");
+		Assert.assertTrue(true, "Failed to Click on  Suspende_Users close Button");
 		
 		Thread.sleep(4000);
 
 		helper.Suspended_Users_Xsxl_Data_Complete_Print_ALL();
-
+ 
 		Thread.sleep(2000);
 	}
 

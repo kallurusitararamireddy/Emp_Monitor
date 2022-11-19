@@ -98,41 +98,41 @@ public class EmployeeAttendanePage extends BasePage {
 		helper.waitFor(EmployeeAttendance);
 		helper.highLightElement(driver, EmployeeAttendance);
 		EmployeeAttendance.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on EmployeeAttendance");
-		Assert.assertTrue(true, "Failed to click on EmployeeAttendance");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee Module and Selected  EmployeeAttendance Sub-Module");
+		Assert.assertTrue(true, "Failed to click on Employee Module and Selected  EmployeeAttendance Sub-Module");
 
 		helper.highLightElement(driver, Showentries);
-		helper.selectDropDownValue(Showentries, "index", "4");
+		helper.selectDropDownValue(Showentries, "index", "4"); 
 		Showentries.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on ShowEntries_DropDown");
-		Assert.assertTrue(true, "Failed to click on ShowEntries_DropDown");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Show-Entries DropDown and Selected Number");
+		Assert.assertTrue(true, "Failed to click on Show-Entries DropDown and Selected Number");
 
 		helper.waitFor(Monthyear);
 		helper.highLightElement(driver, Monthyear);
 		Monthyear.clear();
 		Monthyear.sendKeys("05-2021");
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Monthyear_DropDown");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Month-year DropDown and Selected Date");
 		Assert.assertTrue(true, "Failed to send data to Monthyear");
 
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
 		helper.selectDropDownValue(Location, "value", "null");
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Location_DropDown");
-		Assert.assertTrue(true, "Failed click on Location_DropDown");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Location_DropDown and Select Any Location ");
+		Assert.assertTrue(true, "Failed click on Location_DropDown and Select Any Location ");
 
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
 		helper.selectDropDownValue(Department, "id", "null");
 		Department.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Department_DropDown");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Department_DropDown ");
 		Assert.assertTrue(true, "Failed to click on Department_DropDown");
 		
 		helper.waitFor(Select_list);
 		helper.highLightElement(driver, Select_list);
 		helper.selectDropDownValue(Department, "id", "null");
 		Select_list.click();
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Select_list");
-		Assert.assertTrue(true, "Failed to click on Select_list");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Select_list Option (Check Box) ");
+		Assert.assertTrue(true, "Failed to click on Select_list   Option (Check Box) ");
 		
 
 		helper.waitFor(ExportExcel);
@@ -141,8 +141,8 @@ public class EmployeeAttendanePage extends BasePage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@id='DownloadButton']"))).click();
 
 		ExportExcel.click();
-		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on ExportExcel_Button");
-		Assert.assertTrue(true, "Failed to click on ExportExcel_Button");
+		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on Export Excel_Button");
+		Assert.assertTrue(true, "Failed to click on Export Excel_Button");
 		Thread.sleep(7000);
 		
 		
@@ -192,8 +192,8 @@ public class EmployeeAttendanePage extends BasePage {
 		helper.waitFor(Keystrokes);
 		helper.highLightElement(driver, Keystrokes);
 		Keystrokes.click();
-		Reporter.log("<B><font color = 'blue'>Step14.</font></B> clicked on Keystrokes");
-		Assert.assertTrue(true, "Failed to click on Keystrokes_Button");
+		Reporter.log("<B><font color = 'blue'>Step14.</font></B> clicked on Keystrokes Button");
+		Assert.assertTrue(true, "Failed to click on Keystrokes Button");
 		
 		
 		Thread.sleep(3000);

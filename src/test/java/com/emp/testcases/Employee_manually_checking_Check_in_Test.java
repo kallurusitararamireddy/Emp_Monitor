@@ -19,7 +19,7 @@ public class Employee_manually_checking_Check_in_Test extends  TestBase
 	homePage.clickEmployee();
 	Employee_manually_checking_Check_in_Page admin_change=new Employee_manually_checking_Check_in_Page(getDriver());
 	admin_change.Employeecheckin();
-		
+		 
 	admin_change._Employee_log_side_HRM_Check_in();
 	
 	}
