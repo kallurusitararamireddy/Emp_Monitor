@@ -75,34 +75,34 @@ public class SplitSheetPage extends BasePage {
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
 		helper.selectDropDownValue(Location, "visibletext", " See All");
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Selected  See All from the loction Dropdown");
-		Assert.assertTrue(true, "Failed to Select a  See All from the Locaton Drpdown");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Location Drop-down and Selected Any Location");
+		Assert.assertTrue(true, "Failed to click on Location Drop-down and Selected Any Location");
 		 
 
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
 		helper.selectDropDownValue(Department, "value", "0");
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Department dropdown & Select Department");
-		Assert.assertTrue(true, "Failed to click on Department dropdown & Select Department");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Department Drop-down and  Selected Department");
+		Assert.assertTrue(true, "Failed to click on Department Drop-down and  Selected Department");
 		
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
 		helper.move_to_element_click_target(Employee);
 		helper.robot_Zero_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Employee dropdown & Select Employee");
-		Assert.assertTrue(true, "Failed to Select Employee & Select Employee ");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Employee Drop-down and  Selected Employee");
+		Assert.assertTrue(true, "Failed to click on  Employee and Selected Employee ");
 		
 		helper.waitFor(selectdateranges);
 		helper.highLightElement(driver, selectdateranges);
 		selectdateranges.click();
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on select-Date-Ranges");
-		Assert.assertTrue(true, "Failed to click on  select-date-Ranges");
+		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on Calendar Drop-down and Slected Day's");
+		Assert.assertTrue(true, "Failed to click on Calendar Drop-down and Slected Day's");
 		
 		helper.waitFor(Last30days);
 		helper.highLightElement(driver, Last30days);
 		Last30days.click();
 		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Last-30-days");
-		Assert.assertTrue(true, "Failed to select Last-30-days");
+		Assert.assertTrue(true, "Failed to click on  Last-30-days");
 		
 		
 		 
@@ -116,8 +116,8 @@ public class SplitSheetPage extends BasePage {
 		helper.highLightElement(driver, Splitsheet);
 		helper.Scrollintoview(Splitsheet);
 		Splitsheet.click();
-		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on Splitsheet  checkBox");
-		Assert.assertTrue(true, "Failed to click on Splitsheet ChekBox");
+		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on Split-sheet checkBox option ");
+		Assert.assertTrue(true, "Failed to click on Splitsheet ChekBox option ");
 		Thread.sleep(2000);
 		
 		helper.waitFor(Submit);

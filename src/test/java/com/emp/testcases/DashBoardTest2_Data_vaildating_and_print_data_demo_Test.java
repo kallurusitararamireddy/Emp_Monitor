@@ -7,6 +7,8 @@ import com.emp.qa.base.TestBase;
 import com.emp.qa.pages.DashBoardPage2__Details_Validating_and_Print_Data_Demo_page;
 import com.emp.qa.pages.HomePage;
 
+
+
 public class DashBoardTest2_Data_vaildating_and_print_data_demo_Test extends TestBase {
 
 	@Test(priority  = 1)
@@ -30,6 +32,7 @@ public class DashBoardTest2_Data_vaildating_and_print_data_demo_Test extends Tes
 		DashBoardPage2__Details_Validating_and_Print_Data_Demo_page DashBoardpage = new DashBoardPage2__Details_Validating_and_Print_Data_Demo_page(getDriver());
 		homePage.clickDashboard();
 		DashBoardpage.CurrentlyACtive_2(); 
+		
 	}  
 	
 	@Test(priority  = 3)

@@ -215,22 +215,22 @@ public class DashBoardPage extends BasePage {
 		helper.waitFor(TotalEnrollments);
 		helper.highLightElement(driver, TotalEnrollments);
 		TotalEnrollments.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Total_Enrollments_Button ");
-		Assert.assertTrue(true, "Failed to Click on  Total_Enrollments_Button ");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Total_Enrollments Button ");
+		Assert.assertTrue(true, "Failed to Click on  Total_Enrollments Button ");
 		
 		helper.waitFor(TotalEnrollments_csvButton);
-		helper.highLightElement(driver, TotalEnrollments_csvButton);
+		helper.highLightElement(driver, TotalEnrollments_csvButton); 
 		Thread.sleep(7000);
 		TotalEnrollments_csvButton.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Total_Enrollments_csvButton ");
-		Assert.assertTrue(true, "Failed to Click on Total Total_Enrollments_csvButton");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Total_Enrollments csv-Button ");
+		Assert.assertTrue(true, "Failed to Click on Total Total_Enrollments csvButton");
 		Thread.sleep(7000); 
 		
 		helper.waitFor(TotalEnrollments_CloseButtton);
 		helper.highLightElement(driver, TotalEnrollments_CloseButtton);
 		TotalEnrollments_CloseButtton.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Total_Enrollments_CloseButtton ");
-		Assert.assertTrue(true, "Failed to Click on Total Total_Enrollments_CloseButtton");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Total_Enrollments_Close-Buttton ");
+		Assert.assertTrue(true, "Failed to Click on Total Total_Enrollments_Close-Buttton");
 		Thread.sleep(7000);
 		
 		helper.waitFor(CurrentlyACtive);
@@ -245,14 +245,14 @@ public class DashBoardPage extends BasePage {
 		helper.highLightElement(driver, CurrentlyACtive_CsvButton);
 		helper.jsCLick(CurrentlyACtive_CsvButton);
 		Thread.sleep(7000);
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Currently_ACtive_CsvButton ");
-		Assert.assertTrue(true, "Failed to Click on  Currently_ACtive_CsvButton");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Currently_ACtive Csv-Button ");
+		Assert.assertTrue(true, "Failed to Click on  Currently_ACtive Csv-Button");
 		
 		helper.waitFor(CurrentlyACtive_Close_Button);
 		helper.highLightElement(driver, CurrentlyACtive_Close_Button);
 		CurrentlyACtive_Close_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on Currently_ACtive_Close_Button ");
-		Assert.assertTrue(true, "Failed to Click on  Currently_ACtive_Close_Button");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on Currently_ACtive_Close Button ");
+		Assert.assertTrue(true, "Failed to Click on  Currently_ACtive_Close Button");
 		
 		helper.waitFor(CurrentlyIdle);
 		helper.highLightElement(driver, CurrentlyIdle);
@@ -263,16 +263,16 @@ public class DashBoardPage extends BasePage {
 		helper.waitFor(CurrentlyIdle_csv_Button);
 		helper.highLightElement(driver, CurrentlyIdle_csv_Button);
 		helper.jsCLick(CurrentlyIdle_csv_Button);
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> Clicked on Currently_Idle_csv_Button ");
-		Assert.assertTrue(true, "Failed to Click on  Currently_Idle_csv_Button");
+		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> Clicked on Currently_Idle csv-Button ");
+		Assert.assertTrue(true, "Failed to Click on  Currently_Idle csv-Button");
 		Thread.sleep(5000);
 		
 		helper.waitFor(CurrentlyIdle_close_Button);
 		helper.highLightElement(driver, CurrentlyIdle_close_Button);
 		CurrentlyIdle_close_Button.click();
 		Thread.sleep(5000);
-		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> Clicked on Currently_Idle_close_Button ");
-		Assert.assertTrue(true, "Failed to Click on  Currently_Idle_close_Button");
+		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> Clicked on Currently_Idle_close Button ");
+		Assert.assertTrue(true, "Failed to Click on  Currently_Idle_close Button");
 		
 		helper.waitFor(Currently_Offline);
 		helper.highLightElement(driver, Currently_Offline);
@@ -285,8 +285,8 @@ public class DashBoardPage extends BasePage {
 		helper.waitFor(Currently_offline_csv_Button);
 		helper.highLightElement(driver, Currently_offline_csv_Button);
 		Currently_offline_csv_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> Clicked on Currently_offline_csv_Button ");
-		Assert.assertTrue(true, "Failed to Click on  Currently_offline_csv_Button");
+		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> Clicked on Currently_offline csv-Button ");
+		Assert.assertTrue(true, "Failed to Click on  Currently_offline csv-Button");
 		Thread.sleep(5000);
 		
 		
@@ -294,8 +294,8 @@ public class DashBoardPage extends BasePage {
 		helper.highLightElement(driver, Currentlyoffline_close_Button);
 		Thread.sleep(5000);
 		Currentlyoffline_close_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> Clicked on Currentlyoffline_close_Button ");
-		Assert.assertTrue(true, "Failed to Click on  Currentlyoffline_close_Button");
+		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> Clicked on Currentlyoffline_close Button ");
+		Assert.assertTrue(true, "Failed to Click on  Currentlyoffline_close Button");
 		
 		helper.waitFor(Absent_Users);
 		helper.highLightElement(driver, Absent_Users);
@@ -514,7 +514,7 @@ public class DashBoardPage extends BasePage {
 		helper.highLightElement(driver, Top10Websitesusages_Viewdetails);
 		helper.Scrollintoview(Top10Websitesusages_Viewdetails);
 		helper.jsCLick(Top10Websitesusages_Viewdetails);
-		Reporter.log("<B><font color = 'blue'>Step40 .</font></B> Clicked on Top_10_Websites_usages_Viewdetails ");
+		Reporter.log("<B><font color = 'blue'>Step40 .</font></B> Clicked on Top_10_Websites_usages_View-details ");
 		Assert.assertTrue(true, "Failed to Click on  Top_10_Websites_usages_Viewdetails");
 		Thread.sleep(2000);
 
@@ -522,8 +522,8 @@ public class DashBoardPage extends BasePage {
 		helper.highLightElement(driver, Viewdetails_CloseButton);
 		helper.Scrollintoview(Viewdetails_CloseButton);
 		helper.jsCLick(Viewdetails_CloseButton);
-		Reporter.log("<B><font color = 'blue'>Step41 .</font></B> Clicked on Viewdetails_CloseButton ");
-		Assert.assertTrue(true, "Failed to Click on  Viewdetails_CloseButton");
+		Reporter.log("<B><font color = 'blue'>Step41 .</font></B> Clicked on Viewdetails_Close Button ");
+		Assert.assertTrue(true, "Failed to Click on  Viewdetails_Close Button");
 
 		helper.waitFor(Top10_Application_Usage_Today);
 		helper.highLightElement(driver, Top10_Application_Usage_Today);
@@ -550,8 +550,8 @@ public class DashBoardPage extends BasePage {
 		helper.highLightElement(driver, Top10_Application_Usage_viewdetails);
 		helper.Scrollintoview(Top10_Application_Usage_viewdetails);
 		helper.jsCLick(Top10_Application_Usage_viewdetails);
-		Reporter.log("<B><font color = 'blue'>Step45 .</font></B> Clicked on Top10_Application_Usage_viewdetails ");
-		Assert.assertTrue(true, "Failed to Click on  Top10_Application_Usage_viewdetails");
+		Reporter.log("<B><font color = 'blue'>Step45 .</font></B> Clicked on Top10_Application_Usage_view-details ");
+		Assert.assertTrue(true, "Failed to Click on  Top10_Application_Usage_view details");
 		Thread.sleep(2000);
 
 		helper.waitFor(Top10_Application_Usage_view_details_closebutton);
@@ -559,8 +559,8 @@ public class DashBoardPage extends BasePage {
 		helper.Scrollintoview(Top10_Application_Usage_view_details_closebutton);
 		helper.jsCLick(Top10_Application_Usage_view_details_closebutton);
 		Reporter.log(
-				"<B><font color = 'blue'>Step45 .</font></B> Clicked on Top10_Application_Usage_view_details_closebutton ");
-		Assert.assertTrue(true, "Failed to Click on  Top10_Application_Usage_view_details_closebutton");
+				"<B><font color = 'blue'>Step45 .</font></B> Clicked on Top10_Application_Usage_view_details_close Button ");
+		Assert.assertTrue(true, "Failed to Click on  Top10_Application_Usage_view_details_close Button");
 		Thread.sleep(2000);
 
 	}

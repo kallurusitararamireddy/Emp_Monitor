@@ -36,12 +36,10 @@ public class ShiftManagementPage extends BasePage{
 	@CacheLookup
 	WebElement ShiftName;
 	
-//	@FindBy(xpath = "//input[@id='lateLogin']") 
 	@FindBy(xpath = "//*[@id='monStart']")
 	@CacheLookup
 	WebElement LateLogin;
 	
-//	@FindBy(xpath = "//input[@id='earlyLoginAndLogout']")
 	@FindBy(xpath = "//*[@id='monEnd']")
 	@CacheLookup
 	WebElement EarlyLogin;
@@ -76,15 +74,15 @@ public class ShiftManagementPage extends BasePage{
 		helper.waitFor(ShiftManagemet);		
 		helper.highLightElement(driver, ShiftManagemet);
 		ShiftManagemet.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on ShiftManagemet");
-		Assert.assertTrue(true, "Failed To Select ShiftManagemet");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Settings Module and Selected  Shift-Managemet Sub-Module ");
+		Assert.assertTrue(true, "Failed To  click on Settings Module and Selected  Shift-Managemet Sub-Module");
 		
 		
 		helper.waitFor(CreateShift);		
 		helper.highLightElement(driver, CreateShift);
 		CreateShift.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on CreateShift");
-		Assert.assertTrue(true, "Failed To Select CreateShift");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Create-Shift Button ");
+		Assert.assertTrue(true, "Failed To click on Create-Shift Button");
 		
 		Random r=new Random();
 		int num=r.nextInt(100);
@@ -95,67 +93,67 @@ public class ShiftManagementPage extends BasePage{
 		helper.highLightElement(driver, ShiftName);
 		ShiftName.sendKeys(exp_sn);
 		ShiftName.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on ShiftName");
-		Assert.assertTrue(true, "Failed To Select ShiftName");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Shift-Name Text field and Entered Shift Name ");
+		Assert.assertTrue(true, "Failed To click on Shift-Name Text field and Entered Shift Name ");
 		
 		helper.waitFor(LateLogin);		
 		helper.highLightElement(driver, LateLogin);
 		LateLogin.sendKeys("10-05");
 		LateLogin.click();
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on LateLogin");
-		Assert.assertTrue(true, "Failed To Select LateLogin");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Late-Login Time Set");
+		Assert.assertTrue(true, "Failed To click on  Late-Login Time Set");
 		
 		
 		helper.waitFor(EarlyLogin);		
 		helper.highLightElement(driver,EarlyLogin);
 		EarlyLogin.sendKeys("09-50");
 		LateLogin.click();
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on EarlyLogin");
-		Assert.assertTrue(true, "Failed To Select EarlyLogin");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Early-Login Time Set ");
+		Assert.assertTrue(true, "Failed To click on  Early-Login Time Set");
 		
 		
 		helper.waitFor(Selectcolor_RadioButton);		
 		helper.highLightElement(driver,Selectcolor_RadioButton);
 		Selectcolor_RadioButton.click();
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Selectcolor_RadioButton");
-		Assert.assertTrue(true, "Failed To Selectcolor_RadioButton");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Select-color Radio Button");
+		Assert.assertTrue(true, "Failed To click on  Select-color Radio Button");
 		
 		
 		helper.waitFor(mon_checkBox);		
 		helper.highLightElement(driver,mon_checkBox);
 //		EarlyLogin.sendKeys("09-50");
 		mon_checkBox.click();
-		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on mon_checkBox");
-		Assert.assertTrue(true, "Failed To Select mon_checkBox");
+		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on monday check Box option");
+		Assert.assertTrue(true, "Failed To click on  monday check Box option ");
 		
 		helper.waitFor(Monday_StartTime);		
 		helper.highLightElement(driver,Monday_StartTime);
 //		Monday_StartTime.sendKeys("10-00");
 		Monday_StartTime.click();
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Monday_StartTime");
-		Assert.assertTrue(true, "Failed To Select LateLogin");
+		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Monday Start-Time");
+		Assert.assertTrue(true, "Failed To click on Monday Start-Time");
 		
 		helper.waitFor(Monday_EndTime);		
 		helper.highLightElement(driver,Monday_EndTime);
 		Monday_EndTime.sendKeys("07-00");
 		Monday_EndTime.click();
-		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on Monday_EndTime");
-		Assert.assertTrue(true, "Failed To Select Monday_EndTime");
+		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on Monday End-Time");
+		Assert.assertTrue(true, "Failed To click on Monday End-Time");
 		
 		helper.waitFor(Save_Button);		
 		helper.highLightElement(driver,Save_Button);
 		helper.Scrollintoview(Save_Button);
 		helper.jsCLick(Save_Button);
 		Thread.sleep(3000);
-		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on Save_Button");
-		Assert.assertTrue(true, "Failed To Select Save_Button");
+		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on Save Button");
+		Assert.assertTrue(true, "Failed To click on  Save Button");
 		Thread.sleep(2000);
 		
 		helper.waitFor(OK_Button);		
 		helper.highLightElement(driver,OK_Button);
 		OK_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on ok_button");
-		Assert.assertTrue(true, "Failed To clicked on ok_button");
+		Assert.assertTrue(true, "Failed To click on ok_button");
 		
 		
 	}

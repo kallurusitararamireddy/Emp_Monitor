@@ -88,28 +88,28 @@ public class ProductivityRulesPage extends BasePage {
 		helper.waitFor(ProductivityRules);		
 		helper.highLightElement(driver, ProductivityRules);
 		ProductivityRules.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Productivity-Rules");
-		Assert.assertTrue(true, "Failed To Select Productivity-Rules");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Settings Module and Selected  Productivity-Rules Sub-Module ");
+		Assert.assertTrue(true, "Failed To Settings Module and Selected  Productivity-Rules Sub-Module");
 		
-		
+		 
 		helper.waitFor(Activity_Button);		
 		helper.highLightElement(driver, Activity_Button);
 		Activity_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Activity_Button");
-		Assert.assertTrue(true, "Failed To Select Activity_Button");
+		Assert.assertTrue(true, "Failed To click on  Activity_Button");
 		
 		helper.waitFor(Category_Button);		
 		helper.highLightElement(driver, Category_Button);
 		Category_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Category_Button");
-		Assert.assertTrue(true, "Failed To Select Category_Button");
+		Assert.assertTrue(true, "Failed To click on  Category_Button");
 		Thread.sleep(5000);
 		 
 		helper.waitFor(SeeAll_Button);		
 		helper.highLightElement(driver, SeeAll_Button);
 		SeeAll_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on SeeAll_Button");
-		Assert.assertTrue(true, "Failed To Select SeeAll_Button");
+		Assert.assertTrue(true, "Failed To click on  SeeAll_Button");
 		Thread.sleep(5000);
 		
 		
@@ -117,7 +117,7 @@ public class ProductivityRulesPage extends BasePage {
 		helper.highLightElement(driver, Global_Button);
 		Global_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Global_Button");
-		Assert.assertTrue(true, "Failed To Select Global_Button");
+		Assert.assertTrue(true, "Failed To click on  Global_Button");
 		Thread.sleep(5000);
 		
 		
@@ -125,7 +125,7 @@ public class ProductivityRulesPage extends BasePage {
 		helper.highLightElement(driver, Custom_Button);
 		Custom_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Custom_Button");
-		Assert.assertTrue(true, "Failed To Select Custom_Button");
+		Assert.assertTrue(true, "Failed To click on  Custom_Button");
 		Thread.sleep(5000);
 		
 		
@@ -134,19 +134,18 @@ public class ProductivityRulesPage extends BasePage {
 		helper.highLightElement(driver, New_Button);
 		New_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on New_Button");
-		Assert.assertTrue(true, "Failed To Select New_Button");
+		Assert.assertTrue(true, "Failed To click on  New_Button");
 		Thread.sleep(5000);
+		
 		
 		driver.navigate().refresh();
 		
 
-		
-		
 		helper.waitFor(Addnew_Domain);		
 		helper.highLightElement(driver, Addnew_Domain);
 		Addnew_Domain.click();
 		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Addnew_Domain");
-		Assert.assertTrue(true, "Failed To Select Addnew_Domain");
+		Assert.assertTrue(true, "Failed To click on  Addnew_Domain");
 		
 		Random l=new Random();
 		int num=l.nextInt(100);
@@ -158,14 +157,14 @@ public class ProductivityRulesPage extends BasePage {
 		Add_Domain_Link.sendKeys(exp_l+".de");
 		Add_Domain_Link.click();
 		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on Add_Domain_Link");
-		Assert.assertTrue(true, "Failed To Add_Domain_Link");
+		Assert.assertTrue(true, "Failed To click on Add_Domain_Link");
 		Thread.sleep(4000);
 		
 		helper.waitFor(Save_Button);		
 		helper.highLightElement(driver, Save_Button);
 		Save_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on Save_Button");
-		Assert.assertTrue(true, "Failed To Click Save_Button");
+		Assert.assertTrue(true, "Failed To Click on Save_Button");
 		Thread.sleep(5000);
 		
 		
@@ -173,7 +172,7 @@ public class ProductivityRulesPage extends BasePage {
 		helper.highLightElement(driver, Export_Button);
 		Export_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on Export_Button");
-		Assert.assertTrue(true, "Failed To Click Export_Button");
+		Assert.assertTrue(true, "Failed To Click on Export_Button");
 		Thread.sleep(5000);
 	
 	

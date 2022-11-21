@@ -26,18 +26,15 @@ public class UpdateTheRolePage extends BasePage{
 	@CacheLookup
 	WebElement EmployeeDetails;
 	
-//	@FindBy(xpath = "//body/div[1]/div[1]/div[8]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]")
-	@FindBy(xpath = "//*[@id=\"main-wrapper\"]/div[2]/div[2]/div[2]/div/div/div[4]")
+	@FindBy(xpath = "//*[@id='main-wrapper']/div[2]/div[2]/div[2]/div/div/div[4]")
 	@CacheLookup
 	WebElement Scroller;
 	
-//	@FindBy(xpath = "//tbody/tr[@id='24756']/td[@id='act24756']/a[@id='upgrade']/i[1]")
-	@FindBy(xpath = "//*[@id=\"upgrade\" and @data-id=\"25499\"]/i")
+	@FindBy(xpath = "//*[@id='upgrade' and @data-id='25499']/i")
 	WebElement UpdateTheRole;
 	
 	
-//	@FindBy(xpath = "//select[@id='AllRolesAppend']") 
-	@FindBy(xpath = "//*[@id=\"upgradeManagerModal\"]/div/div/div[2]/span[1]/span[1]/span/ul")
+	@FindBy(xpath = "//*[@id='upgradeManagerModal']/div/div/div[2]/span[1]/span[1]/span/ul")
 	WebElement WhichRole;
 	
 	@FindBy(xpath = "//button[@id='UpgradeHide']")
@@ -51,21 +48,21 @@ public class UpdateTheRolePage extends BasePage{
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on EmployeeDetails");
-		Assert.assertTrue(true, "Failed to click on EmployeeDetails");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Employee Module and Selected  Employee-Details Sub-Module ");
+		Assert.assertTrue(true, "Failed to click on  Employee Module and Selected  Employee-Details Sub-Module");
 		
 		helper.waitFor(Scroller);
 		helper.highLightElement(driver,Scroller);
 		helper.Scrollintoview(Scroller);
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Scroller");
-		Assert.assertTrue(true, "Failed to click on Scroller");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Scroller view ");
+		Assert.assertTrue(true, "Failed to click on Scroller view ");
 		
 		
 		helper.waitFor(UpdateTheRole);
 		helper.highLightElement(driver, UpdateTheRole);
 		helper.jsCLick(UpdateTheRole); 
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Updated the role");
-		Assert.assertTrue(true, "Failed to Update the role");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Updated Role Drop-down");
+		Assert.assertTrue(true, "Failed to click on  Role Drop-down");
 		
 		
 		helper.waitFor(WhichRole);
@@ -73,15 +70,15 @@ public class UpdateTheRolePage extends BasePage{
 //		helper.jsCLick(WhichRole);
 //		helper.selectDropDownValue(WhichRole, "value", "230");
 		helper.robot_Second_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step30.</font></B> Selected  the role");
-		Assert.assertTrue(true, "Failed to Select the role");
+		Reporter.log("<B><font color = 'blue'>Step30.</font></B> clicked on  Any Role");
+		Assert.assertTrue(true, "Failed to click on  role");
 		
 		   
 		helper.waitFor(Yes_Button);
 		helper.highLightElement(driver, Yes_Button);
 		helper.jsCLick(Yes_Button);
-		Reporter.log("<B><font color = 'blue'>Step31.</font></B> Clicked on YesButton");
-		Assert.assertTrue(true, "Failed to Select YESbutton");
+		Reporter.log("<B><font color = 'blue'>Step31.</font></B> Clicked on Yes_Button");
+		Assert.assertTrue(true, "Failed to Select YES_button");
 	
 		
 	}

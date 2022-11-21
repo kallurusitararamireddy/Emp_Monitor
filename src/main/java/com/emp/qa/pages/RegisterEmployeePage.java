@@ -95,9 +95,15 @@ public class RegisterEmployeePage extends BasePage {
 	@CacheLookup
 	WebElement AsiaKolkata;
 
+	@FindBy(xpath = "//input[@id='f_upload']")
+	@CacheLookup
+	WebElement Image_up_load;
+	
+	
 	@FindBy(xpath = "//select[@id='Shiftfilteradd']")
 	@CacheLookup
 	WebElement selectshift;
+	
 
 	@FindBy(xpath = "//textarea[@id='address']")
 	@CacheLookup
@@ -136,7 +142,7 @@ public class RegisterEmployeePage extends BasePage {
 		Assert.assertTrue(true, "Failed to click  on Lastname text space & enter name");
 
 		Random g=new Random();
-		int num=g.nextInt(100);
+		int num=g.nextInt(100); 
 		String Act_g="skabcdef";
 		String Exp_g=Act_g+num;
 		
@@ -226,27 +232,37 @@ public class RegisterEmployeePage extends BasePage {
 		AsiaKolkata.click();
 		Reporter.log("<B><font color = 'blue'>Step15.</font></B> clicked on Asia_Kolkata");
 		Assert.assertTrue(true, "Failed to click  Asia_Kolkata");
+		
+		
+		helper.waitFor(Image_up_load);
+		helper.highLightElement(driver, Image_up_load);
+		helper.jsCLick(Image_up_load);
+		Thread.sleep(2000);
+		helper.uploadFile("C:\\Users\\Official\\Downloads\\Automation_Pic.jpg");
+		Thread.sleep(1000);
+		Reporter.log("<B><font color = 'blue'>Step16.</font></B> clicked on Image_Uploaded Button and Selected Employee Image ");
+		Assert.assertTrue(true, "Failed to click on Image_Uploaded Button  and Selected Employee Image");
 
 		 
 
 		helper.waitFor(selectshift);
 		helper.highLightElement(driver, selectshift);
 		helper.selectDropDownValue(selectshift, "value", "475");
-		Reporter.log("<B><font color = 'blue'>Step16.</font></B> clicked on select shift Drop down & select shift ");
+		Reporter.log("<B><font color = 'blue'>Step17.</font></B> clicked on select shift Drop down & select shift ");
 		Assert.assertTrue(true, "Failed to click on select shift Drop down & select shift");
 
 		helper.waitFor(Address);
 		helper.highLightElement(driver, Address);
 		Address.sendKeys("Hno:123,Banglore");
-		Reporter.log("<B><font color = 'blue'>Step17.</font></B> clicked on Address Text space & Enter Address");
+		Reporter.log("<B><font color = 'blue'>Step18.</font></B> clicked on Address Text space & Enter Address");
 		Assert.assertTrue(true, "Failed to click on Address Text space & Enter Address");
 
-		
+		 
 		helper.waitFor(Register);
 		helper.highLightElement(driver, Register);
 		helper.Scrollintoview(Register);
 		helper.jsCLick(Register);
-		Reporter.log("<B><font color = 'blue'>Step18.</font></B> clicked on Register Button ");
+		Reporter.log("<B><font color = 'blue'>Step19.</font></B> clicked on Register Button ");
 		Assert.assertTrue(true, "Failed to click on  Register Button ");
 		Thread.sleep(7000);
 

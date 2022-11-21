@@ -110,15 +110,15 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
 		Employee.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee");
-		Assert.assertTrue(true, "Failed to click on Employee");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee Module ");
+		Assert.assertTrue(true, "Failed to click on Employee Module ");
         Thread.sleep(1000);
         
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on EmployeeDetails");
-		Assert.assertTrue(true, "Failed to click on EmployeeDetails");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Employee Details Sub-Module ");
+		Assert.assertTrue(true, "Failed to click on Employee Details Sub-Module ");
 
 		helper.highLightElement(driver, ShowEntries);
 		ShowEntries.click();
@@ -132,16 +132,16 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		helper.highLightElement(driver, employee_select);
 		helper.Scrollintoview(employee_select);
 		employee_select.click();
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on employee_select");
-		Assert.assertTrue(true, "Failed to click on employee_select");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Any Employee Selected");
+		Assert.assertTrue(true, "Failed to click on Any Employee selected");
 
 		Thread.sleep(2000);
 
 		helper.waitFor(settings);
 		helper.highLightElement(driver, settings);
 		helper.move_to_element_click_target(settings);
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on settings");
-		Assert.assertTrue(true, "Failed to click on settings");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on settings Option ");
+		Assert.assertTrue(true, "Failed to click on settings Option ");
 
 		Thread.sleep(3000);
 
@@ -149,8 +149,8 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		helper.highLightElement(driver, enable);
 		helper.Scrollintoview(enable);
 		enable.click();
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on enable");
-		Assert.assertTrue(true, "Failed to click on enable");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Enable Option");
+		Assert.assertTrue(true, "Failed to click on Enable Option");
 
 		Thread.sleep(1000);
 
@@ -191,14 +191,14 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		helper.waitFor(user);
 		helper.highLightElement(driver, user);
 		user.sendKeys(du.Data_info("manager_TL_Employee_User"));
-		Reporter.log("<B><font color = 'blue'>Step10.</font></B> Entered the User-name");
-		Assert.assertTrue(true, "Failed to Entered the User-name");
+		Reporter.log("<B><font color = 'blue'>Step10.</font></B> Entered Manager-TL-Employee User-name");
+		Assert.assertTrue(true, "Failed to Enter Manager-TL-Employee User-name");
 
 		helper.waitFor(pwd);
 		helper.highLightElement(driver, pwd);
 		pwd.sendKeys(du.Data_info("manager_TL_Employee_password"));
-		Reporter.log("<B><font color = 'blue'>Step11.</font></B> Entered the password");
-		Assert.assertTrue(true, "Failed to Entered the password");
+		Reporter.log("<B><font color = 'blue'>Step11.</font></B> Entered Manager-TL-Employee password");
+		Assert.assertTrue(true, "Failed to Enter Manager-TL-Employee password");
 
 		helper.waitFor(login_button);
 		helper.highLightElement(driver, login_button);
@@ -210,15 +210,15 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		helper.highLightElement(driver, role_change);
 		role_change.click();
 		role_change.click();
-		Reporter.log("<B><font color = 'blue'>Step13.</font></B> clicked on  role_change-button");
-		Assert.assertTrue(true, "Failed to clicked on  role_change-button");
+		Reporter.log("<B><font color = 'blue'>Step13.</font></B> clicked on  role change-button");
+		Assert.assertTrue(true, "Failed to clicked on  role change-button");
 
 		Thread.sleep(1000);
 		helper.waitFor(employee);
 		helper.highLightElement(driver, employee);
 		employee.click();
-		Reporter.log("<B><font color = 'blue'>Step14.</font></B> Selected the employee");
-		Assert.assertTrue(true, "Failed to Selected the employee");
+		Reporter.log("<B><font color = 'blue'>Step14.</font></B> Selected  Employee");
+		Assert.assertTrue(true, "Failed to Select Employee");
 
 		s1.Skip();
 		Thread.sleep(2000);
@@ -226,8 +226,8 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		helper.waitFor(hrm);
 		helper.highLightElement(driver, hrm);
 		hrm.click();
-		Reporter.log("<B><font color = 'blue'>Step15 .</font></B> clicked on hrm");
-		Assert.assertTrue(true, "Failed to clicked on hrm");
+		Reporter.log("<B><font color = 'blue'>Step15 .</font></B> clicked on HRMS");
+		Assert.assertTrue(true, "Failed to click on HRMS");
 
 		/*
 		 * Open New Tab - Display HRM
@@ -249,15 +249,15 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 			if (!title.contains("HRMS | My Profile")) {
 				driver.close();
 			}
-		}
+		} 
 
 		Thread.sleep(2000);
 
 		helper.waitFor(Attendance);
 		helper.highLightElement(driver, Attendance);
 		Attendance.click();
-		Reporter.log("<B><font color = 'blue'>Step16 .</font></B> clicked on Attendance");
-		Assert.assertTrue(true, "Failed to click on Attendance");
+		Reporter.log("<B><font color = 'blue'>Step16 .</font></B> clicked on  Attendance Module ");
+		Assert.assertTrue(true, "Failed to click on Attendance Module ");
 
 
 		Thread.sleep(5000);		
@@ -294,8 +294,8 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='btn btn-danger float-right']"))).click();
 		checkin_button.click();
-		Reporter.log("<B><font color = 'blue'>Step17 .</font></B> clicked on checkin_button");
-		Assert.assertTrue(true, "Failed to click on checkin_button");
+		Reporter.log("<B><font color = 'blue'>Step17 .</font></B> clicked on checkOUT_button");
+		Assert.assertTrue(true, "Failed to click on checkOUT_button");
 
 		 
 

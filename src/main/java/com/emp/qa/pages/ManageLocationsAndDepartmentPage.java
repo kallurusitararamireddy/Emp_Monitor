@@ -54,44 +54,44 @@ public class ManageLocationsAndDepartmentPage extends BasePage {
 		
 		helper.highLightElement(driver,ManageLocationsAnd_Departmets);
 		ManageLocationsAnd_Departmets.click();
-		Reporter.log("<B><font color = 'blue'>Step1.</font></B> clicked on ManageLocationsAnd_Departmets");
-		Assert.assertTrue(true, "Failed to click on ManageLocationsAnd_Departmets");
+		Reporter.log("<B><font color = 'blue'>Step1.</font></B> clicked on Settings Module ans Selected  Manage-Locations-And-Departmets Sub-Module ");
+		Assert.assertTrue(true, "Failed to click on Settings Module ans Selected  Manage-Locations-And-Departmets Sub-Module ");
 		  
-		helper.waitFor(AddLocationsandDepartments);
+		helper.waitFor(AddLocationsandDepartments); 
 		helper.highLightElement(driver,AddLocationsandDepartments);
 		AddLocationsandDepartments.click();
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on AddLocations-and-Departments");
-		Assert.assertTrue(true, "Failed to click on AddLocations-and-Departments");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Add Locations-and-Departments Button");
+		Assert.assertTrue(true, "Failed to click on Add Locations-and-Departments Button ");
 		
 		
 		helper.waitFor(SelectTimezone);
 		helper.highLightElement(driver,SelectTimezone);
 		helper.selectDropDownValue(SelectTimezone, "value", "AsiaKolkata");
 		SelectTimezone.click();
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Timezone Drop-Down & Select Time Zone");
-		Assert.assertTrue(true, "Failed to click on Timezone Drop-Down & Select Time Zone");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Timezone Drop-down and  Selected Time Zone");
+		Assert.assertTrue(true, "Failed to click on Timezone Drop-down and  Selected Time Zone");
 		
 		
 		
 		helper.waitFor(Type_Location);
 		helper.highLightElement(driver,Type_Location);
 		Type_Location.sendKeys("Vizag");
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on Type_Location");
-		Assert.assertTrue(true, "Failed to click on Type_Location");
+		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on Location Text field and Entered Location name  ");
+		Assert.assertTrue(true, "Failed to click on Location Text field and Entered Location name ");
 		
 		
 		helper.waitFor(EnterDepartments);
 		helper.highLightElement(driver,EnterDepartments);
 		helper.move_to_element_click_target(EnterDepartments);
 		helper.robot_Second_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Departments Drop-Down & Select Department ");
-		Assert.assertTrue(true, "Failed to  click on Departments Drop-Down & Select Department");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Departments Drop-Down and  Selected Department ");
+		Assert.assertTrue(true, "Failed to  click on Departments Drop-Down and  Selected Department");
 		
 		helper.waitFor(AddLocation_Button);
 		helper.highLightElement(driver,AddLocation_Button);
 		helper.jsCLick(AddLocation_Button);
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on AddLocation_Button ");
-		Assert.assertTrue(true, "Failed to click on AddLocation_Button");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Add-Location Button ");
+		Assert.assertTrue(true, "Failed to click on Add-Location Button");
 		Thread.sleep(5000);
 	
 	

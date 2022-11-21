@@ -70,17 +70,17 @@ public class Dashboardpage3_Top_10_Productive_Employees_Checking_page extends Ba
 		helper.selectDropDownValue(Top10ProductiveEmployees_Locations, "value", "0");
 		Top10ProductiveEmployees_Locations.click();
 		Reporter.log(
-				"<B><font color = 'blue'>Step1 .</font></B> Clicked on  Top_10_Productive_Employees_Locations option");
-		Assert.assertTrue(true, "Failed to Click on  Top_10_Productive_Employees_Locations  option ");
+				"<B><font color = 'blue'>Step1 .</font></B> Clicked on  Top_10_Productive_Employees_Locations Drop-down and Selected Any Location ");
+		Assert.assertTrue(true, "Failed to Click on  Top_10_Productive_Employees_Locations Drop-down and Selected Any Location");
 
 		helper.waitFor(Top10ProductiveEmployees_Departments);
 		helper.highLightElement(driver, Top10ProductiveEmployees_Departments);
 		helper.Scrollintoview(Top10ProductiveEmployees_Departments);
 		helper.selectDropDownValue(Top10ProductiveEmployees_Departments, "value", "null");
 		Top10ProductiveEmployees_Departments.click();
-		Reporter.log(
-				"<B><font color = 'blue'>Step2 .</font></B> Clicked on Top10ProductiveEmployees_Departments Option");
-		Assert.assertTrue(true, "Failed to Click on  Top10ProductiveEmployees_Departments");
+		Reporter.log( 
+				"<B><font color = 'blue'>Step2 .</font></B> Clicked on Top10ProductiveEmployees_Departments Drop-down and Selected Any Department");
+		Assert.assertTrue(true, "Failed to Click on  Top10ProductiveEmployees_Departments Drop-down and Selected Any Department");
 
 		helper.waitFor(Top10ProductiveEmployeesToday);
 		helper.highLightElement(driver, Top10ProductiveEmployeesToday);
@@ -89,14 +89,70 @@ public class Dashboardpage3_Top_10_Productive_Employees_Checking_page extends Ba
 		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Top10ProductiveEmployeesToday Button");
 		Assert.assertTrue(true, "Failed to Click on  Top10ProductiveEmployeesToday");
 		Thread.sleep(2000);
+		 
+		 
+		System.out.println(header_1.getText() + " --  " + header_2.getText());
+		Reporter.log("<B><font color = 'blue'>  </font></B>    ");
+		Reporter.log("<B><font color = 'green'> Today Top-10-Productive-Employees  </font></B>    ");
+		Reporter.log("<B><font color = 'blue'>  </font></B>    " + header_1.getText() +"--"+  header_2.getText());
+		List<WebElement> l1=driver.findElements(By.xpath("//tbody[@id='productive_employees_data']/tr/td/a"));
+		List<WebElement> l21=driver.findElements(By.xpath("//tbody[@id='productive_employees_data']/tr/td[2]"));
 
-		helper.waitFor(Top10ProductiveEmployeesyesterday);
+		String s11 = null;
+		String s21 = null;
+		for(WebElement d1:l1 )
+		{  
+			 s21=d1.getText(); 
+		for(WebElement d2:l21 )
+		{
+			s11=d2.getText(); 
+		}
+		String s3=s21+"--" +s11;
+		System.out.println(s3);	
+		Reporter.log("<B><font color = 'blue'>    </font></B>    " + s3);
+		}
+		
+		
+		
+		
+		
+		
+
+		helper.waitFor(Top10ProductiveEmployeesyesterday); 
 		helper.highLightElement(driver, Top10ProductiveEmployeesyesterday);
 		helper.Scrollintoview(Top10ProductiveEmployeesyesterday);
 		Top10ProductiveEmployeesyesterday.click();
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> Clicked on Top10ProductiveEmployeesyesterday Button");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> Clicked on Top_10_Productive_Employees-yesterday Button");
 		Assert.assertTrue(true, "Failed to Click on  Top10ProductiveEmployeesyesterday");
 		Thread.sleep(2000);
+		
+		
+		System.out.println(header_1.getText() + " --  " + header_2.getText());
+		Reporter.log("<B><font color = 'blue'>  </font></B>    ");
+		Reporter.log("<B><font color = 'green'> yesterday Top-10-Productive-Employees </font></B>    ");
+		Reporter.log("<B><font color = 'blue'>  </font></B>    " + header_1.getText() +"--"+  header_2.getText());
+		List<WebElement> l=driver.findElements(By.xpath("//tbody[@id='productive_employees_data']/tr/td/a"));
+		List<WebElement> l2=driver.findElements(By.xpath("//tbody[@id='productive_employees_data']/tr/td[2]"));
+
+		String s1 = null;
+		String s2 = null; 
+		for(WebElement d1:l )
+		{  
+			 s2=d1.getText(); 
+		for(WebElement d2:l2 )
+		{
+			s1=d2.getText(); 
+		}
+		String s3=s2+"--" +s1;
+		System.out.println(s3);	
+		Reporter.log("<B><font color = 'blue'>    </font></B>    " + s3);
+		}
+		
+		
+		
+		
+		
+		
 
 		helper.waitFor(Top10ProductiveEmployees_Thisweek);
 		helper.highLightElement(driver, Top10ProductiveEmployees_Thisweek);
@@ -110,20 +166,22 @@ public class Dashboardpage3_Top_10_Productive_Employees_Checking_page extends Ba
 		
  
 		System.out.println(header_1.getText() + " --  " + header_2.getText());
-		Reporter.log("<B><font color = 'blue'> step6 .</font></B>    " + header_1.getText() +"--"+  header_2.getText());
-		List<WebElement> l=driver.findElements(By.xpath("//tbody[@id='productive_employees_data']/tr/td/a"));
-		List<WebElement> l2=driver.findElements(By.xpath("//tbody[@id='productive_employees_data']/tr/td[2]"));
+		Reporter.log("<B><font color = 'blue'>  </font></B>    ");
+		Reporter.log("<B><font color = 'green'> This Week Top-10-Productive-Employees  </font></B>    ");
+		Reporter.log("<B><font color = 'blue'>  </font></B>    " + header_1.getText() +"--"+  header_2.getText());
+		List<WebElement> l11=driver.findElements(By.xpath("//tbody[@id='productive_employees_data']/tr/td/a"));
+		List<WebElement> l211=driver.findElements(By.xpath("//tbody[@id='productive_employees_data']/tr/td[2]"));
 
-		String s1 = null;
-		String s2 = null;
-		for(WebElement d1:l )
+		String s111 = null;
+		String s211 = null;
+		for(WebElement d1:l11 )
 		{  
-			 s2=d1.getText();
-		for(WebElement d2:l2 )
+			 s211=d1.getText(); 
+		for(WebElement d2:l211 )
 		{
-			s1=d2.getText();
+			s111=d2.getText(); 
 		}
-		String s3=s2+"--" +s1;
+		String s3=s211+"--" +s111;
 		System.out.println(s3);	
 		Reporter.log("<B><font color = 'blue'>    </font></B>    " + s3);
 		}

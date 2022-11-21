@@ -71,16 +71,12 @@ public class EmployeePage extends BasePage {
 	@FindBy(xpath = "/html/body/div[7]/div/div[3]/button[1]")
 	WebElement Invalid_Users_List;
 	
-
-	// @FindBy(xpath="//body/div[1]/div[1]/div[8]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[4]/div[1]")
-	// WebElement scroller;
 	@FindBy(xpath = "//select[@id='roles']")
 	WebElement Roles;
 
 	@FindBy(xpath = "//select[@id='locations']")
 	WebElement Locations;
 
-//	@FindBy(xpath = "//button[@id='ExportButton']")
 	@FindBy(id =  "ExportButton")
 	WebElement Exports;
 	
@@ -95,14 +91,14 @@ public class EmployeePage extends BasePage {
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
-		Reporter.log("<B><font color = 'blue'>Step 1 .</font></B> clicked on EmployeeDetails");
-		Assert.assertTrue(true, "Failed to clicked on EmployeeDetails");
+		Reporter.log("<B><font color = 'blue'>Step 1 .</font></B> clicked on Employee Module and Selected  Employee-Details Sub-Module ");
+		Assert.assertTrue(true, "Failed to click on Employee Module and Selected  Employee-Details Sub-Module ");
 
 		helper.highLightElement(driver, ShowEntries);
 		helper.selectDropDownValue(ShowEntries, "index", "4");
 		ShowEntries.click();
-		Reporter.log("<B><font color = 'blue'>Step 2 .</font></B> clicked on ShowEntries");
-		Assert.assertTrue(true, "Failed to clicked on ShowEntries");
+		Reporter.log("<B><font color = 'blue'>Step 2 .</font></B> clicked on Show-Entries Drop-down and Selected Any Value ");
+		Assert.assertTrue(true, "Failed to click on Show-Entries Drop-down and Selected Any Value");
 		
        /*
         *   Deleted all Register Employees
@@ -113,15 +109,15 @@ public class EmployeePage extends BasePage {
 //		helper.waitFor(SelectAllCheckBox);
 //		helper.highLightElement(driver, SelectAllCheckBox);
 //		helper.jsCLick(SelectAllCheckBox);
-//		Reporter.log("<B><font color = 'blue'>Step 3 .</font></B> clickedonSelectAllCheckBox");
-//		Assert.assertTrue(true, "Failed to clickedonSelectAllCheckBox");
+//		Reporter.log("<B><font color = 'blue'>Step 3 .</font></B> Selected All Select Option");
+//		Assert.assertTrue(true, "Failed to Select All Select Option");
 //
 //		helper.waitForpage(); 
 //		helper.waitFor(Deletebtn);
 //		helper.highLightElement(driver, Deletebtn);
 //		helper.jsCLick(Deletebtn);
-//		Reporter.log("<B><font color = 'blue'>Step 4 .</font></B> clickedonDeletebtn");
-//		Assert.assertTrue(true, "Failed to clickedonDeletebtn");
+//		Reporter.log("<B><font color = 'blue'>Step 4 .</font></B> clicked on Delete-Button");
+//		Assert.assertTrue(true, "Failed to click on Delete-Button");
 //
 //		helper.waitForpage();
 //		helper.waitFor(deleteModal);
@@ -129,21 +125,21 @@ public class EmployeePage extends BasePage {
 //		helper.jsCLick(deleteModal);
 //		Thread.sleep(5000);
 //		driver.navigate().refresh();
-//		Reporter.log("<B><font color = 'blue'>Step 5 .</font></B> clicked on deleteModal");
-//		Assert.assertTrue(true, "Failed to clicked on deleteModal");
+//		Reporter.log("<B><font color = 'blue'>Step 5 .</font></B> clicked on Delete-Modal ");
+//		Assert.assertTrue(true, "Failed to click on Delete-Modal");
 
 		helper.waitFor(BulkRegisterBtn);
 		helper.highLightElement(driver, BulkRegisterBtn);
 		BulkRegisterBtn.click();
-		Reporter.log("<B><font color = 'blue'>Step 6 .</font></B> clicked on BulkRegisterBtn");
-		Assert.assertTrue(true, "Failed to clicked on BulkRegisterBtn");
+		Reporter.log("<B><font color = 'blue'>Step 6 .</font></B> clicked on Bulk-Register Button");
+		Assert.assertTrue(true, "Failed to click on Bulk-Register Button ");
 		
 
 		helper.waitFor(Browse);
 		helper.highLightElement(driver, Browse);
 		Browse.click();
-		Reporter.log("<B><font color = 'blue'>Step 7 .</font></B> clicked on Browse");
-		Assert.assertTrue(true, "Failed to clickedonBrowse");
+		Reporter.log("<B><font color = 'blue'>Step 7 .</font></B> clicked on Browse Text Field ");
+		Assert.assertTrue(true, "Failed to click on Browse Text Field ");
 		helper.uploadFile("C:\\Users\\Official\\Downloads\\Employee Registration.xlsx");
 		Thread.sleep(3000);
 		
@@ -151,8 +147,8 @@ public class EmployeePage extends BasePage {
 		helper.waitFor(add);
 		helper.highLightElement(driver, add);
 		add.click();
-		Reporter.log("<B><font color = 'blue'>Step 8 .</font></B> clicked on add");
-		Assert.assertTrue(true, "Failed to clicked on add");
+		Reporter.log("<B><font color = 'blue'>Step 8 .</font></B> clicked on Add Button");
+		Assert.assertTrue(true, "Failed to click on Add Button ");
 
 		Thread.sleep(6000);
 //		Browse.sendKeys("/C:/Users/Official/Desktop/200Licences.xlsx/");
@@ -172,40 +168,36 @@ public class EmployeePage extends BasePage {
 		helper.waitFor(Roles);
 		helper.highLightElement(driver, Roles);
 		helper.selectDropDownValue(Roles, "visibletext", "Employee");
-		Reporter.log("<B><font color = 'blue'>Step 9 .</font></B> clicked on Roles");
-		Assert.assertTrue(true, "Failed to clicked on Roles");
+		Reporter.log("<B><font color = 'blue'>Step 9 .</font></B> clicked on Roles Drop-down and Selected Any Employee ");
+		Assert.assertTrue(true, "Failed to click on Roles Drop-down and Selected Any Employee");
 		Thread.sleep(6000);
 
 		helper.waitFor(Locations);
 		helper.highLightElement(driver, Locations);
 		helper.selectDropDownValue(Locations, "visibletext", "Bangalore");
-		Reporter.log("<B><font color = 'blue'>Step 10 .</font></B> clicked on Locations");
-		Assert.assertTrue(true, "Failed to clicked on ALocations");
+		Reporter.log("<B><font color = 'blue'>Step 10 .</font></B> clicked on Locations Drop-down ans Selected Any Location ");
+		Assert.assertTrue(true, "Failed to click on  Locations Drop-down ans Selected Any Location");
 		Thread.sleep(7000);
 		
 		helper.waitFor(Exports);
 		helper.highLightElement(driver, Exports);
-//		helper.selectDropDownValue( Exports, "type", "checkboxs");
-//        Exports.click();
-
 		Actions act=new Actions(driver);
 		act.moveToElement(Exports).click().build().perform();
-		
-		Reporter.log("<B><font color = 'blue'>Step 11 .</font></B> clicked on Exports");
-		Assert.assertTrue(true, "Failed to clicked on Exports");
+		Reporter.log("<B><font color = 'blue'>Step 11 .</font></B> clicked on Exports Button ");
+		Assert.assertTrue(true, "Failed to click on Exports Button");
 		
 		
 		helper.waitFor(all_select);
 		helper.highLightElement(driver, all_select);
 		all_select.click();
-		Reporter.log("<B><font color = 'blue'>Step 12 .</font></B> clicked all select");
-		Assert.assertTrue(true, "Failed to clicked on submit");
+		Reporter.log("<B><font color = 'blue'>Step 12 .</font></B> clicked on  Select All Option ");
+		Assert.assertTrue(true, "Failed to click on click on  Select All Option ");
 	
 		helper.waitFor(submit);
 		helper.highLightElement(driver, submit);
 		submit.click();
-		Reporter.log("<B><font color = 'blue'>Step 13 .</font></B> clicked on submit");
-		Assert.assertTrue(true, "Failed to clicked on submit");
+		Reporter.log("<B><font color = 'blue'>Step 13 .</font></B> clicked on submit Button ");
+		Assert.assertTrue(true, "Failed to click on submit Button ");
 
 		
 		

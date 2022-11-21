@@ -15,9 +15,9 @@ import org.testng.Reporter;
 
 import com.emp.qa.util.Helpers;
 
-public class DashBoardPage1_One_off_one_checking_Details extends BasePage {
+public class DashBoardPage_Details extends BasePage {
 
-	public DashBoardPage1_One_off_one_checking_Details(WebDriver driver) {
+	public DashBoardPage_Details(WebDriver driver) {
 		super(driver);
 
 	}
@@ -36,7 +36,6 @@ public class DashBoardPage1_One_off_one_checking_Details extends BasePage {
 	@CacheLookup
 	WebElement TotalEnrollments_CloseButtton;
 
-//	@FindBy(xpath = "//*[@id='registered-employees']")
 	@FindBy(xpath = "(//h3)[1]")
 	@CacheLookup
 	WebElement TotalEnrollments_displayed_number;
@@ -293,20 +292,20 @@ public class DashBoardPage1_One_off_one_checking_Details extends BasePage {
 		helper.highLightElement(driver, TotalEnrollments_csvButton);
 		Thread.sleep(7000);
 		TotalEnrollments_csvButton.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Total_Enrollments csvButton ");
-		Assert.assertTrue(true, "Failed to Click on Total Total_Enrollments csvButton");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Total_Enrollments csv Button ");
+		Assert.assertTrue(true, "Failed to Click on Total Total_Enrollments csv Button");
 		Thread.sleep(7000);
 
 		helper.waitFor(TotalEnrollments_CloseButtton);
 		helper.highLightElement(driver, TotalEnrollments_CloseButtton);
 		TotalEnrollments_CloseButtton.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on TotalEnrollments Close_Buttton ");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on TotalEnrollments Close Buttton ");
 		Assert.assertTrue(true, "Failed to Click on Total TotalEnrollments  Close_Buttton");
 		Thread.sleep(6000);
 	}
 
 	public void CurrentlyACtive_2() throws InterruptedException, IOException {
-
+ 
 		helper.waitFor(CurrentlyACtive);
 		helper.highLightElement(driver, CurrentlyACtive);
 		Thread.sleep(4000);
@@ -318,13 +317,13 @@ public class DashBoardPage1_One_off_one_checking_Details extends BasePage {
 		helper.highLightElement(driver, CurrentlyACtive_CsvButton);
 		helper.jsCLick(CurrentlyACtive_CsvButton);
 		Thread.sleep(7000);
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Currently_ACtive CsvButton ");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Currently_ACtive Csv Button ");
 		Assert.assertTrue(true, "Failed to Click on  Currently_ACtive CsvButton");
 
 		helper.waitFor(CurrentlyACtive_Close_Button);
 		helper.highLightElement(driver, CurrentlyACtive_Close_Button);
 		CurrentlyACtive_Close_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Currently_ACtive Close_Button ");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Currently_ACtive Close Button ");
 		Assert.assertTrue(true, "Failed to Click on  Currently_ACtive Close_Button");
 
 	}
@@ -340,7 +339,7 @@ public class DashBoardPage1_One_off_one_checking_Details extends BasePage {
 		helper.waitFor(CurrentlyIdle_csv_Button);
 		helper.highLightElement(driver, CurrentlyIdle_csv_Button);
 		helper.jsCLick(CurrentlyIdle_csv_Button);
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Currently_Idle csv_Button ");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Currently_Idle csv Button ");
 		Assert.assertTrue(true, "Failed to Click on  Currently_Idle csv_Button");
 		Thread.sleep(5000);
 
@@ -348,7 +347,7 @@ public class DashBoardPage1_One_off_one_checking_Details extends BasePage {
 		helper.highLightElement(driver, CurrentlyIdle_close_Button);
 		CurrentlyIdle_close_Button.click();
 		Thread.sleep(5000);
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on CurrentlyIdle_close_Button ");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on CurrentlyIdle close Button ");
 		Assert.assertTrue(true, "Failed to Click on  CurrentlyIdle_close_Button");
 	}
 
@@ -364,7 +363,7 @@ public class DashBoardPage1_One_off_one_checking_Details extends BasePage {
 		helper.waitFor(Currently_offline_csv_Button);
 		helper.highLightElement(driver, Currently_offline_csv_Button);
 		Currently_offline_csv_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Currently_offline csv_Button ");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Currently_offline csv Button ");
 		Assert.assertTrue(true, "Failed to Click on  Currently_offline csv_Button");
 		Thread.sleep(5000);
 
@@ -372,8 +371,8 @@ public class DashBoardPage1_One_off_one_checking_Details extends BasePage {
 		helper.highLightElement(driver, Currentlyoffline_close_Button);
 		Thread.sleep(5000);
 		Currentlyoffline_close_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Currently_offline close_Button ");
-		Assert.assertTrue(true, "Failed to Click on  Currently_offline close_Button");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Currently_offline close Button ");
+		Assert.assertTrue(true, "Failed to Click on  Currently_offline close Button");
 		Thread.sleep(5000);
 	}
 
@@ -389,15 +388,15 @@ public class DashBoardPage1_One_off_one_checking_Details extends BasePage {
 		helper.waitFor(Absent_Users_Generate_csvButton);
 		helper.highLightElement(driver, Absent_Users_Generate_csvButton);
 		Absent_Users_Generate_csvButton.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Absent_Users_Generate_csvButton ");
-		Assert.assertTrue(true, "Failed to Click on  Absent_Users_Generate_csvButton");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Absent_Users_Generate csv Button ");
+		Assert.assertTrue(true, "Failed to Click on  Absent_Users_Generate csv Button");
 		Thread.sleep(5000);
 
 		helper.waitFor(Absent_Users_closeButton);
 		helper.highLightElement(driver, Absent_Users_closeButton);
 		Thread.sleep(5000);
 		Absent_Users_closeButton.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Absent_Users_closeButton ");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Absent_Users close Button ");
 		Assert.assertTrue(true, "Failed to Click on  Absent_Users_closeButton");
 	}
 
@@ -418,16 +417,16 @@ public class DashBoardPage1_One_off_one_checking_Details extends BasePage {
 				.visibilityOfElementLocated(By.xpath("//*[@id=\"suspended_count\"]/div/div/div[3]/button[1]"))).click();
 
 		Suspended_Users_csvButton.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Suspended_Users_csvButton ");
-		Assert.assertTrue(true, "Failed to Click on  Suspended_Users_csvButton");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Suspended_Users csv Button ");
+		Assert.assertTrue(true, "Failed to Click on  Suspended_Users csv Button");
 		Thread.sleep(5000);
 
 		helper.waitFor(Suspende_Users_closeButton);
 		helper.highLightElement(driver, Suspende_Users_closeButton);
 		Thread.sleep(5000);
 		Suspende_Users_closeButton.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Suspende_Users close_Button ");
-		Assert.assertTrue(true, "Failed to Click on  Suspende_Users close_Button");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Suspende_Users close Button ");
+		Assert.assertTrue(true, "Failed to Click on  Suspende_Users close Button");
 	}
 
 	public void Top10ProductiveEmployees_Locations_7() throws InterruptedException, IOException {
@@ -555,7 +554,7 @@ public class DashBoardPage1_One_off_one_checking_Details extends BasePage {
 		helper.Scrollintoview(Location_Performance_Thisweek);
 		Location_Performance_Thisweek.click();
 		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> Clicked on Location_Performance_Thisweek Button");
-		Assert.assertTrue(true, "Failed to Click on  Location_Performance_Thisweek");
+		Assert.assertTrue(true, "Failed to Click on  Location_Performance_This week");
 		Thread.sleep(2000);
 
 	}

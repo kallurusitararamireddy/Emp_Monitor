@@ -4,7 +4,7 @@ package com.emp.testcases;
 import org.testng.annotations.Test;
 
 import com.emp.qa.base.TestBase;
-import com.emp.qa.pages.DashBoardPage1_One_off_one_checking_Details;
+import com.emp.qa.pages.DashBoardPage_Details;
 import com.emp.qa.pages.HomePage;
 
 public class DashBoardTest1_One_off_one_checking extends TestBase {
@@ -14,7 +14,7 @@ public class DashBoardTest1_One_off_one_checking extends TestBase {
 
 		HomePage homePage = new HomePage(getDriver());
 		Thread.sleep(8000);
-		DashBoardPage1_One_off_one_checking_Details DashBoardpage = new DashBoardPage1_One_off_one_checking_Details(getDriver());
+		DashBoardPage_Details DashBoardpage = new DashBoardPage_Details(getDriver());
 		
 		homePage.clickDashboard();
 		DashBoardpage.TotalEnrollments_1();
@@ -25,7 +25,7 @@ public class DashBoardTest1_One_off_one_checking extends TestBase {
 
 		HomePage homePage = new HomePage(getDriver());
 		Thread.sleep(8000);
-		DashBoardPage1_One_off_one_checking_Details DashBoardpage = new DashBoardPage1_One_off_one_checking_Details(getDriver());
+		DashBoardPage_Details DashBoardpage = new DashBoardPage_Details(getDriver());
 		homePage.clickDashboard();
 		DashBoardpage.CurrentlyACtive_2(); 
 	} 
@@ -35,7 +35,7 @@ public class DashBoardTest1_One_off_one_checking extends TestBase {
 
 		HomePage homePage = new HomePage(getDriver());
 		Thread.sleep(8000);
-		DashBoardPage1_One_off_one_checking_Details DashBoardpage = new DashBoardPage1_One_off_one_checking_Details(getDriver());
+		DashBoardPage_Details DashBoardpage = new DashBoardPage_Details(getDriver());
 		homePage.clickDashboard();
 		DashBoardpage.CurrentlyIdle_3();
 	} 
@@ -45,7 +45,7 @@ public class DashBoardTest1_One_off_one_checking extends TestBase {
 
 		HomePage homePage = new HomePage(getDriver());
 		Thread.sleep(8000);
-		DashBoardPage1_One_off_one_checking_Details DashBoardpage = new DashBoardPage1_One_off_one_checking_Details(getDriver());
+		DashBoardPage_Details DashBoardpage = new DashBoardPage_Details(getDriver());
 		homePage.clickDashboard();
 		DashBoardpage.Currently_Offline_4();
 	} 
@@ -55,7 +55,7 @@ public class DashBoardTest1_One_off_one_checking extends TestBase {
 
 		HomePage homePage = new HomePage(getDriver());
 		Thread.sleep(8000);
-		DashBoardPage1_One_off_one_checking_Details DashBoardpage = new DashBoardPage1_One_off_one_checking_Details(getDriver());
+		DashBoardPage_Details DashBoardpage = new DashBoardPage_Details(getDriver());
 		homePage.clickDashboard();
 		DashBoardpage.Absent_Users_5();
 	} 
@@ -65,7 +65,7 @@ public class DashBoardTest1_One_off_one_checking extends TestBase {
 
 		HomePage homePage = new HomePage(getDriver());
 		Thread.sleep(8000);
-		DashBoardPage1_One_off_one_checking_Details DashBoardpage = new DashBoardPage1_One_off_one_checking_Details(getDriver());
+		DashBoardPage_Details DashBoardpage = new DashBoardPage_Details(getDriver());
 		homePage.clickDashboard();
 		DashBoardpage.Suspended_Users_6();
 	} 
@@ -75,7 +75,7 @@ public class DashBoardTest1_One_off_one_checking extends TestBase {
 
 		HomePage homePage = new HomePage(getDriver());
 		Thread.sleep(8000);
-		DashBoardPage1_One_off_one_checking_Details DashBoardpage = new DashBoardPage1_One_off_one_checking_Details(getDriver());
+		DashBoardPage_Details DashBoardpage = new DashBoardPage_Details(getDriver());
 		homePage.clickDashboard();
 		DashBoardpage.Top10ProductiveEmployees_Locations_7();
 	} 
@@ -85,7 +85,7 @@ public class DashBoardTest1_One_off_one_checking extends TestBase {
 
 		HomePage homePage = new HomePage(getDriver());
 		Thread.sleep(8000);
-		DashBoardPage1_One_off_one_checking_Details DashBoardpage = new DashBoardPage1_One_off_one_checking_Details(getDriver());
+		DashBoardPage_Details DashBoardpage = new DashBoardPage_Details(getDriver());
 		homePage.clickDashboard();
 		DashBoardpage.Top10NonProductiveEmployees_Location_8();
 	} 
@@ -95,7 +95,7 @@ public class DashBoardTest1_One_off_one_checking extends TestBase {
 
 		HomePage homePage = new HomePage(getDriver());
 		Thread.sleep(8000);
-		DashBoardPage1_One_off_one_checking_Details DashBoardpage = new DashBoardPage1_One_off_one_checking_Details(getDriver());
+		DashBoardPage_Details DashBoardpage = new DashBoardPage_Details(getDriver());
 		homePage.clickDashboard();
 		DashBoardpage.Location_Performance_Productive_9();
 	} 
@@ -105,7 +105,7 @@ public class DashBoardTest1_One_off_one_checking extends TestBase {
 
 		HomePage homePage = new HomePage(getDriver());
 		Thread.sleep(8000);
-		DashBoardPage1_One_off_one_checking_Details DashBoardpage = new DashBoardPage1_One_off_one_checking_Details(getDriver());
+		DashBoardPage_Details DashBoardpage = new DashBoardPage_Details(getDriver());
 		homePage.clickDashboard();
 		DashBoardpage.Department_Performance_Productive_10();
 	} 
@@ -115,7 +115,7 @@ public class DashBoardTest1_One_off_one_checking extends TestBase {
 
 		HomePage homePage = new HomePage(getDriver());
 		Thread.sleep(8000);
-		DashBoardPage1_One_off_one_checking_Details DashBoardpage = new DashBoardPage1_One_off_one_checking_Details(getDriver());
+		DashBoardPage_Details DashBoardpage = new DashBoardPage_Details(getDriver());
 		homePage.clickDashboard();
 		DashBoardpage.Top10Websitesusages_Today_11();
 	} 
@@ -125,7 +125,7 @@ public class DashBoardTest1_One_off_one_checking extends TestBase {
 
 		HomePage homePage = new HomePage(getDriver());
 		Thread.sleep(8000);
-		DashBoardPage1_One_off_one_checking_Details DashBoardpage = new DashBoardPage1_One_off_one_checking_Details(getDriver());
+		DashBoardPage_Details DashBoardpage = new DashBoardPage_Details(getDriver());
 		homePage.clickDashboard();
 		DashBoardpage.Top10_Application_Usage_Today_12();
 	} 

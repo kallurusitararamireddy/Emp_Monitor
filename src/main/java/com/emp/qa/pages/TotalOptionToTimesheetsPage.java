@@ -79,29 +79,29 @@ public class TotalOptionToTimesheetsPage extends BasePage{
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
 		helper.selectDropDownValue(Location, "visibletext", " See All");
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Selected  See All from the loction Dropdown");
-		Assert.assertTrue(true, "Failed to Select a  See All from the Locaton Drpdown");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on  Loction Drop-down and Selected Any Location");
+		Assert.assertTrue(true, "Failed to Click on  Loction Drop-down and Selected Any Location");
 		 
 
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
 		helper.selectDropDownValue(Department, "value", "0");
 		Department.click();
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Department dropdown & Select Department");
-		Assert.assertTrue(true, "Failed to click on Department dropdown & Select Department");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Department Drop-down & Selected Any Department");
+		Assert.assertTrue(true, "Failed to click on Department Drop-down & Selected Any Department");
 		
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
 		helper.move_to_element_click_target(Employee);
 		helper.robot_Zero_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Employee dropdown & Select Employee");
-		Assert.assertTrue(true, "Failed to click on Employee dropdown & Select Employee");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Employee Drop-down & Selected Any  Employee");
+		Assert.assertTrue(true, "Failed to click on Employee Drop-down & Selected Any  Employee");
 		
 		helper.waitFor(selectdateranges);
 		helper.highLightElement(driver, selectdateranges);
 		selectdateranges.click();
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on select_date_Ranges");
-		Assert.assertTrue(true, "Failed to click on select_date_Ranges");
+		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on Calendar Drop-down and Selected Day's");
+		Assert.assertTrue(true, "Failed to click on Calendar Drop-down and Selected Day's");
 		
 		helper.waitFor(Last30days);
 		helper.highLightElement(driver, Last30days);
@@ -121,8 +121,8 @@ public class TotalOptionToTimesheetsPage extends BasePage{
 		helper.Scrollintoview(Timeintotal);
 		Timeintotal.click();
 		Thread.sleep(2000);
-		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on Time_in_total checkBox");
-		Assert.assertTrue(true, "Failed to click on Time_in_total ChekBox");
+		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on Time_in_total check-Box");
+		Assert.assertTrue(true, "Failed to click on Time_in_total Chek-Box");
 	
 		helper.waitFor(Submit);
 		helper.highLightElement(driver, Submit);

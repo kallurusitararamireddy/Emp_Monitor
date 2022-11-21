@@ -28,7 +28,6 @@ Helpers helper=new Helpers();
 	@CacheLookup
 	WebElement EmployeeDetailsfilter;
 	
-	
 	@FindBy(css = "li:nth-of-type(2) > .mr-2.selectCheckbox")
 	@CacheLookup
 	WebElement EmployeeDetailsfilterEmail;
@@ -69,63 +68,63 @@ Helpers helper=new Helpers();
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee_Details");
-		Assert.assertTrue(true, "Failed to clicked on Employee_Details");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee Module and Selected  Employee_Details Sub-Module ");
+		Assert.assertTrue(true, "Failed to click on on Employee Module and Selected  Employee_Details Sub-Module ");
 		
 		helper.waitFor(EmployeeDetailsfilter);
 		helper.highLightElement(driver, EmployeeDetailsfilter);
 		helper.Double_click(EmployeeDetailsfilter);
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Employee_Details_filter");
-		Assert.assertTrue(true, "Failed to clicked on Employee_Details_filter");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Employee Details filter");
+		Assert.assertTrue(true, "Failed to click on Employee Details filter");
 		Thread.sleep(4000);
 		
 		helper.waitFor(EmployeeDetailsfilterEmail);
 		helper.highLightElement(driver, EmployeeDetailsfilterEmail);
 		helper.jsCLick(EmployeeDetailsfilterEmail);
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Employee_Details_filter_Email");
-		Assert.assertTrue(true, "Failed to clicked on Employee_Details_filter_Email");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Employee_Details_filter Email Option ");
+		Assert.assertTrue(true, "Failed to click on Employee_Details_filter Email option ");
 		Thread.sleep(2000);
 		
 		helper.waitFor(EmployeeDetailsfilterLocation);
 		helper.highLightElement(driver, EmployeeDetailsfilterLocation);
 		helper.jsCLick(EmployeeDetailsfilterLocation);
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Employee_Details_filter_Location");
-		Assert.assertTrue(true, "Failed to clicked on Employee_Details_filter_Location");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Employee_Details_filter Location option");
+		Assert.assertTrue(true, "Failed to click on Employee_Details_filter Location option ");
 		Thread.sleep(2000);
 		
 		helper.waitFor(EmployeeDetailsfilterDepartment);
 		helper.highLightElement(driver, EmployeeDetailsfilterDepartment);
 		helper.jsCLick(EmployeeDetailsfilterDepartment);
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Employee_Details_filter_Department");
-		Assert.assertTrue(true, "Failed to clicked on Employee_Details_filter_Department");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Employee_Details_filter Department option ");
+		Assert.assertTrue(true, "Failed to click on Employee_Details_filter Department option ");
 		Thread.sleep(2000);
 		
 		helper.waitFor(EmployeeDetailsfilterRole);
 		helper.highLightElement(driver, EmployeeDetailsfilterRole);
 		helper.jsCLick(EmployeeDetailsfilterRole);
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Employee_Details_filter_Role");
-		Assert.assertTrue(true, "Failed to clicked on Employee_Details_filter_Role");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Employee_Details_filter Role Option ");
+		Assert.assertTrue(true, "Failed to click on Employee_Details_filter Role option ");
 		Thread.sleep(2000);
 		
 		helper.waitFor(EmployeeDetailsfilterEmpcode);
 		helper.highLightElement(driver, EmployeeDetailsfilterEmpcode);
 		helper.jsCLick(EmployeeDetailsfilterRole);
-		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on Employee_Details_filter_Empcode");
-		Assert.assertTrue(true, "Failed to clicked on Employee_Details_filter_Empcode");
+		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on Employee_Details_filter Empcode Option ");
+		Assert.assertTrue(true, "Failed to click on Employee_Details_filter Empcode Option ");
 		Thread.sleep(2000);
 		
 		helper.waitFor(EmployeeDetailsfilterComputername);
 		helper.highLightElement(driver, EmployeeDetailsfilterComputername);
 		helper.jsCLick(EmployeeDetailsfilterComputername);
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Employee_Details_filter_Computername");
-		Assert.assertTrue(true, "Failed to clicked on Employee_Details_filter_Computername");
+		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Employee_Details_filter Computer-name Option ");
+		Assert.assertTrue(true, "Failed to click on Employee_Details_filter_Computer-name Option ");
 		Thread.sleep(2000);
 		
 		helper.waitFor(EmployeeDetailsfilterversion);
 		helper.highLightElement(driver, EmployeeDetailsfilterversion);
 		helper.jsCLick(EmployeeDetailsfilterversion);
-		Reporter.log("<B><font color = 'blue'>Step9.</font></B> clicked on Employee_Details_filter_version");
-		Assert.assertTrue(true, "Failed to clicked on Employee_Details_filter_version");
+		Reporter.log("<B><font color = 'blue'>Step9.</font></B> clicked on Employee_Details_filter version Option ");
+		Assert.assertTrue(true, "Failed to click on Employee_Details_filter version option ");
 		Thread.sleep(2000);
 
 		

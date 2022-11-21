@@ -29,7 +29,7 @@ Helpers helper=new Helpers();
 	WebElement Create_Group;
 	
 	@FindBy(xpath = "//input[@id='groupsName']")
-	@CacheLookup
+	@CacheLookup 
 	WebElement Group_Name;
 	
 	@FindBy(xpath = "//*[@id='select2-role0-container']")
@@ -108,14 +108,14 @@ Helpers helper=new Helpers();
 		helper.waitFor(MonitoringControl);		
 		helper.highLightElement(driver, MonitoringControl);
 		MonitoringControl.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on MonitoringControl");
-		Assert.assertTrue(true, "Failed To Select MonitoringControl");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Settings Module and Selected  Monitoring-Control Sub-Module ");
+		Assert.assertTrue(true, "Failed To click on Settings Module and Selected  Monitoring-Control Sub-Module");
 		
 		helper.waitFor(Create_Group);		
 		helper.highLightElement(driver, Create_Group);
 		Create_Group.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Create_Group");
-		Assert.assertTrue(true, "Failed To Select Create_Group");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Create_Group Button");
+		Assert.assertTrue(true, "Failed To click on  Create_Group Button ");
 		
 		
 		Random r=new Random();
@@ -127,15 +127,15 @@ Helpers helper=new Helpers();
 		helper.highLightElement(driver, Group_Name);
 		Group_Name.sendKeys(exp_name);
 		Group_Name.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Group_Name");
-		Assert.assertTrue(true, "Failed To Select Group_Name");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Group_Name Text field and Entered Group Name ");
+		Assert.assertTrue(true, "Failed To click on Group_Name Text field and Entered Group Name ");
 		
 		helper.waitFor(Role);		
 		helper.highLightElement(driver, Role);
 	    helper.move_to_element_click_target(Role);  
 		helper.robot_Second_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Role");
-		Assert.assertTrue(true, "Failed To Select Role");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Role Drop-down and Selected Any Role ");
+		Assert.assertTrue(true, "Failed To click on Role Drop-down and Selected Any Role ");
 		
 		
 		
@@ -143,23 +143,23 @@ Helpers helper=new Helpers();
 		helper.highLightElement(driver, Location);
 	    helper.move_to_element_click_target(Location);
 		helper.robot_Second_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Location");
-		Assert.assertTrue(true, "Failed To Select Location");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Location Drop-down and Selected Any Location ");
+		Assert.assertTrue(true, "Failed To click on Location Drop-down and Selected Any Location");
 		
 
 		helper.waitFor(Department);		
 		helper.highLightElement(driver, Department);
 	    helper.move_to_element_click_target(Department);
 		helper.robot_frist_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Department");
-		Assert.assertTrue(true, "Failed To Select Department");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Department Drop-down and Selected Any Department");
+		Assert.assertTrue(true, "Failed To click on Department Drop-down and Selected Any Department");
 		
 		helper.waitFor(Employees);		
 		helper.highLightElement(driver,Employees);
 	    helper.move_to_element_click_target(Employees);
 		helper.robot_frist_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on Employees");
-		Assert.assertTrue(true, "Failed To Select Employees");
+		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on Employees Drop-down and Selected Any Employee");
+		Assert.assertTrue(true, "Failed To clicked on Employees Drop-down and Selected Any Employee");
 		
 
 		
@@ -167,73 +167,59 @@ Helpers helper=new Helpers();
 		helper.highLightElement(driver, CreateGroup_Button);
 		helper.Scrollintoview(CreateGroup_Button);
 		helper.jsCLick(CreateGroup_Button);
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on CreateGroup_Button");
-		Assert.assertTrue(true, "Failed To Select CreateGroup_Button");
+		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Create-Group Button");
+		Assert.assertTrue(true, "Failed To Select Create-Group Button");
 		Thread.sleep(2000); 
-		
-		
-//		helper.waitFor(Assign_ok_button);		
-//		helper.highLightElement(driver, Assign_ok_button);
-//		Assign_ok_button.click();
-//		
-//		helper.waitFor(Ok_Button);		
-//		helper.highLightElement(driver, CreateGroup_Button);
-//		helper.Scrollintoview(Ok_Button);
-//		helper.jsCLick(Ok_Button);
-//		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Ok_Button");
-//		Assert.assertTrue(true, "Failed To Select Ok_Button");
 		
 		helper.waitFor(LastPageButton);		
 		helper.highLightElement(driver, LastPageButton);
 		helper.Scrollintoview(LastPageButton);
 		helper.jsCLick(LastPageButton);
-		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on LastPageButton");
-		Assert.assertTrue(true, "Failed To Select LastPageButton");
+		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on Last-Page Button");
+		Assert.assertTrue(true, "Failed To click on  Last-Page Button");
 		Thread.sleep(2000);
 		
 		helper.waitFor(GroupSettings);		
 		helper.highLightElement(driver, GroupSettings);
 		helper.Scrollintoview(GroupSettings);
 		helper.jsCLick(GroupSettings);
-		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on GroupSettings");
-		Assert.assertTrue(true, "Failed To Select GroupSettings");
+		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on Group-Settings  ");
+		Assert.assertTrue(true, "Failed To click on  Group-Settings");
 		
 		helper.waitFor(TrackingFeatures);		
 		helper.highLightElement(driver, TrackingFeatures);
 		helper.Scrollintoview(TrackingFeatures);
 		helper.jsCLick(TrackingFeatures);
-		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on TrackingFeatures");
-		Assert.assertTrue(true, "Failed To Select TrackingFeatures");
+		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on Tracking-Features option ");
+		Assert.assertTrue(true, "Failed To click on  Tracking-Features option ");
 		
 		
 		helper.waitFor(AdvanceSettings);		 
 		helper.highLightElement(driver, AdvanceSettings);
 		helper.Scrollintoview(AdvanceSettings);
 		helper.jsCLick(AdvanceSettings);
-		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> clicked on AdvanceSettings");
-		Assert.assertTrue(true, "Failed To Select AdvanceSettings");
+		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> clicked on Advance Settings");
+		Assert.assertTrue(true, "Failed To click on  Advance Settings");
 		
-//		Assert.assertEquals(AdvanceSettings.click(), "Failed to click on checkin_button",AdvanceSettings.isDisplayed() );
 		 
 		helper.waitFor(MonitorOnlyThis);		
 		helper.highLightElement(driver, MonitorOnlyThis);
 		helper.Scrollintoview(MonitorOnlyThis);
-		//MonitorOnlyThis.sendKeys("www.youtube.com");
 		helper.jsCLick(MonitorOnlyThis);
-		Reporter.log("<B><font color = 'blue'>Step13 .</font></B> clicked on MonitorOnlyThis");
-		Assert.assertTrue(true, "Failed To Select MonitorOnlyThis");
+		Reporter.log("<B><font color = 'blue'>Step13 .</font></B> clicked on Monitor Only_This ");
+		Assert.assertTrue(true, "Failed To click on  Monitor Only_This");
 		
 		helper.waitFor(Save_Website);		
 		helper.highLightElement(driver, Save_Website);
 		helper.jsCLick(Save_Website);
 		Reporter.log("<B><font color = 'blue'>Step14 .</font></B> clicked on Save_Website");
-		Assert.assertTrue(true, "Failed To Select Save_Website");
+		Assert.assertTrue(true, "Failed To click on  Save_Website");
 		
 		helper.waitFor(Save_Button);		
 		helper.highLightElement(driver, Save_Button);
 		helper.jsCLick(Save_Button);
 		Reporter.log("<B><font color = 'blue'>Step15 .</font></B> clicked on Save_Button");
-		Assert.assertTrue(true, "Failed To Select Save_Button");
+		Assert.assertTrue(true, "Failed To click on Save_Button");
 		
 		
 	}

@@ -52,24 +52,24 @@ public class EditEmployeePage extends BasePage {
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on EmployeeDetails");
-		Assert.assertTrue(true, "Failed to click on EmployeeDetails");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee Module and Selected  Employee-Details Sub-module ");
+		Assert.assertTrue(true, "Failed to click on Employee Module and Selected  Employee-Details Sub-module");
 
-
+ 
 
 		helper.waitFor(EditEmployee);
 		helper.highLightElement(driver, EditEmployee);
 		helper.move_to_element_click(EditEmployee); 
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on EditEmployee");
-		Assert.assertTrue(true, "Failed to click on EditEmployee");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Edit-Employee Option");
+		Assert.assertTrue(true, "Failed to click on Edit-Employee Option ");
 
 
 		helper.waitFor(LastName);
 		helper.highLightElement(driver, LastName);
 		LastName.clear();
 		LastName.sendKeys("CODE"); 
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B>  Modified  LastName");
-		Assert.assertTrue(true, "Failed to Modify  LastName");
+		Reporter.log("<B><font color = 'blue'>Step4.</font></B> Edited  Modified  LastName");
+		Assert.assertTrue(true, "Failed to Edit Modify  LastName");
 		Thread.sleep(3000);
 
 		Random d = new Random();
@@ -79,16 +79,16 @@ public class EditEmployeePage extends BasePage {
 		helper.highLightElement(driver, Address);
 		Address.clear();
 		Address.sendKeys("HousNo:1234,Andhra" + d_num);
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B>  Modified  Address");
-		Assert.assertTrue(true, "Failed to Modify  Address");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> Edited  Modified  Address");
+		Assert.assertTrue(true, "Failed to Edit Modify  Address");
 		Thread.sleep(3000);
 
 		helper.waitFor(Update_Button);
 		helper.highLightElement(driver, Update_Button);
 		helper.Scrollintoview(Update_Button);
 		helper.jsCLick(Update_Button);
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B>  clicked on Update_Button");
-		Assert.assertTrue(true, "Failed to Click On Update_Button");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B>  clicked on Update-Button");
+		Assert.assertTrue(true, "Failed to Click On Update-Button");
 		Thread.sleep(9000);
 
 	}
