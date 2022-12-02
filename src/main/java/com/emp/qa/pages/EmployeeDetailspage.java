@@ -47,34 +47,34 @@ public  void EmployeeDetails() throws InterruptedException {
 	helper.waitFor(EmployeeDetails);
 	helper.highLightElement(driver, EmployeeDetails);
 	EmployeeDetails.click();
-	Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee Module and Selected  Employee_Details Sub-Module ");
-	Assert.assertTrue(true, "Failed to click on Employee Module and Selected  Employee_Details Sub-Module");
+	Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Employee Module and Selected  Employee_Details Sub-Module ");
+	Assert.assertTrue(true, "Failed to Click on Employee Module and Selected  Employee_Details Sub-Module");
 	
 	helper.waitFor(Active);
 	helper.highLightElement(driver, Active);
 	Active.click();
-	Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Active_Button");
-	Assert.assertTrue(true, "Failed to click on Active_Button");
+	Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Active_Button");
+	Assert.assertTrue(true, "Failed to Click on Active_Button");
 	
 	helper.waitFor(Suspended);
 	helper.highLightElement(driver, Suspended);
 	Suspended.click();
-	Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Suspended_Button");
-	Assert.assertTrue(true, "Failed to click on Suspended_Button");
+	Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Suspended_Button");
+	Assert.assertTrue(true, "Failed to Click on Suspended_Button");
 	
 
 	helper.waitFor(DeletedusersHistory);
 	helper.highLightElement(driver, DeletedusersHistory);
 	DeletedusersHistory.click();
-	Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on DeletedusersHistory_Button");
-	Assert.assertTrue(true, "Failed to click on DeletedusersHistory_Button");
+	Reporter.log("<B><font color = 'blue'>Step4 .</font></B> Clicked on DeletedusersHistory_Button");
+	Assert.assertTrue(true, "Failed to Click on DeletedusersHistory_Button");
 	 
 	helper.waitFor(close);
 	helper.highLightElement(driver, close);
 	Thread.sleep(2000);
 	close.click();
-	Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on close_Button");
-	Assert.assertTrue(true, "Failed to click on close_Button");
+	Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on close_Button");
+	Assert.assertTrue(true, "Failed to Click on close_Button");
 	
 	
 }

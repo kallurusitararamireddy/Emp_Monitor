@@ -26,7 +26,7 @@ public class TestUtil extends TestBase {
 
 	static Workbook book;
 	static Sheet sheet;
-	static JavascriptExecutor js;
+	static JavascriptExecutor js; 
 
 	public void switchToFrame() throws InterruptedException {
 		getDriver().switchTo().frame("mainpanel");

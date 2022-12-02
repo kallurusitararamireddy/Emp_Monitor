@@ -75,36 +75,36 @@ Helpers helper=new Helpers();
 		helper.waitFor(MonitoringControl);		
 		helper.highLightElement(driver, MonitoringControl);
 		MonitoringControl.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Settings Module and Selected  Monitoring_Control Sub-Module ");
-		Assert.assertTrue(true, "Failed To click on Settings Module and Selected  Monitoring_Control Sub-Module");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Settings Module and Selected  Monitoring_Control Sub-Module ");
+		Assert.assertTrue(true, "Failed To Click on Settings Module and Selected  Monitoring_Control Sub-Module");
 		
 		helper.waitFor(Create_Group);		
 		helper.highLightElement(driver, Create_Group);
 		Create_Group.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Create_Group Button ");
-		Assert.assertTrue(true, "Failed To click on  Create_Group Button ");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Create_Group Button ");
+		Assert.assertTrue(true, "Failed To Click on  Create_Group Button ");
 		
 		helper.waitFor(Group_Name);		 
 		helper.highLightElement(driver, Group_Name);
 		Group_Name.sendKeys("Automation code");
 		Group_Name.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Group_Name Text Field and Entered Grop name ");
-		Assert.assertTrue(true, "Failed To click on Group_Name Text Field and Entered Grop name");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Group_Name Text Field and Entered Grop name ");
+		Assert.assertTrue(true, "Failed To Click on Group_Name Text Field and Entered Grop name");
 		
 		helper.waitFor(Role);		
 		helper.highLightElement(driver, Role);
 		helper.selectDropDownValue(Role, "value","roles+2");
 		helper.jsCLick(Role);
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Role Drop-down and Selected Any role ");
-		Assert.assertTrue(true, "Failed To click on Role Drop-down and Selected Any role");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> Clicked on Role Drop-down and Selected Any role ");
+		Assert.assertTrue(true, "Failed To Click on Role Drop-down and Selected Any role");
 			
 		
 		helper.waitFor(Location);		
 		helper.highLightElement(driver, Location);
 		helper.selectDropDownValue(Location, "value", "location+2");
 		helper.jsCLick(Location);
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Location Drop-down and Selected Any Location ");
-		Assert.assertTrue(true, "Failed To click on Location Drop-down and Selected Any Location");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Location Drop-down and Selected Any Location ");
+		Assert.assertTrue(true, "Failed To Click on Location Drop-down and Selected Any Location");
 		
 
 		
@@ -112,15 +112,15 @@ Helpers helper=new Helpers();
 		helper.highLightElement(driver, Department);
 		helper.selectDropDownValue(Department, "value", "285");
 		helper.jsCLick(Department);
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Department Drop-down and Selected Any Department");
-		Assert.assertTrue(true, "Failed To click on Department Drop-down and Selected Any Department");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on Department Drop-down and Selected Any Department");
+		Assert.assertTrue(true, "Failed To Click on Department Drop-down and Selected Any Department");
 
 		helper.waitFor(Employees);		
 		helper.highLightElement(driver,Employees);
 		helper.selectDropDownValue(Employees, "values", "9342");
 		helper.jsCLick(Employees);
-		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on Employees Drop-down and Selected Any Employee");
-		Assert.assertTrue(true, "Failed To click on Employees Drop-down and Selected Any Employee");
+		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> Clicked on Employees Drop-down and Selected Any Employee");
+		Assert.assertTrue(true, "Failed To Click on Employees Drop-down and Selected Any Employee");
 		
 
 		
@@ -128,8 +128,8 @@ Helpers helper=new Helpers();
 		helper.highLightElement(driver, CreateGroup_Button);
 		helper.Scrollintoview(CreateGroup_Button);
 		helper.jsCLick(CreateGroup_Button);
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Create-Group Button");
-		Assert.assertTrue(true, "Failed To click on  Create-Group Button");
+		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> Clicked on Create-Group Button");
+		Assert.assertTrue(true, "Failed To Click on  Create-Group Button");
 	}
 	
 }

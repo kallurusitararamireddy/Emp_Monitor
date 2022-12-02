@@ -75,49 +75,49 @@ public class SplitSheetPage extends BasePage {
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
 		helper.selectDropDownValue(Location, "visibletext", " See All");
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Location Drop-down and Selected Any Location");
-		Assert.assertTrue(true, "Failed to click on Location Drop-down and Selected Any Location");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Location Drop-down and Selected Any Location");
+		Assert.assertTrue(true, "Failed to Click on Location Drop-down and Selected Any Location");
 		 
 
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
 		helper.selectDropDownValue(Department, "value", "0");
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Department Drop-down and  Selected Department");
-		Assert.assertTrue(true, "Failed to click on Department Drop-down and  Selected Department");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> Clicked on Department Drop-down and  Selected Department");
+		Assert.assertTrue(true, "Failed to Click on Department Drop-down and  Selected Department");
 		
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
 		helper.move_to_element_click_target(Employee);
 		helper.robot_Zero_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Employee Drop-down and  Selected Employee");
-		Assert.assertTrue(true, "Failed to click on  Employee and Selected Employee ");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> Clicked on Employee Drop-down and  Selected Employee");
+		Assert.assertTrue(true, "Failed to Click on  Employee and Selected Employee ");
 		
 		helper.waitFor(selectdateranges);
 		helper.highLightElement(driver, selectdateranges);
 		selectdateranges.click();
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on Calendar Drop-down and Slected Day's");
-		Assert.assertTrue(true, "Failed to click on Calendar Drop-down and Slected Day's");
+		Reporter.log("<B><font color = 'blue'>Step4.</font></B> Clicked on Calendar Drop-down and Slected Day's");
+		Assert.assertTrue(true, "Failed to Click on Calendar Drop-down and Slected Day's");
 		
 		helper.waitFor(Last30days);
 		helper.highLightElement(driver, Last30days);
 		Last30days.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Last-30-days");
-		Assert.assertTrue(true, "Failed to click on  Last-30-days");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> Clicked on Last-30-days");
+		Assert.assertTrue(true, "Failed to Click on  Last-30-days");
 		
 		
 		 
 		helper.waitFor(CSV);
 		helper.highLightElement(driver, CSV);
 		CSV.click();
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on CSV Button");
-		Assert.assertTrue(true, "Failed to click on CSV Button");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> Clicked on CSV Button");
+		Assert.assertTrue(true, "Failed to Click on CSV Button");
 		
 		helper.waitFor(Splitsheet);
 		helper.highLightElement(driver, Splitsheet);
 		helper.Scrollintoview(Splitsheet);
 		Splitsheet.click();
-		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on Split-sheet checkBox option ");
-		Assert.assertTrue(true, "Failed to click on Splitsheet ChekBox option ");
+		Reporter.log("<B><font color = 'blue'>Step7.</font></B> Clicked on Split-sheet checkBox option ");
+		Assert.assertTrue(true, "Failed to Click on Splitsheet ChekBox option ");
 		Thread.sleep(2000);
 		
 		helper.waitFor(Submit);
@@ -125,8 +125,8 @@ public class SplitSheetPage extends BasePage {
 		helper.Scrollintoview(Submit);
 		Thread.sleep(3000);
 		helper.jsCLick(Submit);
-		Reporter.log("<B><font color = 'blue'>Step8.</font></B> clicked on Submit Button");
-		Assert.assertTrue(true, "Failed to click on Submit Button");
+		Reporter.log("<B><font color = 'blue'>Step8.</font></B> Clicked on Submit Button");
+		Assert.assertTrue(true, "Failed to Click on Submit Button");
 		Thread.sleep(4000);
 		
 //		helper.Time_Sheets_CSV_Dot_files();

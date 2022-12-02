@@ -14,7 +14,7 @@ public class TestStatusListener implements ITestListener {
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
 		
-	}
+	} 
 
 	@Override
 	public void onTestSuccess(ITestResult result) {

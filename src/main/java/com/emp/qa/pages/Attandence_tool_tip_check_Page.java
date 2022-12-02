@@ -63,15 +63,15 @@ public class Attandence_tool_tip_check_Page extends BasePage
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
 		Employee.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee Module ");
-		Assert.assertTrue(true, "Failed to click on Employee Module ");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Employee Module ");
+		Assert.assertTrue(true, "Failed to Click on Employee Module ");
 		
 		  
 		helper.waitFor(EmployeeAttendance);
 		helper.highLightElement(driver, EmployeeAttendance);
 		EmployeeAttendance.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Employee Attendance Sub-Module ");
-		Assert.assertTrue(true, "Failed to click on Employee Attendance Sub-Module");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Employee Attendance Sub-Module ");
+		Assert.assertTrue(true, "Failed to Click on Employee Attendance Sub-Module");
 		
 		Thread.sleep(4000);
 		helper.waitFor(present_show);

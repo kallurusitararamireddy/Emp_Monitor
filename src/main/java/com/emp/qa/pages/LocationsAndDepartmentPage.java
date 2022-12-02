@@ -50,52 +50,61 @@ public class LocationsAndDepartmentPage extends BasePage {
 	@CacheLookup
 	WebElement AddLocation_Button;
 
+	@SuppressWarnings("static-access")
 	public void LocationsAndDepartmentPage() throws InterruptedException, AWTException {
 
 		helper.highLightElement(driver,ManageLocationsAnd_Departmets);
 		ManageLocationsAnd_Departmets.click();
-		Reporter.log("<B><font color = 'blue'>Step1.</font></B> clicked on Settings Module and Selected  ManageLocations-And-Departmets Sub-Module");
-		Assert.assertTrue(true, "Failed to click on  Settings Module and Selected  ManageLocations-And-Departmets Sub-Module");
+		Reporter.log("<B><font color = 'blue'>Step1.</font></B> Clicked on Settings Module and Selected  ManageLocations-And-Departmets Sub-Module");
+		Assert.assertTrue(true, "Failed to Click on  Settings Module and Selected  ManageLocations-And-Departmets Sub-Module");
 		
 		helper.waitFor(AddLocationsandDepartments);
 		helper.highLightElement(driver,AddLocationsandDepartments);
 		AddLocationsandDepartments.click();
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Add-Locations and Departments Button");
-		Assert.assertTrue(true, "Failed to click on Add-Locations and Departments Button");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> Clicked on Add-Locations and Departments Button");
+		Assert.assertTrue(true, "Failed to Click on Add-Locations and Departments Button");
 		
 		 
 		helper.waitFor(SelectTimezone);
 		helper.highLightElement(driver,SelectTimezone);
 		helper.selectDropDownValue(SelectTimezone, "value", "AsiaKolkata");
 		SelectTimezone.click();
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Timezone Drop-down and Select Time Zone ");
-		Assert.assertTrue(true, "Failed to click on Timezone Drop-down and Select Time Zone");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> Clicked on Timezone Drop-down and Select Time Zone ");
+		Assert.assertTrue(true, "Failed to Click on Timezone Drop-down and Select Time Zone");
 		
 		/*
 		 *  Checking with  Location name  or  Change the location name
 		 */
 		
+		
+	
+		
+		
 		helper.waitFor(Type_Location);
 		helper.highLightElement(driver,Type_Location);
-		Type_Location.sendKeys("mumbai");
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on Location Drop-doown and  Selected Any  Location");
-		Assert.assertTrue(true, "Failed to click on on Location Drop-doown and  Selected Any  Location");
+		Type_Location.sendKeys("mumbai"+helper.randomChar());
+		Reporter.log("<B><font color = 'blue'>Step4.</font></B> Clicked on Location Drop-doown and  Selected Any  Location");
+		Assert.assertTrue(true, "Failed to Click on on Location Drop-doown and  Selected Any  Location");
 		
 		
 		helper.waitFor(EnterDepartments);
 		helper.highLightElement(driver,EnterDepartments);
 		helper.move_to_element_click_target(EnterDepartments);
 		helper.robot_fourth_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Departments Drop-down and  Selected Any Department");
-		Assert.assertTrue(true, "Failed to click on Departments Drop-down and  Selected Any Department");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> Clicked on Departments Drop-down and  Selected Any Department");
+		Assert.assertTrue(true, "Failed to Click on Departments Drop-down and  Selected Any Department");
 		
 		helper.waitFor(AddLocation_Button);
 		helper.highLightElement(driver,AddLocation_Button);
 		helper.jsCLick(AddLocation_Button);
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Add-Location Button ");
-		Assert.assertTrue(true, "Failed to click on Add-Location Button");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> Clicked on Add-Location Button ");
+		Assert.assertTrue(true, "Failed to Click on Add-Location Button");
 		Thread.sleep(5000);
+		
+		
+        return;
 
+ 
 	}
 
 }

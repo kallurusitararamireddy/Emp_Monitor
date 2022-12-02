@@ -55,14 +55,14 @@ public class EmployeeAssignedPage extends BasePage {
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
 		Reporter.log(
-				"<B><font color = 'blue'>Step1 .</font></B> clicked on Employe Module and Selected  Employee_Details Sub-Module ");
-		Assert.assertTrue(true, "Failed to click on Employe Module and Selected  Employee_Details Sub-Module");
+				"<B><font color = 'blue'>Step1 .</font></B> Clicked on Employe Module and Selected  Employee_Details Sub-Module ");
+		Assert.assertTrue(true, "Failed to Click on Employe Module and Selected  Employee_Details Sub-Module");
 
 		helper.waitFor(Scroller);
 		helper.highLightElement(driver, Scroller);
 		helper.Scrollintoview(Scroller);
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Any Employee  ");
-		Assert.assertTrue(true, "Failed to click on Any Employee  ");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> Clicked on Any Employee  ");
+		Assert.assertTrue(true, "Failed to Click on Any Employee  ");
 
 		helper.waitFor(EmployeeAssigned);
 		helper.highLightElement(driver, EmployeeAssigned);
@@ -75,7 +75,7 @@ public class EmployeeAssignedPage extends BasePage {
 		helper.highLightElement(driver, SelectRole_dropdown_list);
 		helper.Scrollintoview(SelectRole_dropdown_list);
 		Reporter.log("<B><font color = 'blue'>Step4.</font></B> Clicked on  Role Drop-down and Selected Any Role ");
-		Assert.assertTrue(true, "Failed to click  on  Role Drop-down and Selected Any Role");
+		Assert.assertTrue(true, "Failed to Click  on  Role Drop-down and Selected Any Role");
 
 		helper.waitFor(select_role);
 		helper.highLightElement(driver, select_role);
@@ -102,8 +102,8 @@ public class EmployeeAssignedPage extends BasePage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='AssignButton']"))).click();
 
 		Assign_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on Assign_Button");
-		Assert.assertTrue(true, "Failed to click on Assign_Button");
+		Reporter.log("<B><font color = 'blue'>Step7.</font></B> Clicked on Assign_Button");
+		Assert.assertTrue(true, "Failed to Click on Assign_Button");
 
 	}
 

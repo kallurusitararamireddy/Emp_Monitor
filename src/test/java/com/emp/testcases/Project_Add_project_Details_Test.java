@@ -17,7 +17,7 @@ public class Project_Add_project_Details_Test extends TestBase {
 		homePage.ProjectsPage();
 		add_project_details_T.Add_project_Details_P();
 
-	}
+	} 
 
 	@Test(priority = 2)
 

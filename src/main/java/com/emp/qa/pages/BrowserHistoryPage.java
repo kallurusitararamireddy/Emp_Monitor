@@ -21,9 +21,7 @@ public BrowserHistoryPage(WebDriver driver) {
 	}
 
 
-   //Xls_Reader excel = new Xls_Reader("C:\\Users\\Official\\Downloads\\browser_history_1_1625728708061.xlsx");
 
- // Xls_Reader excel = new Xls_Reader ("C:\\Users\\Official\\Downloads\\browser_history_1_1626064875440.xlsx");
    Helpers helper=new Helpers();
 	
 	@FindBy(xpath = "//a[contains(text(),'Reports Download')]")
@@ -107,94 +105,91 @@ public BrowserHistoryPage(WebDriver driver) {
 		helper.waitFor(ReportsDownload);
 		helper.highLightElement(driver, ReportsDownload);
 		ReportsDownload.click();
-		Reporter.log("<B><font color = 'blue'>SteP1 .</font></B> clicked on ReportsDownload");
-		Assert.assertTrue(true, "Failed to click on ReportsDownload");
+		Reporter.log("<B><font color = 'blue'>SteP1 .</font></B> Clicked on ReportsDownload");
+		Assert.assertTrue(true, "Failed to Click on ReportsDownload");
 		
 		
 		helper.waitFor(Role);
 		helper.highLightElement(driver, Role);
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clickedonRoles");
-		Assert.assertTrue(true, "Failed to clickedonRole");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Roles Drop-down and Selected Any Role");
+		Assert.assertTrue(true, "Failed to Click on Roles Drop-down and Selected Any Role");
 		
 		helper.waitFor(SelectAll);
 		helper.highLightElement(driver, SelectAll);
 		SelectAll.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on  SelectAll");
-		Assert.assertTrue(true, "Failed to click on SelectAll");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on  Select-All");
+		Assert.assertTrue(true, "Failed to Click on Select-All");
 		
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
 		helper.robot_Zero_option_selectClick();
 		Location.click();
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clickedonSelectLocation");
-		Assert.assertTrue(true, "Failed clickeonSelectLocation");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Location Drop-down and Slected Any Location");
+		Assert.assertTrue(true, "Failed clicke on Location Drop-down and Slected Any Location");
 		
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
 		helper.robot_Zero_option_selectClick();
 		Department.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Department");
-		Assert.assertTrue(true, "Failed to clicked on Department");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> Clicked on Department Drop-down and Selcted Any Department");
+		Assert.assertTrue(true, "Failed to Click on Department Drop-down and Selcted Any Department");
 		
 		helper.waitFor(SelectDateRanges);
 		helper.highLightElement(driver, SelectDateRanges);
 		SelectDateRanges.click();
 		//SelectDateRanges.sendKeys("26-05-2021");
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> click on SelectDateRanges");
-		Assert.assertTrue(true, "Failed to Click on SelectDateRanges");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Click on Calendar Drop-down and Selected Day's");
+		Assert.assertTrue(true, "Failed to Click on Calendar Drop-down and Selected Day's");
 		
 		helper.waitFor(Last30days);
 		helper.highLightElement(driver, Last30days);
 		Last30days.click();
-		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on Last30days");
-		Assert.assertTrue(true, "Failed to Select Last30days");
+		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> Selected  on Last-30-days");
+		Assert.assertTrue(true, "Failed to Select Last-30-days");
 		
 		helper.waitFor(DownloadOption);
 		helper.highLightElement(driver, DownloadOption);
 		DownloadOption.click();
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on DownloadOption");
-		Assert.assertTrue(true, "Failed to Select DownloadOption");
+		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> Clicked on Download-Option");
+		Assert.assertTrue(true, "Failed to Click on Download-Option");
 		
 		helper.waitFor(BrowserHistory);
 		helper.highLightElement(driver, BrowserHistory);
 		BrowserHistory.click();
-		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on BrowserHistory");
-		Assert.assertTrue(true, "Failed to Select BrowserHistory");
+		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> Clicked on Browser-History");
+		Assert.assertTrue(true, "Failed to Click on Browser-History");
 		
 		 
 		
 		helper.waitFor(CSV);
 		helper.highLightElement(driver, CSV);
 		CSV.click();
-		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on CSV");
-		Assert.assertTrue(true, "Failed to Select CSV");
+		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> Clicked on CSV-Button");
+		Assert.assertTrue(true, "Failed to  Click on CSV-Button");
 		
 		
 		helper.waitFor(Domain);
 		helper.highLightElement(driver, Domain);
-		//helper.jsCLick(Select_All_checkBox);
 		helper.jsScrollintoview(Domain);
 		helper.jsCLick(Domain);
-		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on Domain");
-		Assert.assertTrue(true, "Failed to Select Domain");
+		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> Clicked on Domain");
+		Assert.assertTrue(true, "Failed to click on Domain");
 		
 		
 		helper.waitFor(Browser);
 		helper.highLightElement(driver, Browser);
-		//helper.jsCLick(Select_All_checkBox);
 		helper.jsScrollintoview(Browser);
 		helper.jsCLick(Browser);
-		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> clicked on Browser");
-		Assert.assertTrue(true, "Failed to Select Browser");
+		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> Clicked on Browser");
+		Assert.assertTrue(true, "Failed to Click on Browser");
 		
 		
 		helper.waitFor(URL);
 		helper.highLightElement(driver, URL);
-		//helper.jsCLick(Select_All_checkBox);
 		helper.jsScrollintoview(URL);
 		helper.jsCLick(URL);
 		Reporter.log("<B><font color = 'blue'>Step13 .</font></B> clicked on URL");
-		Assert.assertTrue(true, "Failed to Select URL");
+		Assert.assertTrue(true, "Failed to click on URL");
 		
 		
 		
@@ -202,7 +197,7 @@ public BrowserHistoryPage(WebDriver driver) {
 		helper.highLightElement(driver, Submit_Button);
 		helper.Scrollintoview(Submit_Button);
 		Submit_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> clicked on Submit_Button");
+		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> Clicked on Submit_Button");
 		Assert.assertTrue(true, "Failed to Click Submit_Button");
 		
 		driver.navigate().refresh();
@@ -210,34 +205,22 @@ public BrowserHistoryPage(WebDriver driver) {
 		helper.waitFor(DownloadFiles_Button);
 		helper.highLightElement(driver, DownloadFiles_Button);
 		helper.jsCLick(DownloadFiles_Button);
-		Reporter.log("<B><font color = 'blue'>Step13 .</font></B> clicked on DownloadFiles_Button");
-		Assert.assertTrue(true, "Failed to Click DownloadFiles_Button");
+		Reporter.log("<B><font color = 'blue'>Step13 .</font></B> Clicked on DownloadFiles_Button");
+		Assert.assertTrue(true, "Failed to Click on DownloadFiles_Button");
 		//driver.navigate().refresh();
 		
 		helper.waitFor(ApplicationsUsageReport);
 		helper.highLightElement(driver, ApplicationsUsageReport);
 		helper.jsCLick(ApplicationsUsageReport);
-		Reporter.log("<B><font color = 'blue'>Step14 .</font></B> clicked on ApplicationsUsageReport");
-		Assert.assertTrue(true, "Failed to Click ApplicationsUsageReport");
+		Reporter.log("<B><font color = 'blue'>Step14 .</font></B> Clicked on Applications-Usage-Report");
+		Assert.assertTrue(true, "Failed to Click on Applications-Usage-Report");
 		driver.navigate().refresh();
 		driver.navigate().back();
 		driver.navigate().forward();
 		Thread.sleep(5000);
 		
 		
-		
-		
-//		   String sheetName = "Sheet 1";
-//			int rowcount = excel.getRowCount(sheetName);
-//			System.out.println("The number of rows in the Sheet is:"  + rowcount);
-//			int cellcount=excel.getColumnCount(sheetName);
-//			System.out.println("The number of cellcount in the Sheet is:"  + cellcount);
-//			
-////			String s1= excel.IterateRow(sheetName);    
-////			  System.out.println(s1);
-//			
-//			 int S2= excel.getRowvalues(sheetName, 0,1);
-//			  System.out.println(S2);
+	
 
 
 	}

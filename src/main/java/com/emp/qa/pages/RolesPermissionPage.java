@@ -25,7 +25,6 @@ public class RolesPermissionPage extends BasePage {
 	}
 
 	Helpers helper = new Helpers();
-
 	@FindBy(xpath = "//a[contains(text(),'Roles and Permission')]")
 	@CacheLookup
 	WebElement RolesAndPermission;
@@ -89,16 +88,17 @@ public class RolesPermissionPage extends BasePage {
 
 	public void RolesPermissionPage() throws InterruptedException, AWTException {
 
+
 		helper.waitFor(RolesAndPermission);
 		helper.highLightElement(driver, RolesAndPermission); 
 		RolesAndPermission.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Sttings Module and Selected  Roles-And-Permission Sub-module ");
-		Assert.assertTrue(true, "Failed To click on  Sttings Module and Selected  Roles-And-Permission Sub-module");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Sttings Module and Selected  Roles-And-Permission Sub-module ");
+		Assert.assertTrue(true, "Failed To Click on  Sttings Module and Selected  Roles-And-Permission Sub-module");
 
 		helper.waitFor(Addnewrole_Button);
 		helper.highLightElement(driver, Addnewrole_Button);
 		Addnewrole_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Add New-Role Button");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Add New-Role Button");
 		Assert.assertTrue(true, "Failed To Select Add New-Role Button");
 
 		Random g=new Random();
@@ -110,15 +110,15 @@ public class RolesPermissionPage extends BasePage {
 		helper.highLightElement(driver,Rolename);
 		Rolename.sendKeys(Exp_g);
 		Rolename.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Role-name Test field and  Entered Role Name ");
-		Assert.assertTrue(true, "Failed To click on Role-name Test field and  Entered Role Name");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Role-name Test field and  Entered Role Name ");
+		Assert.assertTrue(true, "Failed To Click on Role-name Test field and  Entered Role Name");
 		
 		helper.waitFor(Location);		
 		helper.highLightElement(driver,Location);
 		helper.move_to_element_click_target(Location);
 		helper.robot_Second_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Location Drop-down and  Selected Location ");
-		Assert.assertTrue(true, "Failed To click on Location Drop-Down & Select Location");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> Clicked on Location Drop-down and  Selected Location ");
+		Assert.assertTrue(true, "Failed To Click on Location Drop-Down & Select Location");
 		
 		
 		helper.waitFor(Department);		
@@ -126,8 +126,8 @@ public class RolesPermissionPage extends BasePage {
 		helper.move_to_element_click(Department);
 		Thread.sleep(1000);
 		helper.robot_frist_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Department Drop-down and  Select Department");
-		Assert.assertTrue(true, "Failed To click on Department Drop-down and  Select Department");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Department Drop-down and  Select Department");
+		Assert.assertTrue(true, "Failed To Click on Department Drop-down and  Select Department");
 		
 		
 		helper.waitFor(Save_Button);		
@@ -135,8 +135,8 @@ public class RolesPermissionPage extends BasePage {
 		Thread.sleep(5000);
 		helper.jsCLick(Save_Button);
 		Thread.sleep(5000);
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on save Button");
-		Assert.assertTrue(true, "Failed To clik on save Button");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on save Button");
+		Assert.assertTrue(true, "Failed To Clik on save Button");
 		
 		driver.navigate().refresh();
 
@@ -146,14 +146,14 @@ public class RolesPermissionPage extends BasePage {
 		helper.highLightElement(driver, LastpageButton);
 		helper.Scrollintoview(LastpageButton);
         helper.move_to_element_click(LastpageButton);
-		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on  Last-page Button");
-		Assert.assertTrue(true, "Failed to click on Last-page Button");
+		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> Clicked on  Last-page Button");
+		Assert.assertTrue(true, "Failed to Click on Last-page Button");
 		Thread.sleep(3000);
 
 		helper.highLightElement(driver, write_CheckBox);
 		helper.Scrollintoview(write_CheckBox);
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked write_CheckBox");
-		Assert.assertTrue(true, "Failed to click write_CheckBox");
+		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> Clicked write_CheckBox");
+		Assert.assertTrue(true, "Failed to Click write_CheckBox");
 
 		helper.highLightElement(driver, Delete_CheckBox);
 		helper.Scrollintoview(Delete_CheckBox);
@@ -170,34 +170,32 @@ public class RolesPermissionPage extends BasePage {
 
 		}
 
-		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> clicked on  Delete Check Box");
-		Assert.assertTrue(true, "Failed to click on Delete Check-Box");
-
-		helper.waitFor(Settings);
+		Reporter.log("<B><font color = 'blue'>Step9 .</font></B> Clicked on  Delete Check Box");
+		Assert.assertTrue(true, "Failed to Click on Delete Check-Box");
 		helper.highLightElement(driver, Settings);
 		helper.Scrollintoview(Settings);
 		helper.jsCLick(Settings);
-		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on  Settings");
-		Assert.assertTrue(true, "Failed To click on  Settings");
-		Thread.sleep(2000);
+		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> Clicked on  Settings");
+		Assert.assertTrue(true, "Failed To Click on  Settings");
+		Thread.sleep(2000); 
 
 		helper.waitFor(EmployeeWebsiteusage);
 		helper.highLightElement(driver, EmployeeWebsiteusage);
 		EmployeeWebsiteusage.click();
-		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on  Employee-Website-usage Button ");
-		Assert.assertTrue(true, "Failed To click on  Employee-Website-usage Button");
+		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> Clicked on  Employee-Website-usage Button ");
+		Assert.assertTrue(true, "Failed To Click on  Employee-Website-usage Button");
 
 		helper.waitFor(checkbox);
 		helper.highLightElement(driver, checkbox);
 		helper.jsCLick(checkbox);
-		Reporter.log("<B><font color = 'blue'>Step12.</font></B> selected All option (check-box )");
-		Assert.assertTrue(true, "Failed To select All option (check-box )");
+		Reporter.log("<B><font color = 'blue'>Step12.</font></B> Selected All option (check-box )");
+		Assert.assertTrue(true, "Failed To Select All option (check-box )");
 
 		helper.waitFor(save);
 		helper.highLightElement(driver, save);
 		helper.jsCLick(save);
-		Reporter.log("<B><font color = 'blue'>Step13.</font></B> clicked on  save Button");
-		Assert.assertTrue(true, "Failed To click on  save Button ");
+		Reporter.log("<B><font color = 'blue'>Step13.</font></B> Clicked on  save Button");
+		Assert.assertTrue(true, "Failed To Click on  save Button ");
 
 	}
 

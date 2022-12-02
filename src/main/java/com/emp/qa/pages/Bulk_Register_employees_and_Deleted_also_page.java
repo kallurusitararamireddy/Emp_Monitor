@@ -58,37 +58,39 @@ public class Bulk_Register_employees_and_Deleted_also_page extends BasePage {
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
-		Reporter.log("<B><font color = 'blue'>Step 1 .</font></B> clicked on Employee_Details_option");
-		Assert.assertTrue(true, "Failed to clicked on EmployeeDetails");
+		Reporter.log("<B><font color = 'blue'>Step 1 .</font></B> Clicked on Employee Module  and Clicked Employee Details Sub-Module ");
+		Assert.assertTrue(true, "Failed to Clicked on  Employee Module  and Clicked Employee Details Sub-Module ");
 
 		helper.waitFor(BulkRegisterBtn);
 		helper.highLightElement(driver, BulkRegisterBtn);
 		BulkRegisterBtn.click();
-		Reporter.log("<B><font color = 'blue'>Step 2 .</font></B> clicked on Bulk_Register_Button");
-		Assert.assertTrue(true, "Failed to clicked on Bulk_Register_button");
+		Reporter.log("<B><font color = 'blue'>Step 2 .</font></B> Clicked on Bulk_Register Button");
+		Assert.assertTrue(true, "Failed to Clicked on Bulk_Register Button");
 		
 
 		helper.waitFor(Browse);
 		helper.highLightElement(driver, Browse);
 		Browse.click();
-		Reporter.log("<B><font color = 'blue'>Step 3 .</font></B> clicked on Browse_option");
-		Assert.assertTrue(true, "Failed to clicked on Browse_option");
-		helper.uploadFile("\"C:\\Users\\Official\\Downloads\\Employee Registration.xlsx\"");
+		Reporter.log("<B><font color = 'blue'>Step 3 .</font></B> Clicked on Browse_option Filed ");
+		Assert.assertTrue(true, "Failed to Clicked on Browse_option Filed ");
+		Thread.sleep(5000);
+		helper.uploadFile("C:\\Users\\GLB-BLR-449\\Downloads\\Employee Registration.xlsx");
+
 		Thread.sleep(3000);
-		
+		 
 
 		helper.waitFor(add);
 		helper.highLightElement(driver, add);
 		add.click();
-		Reporter.log("<B><font color = 'blue'>Step 4 .</font></B> clicked on Add_Option");
-		Assert.assertTrue(true, "Failed to clicked on Add_option");
+		Reporter.log("<B><font color = 'blue'>Step 4 .</font></B> Clicked on Add  Button ");
+		Assert.assertTrue(true, "Failed to Clicked on Add Button ");
  
 		Thread.sleep(4000);
 
 		helper.waitFor(one_emp);
 		helper.highLightElement(driver, one_emp);
 		one_emp.click();
-		Reporter.log("<B><font color = 'blue'>Step 5 .</font></B> Selected  employee(Clicking check box) ");
+		Reporter.log("<B><font color = 'blue'>Step 5 .</font></B> Selected  Employee(Clicking check box) ");
 		Assert.assertTrue(true, "Failed to Selected on one_emp");
 
 		helper.waitFor(two_emp);
@@ -100,15 +102,15 @@ public class Bulk_Register_employees_and_Deleted_also_page extends BasePage {
 		helper.waitFor(delete_reg_employess);
 		helper.highLightElement(driver, delete_reg_employess);
 		delete_reg_employess.click();
-		Reporter.log("<B><font color = 'blue'>Step 7 .</font></B> clicked on Deleted Button");
-		Assert.assertTrue(true, "Failed to clicked on Deleted Button");
+		Reporter.log("<B><font color = 'blue'>Step 7 .</font></B> Clicked on Deleted Button");
+		Assert.assertTrue(true, "Failed to Clicked on Deleted Button");
 		Thread.sleep(1000);
 		
 		helper.waitFor(del_modal);
 		helper.highLightElement(driver, del_modal);
 		del_modal.click();
-		Reporter.log("<B><font color = 'blue'>Step 8 .</font></B> Clicked on Del_modal_button");
-		Assert.assertTrue(true, "Failed to Clicked on Del_modal_button");
+		Reporter.log("<B><font color = 'blue'>Step 8 .</font></B> Clicked on Delete  modal button");
+		Assert.assertTrue(true, "Failed to Clicked on Delete  modal button");
 		Thread.sleep(2000);
 		
 		
@@ -117,7 +119,6 @@ public class Bulk_Register_employees_and_Deleted_also_page extends BasePage {
 		Thread.sleep(2000);
 		helper.waitFor(Show_entries_list);
 		helper.highLightElement(driver, Show_entries_list);
-//		helper.selectDropDownValue(Show_entries_list, "id", "200");
 		helper.move_to_element_click_target(Show_entries_list);
 		helper.robot_third_option_selectClick();
 		Reporter.log("<B><font color = 'blue'>Step 8 .</font></B> Selected Show_entries");
@@ -127,7 +128,6 @@ public class Bulk_Register_employees_and_Deleted_also_page extends BasePage {
 		js.executeScript("window.scrollTo(0,600);");
 		
 		Thread.sleep(3000);
-		
 
 	}
 

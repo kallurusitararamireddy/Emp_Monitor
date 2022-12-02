@@ -47,13 +47,13 @@ public class StorageTypePage extends BasePage {
 		helper.highLightElement(driver,  StorageType);
 		 StorageType.click();
 		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Settings Module and Selected StorageType Sub-Module ");
-		Assert.assertTrue(true, "Failed to click on Settings Module and Selected StorageType Sub-Module");
+		Assert.assertTrue(true, "Failed to Click on Settings Module and Selected StorageType Sub-Module");
 		
 		helper.waitFor( Add_Storage_Button); 
 		helper.highLightElement(driver,  Add_Storage_Button);
 		Add_Storage_Button.click();
 		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on  Add_Storage Button ");
-		Assert.assertTrue(true, "Failed to click on   Add_Storage Button");
+		Assert.assertTrue(true, "Failed to Click on   Add_Storage Button");
 		
 		
 		helper.waitFor(Select_Storagetype_Dropdown);

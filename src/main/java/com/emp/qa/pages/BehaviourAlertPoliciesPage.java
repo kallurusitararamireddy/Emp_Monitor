@@ -46,22 +46,22 @@ public class BehaviourAlertPoliciesPage extends BasePage {
 		helper.waitFor(AlertPolicies);
 		helper.highLightElement(driver, AlertPolicies);
 		AlertPolicies.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Alert_Policies ");
-		Assert.assertTrue(true, "Failed to click on Alert_Policies");	
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Alert_Policies ");
+		Assert.assertTrue(true, "Failed to Click on Alert_Policies");	
 		Thread.sleep(2000);
 		
 		helper.waitFor(EditButton);
 		helper.highLightElement(driver, EditButton);
 		helper.move_to_element(EditButton);
 		EditButton.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Edit_Button ");
-		Assert.assertTrue(true, "Failed to click on Edit_Button");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Edit_Button ");
+		Assert.assertTrue(true, "Failed to Click on Edit_Button");
 		
 		helper.waitFor(MultipleAlertsInAday);
 		helper.highLightElement(driver, MultipleAlertsInAday);
 		helper.move_to_element_click_target(MultipleAlertsInAday);
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Multiple_Alerts_In_A_day ");
-		Assert.assertTrue(true, "Failed to click on Multiple_Alerts_In_A_day");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Multiple_Alerts_In_A_day ");
+		Assert.assertTrue(true, "Failed to Click on Multiple_Alerts_In_A_day");
 		Thread.sleep(5000);
 		
 		
@@ -69,8 +69,8 @@ public class BehaviourAlertPoliciesPage extends BasePage {
 		helper.highLightElement(driver, SaveAndLaunch);
 		helper.Scrollintoview(SaveAndLaunch);
 		helper.jsCLick(SaveAndLaunch);
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Save_And_Launch_Button");
-		Assert.assertTrue(true, "Failed to select Save_And_Launch_Button");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> Clicked on Save_And_Launch_Button");
+		Assert.assertTrue(true, "Failed to Click on Save_And_Launch_Button");
 		Thread.sleep(4000);
 		
 		

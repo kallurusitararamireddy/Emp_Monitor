@@ -133,43 +133,43 @@ public class TrackUserSettingsFixedPage extends BasePage{
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee Module and Selected  Employee-Details Sub-Module ");
-		Assert.assertTrue(true, "Failed to click on Employee Module and Selected  Employee-Details Sub-Module ");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Employee Module and Selected  Employee-Details Sub-Module ");
+		Assert.assertTrue(true, "Failed to Click on Employee Module and Selected  Employee-Details Sub-Module ");
 		
 		
 		helper.waitFor(Scroller);
 		helper.highLightElement(driver,Scroller);
 		helper.Scrollintoview(Scroller);
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Scroller view ");
-		Assert.assertTrue(true, "Failed to click on Scroller view ");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> Clicked on Scroller view ");
+		Assert.assertTrue(true, "Failed to Click on Scroller view ");
 		
 		helper.waitFor(TrackuserSettings);
 		helper.highLightElement(driver, TrackuserSettings);
 		TrackuserSettings.click();
-		Reporter.log("<B><font color = 'blue'>Step13.</font></B> clicked on Track_user_Settings field ");
-		Assert.assertTrue(true, "Failed to click on Track_user_Settings field");
+		Reporter.log("<B><font color = 'blue'>Step13.</font></B> Clicked on Track_user_Settings field ");
+		Assert.assertTrue(true, "Failed to Click on Track_user_Settings field");
 		
 		helper.waitFor(SettingsAppliedTotheuser);
 		helper.highLightElement(driver, SettingsAppliedTotheuser);
 		helper.Scrollintoview(SettingsAppliedTotheuser);
 		helper.selectDropDownValue(SettingsAppliedTotheuser, "value", "3");
 		SettingsAppliedTotheuser.click();
-		Reporter.log("<B><font color = 'blue'>Step14.</font></B> clicked on Settings_Applied_To_the_user  Drop-down and Selected Any Value");
-		Assert.assertTrue(true, "Failed to click on Settings_Applied_To_the_user  Drop-down and Selected Any Value");
+		Reporter.log("<B><font color = 'blue'>Step14.</font></B> Clicked on Settings_Applied_To_the_user  Drop-down and Selected Any Value");
+		Assert.assertTrue(true, "Failed to Click on Settings_Applied_To_the_user  Drop-down and Selected Any Value");
 		
 		
 		helper.waitFor(Empmonitoriconhiden);
 		helper.highLightElement(driver, Empmonitoriconhiden);
 		Empmonitoriconhiden.click();
-		Reporter.log("<B><font color = 'blue'>Step15.</font></B> clicked on Stealth Button");
+		Reporter.log("<B><font color = 'blue'>Step15.</font></B> Clicked on Stealth Button");
 		Assert.assertTrue(true, "Failed to Select  Stealth Radio Button");
 		Thread.sleep(5000);
 		
 		helper.waitFor(ScreenShots_RadioButton_Disable);
 		helper.highLightElement(driver, ScreenShots_RadioButton_Disable);
 		ScreenShots_RadioButton_Disable.click();
-		Reporter.log("<B><font color = 'blue'>Step16.</font></B> clicked on Screen shot Radio Button");
-		Assert.assertTrue(true, "Failed to click on  ScreeShots Radio Button");
+		Reporter.log("<B><font color = 'blue'>Step16.</font></B> Clicked on Screen shot Radio Button");
+		Assert.assertTrue(true, "Failed to Click on  ScreeShots Radio Button");
 		Thread.sleep(6000);
 		
 		
@@ -178,24 +178,24 @@ public class TrackUserSettingsFixedPage extends BasePage{
 		helper.Scrollintoview(ScreenShotsFrequency);
 		helper.selectDropDownValue(ScreenShotsFrequency, "value", "3");
 		ScreenShotsFrequency.click();
-		Reporter.log("<B><font color = 'blue'>Step17.</font></B> clicked on Screenshot Frequency Drop-down and Selected Any Value ");
-		Assert.assertTrue(true, "Failed to click on Screenshot Frequency Drop-down and Selected Any Value ");
+		Reporter.log("<B><font color = 'blue'>Step17.</font></B> Clicked on Screenshot Frequency Drop-down and Selected Any Value ");
+		Assert.assertTrue(true, "Failed to Click on Screenshot Frequency Drop-down and Selected Any Value ");
 	
 		
 		
 		helper.waitFor(Twelveperhour);
 		helper.highLightElement(driver, Twelveperhour);
 		Twelveperhour.click();
-		Reporter.log("<B><font color = 'blue'>Step18.</font></B> clicked on Twelveperhour");
-		Assert.assertTrue(true, "Failed to click on Twelveperhour DropDown");
+		Reporter.log("<B><font color = 'blue'>Step18.</font></B> Clicked on Twelveperhour");
+		Assert.assertTrue(true, "Failed to Click on Twelveperhour DropDown");
 		
 		helper.waitFor(Videoquality_DropDown);
 		helper.highLightElement(driver, Videoquality_DropDown);
 		helper.Scrollintoview(Videoquality_DropDown);
 		helper.selectDropDownValue(ScreenShotsFrequency, "value", "1280");
 		Videoquality_DropDown.click();
-		Reporter.log("<B><font color = 'blue'>Step19.</font></B> clicked on Video-Quality Drop-down and Selected Any Value ");
-		Assert.assertTrue(true, "Failed to click on Video-Quality Drop-down and Selected Any Value");
+		Reporter.log("<B><font color = 'blue'>Step19.</font></B> Clicked on Video-Quality Drop-down and Selected Any Value ");
+		Assert.assertTrue(true, "Failed to Click on Video-Quality Drop-down and Selected Any Value");
 		
 		helper.waitFor(Medium);
 		helper.highLightElement(driver, Medium);
@@ -207,15 +207,15 @@ public class TrackUserSettingsFixedPage extends BasePage{
 		helper.waitFor(AgentAutomaticUpdate);
 		helper.highLightElement(driver, AgentAutomaticUpdate);
 		AgentAutomaticUpdate.click();
-		Reporter.log("<B><font color = 'blue'>Step21.</font></B> clicked on Enabled  Agent-Automatic-Update Button ");
-		Assert.assertTrue(true, "Failed to click on  Enable  Agent-Automatic-Update Button ");
+		Reporter.log("<B><font color = 'blue'>Step21.</font></B> Clicked on Enabled  Agent-Automatic-Update Button ");
+		Assert.assertTrue(true, "Failed to Click on  Enable  Agent-Automatic-Update Button ");
 		
 		
 		helper.waitFor(idleTimeDropdown);
 		helper.highLightElement(driver, idleTimeDropdown);
 		idleTimeDropdown.click();
-		Reporter.log("<B><font color = 'blue'>Step22.</font></B> clicked on  idle-Time Drop-down and Selected Any value ");
-		Assert.assertTrue(true, "Failed to click on  idle-Time Drop-down and Selected Any value");
+		Reporter.log("<B><font color = 'blue'>Step22.</font></B> Clicked on  idle-Time Drop-down and Selected Any value ");
+		Assert.assertTrue(true, "Failed to Click on  idle-Time Drop-down and Selected Any value");
 	
 		
 		helper.waitFor(Fifteenmins);
@@ -241,14 +241,14 @@ public class TrackUserSettingsFixedPage extends BasePage{
 		helper.waitFor( ShiftStart);
 		helper.highLightElement(driver,  ShiftStart);
 		ShiftStart.sendKeys("1000");
-		Reporter.log("<B><font color = 'blue'>Step24.</font></B> clicked on  Shift-Start Text filed and Entered Value ");
-		Assert.assertTrue(true, "Failed to click on  Shift-Start Text filed and Entered Value");
+		Reporter.log("<B><font color = 'blue'>Step24.</font></B> Clicked on  Shift-Start Text filed and Entered Value ");
+		Assert.assertTrue(true, "Failed to Click on  Shift-Start Text filed and Entered Value");
 		
 		helper.waitFor( Shiftend);
 		helper.highLightElement(driver,  Shiftend);
 		Shiftend.sendKeys("0700");
-		Reporter.log("<B><font color = 'blue'>Step25.</font></B> clicked on  Shift-End Text filed and Entered Value");
-		Assert.assertTrue(true, "Failed to click on  Shift-End Text filed and Entered Value");
+		Reporter.log("<B><font color = 'blue'>Step25.</font></B> Clicked on  Shift-End Text filed and Entered Value");
+		Assert.assertTrue(true, "Failed to Click on  Shift-End Text filed and Entered Value");
 		
 		helper.waitFor( Tuesday);
 		helper.highLightElement(driver,  Tuesday);
@@ -259,14 +259,14 @@ public class TrackUserSettingsFixedPage extends BasePage{
 		helper.waitFor(Tuesdaystart);
 		helper.highLightElement(driver,  Tuesdaystart);
 		Tuesdaystart.sendKeys("1000");
-		Reporter.log("<B><font color = 'blue'>Step27.</font></B> clicked on  Tuesday Shift-Start Text filed and Entered Value");
-		Assert.assertTrue(true, "Failed to click on  Tuesday Shift-Start Text filed and Entered Value");
+		Reporter.log("<B><font color = 'blue'>Step27.</font></B> Clicked on  Tuesday Shift-Start Text filed and Entered Value");
+		Assert.assertTrue(true, "Failed to Click on  Tuesday Shift-Start Text filed and Entered Value");
 		
 		helper.waitFor( Tuesdayend);
 		helper.highLightElement(driver,  Tuesdayend);
 		Tuesdayend.sendKeys("0700");
-		Reporter.log("<B><font color = 'blue'>Step24.</font></B> clicked on  Tuesday Shift-End Text filed and Entered Value");
-		Assert.assertTrue(true, "Failed to click on  Tuesday Shift-End Text filed and Entered Value");
+		Reporter.log("<B><font color = 'blue'>Step24.</font></B> Clicked on  Tuesday Shift-End Text filed and Entered Value");
+		Assert.assertTrue(true, "Failed to Click on  Tuesday Shift-End Text filed and Entered Value");
 		
 		helper.waitFor( Wednesday);
 		helper.highLightElement(driver,  Wednesday);
@@ -277,14 +277,14 @@ public class TrackUserSettingsFixedPage extends BasePage{
 		helper.waitFor( WednesdaystartTime);
 		helper.highLightElement(driver,  WednesdaystartTime);
 		WednesdaystartTime.sendKeys("1000");
-		Reporter.log("<B><font color = 'blue'>Step24.</font></B> clicked on  Wednesday Shift-Start Text filed and Entered Value");
-		Assert.assertTrue(true, "Failed to click on  Wednesday Shift-Start Text filed and Entered Value");
+		Reporter.log("<B><font color = 'blue'>Step24.</font></B> Clicked on  Wednesday Shift-Start Text filed and Entered Value");
+		Assert.assertTrue(true, "Failed to Click on  Wednesday Shift-Start Text filed and Entered Value");
 		
 		helper.waitFor( Wednesdayend);
 		helper.highLightElement(driver, Wednesdayend);
 		Wednesdayend.sendKeys("0700");
-		Reporter.log("<B><font color = 'blue'>Step24.</font></B> clicked on  Wednesday Shift-End Text filed and Entered Value");
-		Assert.assertTrue(true, "Failed to click on  Wednesday Shift-End Text filed and Entered Value");
+		Reporter.log("<B><font color = 'blue'>Step24.</font></B> Clicked on  Wednesday Shift-End Text filed and Entered Value");
+		Assert.assertTrue(true, "Failed to Click on  Wednesday Shift-End Text filed and Entered Value");
 		
 		helper.waitFor(Thursday);
 		helper.highLightElement(driver,  Thursday);
@@ -295,14 +295,14 @@ public class TrackUserSettingsFixedPage extends BasePage{
 		helper.waitFor( Thursdaystart);
 		helper.highLightElement(driver,  Thursdaystart);
 		Thursdaystart.sendKeys("1000");
-		Reporter.log("<B><font color = 'blue'>Step24.</font></B> clicked on  Thursday Shift-Start Text filed and Entered Value");
-		Assert.assertTrue(true, "Failed to click on  Thursday Shift-start Text filed and Entered Value");
+		Reporter.log("<B><font color = 'blue'>Step24.</font></B> Clicked on  Thursday Shift-Start Text filed and Entered Value");
+		Assert.assertTrue(true, "Failed to Click on  Thursday Shift-start Text filed and Entered Value");
 		
 		helper.waitFor( Thursdayend);
 		helper.highLightElement(driver,  Thursdayend);
 		Thursdayend.sendKeys("0700");
-		Reporter.log("<B><font color = 'blue'>Step24.</font></B>  clicked on  Thursday Shift-End Text filed and Entered Value");
-		Assert.assertTrue(true, "Failed to click on  Thursday Shift-End Text filed and Entered Value");
+		Reporter.log("<B><font color = 'blue'>Step24.</font></B>  Clicked on  Thursday Shift-End Text filed and Entered Value");
+		Assert.assertTrue(true, "Failed to Click on  Thursday Shift-End Text filed and Entered Value");
 		
 		helper.waitFor( Friday);
 		helper.highLightElement(driver,  Friday);
@@ -313,14 +313,14 @@ public class TrackUserSettingsFixedPage extends BasePage{
 		helper.waitFor( Fridaystart);
 		helper.highLightElement(driver,  Fridaystart);
 		Fridaystart.sendKeys("1000");
-		Reporter.log("<B><font color = 'blue'>Step24.</font></B> clicked on  Friday Shift-start Text filed and Entered Value");
-		Assert.assertTrue(true, "Failed to click on  Friday Shift-start Text filed and Entered Value");
+		Reporter.log("<B><font color = 'blue'>Step24.</font></B> Clicked on  Friday Shift-start Text filed and Entered Value");
+		Assert.assertTrue(true, "Failed to Click on  Friday Shift-start Text filed and Entered Value");
 		
 		helper.waitFor( Fridayend);
 		helper.highLightElement(driver,  Fridayend);
 		Fridayend.sendKeys("0700");
-		Reporter.log("<B><font color = 'blue'>Step24.</font></B> clicked on  Friday Shift-End Text filed and Entered Value ");
-		Assert.assertTrue(true, "Failed to clicked on  Friday Shift-End Text filed and Entered Value");
+		Reporter.log("<B><font color = 'blue'>Step24.</font></B> Clicked on  Friday Shift-End Text filed and Entered Value ");
+		Assert.assertTrue(true, "Failed to Clicked on  Friday Shift-End Text filed and Entered Value");
 		
 		helper.waitFor( Saturday);
 		helper.highLightElement(driver,  Saturday);
@@ -331,16 +331,15 @@ public class TrackUserSettingsFixedPage extends BasePage{
 		helper.waitFor(Saturdaystart );
 		helper.highLightElement(driver,  Saturdaystart);
 		Saturdaystart.sendKeys("1000");
-		Reporter.log("<B><font color = 'blue'>Step24.</font></B> clicked on  Saturday Shift-start Text filed and Entered Value");
-		Assert.assertTrue(true, "Failed to click on  Saturday Shift-start Text filed and Entered Value");
+		Reporter.log("<B><font color = 'blue'>Step24.</font></B> Clicked on  Saturday Shift-start Text filed and Entered Value");
+		Assert.assertTrue(true, "Failed to Click on  Saturday Shift-start Text filed and Entered Value");
 		
 		helper.waitFor(Saturdayend);
 		helper.highLightElement(driver,  Saturdayend);
 		Saturdayend.sendKeys("0700");
-		Reporter.log("<B><font color = 'blue'>Step24.</font></B> clicked on  Saturday Shift-End Text filed and Entered Value");
-		Assert.assertTrue(true, "Failed to click on  Saturday Shift-End Text filed and Entered Value");
-		
-
+		Reporter.log("<B><font color = 'blue'>Step24.</font></B> Clicked on  Saturday Shift-End Text filed and Entered Value");
+		Assert.assertTrue(true, "Failed to Click on  Saturday Shift-End Text filed and Entered Value");
+	
 		
 		helper.waitFor(Save_Button);
 		helper.highLightElement(driver, Save_Button);

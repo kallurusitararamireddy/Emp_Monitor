@@ -42,21 +42,21 @@ public class LocaliationPage extends BasePage {
 		helper.waitFor(Localiation);		
 		helper.highLightElement(driver, Localiation);
 		Localiation.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Settings Module and Selected  Localiation Sub-Module ");
-		Assert.assertTrue(true, "Failed To click on Settings Module and Selected  Localiation Sub-Module");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Settings Module and Selected  Localiation Sub-Module ");
+		Assert.assertTrue(true, "Failed To Click on Settings Module and Selected  Localiation Sub-Module");
 		
 		helper.waitFor(SelectTimezone);		
 		helper.highLightElement(driver, SelectTimezone); 
 		helper.selectDropDownValue(SelectTimezone, "id", "Asia/Kolkata");
 		SelectTimezone.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Time-Zone Drop-down  and Selected Time Zone");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Time-Zone Drop-down  and Selected Time Zone");
 		Assert.assertTrue(true, "Failed To Click on  Time-Zone Drop-down and Selected Time Zone");
 		
 		helper.waitFor(Save_Button);		
 		helper.highLightElement(driver, Save_Button);
 	    Save_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Save_Button");
-		Assert.assertTrue(true, "Failed To click on  Save_Button");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Save_Button");
+		Assert.assertTrue(true, "Failed To Click on  Save_Button");
 		
  
 }

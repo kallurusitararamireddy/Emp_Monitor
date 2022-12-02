@@ -84,7 +84,6 @@ public class DashBoardPage_Details extends BasePage {
 	@CacheLookup
 	WebElement CurrentlyIdle;
 
-//	@FindBy(xpath = "//button[contains(text(),'Generate CSV')]")
 	@FindBy(xpath = "//*[@id='Offline_count']/div/div/div[3]/button[1]")
 	@CacheLookup
 	WebElement CurrentlyIdle_csv_Button;

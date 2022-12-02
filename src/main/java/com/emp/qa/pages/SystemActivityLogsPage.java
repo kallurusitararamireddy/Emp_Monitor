@@ -87,57 +87,58 @@ public class SystemActivityLogsPage extends BasePage {
 		helper.waitFor(SystemActivityLogs);		
 		helper.highLightElement(driver, SystemActivityLogs);
 		SystemActivityLogs.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Reports Module and Selected System-Activity-Logs Button ");
-		Assert.assertTrue(true, "Failed To click  on Reports Module and Selected System-Activity-Logs Button");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Reports Module and Selected System-Activity-Logs Button ");
+		Assert.assertTrue(true, "Failed To Click  on Reports Module and Selected System-Activity-Logs Button");
 		
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
 		helper.move_to_element_click_target(Location);
 		helper.robot_Zero_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Location Drop-down and  Selected Location ");
-		Assert.assertTrue(true, "Failed To click  Location Drop-down and Selected Location");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Location Drop-down and  Selected Location ");
+		Assert.assertTrue(true, "Failed To Click  Location Drop-down and Selected Location");
 		
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department); 
 		helper.move_to_element_click_target(Department);
 		helper.robot_Zero_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Department Drop-down and Selected Department ");
-		Assert.assertTrue(true, "Failed To click on Department Drop-down and Selected Department");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Department Drop-down and Selected Department ");
+		Assert.assertTrue(true, "Failed To Click on Department Drop-down and Selected Department");
 		
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
+//		helper.explicitlyWait(Employee);
 		helper.selectDropDownValue(Employee, "visibletext", "See All Employee");
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Employee Drop-down and Selected Any Employee");
-		Assert.assertTrue(true, "Failed To click on Employee Drop-down and Selected Any Employee");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> Clicked on Employee Drop-down and Selected Any Employee");
+		Assert.assertTrue(true, "Failed To Click on Employee Drop-down and Selected Any Employee");
 		
 		
 		helper.waitFor(DateRange);
 		helper.highLightElement(driver, DateRange);
 		DateRange.click();
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Calendar Drop-down and Selected Day's");
-		Assert.assertTrue(true, "Failed To click  on Calendar Drop-down and Selected Day's");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Calendar Drop-down and Selected Day's");
+		Assert.assertTrue(true, "Failed To Click  on Calendar Drop-down and Selected Day's");
 		
 		helper.waitFor(Last_30Days);
 		helper.highLightElement(driver,Last_30Days);
 		Last_30Days.click();
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Last-30-Days");
-		Assert.assertTrue(true, "Failed To click on  Last-30-Days");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on Last-30-Days");
+		Assert.assertTrue(true, "Failed To Click on  Last-30-Days");
 		Thread.sleep(3000);
 		
 		 
 		helper.waitFor(Excel_Button);
 		helper.highLightElement(driver, Excel_Button);
 		Excel_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on Excel-Button");
-		Assert.assertTrue(true, "Failed To click on  Excel-Button");
+		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> Clicked on Excel-Button");
+		Assert.assertTrue(true, "Failed To Click on  Excel-Button");
 		Thread.sleep(5000);
 	
 		
 		helper.waitFor(Pdf_Button);
 		helper.highLightElement(driver, Pdf_Button);
 		Pdf_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Pdf-Button");
-		Assert.assertTrue(true, "Failed To  click on  Pdf-Button");
+		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> Clicked on Pdf-Button");
+		Assert.assertTrue(true, "Failed To  Click on  Pdf-Button");
 		Thread.sleep(5000);
 	
 		

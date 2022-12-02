@@ -11,8 +11,8 @@ public class  DataUtility
 	public String  Data_info(String keys) throws IOException
 	{
 	
-	 FileInputStream fis=new FileInputStream("C:\\EMP Monitor\\Emp_Monitor\\src\\main\\java\\com\\emp\\qa\\config\\EMP_File_paths");
-
+	 FileInputStream fis=new FileInputStream("C:\\Emp-Monitor-PR\\Emp_Monitor\\src\\main\\java\\com\\emp\\qa\\config\\EMP_File_paths");
+ 
 	Properties pobj=new Properties();
 	pobj.load(fis);
 	return pobj.getProperty(keys); 

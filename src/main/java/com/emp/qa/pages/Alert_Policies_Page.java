@@ -112,14 +112,14 @@ public class Alert_Policies_Page extends BasePage {
 		helper.waitFor(AlertPolocies);
 		helper.highLightElement(driver, AlertPolocies);
 		AlertPolocies.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Behavior Module and Selected  Alert Policies Sub-Module ");
-		Assert.assertTrue(true, "Failed to click on Behavior Module and Selected  Alert Policies Sub-Module ");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Behavior Module and Selected  Alert Policies Sub-Module ");
+		Assert.assertTrue(true, "Failed to Click on Behavior Module and Selected  Alert Policies Sub-Module ");
 		  
 		helper.waitFor(AddNewAlert);
 		helper.highLightElement(driver, AddNewAlert);
 		helper.jsCLick(AddNewAlert);
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on  Add_New_Alert Button");
-		Assert.assertTrue(true, "Failed to click on  Add_New_Alert Button");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on  Add_New_Alert Button");
+		Assert.assertTrue(true, "Failed to Click on  Add_New_Alert Button");
 		
 		
 		helper.waitFor(RuleName);
@@ -141,7 +141,7 @@ public class Alert_Policies_Page extends BasePage {
 		helper.highLightElement(driver, SelectAll_locations);
 		helper.jsCLick(SelectAll_locations);
 		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Selected  All_Locations option ");
-		Assert.assertTrue(true, "Failed to select  All_Locations Option ");
+		Assert.assertTrue(true, "Failed to Select  All_Locations Option ");
 		
 		helper.waitFor(Appliesto_Department); 
 		helper.highLightElement(driver, Appliesto_Department);
@@ -162,7 +162,7 @@ public class Alert_Policies_Page extends BasePage {
 		Actions actions2 = new Actions(driver);
 		actions1.moveToElement(Appliesto_Emloyee).click().build().perform();
 		helper.jsCLick(Appliesto_Emloyee); 
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Emloyee Drop-Down and Select Any Employee");
+		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> Clicked on Emloyee Drop-Down and Select Any Employee");
 		Assert.assertTrue(true, "Failed to Click on Employee Drop-Down and Select Any Employee");
 		
 
@@ -187,7 +187,7 @@ public class Alert_Policies_Page extends BasePage {
 		helper.highLightElement(driver, Whomtobenotified);
 		Whomtobenotified.click();
 		helper.robot_frist_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on Whom-to-be-notified Drop-Down and Select Any option");
+		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> Clicked on Whom-to-be-notified Drop-Down and Select Any option");
 		Assert.assertTrue(true, "Failed to Clik on Whom-to-be-notified Drop-Down and Select Any option");
 		
 		
@@ -195,8 +195,8 @@ public class Alert_Policies_Page extends BasePage {
 		helper.highLightElement(driver, SaveAndLaunch);
 		helper.Scrollintoview(SaveAndLaunch);
 		helper.jsCLick(SaveAndLaunch);
-		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> clicked on Save_And_Launch_Button");
-		Assert.assertTrue(true, "Failed to select Save_And_Launch_Button");
+		Reporter.log("<B><font color = 'blue'>Step12 .</font></B> Clicked on Save_And_Launch_Button");
+		Assert.assertTrue(true, "Failed to Click on Save_And_Launch_Button");
 		
 	}
 }

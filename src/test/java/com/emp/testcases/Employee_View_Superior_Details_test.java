@@ -18,7 +18,8 @@ public class Employee_View_Superior_Details_test extends TestBase
 		 */
 		HomePage homePage = new HomePage(getDriver());
         Employee_View_Superior_Details_page Superior_Details=new Employee_View_Superior_Details_page(getDriver());
-		homePage.clickEmployee();
+	
+        homePage.clickEmployee();
 		Superior_Details.View_Superior_Details();
 
 	}

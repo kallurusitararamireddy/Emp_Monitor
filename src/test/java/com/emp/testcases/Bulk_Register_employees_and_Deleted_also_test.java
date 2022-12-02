@@ -15,7 +15,7 @@ public class Bulk_Register_employees_and_Deleted_also_test extends TestBase {
 		
 		HomePage homePage =new HomePage(getDriver());
 		Bulk_Register_employees_and_Deleted_also_page add_deleted = new Bulk_Register_employees_and_Deleted_also_page(getDriver());
- 
+  
 		homePage.clickEmployee();
 		add_deleted.Register_employees_and_Deleted_also();
 			

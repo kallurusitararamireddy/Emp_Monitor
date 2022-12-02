@@ -13,7 +13,7 @@ public class LocationsAndDepartmentTest extends TestBase {
 	public void LocationsAndDepartmentTest() throws Exception{
 	LocationsAndDepartmentPage 	Location=new LocationsAndDepartmentPage(getDriver());
 	HomePage homePage =new HomePage(getDriver());
-
+ 
 	homePage.ManageLocationsAndDepartmentPage();
 	Location.LocationsAndDepartmentPage();
 }

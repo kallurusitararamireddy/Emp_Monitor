@@ -40,7 +40,6 @@ public class DashBoardPage2__Details_Validating_and_Print_Data_Demo_page extends
 	@CacheLookup
 	WebElement TotalEnrollments_CloseButtton;
 
-//	@FindBy(xpath = "//*[@id='registered-employees']")
 	@FindBy(xpath = "(//h3)[1]")
 	@CacheLookup
 	WebElement TotalEnrollments_displayed_number;
@@ -546,7 +545,7 @@ public class DashBoardPage2__Details_Validating_and_Print_Data_Demo_page extends
 
 		System.out
 				.println(" Absent_Users Employes  in main page Displayed = " + Absent_Users_displayed_number.getText());
-		Reporter.log("<B><font color = 'orange'> Step2 .</font> Absent_Users Employes in main page Displayed=  "
+		Reporter.log("<B><font color = 'blue'> Step2 .</font> Absent_Users Employes in main page Displayed=  "
 				+ Absent_Users_displayed_number.getText());
 		Thread.sleep(4000);
 
@@ -555,7 +554,7 @@ public class DashBoardPage2__Details_Validating_and_Print_Data_Demo_page extends
 
 		System.out.println(
 				"Absent_Users employess in modal page displayed  = " + Absent_Users_After_click_button.getText());
-		Reporter.log("<B><font color = 'orange'> Step3 .</font>Absent_Users modal page displayed => "
+		Reporter.log("<B><font color = 'blue'> Step3 .</font>Absent_Users modal page displayed => "
 				+ Absent_Users_After_click_button.getText());
 
 		String main_page_displayed_users_value = Absent_Users_displayed_number.getText();
