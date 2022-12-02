@@ -60,7 +60,7 @@ public class TestBase {
 		df.deleteFilesInScreenshots(TargetReports);
 		df.deleteFilesInScreenshots(TargetSurefire);
 
-	}
+	} 
 
 	public TestBase() {
 		try {
@@ -134,6 +134,17 @@ public class TestBase {
 		 */
 		loginPage = new LoginPage(getDriver());
 		loginPage.login(readconfig.getUserName(), readconfig.getPassword());
+		
+		
+		
+		/*
+		 *  Admin Side 
+		 */
+		
+//		getDriver().get(readconfig.Non_ApplicationURL("manager_url"));
+//		
+//		loginPage = new LoginPage(getDriver());
+//		loginPage.login(readconfig.Non_getUserName(), readconfig.Non_getPassword());
 
 	}
 

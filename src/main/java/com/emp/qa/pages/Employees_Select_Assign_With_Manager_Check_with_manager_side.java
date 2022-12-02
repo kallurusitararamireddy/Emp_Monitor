@@ -2,7 +2,6 @@ package com.emp.qa.pages;
 
 import java.time.Duration;
 import java.util.Properties;
-import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -21,7 +20,6 @@ public class Employees_Select_Assign_With_Manager_Check_with_manager_side extend
 
 	public Employees_Select_Assign_With_Manager_Check_with_manager_side(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 
 	static Properties pro;
@@ -99,22 +97,21 @@ public class Employees_Select_Assign_With_Manager_Check_with_manager_side extend
 
 	public void Assign_Manager_Check_with_manager_side() throws Exception {
 
-		HomePage s = new HomePage(driver);
 
 		/* Admin side Assign one manager */
 		
 		helper.waitFor(employee);
 		helper.highLightElement(driver, employee);
 		employee.click();
-		Reporter.log("<B><font color = 'blue'>Step1.</font></B> clicked on Employee Module ");
+		Reporter.log("<B><font color = 'blue'>Step1.</font></B> Clicked on Employee Module ");
 		Assert.assertTrue(true, "Failed to Click on Employee Module ");
 
 		helper.waitFor(Employee_Details);
 		helper.highLightElement(driver, Employee_Details);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title='Employee-Details']"))).click();
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Employee_Details Sub-Modulen ");
-		Assert.assertTrue(true, "Failed to clicked on Employee_Details Sub-Module ");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> Clicked on Employee_Details Sub-Modulen ");
+		Assert.assertTrue(true, "Failed to Clicked on Employee_Details Sub-Module ");
 		Thread.sleep(2000);
 
 		helper.waitFor(one_emp);
@@ -172,7 +169,7 @@ public class Employees_Select_Assign_With_Manager_Check_with_manager_side extend
 		helper.highLightElement(driver, select_option_employee);
 		select_option_employee.click();
 		Reporter.log("<B><font color = 'blue'>Step11.</font></B> Selelected  employee");
-		Assert.assertTrue(true, "Failed to Select on employee");
+		Assert.assertTrue(true, "Failed to Select on Employee");
 
 		Thread.sleep(4000);
 
@@ -192,7 +189,6 @@ public class Employees_Select_Assign_With_Manager_Check_with_manager_side extend
 
 	{
 
-		HomePage s1 = new HomePage(driver);
 
 		driver.switchTo().newWindow(WindowType.TAB);
 
@@ -218,15 +214,15 @@ public class Employees_Select_Assign_With_Manager_Check_with_manager_side extend
 		helper.waitFor(login_button);
 		helper.highLightElement(driver, login_button);
 		login_button.click();
-		Reporter.log("<B><font color = 'blue'>Step17.</font></B> clicked on login_button");
-		Assert.assertTrue(true, "Failed to click on  login_button");
+		Reporter.log("<B><font color = 'blue'>Step17.</font></B> Clicked on login_button");
+		Assert.assertTrue(true, "Failed to Click on  login_button");
 
 		helper.waitFor(role_change);
 		helper.highLightElement(driver, role_change);
 		role_change.click();
 		role_change.click();
-		Reporter.log("<B><font color = 'blue'>Step18.</font></B> clicked on  role_change-button");
-		Assert.assertTrue(true, "Failed to clicked on  role_change-button");
+		Reporter.log("<B><font color = 'blue'>Step18.</font></B> Clicked on  role_change-button");
+		Assert.assertTrue(true, "Failed to Clicked on  role_change-button");
 
 		Thread.sleep(1000);
 		helper.waitFor(Manager);
@@ -238,15 +234,15 @@ public class Employees_Select_Assign_With_Manager_Check_with_manager_side extend
 		helper.waitFor(employee_module);
 		helper.highLightElement(driver, employee_module);
 		employee_module.click();
-		Reporter.log("<B><font color = 'blue'>Step20.</font></B> clicked on  Employee Module");
-		Assert.assertTrue(true, "Failed to click on Employee Module");
+		Reporter.log("<B><font color = 'blue'>Step20.</font></B> Clicked on  Employee Module");
+		Assert.assertTrue(true, "Failed to Click on Employee Module");
 
 		Thread.sleep(1000);
 		helper.waitFor(employee_Attendance);
 		helper.highLightElement(driver, employee_Attendance);
 		employee_Attendance.click();
-		Reporter.log("<B><font color = 'blue'>Step21.</font></B> clicked on  Employee_Attendance Sub-Module ");
-		Assert.assertTrue(true, "Failed to click on Employee_Attendance Sub-Module");
+		Reporter.log("<B><font color = 'blue'>Step21.</font></B> Clicked on  Employee_Attendance Sub-Module ");
+		Assert.assertTrue(true, "Failed to Click on Employee_Attendance Sub-Module");
 
 	}
 

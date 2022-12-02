@@ -113,22 +113,22 @@ public class AlertsPage extends  BasePage {
 		helper.waitFor(Alerts);
 		helper.highLightElement(driver, Alerts);
 		Alerts.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Behavior Module and Selected Alerts Sub-Module ");
-		Assert.assertTrue(true, "Failed to click on Behavior Module and Selected Alerts Sub-Module");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Behavior Module and Selected Alerts Sub-Module ");
+		Assert.assertTrue(true, "Failed to Click on Behavior Module and Selected Alerts Sub-Module");
 		
 		helper.waitFor(RuleName); 
 		helper.highLightElement(driver, RuleName);
 		RuleName.sendKeys("Rule-AbcDef");
 		RuleName.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on RuleName Text Field & Entered Rule Name");
-		Assert.assertTrue(true, "Failed to click  on RuleName Text Field & Entered Rule Name ");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on RuleName Text Field & Entered Rule Name");
+		Assert.assertTrue(true, "Failed to Click  on RuleName Text Field & Entered Rule Name ");
 		
 		helper.waitFor(AppliestoLocation);
 		helper.highLightElement(driver, AppliestoLocation);
 		Actions actions = new Actions(driver);
 		actions.moveToElement(AppliestoLocation).click().build().perform();		
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Applies-to-Location ");
-		Assert.assertTrue(true, "Failed to select Location");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Applies-to-Location ");
+		Assert.assertTrue(true, "Failed to Clicked on Applies-to-Location");
 
 		
 		helper.waitFor(SelectAll);
@@ -142,8 +142,8 @@ public class AlertsPage extends  BasePage {
 		Actions actions1 = new Actions(driver);
 		actions1.moveToElement(Appliesto_Department).click().build().perform();
 		Appliesto_Department.click();
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on Applies-to-Department");
-		Assert.assertTrue(true, "Failed to click on Department");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on Applies-to-Department");
+		Assert.assertTrue(true, "Failed to Click on Department");
 
 		
 		helper.waitFor(Appliesto_Emloyee);
@@ -151,15 +151,15 @@ public class AlertsPage extends  BasePage {
 		Actions actions2 = new Actions(driver);
 		actions1.moveToElement(Appliesto_Emloyee).click().build().perform();
 		helper.jsCLick(Appliesto_Emloyee);
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Applies-to-Employee");
-		Assert.assertTrue(true, "Failed to click on Employee");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on Applies-to-Employee");
+		Assert.assertTrue(true, "Failed to Click on Employee");
 
 		
 		helper.waitFor(WhattriggerTherule);
 		helper.highLightElement(driver, WhattriggerTherule);
 		helper.selectDropDownValue(WhattriggerTherule, "value", "DWT");
-		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on What-trigger-The-rule Drop-down and Slected Trigger option");
-		Assert.assertTrue(true, "Failed to click on What-trigger-The-rule Drop-down and Slected Trigger option");
+		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> Clicked on What-trigger-The-rule Drop-down and Slected Trigger option");
+		Assert.assertTrue(true, "Failed to Click on What-trigger-The-rule Drop-down and Slected Trigger option");
 
 	
 		helper.waitFor(AnyNote);
@@ -188,8 +188,8 @@ public class AlertsPage extends  BasePage {
 		helper.waitFor(SaveAndLaunch);
 		helper.highLightElement(driver, SaveAndLaunch);
 		helper.jsCLick(SaveAndLaunch);
-		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> clicked on Save-And-Launch");
-		Assert.assertTrue(true, "Failed to select SaveAndLaunch");
+		Reporter.log("<B><font color = 'blue'>Step11 .</font></B> Clicked on Save-And-Launch");
+		Assert.assertTrue(true, "Failed to Clicked on Save-And-Launch");
 		Thread.sleep(5000); 
 		
 	}

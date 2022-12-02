@@ -29,9 +29,7 @@ public class EditEmployeePage extends BasePage {
 	@CacheLookup
 	WebElement EmployeeDetails;
 
-
-
-	@FindBy(xpath = "//*[@id='one25486']/td[10]/a[5]")
+	@FindBy(xpath = "//tbody[@id='fetch_Details']/tr[1]/td[10]/a[5]")
 	@CacheLookup
 	WebElement EditEmployee;
 
@@ -52,16 +50,17 @@ public class EditEmployeePage extends BasePage {
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee Module and Selected  Employee-Details Sub-module ");
-		Assert.assertTrue(true, "Failed to click on Employee Module and Selected  Employee-Details Sub-module");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Employee Module and Selected  Employee-Details Sub-module ");
+		Assert.assertTrue(true, "Failed to Click on Employee Module and Selected  Employee-Details Sub-module");
 
  
 
 		helper.waitFor(EditEmployee);
+		helper.Scrollintoview(EditEmployee);
 		helper.highLightElement(driver, EditEmployee);
 		helper.move_to_element_click(EditEmployee); 
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Edit-Employee Option");
-		Assert.assertTrue(true, "Failed to click on Edit-Employee Option ");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> Clicked on Edit-Employee Option");
+		Assert.assertTrue(true, "Failed to Click on Edit-Employee Option ");
 
 
 		helper.waitFor(LastName);
@@ -73,7 +72,7 @@ public class EditEmployeePage extends BasePage {
 		Thread.sleep(3000);
 
 		Random d = new Random();
-		int d_num = d.nextInt(100);
+		int d_num = d.nextInt(10000);
 
 		helper.waitFor(Address);
 		helper.highLightElement(driver, Address);
@@ -87,9 +86,9 @@ public class EditEmployeePage extends BasePage {
 		helper.highLightElement(driver, Update_Button);
 		helper.Scrollintoview(Update_Button);
 		helper.jsCLick(Update_Button);
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B>  clicked on Update-Button");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B>  Clicked on Update-Button");
 		Assert.assertTrue(true, "Failed to Click On Update-Button");
-		Thread.sleep(9000);
+		Thread.sleep(3000);
 
 	}
 

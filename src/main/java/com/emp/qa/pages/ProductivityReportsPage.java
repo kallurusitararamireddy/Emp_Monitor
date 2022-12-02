@@ -61,7 +61,7 @@ public class ProductivityReportsPage extends BasePage {
 	@CacheLookup
 	WebElement DateRanges;
 
-	@FindBy(xpath = "//li[contains(text(),'Last 30 Days')]")
+	@FindBy(xpath = "//li[text()='Last 30 Days']")
 	@CacheLookup
 	WebElement Last30days;
 
@@ -78,49 +78,49 @@ public class ProductivityReportsPage extends BasePage {
 		helper.waitFor(ProductivityReports);
 		helper.highLightElement(driver, ProductivityReports);
 		ProductivityReports.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Reports Module and Selected  Productivity-Reports Sub-Module ");
-		Assert.assertTrue(true, "Failed to click on Reports Module and Selected  Productivity-Reports Sub-Module");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Reports Module and Selected  Productivity-Reports Sub-Module ");
+		Assert.assertTrue(true, "Failed to Click on Reports Module and Selected  Productivity-Reports Sub-Module");
 
-		helper.waitFor(AllLocation);
+		helper.waitFor(AllLocation); 
 		helper.highLightElement(driver, AllLocation); 
 		helper.move_to_element_click_target(AllLocation);
 		helper.robot_Zero_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Location Drop-down and Selected Any  Location ");
-		Assert.assertTrue(true, "Failed To  click on Location Drop-down and Selected Any  Location  ");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Location Drop-down and Selected Any  Location ");
+		Assert.assertTrue(true, "Failed To  Click on Location Drop-down and Selected Any  Location  ");
 
 		helper.waitFor(SelectDepartment);
 		helper.highLightElement(driver, SelectDepartment);
 		helper.move_to_element_click_target(SelectDepartment);
 		helper.robot_Zero_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Department Drop-down and  Selected Any  Department ");
-		Assert.assertTrue(true, "Failed to click on Department Drop-down and  Selected Any  Department");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> Clicked on Department Drop-down and  Selected Any  Department ");
+		Assert.assertTrue(true, "Failed to Click on Department Drop-down and  Selected Any  Department");
 
 		helper.waitFor(SelectEmployee);
 		helper.highLightElement(driver, SelectEmployee);
 		helper.move_to_element_click_target(SelectEmployee);
 		helper.robot_Zero_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on Employee Drop-down and  Selected Any  Employee ");
-		Assert.assertTrue(true, "Failed to clicked on Employee Drop-down and  Selected Any  Employee ");
+		Reporter.log("<B><font color = 'blue'>Step4.</font></B> Clicked on Employee Drop-down and  Selected Any  Employee ");
+		Assert.assertTrue(true, "Failed to Clicked on Employee Drop-down and  Selected Any  Employee ");
 
 		helper.waitFor(DateRanges);
 		helper.highLightElement(driver, DateRanges);
 		DateRanges.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Calendar and Selected Day's");
-		Assert.assertTrue(true, "Failed to click on Calendar and Selected Day's");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> Clicked on Calendar and Selected Day's");
+		Assert.assertTrue(true, "Failed to Click on Calendar and Selected Day's");
 
 		helper.waitFor(Last30days);
 		helper.highLightElement(driver, Last30days);
-		Last30days.click();
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Last-30-days");
+		helper.jsCLick(Last30days);
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> Clicked on Last-30-days");
 		Assert.assertTrue(true, "Failed to Select Last-30-days");
 
 		helper.waitFor(ExportPDF);
 		helper.highLightElement(driver, ExportPDF);
 		helper.Scrollintoview(ExportPDF);
 		helper.jsCLick(ExportPDF);
-		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on Export-PDF Button ");
-		Assert.assertTrue(true, "Failed to click on  Export-PDF Button ");
-		Thread.sleep(4000);
+		Reporter.log("<B><font color = 'blue'>Step7.</font></B> Clicked on Export-PDF Button ");
+		Assert.assertTrue(true, "Failed to Click on  Export-PDF Button ");
+		Thread.sleep(2000);
 		
 		helper.Productivity_Reports_pdf();
 		Thread.sleep(3000);
@@ -132,40 +132,40 @@ public class ProductivityReportsPage extends BasePage {
 		helper.waitFor(ProductivityReports);
 		helper.highLightElement(driver, ProductivityReports);
 		ProductivityReports.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Reports Module and Selected  Productivity-Reports Sub-Module ");
-		Assert.assertTrue(true, "Failed to click on Reports Module and Selected  Productivity-Reports Sub-Module");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Reports Module and Selected  Productivity-Reports Sub-Module ");
+		Assert.assertTrue(true, "Failed to Click on Reports Module and Selected  Productivity-Reports Sub-Module");
 
 		helper.waitFor(AllLocation);
 		helper.highLightElement(driver, AllLocation);
 		helper.move_to_element_click_target(AllLocation);
 		helper.robot_Zero_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Location Drop-down and  Selected Any Location ");
-		Assert.assertTrue(true, "Failed To  click on Location Drop-down and  Selected Location ");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Location Drop-down and  Selected Any Location ");
+		Assert.assertTrue(true, "Failed To  Click on Location Drop-down and  Selected Location ");
 
 		helper.waitFor(SelectDepartment);
 		helper.highLightElement(driver, SelectDepartment);
 		helper.move_to_element_click_target(SelectDepartment);
 		helper.robot_Zero_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Department Drop-down and  Selected Department ");
-		Assert.assertTrue(true, "Failed to click on Department Drop-down and  Selected Any  Department");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> Clicked on Department Drop-down and  Selected Department ");
+		Assert.assertTrue(true, "Failed to Click on Department Drop-down and  Selected Any  Department");
 
 		helper.waitFor(SelectEmployee);
 		helper.highLightElement(driver, SelectEmployee);
 		helper.move_to_element_click_target(SelectEmployee);
 		helper.robot_Zero_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on Employee Drop-down and  Selected Employee ");
-		Assert.assertTrue(true, "Failed to clicked on Employee Drop-down and  Selected Employee");
+		Reporter.log("<B><font color = 'blue'>Step4.</font></B> Clicked on Employee Drop-down and  Selected Employee ");
+		Assert.assertTrue(true, "Failed to Clicked on Employee Drop-down and  Selected Employee");
 
 		helper.waitFor(DateRanges);
 		helper.highLightElement(driver, DateRanges);
 		DateRanges.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Calendar and Selected Day's");
-		Assert.assertTrue(true, "Failed to click on Calendar and Selected Day's");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> Clicked on Calendar and Selected Day's");
+		Assert.assertTrue(true, "Failed to Click on Calendar and Selected Day's");
 
 		helper.waitFor(Last30days);
 		helper.highLightElement(driver, Last30days);
-		Last30days.click();
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on Last-30-days");
+		helper.jsCLick(Last30days);
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> Clicked on Last-30-days");
 		Assert.assertTrue(true, "Failed to Select Last-30-days");
 
 		
@@ -174,8 +174,8 @@ public class ProductivityReportsPage extends BasePage {
 		helper.highLightElement(driver, ExportCSV);
 		helper.jsScrollintoview(ExportCSV);
 		helper.jsCLick(ExportCSV);
-		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on Export-CSV Button ");
-		Assert.assertTrue(true, "Failed to click on  Export-CSV Button");
+		Reporter.log("<B><font color = 'blue'>Step7.</font></B> Clicked on Export-CSV Button ");
+		Assert.assertTrue(true, "Failed to Click on  Export-CSV Button");
 		Thread.sleep(5000);
 		
 		helper.Productivity_Reports_CSV_Dot_files();

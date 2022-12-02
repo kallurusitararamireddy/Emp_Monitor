@@ -31,7 +31,7 @@ public class Employee_View_Superior_Details_page extends BasePage
 	@CacheLookup
 	WebElement Scroller;
 	
-	@FindBy(xpath = "//*[@id='act25617']/a[7]/i")
+	@FindBy(xpath = "(//td[@class='td-action'])[1]//a[7]")
 	WebElement superior_Details;
 	
 	@FindBy(xpath = "//*[@id='superiorRolesModal']/div/div/div[1]/button/span")
@@ -45,22 +45,24 @@ public class Employee_View_Superior_Details_page extends BasePage
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
-		Reporter.log("<B><font color = 'blue'>Step1 </font></B> clicked on Employee Module and Selected Employee Details Sub-Module ");
-		Assert.assertTrue(true, "Failed to click on Employee Module and Selected Employee Details Sub-Module");
+		Reporter.log("<B><font color = 'blue'>Step1 </font></B> Clicked on Employee Module and Selected Employee Details Sub-Module ");
+		Assert.assertTrue(true, "Failed to Click on Employee Module and Selected Employee Details Sub-Module");
 		
 		helper.waitFor(Scroller);
 		helper.highLightElement(driver,Scroller); 
 		helper.Scrollintoview(Scroller);
-		Reporter.log("<B><font color = 'blue'>Step2 </font></B> clicked on Any  Employee");
-		Assert.assertTrue(true, "Failed to click on Any  Employee");
-		
+		Reporter.log("<B><font color = 'blue'>Step2 </font></B> Clicked on Any  Employee");
+		Assert.assertTrue(true, "Failed to Click on Any  Employee");
+		Thread.sleep(2000);
 		
 		helper.waitFor(superior_Details);
 		helper.highLightElement(driver, superior_Details);
+		helper.Scrollintoview(superior_Details);
+		Thread.sleep(1000);
 		helper.jsCLick(superior_Details); 
-		Reporter.log("<B><font color = 'blue'>Step3 </font></B> clicked on superior_Details icon");
+		Reporter.log("<B><font color = 'blue'>Step3 </font></B> Clicked on superior_Details icon");
 		Assert.assertTrue(true, "Failed to Click  on superior_Details icon");
-		
+		Thread.sleep(2000);
 		   
 		helper.waitFor(Close);
 		helper.highLightElement(driver, Close);

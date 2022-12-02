@@ -11,7 +11,7 @@ import com.emp.qa.pages.TimeClaimPage;
 
 public class ReportsDownloadTest extends TestBase {
 	@Test
-	public void ReportsDownloadTes() throws InterruptedException, AWTException{
+	public void ReportsDownloadTest() throws InterruptedException, AWTException{
 		ReportsDownloadPage ReportD=new ReportsDownloadPage(getDriver());
 		HomePage homePage =new HomePage(getDriver());
 

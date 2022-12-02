@@ -119,33 +119,33 @@ public class TimeSheetsPage extends BasePage {
 		helper.waitFor(Location);
 		helper.highLightElement(driver, Location);
 		helper.selectDropDownValue(Location, "visibletext", " See All");
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on  Loction Drop-down and Selcted Any Location");
-		Assert.assertTrue(true, "Failed to click on  Loction Drop-down and Selcted Any Location");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on  Loction Drop-down and Selcted Any Location");
+		Assert.assertTrue(true, "Failed to Click on  Loction Drop-down and Selcted Any Location");
 		 
 
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
 		helper.selectDropDownValue(Department, "value", "0");
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Department Drop-down and  Selected Department");
-		Assert.assertTrue(true, "Failed to click on Department Drop-down and  Selected Department");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> Clicked on Department Drop-down and  Selected Department");
+		Assert.assertTrue(true, "Failed to Click on Department Drop-down and  Selected Department");
 		
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
 		helper.move_to_element_click_target(Employee);
 		helper.robot_Zero_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Employee Drop-down and Selected Any Employee");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> Clicked on Employee Drop-down and Selected Any Employee");
 		Assert.assertTrue(true, "Failed to Select Employee and  Selected Any  Employee ");
 		
 		helper.waitFor(selectdateranges);
 		helper.highLightElement(driver, selectdateranges);
 		selectdateranges.click();
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on Calendar Drop-down and Selected Day's");
-		Assert.assertTrue(true, "Failed to click on Calendar Drop-down and Selected Day's");
+		Reporter.log("<B><font color = 'blue'>Step4.</font></B> Clicked on Calendar Drop-down and Selected Day's");
+		Assert.assertTrue(true, "Failed to Click on Calendar Drop-down and Selected Day's");
 		
 		helper.waitFor(Last30days);
 		helper.highLightElement(driver, Last30days);
 		Last30days.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Last-30-days");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> Clicked on Last-30-days");
 		Assert.assertTrue(true, "Failed to select Last-30-days");
 		
 		 
@@ -153,22 +153,22 @@ public class TimeSheetsPage extends BasePage {
 		helper.waitFor(CSV);
 		helper.highLightElement(driver, CSV);
 		CSV.click();
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on CSV Button");
-		Assert.assertTrue(true, "Failed to click on CSV Button");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> Clicked on CSV Button");
+		Assert.assertTrue(true, "Failed to Click on CSV Button");
 		
 		helper.waitFor(selectall);
 		helper.highLightElement(driver, selectall);
 		selectall.click();
-		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on Select-All check Box");
-		Assert.assertTrue(true, "Failed to click on select-All Check Box");
+		Reporter.log("<B><font color = 'blue'>Step7.</font></B> Clicked on Select-All check Box");
+		Assert.assertTrue(true, "Failed to Click on select-All Check Box");
 		
 		helper.waitFor(Submit);
 		helper.highLightElement(driver, Submit);
 		helper.Scrollintoview(Submit);
 		Thread.sleep(3000);
 		helper.jsCLick(Submit);
-		Reporter.log("<B><font color = 'blue'>Step8.</font></B> clicked on Submit Button");
-		Assert.assertTrue(true, "Failed to click on Submit Button");
+		Reporter.log("<B><font color = 'blue'>Step8.</font></B> Clicked on Submit Button");
+		Assert.assertTrue(true, "Failed to Click on Submit Button");
 		Thread.sleep(5000);
 		
 		helper.Time_Sheets_CSV_Dot_files();
@@ -185,34 +185,34 @@ public void Time_Sheets_Page_PDF_File()throws InterruptedException, IOException,
 	helper.waitFor(Location);
 	helper.highLightElement(driver, Location);
 	helper.selectDropDownValue(Location, "visibletext", " See All");
-	Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on  loction Drop-down and Selected Any Location");
-	Assert.assertTrue(true, "Failed to click on  loction Drop-down and Selected Any Location");
+	Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on  loction Drop-down and Selected Any Location");
+	Assert.assertTrue(true, "Failed to Click on  loction Drop-down and Selected Any Location");
 	 
 
 	helper.waitFor(Department);
 	helper.highLightElement(driver, Department);
 	helper.selectDropDownValue(Department, "value", "0");
-	Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Department Drop-down and  Selected Any  Department");
-	Assert.assertTrue(true, "Failed to click on Department Drop-down and  Selected Any  Department");
+	Reporter.log("<B><font color = 'blue'>Step2.</font></B> Clicked on Department Drop-down and  Selected Any  Department");
+	Assert.assertTrue(true, "Failed to Click on Department Drop-down and  Selected Any  Department");
 	
 	helper.waitFor(Employee);
 	helper.highLightElement(driver, Employee);
 	helper.move_to_element_click_target(Employee);
 	helper.robot_Zero_option_selectClick();
-	Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Employee Drop-down and  Selected Any Employee");
-	Assert.assertTrue(true, "Failed to click on Employee Drop-down and  Selected Any Employee ");
+	Reporter.log("<B><font color = 'blue'>Step3.</font></B> Clicked on Employee Drop-down and  Selected Any Employee");
+	Assert.assertTrue(true, "Failed to Click on Employee Drop-down and  Selected Any Employee ");
 	
 	helper.waitFor(selectdateranges);
 	helper.highLightElement(driver, selectdateranges);
 	selectdateranges.click();
-	Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on Calendar Drop-down and Selected Day's");
-	Assert.assertTrue(true, "Failed to click on  Calendar Drop-down and Selected Day's");
+	Reporter.log("<B><font color = 'blue'>Step4.</font></B> Clicked on Calendar Drop-down and Selected Day's");
+	Assert.assertTrue(true, "Failed to Click on  Calendar Drop-down and Selected Day's");
 	
 	helper.waitFor(Last30days);
 	helper.highLightElement(driver, Last30days);
 	Last30days.click();
-	Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Last-30-days");
-	Assert.assertTrue(true, "Failed to select Last-30-days");
+	Reporter.log("<B><font color = 'blue'>Step5.</font></B> Clicked on Last-30-days");
+	Assert.assertTrue(true, "Failed to Select Last-30-days");
 
 		/*
 		 * pdf
@@ -223,21 +223,21 @@ public void Time_Sheets_Page_PDF_File()throws InterruptedException, IOException,
 		helper.highLightElement(driver,  PDF);
 		helper.Scrollintoview(PDF);
 		helper.jsCLick(PDF);
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on PDF Button");
-		Assert.assertTrue(true, "Failed to click on PDF Button");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> Clicked on PDF Button");
+		Assert.assertTrue(true, "Failed to Click on PDF Button");
 		
 		helper.waitFor(selectall);
 		helper.highLightElement(driver, selectall);
 		helper.jsCLick(selectall);
-		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on select-All Check Box ");
-		Assert.assertTrue(true, "Failed to click on select-All Check Box");
+		Reporter.log("<B><font color = 'blue'>Step7.</font></B> Clicked on select-All Check Box ");
+		Assert.assertTrue(true, "Failed to Click on select-All Check Box");
 		 
 		helper.waitFor(Submit);
 		helper.Scrollintoview(Submit);
 		helper.highLightElement(driver, Submit);
 		helper.jsCLick(Submit);
-		Reporter.log("<B><font color = 'blue'>Step8.</font></B> clicked on Submit Button");
-		Assert.assertTrue(true, "Failed to click on Submit Button");
+		Reporter.log("<B><font color = 'blue'>Step8.</font></B> Clicked on Submit Button");
+		Assert.assertTrue(true, "Failed to Click on Submit Button");
 		Thread.sleep(5000);
 		
 		helper.Time_sheet_PDF_Reader();

@@ -19,7 +19,7 @@ public class ReadConfig {
 		} catch (Exception e) {
 			System.out.println("Exception is " + e.getMessage());
 		}
-	}
+	} 
 
 	public String getApplicationURL(String DevOrUAT) throws InterruptedException {
 		String url = null;
@@ -80,16 +80,34 @@ public class ReadConfig {
 		return value;
 	}
 
-	public String m_ApplicationURL(String m_url) throws InterruptedException {
-		String url = null;
+	/*
+	 *  Non Admin side
+	 */
+	
+	public String Non_getUserName()
+
+	{
+		String Non_UserName = pro.getProperty("manager_TL_Employee_User");
+		return Non_UserName;
+	}
+
+	public String Non_getPassword()
+
+	{
+		String Non_Password = pro.getProperty("manager_TL_Employee_password");
+		return Non_Password;
+	}
+
+	public String Non_ApplicationURL(String m_url) throws InterruptedException {
+		String Non_url = null;
 
 		if (m_url.equalsIgnoreCase("manager_url")) {
-			url = pro.getProperty("manager_TL_Employee_URL");
+			Non_url = pro.getProperty("manager_TL_Employee_URL"); 
 		}
 //else if(DevOrUAT.equalsIgnoreCase("UAT")) {
 //	url = pro.getProperty("UATUrl");
 //	}
-		return url;
+		return Non_url;
 	}
-
+ 
 }

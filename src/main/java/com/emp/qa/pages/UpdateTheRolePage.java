@@ -49,20 +49,20 @@ public class UpdateTheRolePage extends BasePage{
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
 		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Employee Module and Selected  Employee-Details Sub-Module ");
-		Assert.assertTrue(true, "Failed to click on  Employee Module and Selected  Employee-Details Sub-Module");
+		Assert.assertTrue(true, "Failed to Click on  Employee Module and Selected  Employee-Details Sub-Module");
 		
 		helper.waitFor(Scroller);
 		helper.highLightElement(driver,Scroller);
 		helper.Scrollintoview(Scroller);
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Scroller view ");
-		Assert.assertTrue(true, "Failed to click on Scroller view ");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> Clicked on Scroller view ");
+		Assert.assertTrue(true, "Failed to Click on Scroller view ");
 		
 		
 		helper.waitFor(UpdateTheRole);
 		helper.highLightElement(driver, UpdateTheRole);
 		helper.jsCLick(UpdateTheRole); 
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Updated Role Drop-down");
-		Assert.assertTrue(true, "Failed to click on  Role Drop-down");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> Clicked on Updated Role Drop-down");
+		Assert.assertTrue(true, "Failed to Click on  Role Drop-down");
 		
 		
 		helper.waitFor(WhichRole);
@@ -70,8 +70,8 @@ public class UpdateTheRolePage extends BasePage{
 //		helper.jsCLick(WhichRole);
 //		helper.selectDropDownValue(WhichRole, "value", "230");
 		helper.robot_Second_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step30.</font></B> clicked on  Any Role");
-		Assert.assertTrue(true, "Failed to click on  role");
+		Reporter.log("<B><font color = 'blue'>Step30.</font></B> Clicked on  Any Role");
+		Assert.assertTrue(true, "Failed to Click on  role");
 		
 		   
 		helper.waitFor(Yes_Button);

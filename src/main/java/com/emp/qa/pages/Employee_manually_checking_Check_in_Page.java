@@ -1,11 +1,16 @@
 package com.emp.qa.pages;
 
 import java.awt.AWTException;
+import java.awt.RenderingHints.Key;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.util.Set;
 
+import org.apache.cassandra.cli.CliParser.keyspace_return;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
@@ -13,6 +18,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -51,9 +57,10 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 
 	/* Change with employee Id */
 
-	@FindBy(xpath = "//*[@id='fn25453']")
+	@FindBy(xpath = "(//tbody[@id='fetch_Details']/tr[1]//a)[1]")
 	@CacheLookup
 	WebElement employee_select;
+
 
 	@FindBy(xpath = "(//a[contains(text(),'Settings')])[2]")
 	@CacheLookup
@@ -110,21 +117,21 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
 		Employee.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee Module ");
-		Assert.assertTrue(true, "Failed to click on Employee Module ");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Employee Module ");
+		Assert.assertTrue(true, "Failed to Click on Employee Module ");
         Thread.sleep(1000);
         
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
-		EmployeeDetails.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Employee Details Sub-Module ");
-		Assert.assertTrue(true, "Failed to click on Employee Details Sub-Module ");
+		helper.jsCLick(EmployeeDetails);
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Employee Details Sub-Module ");
+		Assert.assertTrue(true, "Failed to Click on Employee Details Sub-Module ");
 
 		helper.highLightElement(driver, ShowEntries);
 		ShowEntries.click();
         helper.robot_fourth_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Show-Entries");
-		Assert.assertTrue(true, "Failed to clicked on Show-Entries");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Show-Entries");
+		Assert.assertTrue(true, "Failed to Clicked on Show-Entries");
 
 		Thread.sleep(6000);
 
@@ -132,16 +139,18 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		helper.highLightElement(driver, employee_select);
 		helper.Scrollintoview(employee_select);
 		employee_select.click();
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Any Employee Selected");
-		Assert.assertTrue(true, "Failed to click on Any Employee selected");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> Clicked on Any Employee Selected");
+		Assert.assertTrue(true, "Failed to Click on Any Employee selected");
 
-		Thread.sleep(2000);
+		Thread.sleep(2000); 
+	
+		
 
 		helper.waitFor(settings);
 		helper.highLightElement(driver, settings);
 		helper.move_to_element_click_target(settings);
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on settings Option ");
-		Assert.assertTrue(true, "Failed to click on settings Option ");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on settings Option ");
+		Assert.assertTrue(true, "Failed to Click on settings Option ");
 
 		Thread.sleep(3000);
 
@@ -157,8 +166,8 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		helper.waitFor(save);
 		helper.highLightElement(driver, save);
 		save.click();
-		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on save-button");
-		Assert.assertTrue(true, "Failed to click on save-button");
+		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> Clicked on save-button");
+		Assert.assertTrue(true, "Failed to Click on save-button");
 
 
 
@@ -190,7 +199,9 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 
 		helper.waitFor(user);
 		helper.highLightElement(driver, user);
-		user.sendKeys(du.Data_info("manager_TL_Employee_User"));
+//		user.sendKeys(du.Data_info("manager_TL_Employee_User"));
+		user.sendKeys(Keys.CONTROL,"v");
+		
 		Reporter.log("<B><font color = 'blue'>Step10.</font></B> Entered Manager-TL-Employee User-name");
 		Assert.assertTrue(true, "Failed to Enter Manager-TL-Employee User-name");
 
@@ -203,15 +214,15 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		helper.waitFor(login_button);
 		helper.highLightElement(driver, login_button);
 		login_button.click();
-		Reporter.log("<B><font color = 'blue'>Step12.</font></B> clicked on login_button");
-		Assert.assertTrue(true, "Failed to clicked on  login_button");
+		Reporter.log("<B><font color = 'blue'>Step12.</font></B> Clicked on login_button");
+		Assert.assertTrue(true, "Failed to Clicked on  login_button");
 
 		helper.waitFor(role_change);
 		helper.highLightElement(driver, role_change);
 		role_change.click();
 		role_change.click();
-		Reporter.log("<B><font color = 'blue'>Step13.</font></B> clicked on  role change-button");
-		Assert.assertTrue(true, "Failed to clicked on  role change-button");
+		Reporter.log("<B><font color = 'blue'>Step13.</font></B> Clicked on  role change-button");
+		Assert.assertTrue(true, "Failed to Clicked on  role change-button");
 
 		Thread.sleep(1000);
 		helper.waitFor(employee);
@@ -226,8 +237,8 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		helper.waitFor(hrm);
 		helper.highLightElement(driver, hrm);
 		hrm.click();
-		Reporter.log("<B><font color = 'blue'>Step15 .</font></B> clicked on HRMS");
-		Assert.assertTrue(true, "Failed to click on HRMS");
+		Reporter.log("<B><font color = 'blue'>Step15 .</font></B> Clicked on HRMS");
+		Assert.assertTrue(true, "Failed to Click on HRMS");
 
 		/*
 		 * Open New Tab - Display HRM
@@ -256,8 +267,8 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		helper.waitFor(Attendance);
 		helper.highLightElement(driver, Attendance);
 		Attendance.click();
-		Reporter.log("<B><font color = 'blue'>Step16 .</font></B> clicked on  Attendance Module ");
-		Assert.assertTrue(true, "Failed to click on Attendance Module ");
+		Reporter.log("<B><font color = 'blue'>Step16 .</font></B> Clicked on  Attendance Module ");
+		Assert.assertTrue(true, "Failed to Click on Attendance Module ");
 
 
 		Thread.sleep(5000);		
@@ -280,8 +291,8 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='btn btn-danger float-right']"))).click();
 		checkin_button.click();
-		Reporter.log("<B><font color = 'blue'>Step17 .</font></B> clicked on checkin_button");
-		Assert.assertTrue(true, "Failed to click on checkin_button");
+		Reporter.log("<B><font color = 'blue'>Step17 .</font></B> Clicked on checkin_button");
+		Assert.assertTrue(true, "Failed to Click on checkin_button");
 		
 		
 		
@@ -294,8 +305,8 @@ public class Employee_manually_checking_Check_in_Page extends BasePage {
 		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='btn btn-danger float-right']"))).click();
 		checkin_button.click();
-		Reporter.log("<B><font color = 'blue'>Step17 .</font></B> clicked on checkOUT_button");
-		Assert.assertTrue(true, "Failed to click on checkOUT_button");
+		Reporter.log("<B><font color = 'blue'>Step17 .</font></B> Clicked on checkOUT_button");
+		Assert.assertTrue(true, "Failed to Click on checkOUT_button");
 
 		 
 

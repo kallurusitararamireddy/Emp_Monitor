@@ -178,12 +178,6 @@ public class Dashboardpage7_Location_Performance_Checking_page extends BasePage 
 		
 		
 		
-		
-		
-		
-		
-		
-		
 		/*
 		 *  Checking Yesterday
 		 */

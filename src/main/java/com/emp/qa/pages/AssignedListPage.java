@@ -89,35 +89,35 @@ public class AssignedListPage extends BasePage {
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
 		helper.selectDropDownValue(Department, "value", "0");
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Department dropdown & Select Any Department");
-		Assert.assertTrue(true, "Failed to click on Department dropdown & Select Any Department");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> Clicked on Department dropdown & Select Any Department");
+		Assert.assertTrue(true, "Failed to Click on Department dropdown & Select Any Department");
 		
 		helper.waitFor(Employee);
 		helper.highLightElement(driver, Employee);
 		helper.move_to_element_click_target(Employee);
 		helper.robot_Zero_option_selectClick();
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Employee dropdown & Select Any  Employee");
-		Assert.assertTrue(true, "Failed to Select Employee & Select Any Employee ");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> Clicked on Employee dropdown & Select Any  Employee");
+		Assert.assertTrue(true, "Failed to Click on Employee dropdown & Select Any  Employee ");
 		
 		helper.waitFor(selectdateranges);
 		helper.highLightElement(driver, selectdateranges);
 		selectdateranges.click();
-		Reporter.log("<B><font color = 'blue'>Step4.</font></B> clicked on Calendar Drop-down and Selected Day's");
-		Assert.assertTrue(true, "Failed to click on  Calendar Drop-down and Selected Day's");
+		Reporter.log("<B><font color = 'blue'>Step4.</font></B> Clicked on Calendar Drop-down and Selected Day's");
+		Assert.assertTrue(true, "Failed to Click on  Calendar Drop-down and Selected Day's");
 		
 		helper.waitFor(Last30days);
 		helper.highLightElement(driver, Last30days);
 		Last30days.click();
 		Reporter.log("<B><font color = 'blue'>Step5.</font></B> Selected   Last-30-days");
-		Assert.assertTrue(true, "Failed to select Last-30-days");
+		Assert.assertTrue(true, "Failed to Select Last-30-days");
 		
 		
 		
 		helper.waitFor(CSV);
 		helper.highLightElement(driver, CSV);
 		CSV.click();
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on CSV Button");
-		Assert.assertTrue(true, "Failed to click on CSV Button");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> Clicked on CSV Button");
+		Assert.assertTrue(true, "Failed to Click on CSV Button");
 		
 		helper.waitFor(AssignedList);
 		helper.highLightElement(driver, AssignedList);
@@ -131,8 +131,8 @@ public class AssignedListPage extends BasePage {
 		helper.Scrollintoview(Submit);
 		Thread.sleep(3000);
 		helper.jsCLick(Submit);
-		Reporter.log("<B><font color = 'blue'>Step8.</font></B> clicked on Submit-Button");
-		Assert.assertTrue(true, "Failed to click on Submit-Button");
+		Reporter.log("<B><font color = 'blue'>Step8.</font></B> Clicked on Submit-Button");
+		Assert.assertTrue(true, "Failed to Click on Submit-Button");
 		Thread.sleep(3000);
 		
 		helper.Time_Sheets_CSV_Dot_files();

@@ -76,15 +76,15 @@ public class CreateShiftPage extends BasePage {
 		helper.waitFor(ShiftManagemet);		
 		helper.highLightElement(driver, ShiftManagemet);
 		ShiftManagemet.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Settings and Selected Shift Managemet Sub-Module ");
-		Assert.assertTrue(true, "Failed To click on Settings and Selected Shift Managemet Sub-Module");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Settings and Selected Shift Managemet Sub-Module ");
+		Assert.assertTrue(true, "Failed To Click on Settings and Selected Shift Managemet Sub-Module");
 		
 		
 		helper.waitFor(CreateShift);		 
 		helper.highLightElement(driver, CreateShift);
 		CreateShift.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Create Shift Button");
-		Assert.assertTrue(true, "Failed To click on  Create Shift Button");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Create Shift Button");
+		Assert.assertTrue(true, "Failed To Click on  Create Shift Button");
 		
 		Random r=new Random();
 		int num=r.nextInt(1000);
@@ -94,7 +94,7 @@ public class CreateShiftPage extends BasePage {
 		helper.highLightElement(driver, ShiftName);
 		ShiftName.click();
 		ShiftName.sendKeys(expected_name);
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Shift-Name Text Field and Entered Shift Name ");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Shift-Name Text Field and Entered Shift Name ");
 		Assert.assertTrue(true, "Failed To Select Shift-Name Text Field and Entered Shift Name");
 		
 
@@ -102,35 +102,35 @@ public class CreateShiftPage extends BasePage {
 		helper.waitFor(Selectcolor_RadioButton);		
 		helper.highLightElement(driver,Selectcolor_RadioButton);
 		Selectcolor_RadioButton.click();
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on color Radio Button");
-		Assert.assertTrue(true, "Failed To click on  color_Radio Button");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> Clicked on color Radio Button");
+		Assert.assertTrue(true, "Failed To Click on  color_Radio Button");
 		
 		
 		helper.waitFor(mon_checkBox);		
 		helper.highLightElement(driver,mon_checkBox);
 		mon_checkBox.click();
-		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> clicked on monday check-Box");
+		Reporter.log("<B><font color = 'blue'>Step5 .</font></B> Clicked on monday check-Box");
 		Assert.assertTrue(true, "Failed To Select monday check-Box");
 		
 		helper.waitFor(Monday_StartTime);		
 		helper.highLightElement(driver,Monday_StartTime);
 		Monday_StartTime.sendKeys("10-00");
 		Monday_StartTime.click();
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Monday Start-Time and Entered Time ");
-		Assert.assertTrue(true, "Failed To click on Monday Start-Time and Entered Time");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on Monday Start-Time and Entered Time ");
+		Assert.assertTrue(true, "Failed To Click on Monday Start-Time and Entered Time");
 		
 		helper.waitFor(Monday_EndTime);		
 		helper.highLightElement(driver,Monday_EndTime);
 		Monday_EndTime.sendKeys("07-00");
 		Monday_EndTime.click();
-		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> clicked on Monday End-Time and Entered Time ");
-		Assert.assertTrue(true, "Failed To click on Monday End-Time and Entered Time");
+		Reporter.log("<B><font color = 'blue'>Step7 .</font></B> Clicked on Monday End-Time and Entered Time ");
+		Assert.assertTrue(true, "Failed To Click on Monday End-Time and Entered Time");
 		
 		
 		helper.waitFor(Applytoall);		
 		helper.highLightElement(driver,Applytoall);
 		Applytoall.click();
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Apply-to-all Button ");
+		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> Clicked on Apply-to-all Button ");
 		Assert.assertTrue(true, "Failed To Select Apply-to-all Button ");
 		
 		helper.waitFor(Save_Button);		
@@ -144,7 +144,7 @@ public class CreateShiftPage extends BasePage {
 		helper.waitFor(Done_Save);		
 		helper.highLightElement(driver,Done_Save);
 		Done_Save.click();
-		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on Done_save");
+		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> Clicked on Done_save");
 		Assert.assertTrue(true, "Failed To Select Done_save");
 		
 

@@ -156,13 +156,13 @@ public class CreateProjectsPage extends BasePage {
 
 		helper.highLightElement(driver, add_project_Details_button);
 		add_project_Details_button.click();
-		Reporter.log("<B><font color = 'blue'>Step1.</font></B> clicked on add_project_button ");
-		Assert.assertTrue(true, "Failed to click on add_project_button");
+		Reporter.log("<B><font color = 'blue'>Step1.</font></B> Clicked on add_project_button ");
+		Assert.assertTrue(true, "Failed to Click on add_project_button");
 
 		helper.highLightElement(driver, Next_button); 
 		Next_button.click();
-		Reporter.log("<B><font color = 'blue'>Step2.</font></B> clicked on Next_button");
-		Assert.assertTrue(true, "Failed to click on Next_button");
+		Reporter.log("<B><font color = 'blue'>Step2.</font></B> Clicked on Next_button");
+		Assert.assertTrue(true, "Failed to Click on Next_button");
 
 		Random g = new Random();
 		int num = g.nextInt(1000);
@@ -172,8 +172,8 @@ public class CreateProjectsPage extends BasePage {
 		helper.highLightElement(driver, project_name);
 		project_name.click();
 		project_name.sendKeys(expected_name);
-		Reporter.log("<B><font color = 'blue'>Step3.</font></B> clicked on Next_button");
-		Assert.assertTrue(true, "Failed to click on Next_button");
+		Reporter.log("<B><font color = 'blue'>Step3.</font></B> Clicked on Next_button");
+		Assert.assertTrue(true, "Failed to Click on Next_button");
 
 		helper.highLightElement(driver, select_manager);
 		select_manager.click();
@@ -195,19 +195,19 @@ public class CreateProjectsPage extends BasePage {
 //		 LocalDate timeStamp1 = timeStamp.plusMonths(2);
 
 		create_Project_StartDate.sendKeys(timeStamp);
-		Reporter.log("<B><font color = 'blue'>Step6.</font></B> clicked on StartDate");
-		Assert.assertTrue(true, "Failed to click on StartDate");
+		Reporter.log("<B><font color = 'blue'>Step6.</font></B> Clicked on StartDate");
+		Assert.assertTrue(true, "Failed to Click on StartDate");
 
 		helper.highLightElement(driver, create_Project_EndDate);
 		create_Project_EndDate.click();
 		create_Project_EndDate.sendKeys("01122024");
-		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on EndDate");
-		Assert.assertTrue(true, "Failed to click on EndDate");
+		Reporter.log("<B><font color = 'blue'>Step7.</font></B> Clicked on EndDate");
+		Assert.assertTrue(true, "Failed to Click on EndDate");
 
 		helper.highLightElement(driver, Next_buttom_project);
 		Next_buttom_project.click();
-		Reporter.log("<B><font color = 'blue'>Step8.</font></B> clicked on next_button");
-		Assert.assertTrue(true, "Failed to click on next_button");
+		Reporter.log("<B><font color = 'blue'>Step8.</font></B> Clicked on next_button");
+		Assert.assertTrue(true, "Failed to Click on next_button");
 		Thread.sleep(2000);
 
 		/*
@@ -230,20 +230,20 @@ public class CreateProjectsPage extends BasePage {
 		module_StartDate.clear();
 		String timeStampm = new SimpleDateFormat("ddMMyyyy").format(Calendar.getInstance().getTime());
 		module_StartDate.sendKeys(timeStampm);
-		Reporter.log("<B><font color = 'blue'>Step10.</font></B> clicked on StartDate");
-		Assert.assertTrue(true, "Failed to click on StartDate");
+		Reporter.log("<B><font color = 'blue'>Step10.</font></B> Clicked on StartDate");
+		Assert.assertTrue(true, "Failed to Click on StartDate");
 
 		helper.highLightElement(driver, module_EndDate);
 		module_EndDate.click();
 		Thread.sleep(1000);
 		module_EndDate.sendKeys("27112023");
-		Reporter.log("<B><font color = 'blue'>Step11.</font></B> clicked on EndDate");
-		Assert.assertTrue(true, "Failed to click on EndDate");
+		Reporter.log("<B><font color = 'blue'>Step11.</font></B> Clicked on EndDate");
+		Assert.assertTrue(true, "Failed to Click on EndDate");
 
 		helper.highLightElement(driver, Next_Button_Module);
 		Next_Button_Module.click();
-		Reporter.log("<B><font color = 'blue'>Step12.</font></B> clicked on next_button");
-		Assert.assertTrue(true, "Failed to click on next_button");
+		Reporter.log("<B><font color = 'blue'>Step12.</font></B> Clicked on next_button");
+		Assert.assertTrue(true, "Failed to Click on next_button");
 		Thread.sleep(1000);
 
 		/*
@@ -272,19 +272,19 @@ public class CreateProjectsPage extends BasePage {
 		Task_start_Date.click();
 		String timeStampt = new SimpleDateFormat("ddMMyyyy").format(Calendar.getInstance().getTime());
 		Task_start_Date.sendKeys(timeStampt);
-		Reporter.log("<B><font color = 'blue'>Step15.</font></B> clicked on StartDate");
-		Assert.assertTrue(true, "Failed to click on StartDate");
+		Reporter.log("<B><font color = 'blue'>Step15.</font></B> Clicked on StartDate");
+		Assert.assertTrue(true, "Failed to Click on StartDate");
 
 		helper.highLightElement(driver, task_Enddate);
 		task_Enddate.click();
 		task_Enddate.sendKeys("24122022");
-		Reporter.log("<B><font color = 'blue'>Step16.</font></B> clicked on EndDate");
-		Assert.assertTrue(true, "Failed to click on EndDate");
+		Reporter.log("<B><font color = 'blue'>Step16.</font></B> Clicked on EndDate");
+		Assert.assertTrue(true, "Failed to Click on EndDate");
 
 		helper.highLightElement(driver, Save_project_button);
 		helper.jsCLick(Save_project_button);
-		Reporter.log("<B><font color = 'blue'>Step17.</font></B> clicked on save button");
-		Assert.assertTrue(true, "Failed to click on save_button");
+		Reporter.log("<B><font color = 'blue'>Step17.</font></B> Clicked on save button");
+		Assert.assertTrue(true, "Failed to Click on save_button");
 		Thread.sleep(5000);
 		driver.navigate().refresh();
 

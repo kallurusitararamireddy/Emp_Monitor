@@ -111,7 +111,7 @@ public class Helpers extends TestBase {
 
 		}
 
-	}
+	} 
 
 	@SuppressWarnings("deprecation")
 	public void waitFor(WebElement ele, int time) {
@@ -143,7 +143,7 @@ public class Helpers extends TestBase {
 			Thread.sleep(5000);
 		} catch (Exception e) {
 
-		}
+		} 
 	}
 
 	public void jsCLick(WebElement ele) throws InterruptedException {
@@ -307,6 +307,8 @@ public class Helpers extends TestBase {
 			return false;
 		}
 	}
+	
+	
 
 	public void click(WebElement ele) {
 //			highLightElement( driver, ele);
@@ -327,7 +329,7 @@ public class Helpers extends TestBase {
 		robot1.keyPress(KeyEvent.VK_A);
 		Thread.sleep(2000);
 		robot1.keyPress(KeyEvent.VK_ENTER);
-		Thread.sleep(2000);
+		Thread.sleep(2000); 
 		robot1.keyRelease(KeyEvent.VK_ENTER);
 		Thread.sleep(2000);
 		robot1.keyRelease(KeyEvent.VK_A);
@@ -335,12 +337,14 @@ public class Helpers extends TestBase {
 		robot1.keyRelease(KeyEvent.VK_CONTROL);
 		Thread.sleep(2000);
 	}
+	
 
 	public void robot_Zero_option_selectClick() throws InterruptedException, AWTException {
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_ENTER);
 		Thread.sleep(1000);
 		robot.keyRelease(KeyEvent.VK_ENTER);
+		
 	}
 
 	public void robot_frist_option_selectClick() throws InterruptedException, AWTException {
@@ -627,12 +631,19 @@ public class Helpers extends TestBase {
 	 * Take Screen Shot full page
 	 */
 
-	public void Screen_Shot_full_page(String Folder_name, String Screenshot_page_name) throws IOException {
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File source = ts.getScreenshotAs(OutputType.FILE);
-		File target = new File("./" + Folder_name + Screenshot_page_name + ".png");
-		FileUtils.copyFile(source, target);
+	public boolean Screen_Shot_full_page(String Screenshot_page_name) throws IOException {
 
+		try {
+
+			TakesScreenshot ts = (TakesScreenshot) getDriver();
+			File source = ts.getScreenshotAs(OutputType.FILE);
+			File target = new File("./" + "\\Emp-Screen-shots\\" + Screenshot_page_name + ".png");
+			FileUtils.copyFile(source, target);
+			return true; 
+		} catch (NoSuchElementException e) {
+			return false;
+		} 
+ 
 	}
 
 	public String getRandomString() {
@@ -647,6 +658,27 @@ public class Helpers extends TestBase {
 		return saltStr;
 
 	}
+	
+	
+	public static  char randomChar() {
+		Random r = new Random();
+		return (char)(r.nextInt(26) + 'A');
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	/*
 	 * Excel ,CSV and PDF Files Validating Code
@@ -1106,6 +1138,7 @@ public void Productivity_Reports_CSV_Dot_files() throws IOException, CsvExceptio
 	
 	
 	
+
 	
 	
 	

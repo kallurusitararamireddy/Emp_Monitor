@@ -17,8 +17,8 @@ public class Dashboardpage6_Top_10_Non_Active_Employees_Checking_page2 extends B
 
 	public Dashboardpage6_Top_10_Non_Active_Employees_Checking_page2(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
+	
 
 	Helpers helper = new Helpers();
 

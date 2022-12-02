@@ -14,7 +14,7 @@ public void EmployeeFullDetailsTest() throws Exception{
 	
 	HomePage homePage =new HomePage(getDriver());
 	EmployeeFullDetailsPage Fulldetailspage = new EmployeeFullDetailsPage(getDriver());
-
+ 
 	homePage.clickEmployee();
 	Fulldetailspage.EmployeeFullDetails();
 		

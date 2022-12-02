@@ -105,14 +105,14 @@ Helpers helper=new Helpers();
 		helper.waitFor(ReportsDownload);
 		helper.highLightElement(driver, ReportsDownload);
 		ReportsDownload.click();
-		Reporter.log("<B><font color = 'blue'>SteP1 .</font></B> clicked on Reports Module and Selected Reports Download Sub-Module ");
-		Assert.assertTrue(true, "Failed to click on Reports Module and Selected Reports Download Sub-Module");
+		Reporter.log("<B><font color = 'blue'>SteP1 .</font></B> Clicked on Reports Module and Selected Reports Download Sub-Module ");
+		Assert.assertTrue(true, "Failed to Click on Reports Module and Selected Reports Download Sub-Module");
 		
 		
 		helper.waitFor(Role);
 		helper.highLightElement(driver, Role);
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Roles Drop-down and Selected any Role ");
-		Assert.assertTrue(true, "Failed to click on Roles Drop-down and Selected any Role");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Roles Drop-down and Selected any Role ");
+		Assert.assertTrue(true, "Failed to Click on Roles Drop-down and Selected any Role");
 		
 		helper.waitFor(SelectAll);
 		helper.highLightElement(driver, SelectAll);
@@ -124,21 +124,21 @@ Helpers helper=new Helpers();
 		helper.highLightElement(driver, Location);
 		helper.selectDropDownValue(Location, "value", "2");
 		Location.click();
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Location Drop-down and Select Any Location ");
-		Assert.assertTrue(true, "Failed click on Location Drop-down and Select Any Location");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> Clicked on Location Drop-down and Select Any Location ");
+		Assert.assertTrue(true, "Failed Click on Location Drop-down and Select Any Location");
 		
 		helper.waitFor(Department);
 		helper.highLightElement(driver, Department);
 		helper.selectDropDownValue(Department, "value", "1");
 		
 		Department.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Department Drop-down and Slected Any Department");
-		Assert.assertTrue(true, "Failed to click  on Department Drop-down and Slected Any Department");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> Clicked on Department Drop-down and Slected Any Department");
+		Assert.assertTrue(true, "Failed to Click  on Department Drop-down and Slected Any Department");
 		
 		helper.waitFor(SelectDateRanges);
 		helper.highLightElement(driver, SelectDateRanges);
 		SelectDateRanges.click();
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Calender Drop-down and Slected Day's");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on Calender Drop-down and Slected Day's");
 		Assert.assertTrue(true, "Failed to Click on Calender Drop-down and Slected Day's");
 		
 		helper.waitFor(Last30days);
@@ -150,7 +150,7 @@ Helpers helper=new Helpers();
 		helper.waitFor(DownloadOption);
 		helper.highLightElement(driver, DownloadOption);
 		DownloadOption.click();
-		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> clicked on Download-Option Drop-down ");
+		Reporter.log("<B><font color = 'blue'>Step8 .</font></B> Clicked on Download-Option Drop-down ");
 		Assert.assertTrue(true, "Failed to Select DownloadOption");
 		
 		helper.waitFor(AppliationsUsed);
@@ -165,20 +165,17 @@ Helpers helper=new Helpers();
 		helper.waitFor(CSV);
 		helper.highLightElement(driver, CSV);
 		helper.Double_click(CSV);
-		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on CSV-Button");
-		Assert.assertTrue(true, "Failed to click on  CSV-Button");
+		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> Clicked on CSV-Button");
+		Assert.assertTrue(true, "Failed to Click on  CSV-Button");
 		Thread.sleep(2000);
 		
 		
 		helper.waitFor(CSV_Drop_down);
 		helper.highLightElement(driver, CSV_Drop_down);
 		helper.Double_click(CSV_Drop_down);
-		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> clicked on CSV_Drop_down");
-		Assert.assertTrue(true, "Failed to click on  CSV_Drop_down");
+		Reporter.log("<B><font color = 'blue'>Step10 .</font></B> Clicked on CSV_Drop_down");
+		Assert.assertTrue(true, "Failed to Click on  CSV_Drop_down");
 		Thread.sleep(4000); 
-		
 	
-
-
 	}
 }

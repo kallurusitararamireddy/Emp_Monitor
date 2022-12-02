@@ -19,10 +19,10 @@
 		<classes>
 
 
-           <!--*******************   Module   *******************-->
-			<class name="com.emp.testcases.RegisterEmployeeTest"></class> <!--Regression Test 15-->
-			<class name="com.emp.testcases.BulkRegisterTest"></class>
-			<class name="com.emp.testcases.BulkUpdateTest"></class>
+          <!--******************* Employee Module ******************* -->
+          			
+          
+	
 			
 
 

@@ -32,9 +32,9 @@ public class EmployeeFullDetailsPage extends BasePage {
 	@CacheLookup
 	WebElement ShowEntries;
 
-	@FindBy(xpath = "//*[@id=\"fn25486\"]")
+	@FindBy(xpath = "(//tbody[@id='fetch_Details']/tr/td/a)[1]")
 	@CacheLookup
-	WebElement AutomationCode;
+	WebElement Any_Employee;
 
 	@FindBy(xpath = "//a[@id='ProductivityTab']")
 	@CacheLookup
@@ -140,23 +140,23 @@ public class EmployeeFullDetailsPage extends BasePage {
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clicked on Employee Module and Selected  Employee-Details Sub-Module ");
-		Assert.assertTrue(true, "Failed to click on Employee Module and Selected  Employee-Details Sub-Module");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Employee Module and Selected  Employee-Details Sub-Module ");
+		Assert.assertTrue(true, "Failed to Click on Employee Module and Selected  Employee-Details Sub-Module");
 
 		helper.highLightElement(driver, ShowEntries);
 		helper.selectDropDownValue(ShowEntries, "index", "2");
 		ShowEntries.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on Show-Entries Drop-down and Selected Any Value");
-		Assert.assertTrue(true, "Failed to click on Show-Entries Drop-down and Selected Any Value");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on Show-Entries Drop-down and Selected Any Value");
+		Assert.assertTrue(true, "Failed to Click on Show-Entries Drop-down and Selected Any Value");
 
 		Thread.sleep(5000);
 		 
-		helper.waitFor(AutomationCode);
-		helper.highLightElement(driver, AutomationCode);
+		helper.waitFor(Any_Employee);
+		helper.highLightElement(driver, Any_Employee);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"fn25486\"]"))).click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Any Employee");
-		Assert.assertTrue(true, "Failed to click on Any Employee");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//tbody[@id='fetch_Details']/tr/td/a)[1]"))).click();
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Any Employee");
+		Assert.assertTrue(true, "Failed to Click on Any Employee");
 
 		Thread.sleep(3000);
 		
@@ -165,38 +165,38 @@ public class EmployeeFullDetailsPage extends BasePage {
 		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='ProductivityTab']"))).click();
 		productivity.click();
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on productivity Button");
-		Assert.assertTrue(true, "Failed to click on productivity Button");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> Clicked on productivity Button");
+		Assert.assertTrue(true, "Failed to Click on productivity Button");
 
 		helper.waitFor(Timesheets_Btn);
 		helper.highLightElement(driver, Timesheets_Btn);
 		Timesheets_Btn.click();
-		Reporter.log("<B><font color = 'blue'>Step5.</font></B> clicked on Timesheets_Btn");
-		Assert.assertTrue(true, "Failed to click onTimesheets_Btn");
+		Reporter.log("<B><font color = 'blue'>Step5.</font></B> Clicked on Timesheets_Btn");
+		Assert.assertTrue(true, "Failed to Click onTimesheets_Btn");
 
 		helper.waitFor(Screenshots);
 		helper.highLightElement(driver, Screenshots);
 		Screenshots.click();
-		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> clicked on Screenshots Button");
-		Assert.assertTrue(true, "Failed to clicke on Screenshots Button");
+		Reporter.log("<B><font color = 'blue'>Step6 .</font></B> Clicked on Screenshots Button");
+		Assert.assertTrue(true, "Failed to Clicke on Screenshots Button");
 
 		helper.waitFor(Webhistory);
 		helper.highLightElement(driver, Webhistory);
 		Webhistory.click();
-		Reporter.log("<B><font color = 'blue'>Step7.</font></B> clicked on Web History Button");
-		Assert.assertTrue(true, "Failed to click on Web History Button");
+		Reporter.log("<B><font color = 'blue'>Step7.</font></B> Clicked on Web History Button");
+		Assert.assertTrue(true, "Failed to Click on Web History Button");
 
 		helper.waitFor(AppHistory);
 		helper.highLightElement(driver, AppHistory);
 		AppHistory.click();
-		Reporter.log("<B><font color = 'blue'>Step8.</font></B> clicked on App-History Button");
-		Assert.assertTrue(true, "Failed to click on App-History Button");
+		Reporter.log("<B><font color = 'blue'>Step8.</font></B> Clicked on App-History Button");
+		Assert.assertTrue(true, "Failed to Click on App-History Button");
 
 		helper.waitFor(Keystrokes);
 		helper.highLightElement(driver, Keystrokes);
 		Keystrokes.click();
-		Reporter.log("<B><font color = 'blue'>Step9.</font></B> click on Keystrokes Button");
-		Assert.assertTrue(true, "Failed to click on Keystrokes Button");
+		Reporter.log("<B><font color = 'blue'>Step9.</font></B> Click on Keystrokes Button");
+		Assert.assertTrue(true, "Failed to Click on Keystrokes Button");
         Thread.sleep(9000);
 		
 

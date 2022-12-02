@@ -45,31 +45,31 @@ public class BulkUpdatePage extends BasePage {
 		helper.waitFor(EmployeeDetails);
 		helper.highLightElement(driver, EmployeeDetails);
 		EmployeeDetails.click();
-		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> clickedonEmployeeDetails");
-		Assert.assertTrue(true, "Failed to clickedonEmployeeDetails");
+		Reporter.log("<B><font color = 'blue'>Step1 .</font></B> Clicked on Employee Module and Selected  Employee-Details Sub-Module");
+		Assert.assertTrue(true, "Failed to Click on Employee Module and Selected  Employee-Details Sub-Module");
 		
 		
 		helper.waitFor(BulkUpdate_Button);
 		helper.highLightElement(driver, BulkUpdate_Button);
 		BulkUpdate_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> clicked on BulkUpdate_Button");
-		Assert.assertTrue(true, "Failed to clicke on BulkUpdate_Button");
+		Reporter.log("<B><font color = 'blue'>Step2 .</font></B> Clicked on BulkUpdate_Button");
+		Assert.assertTrue(true, "Failed to Click on BulkUpdate_Button");
 		
 		
 		helper.waitFor(Browse_Button);
 		helper.highLightElement(driver, Browse_Button);
 		Browse_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> clicked on Browse_Button");
-		Assert.assertTrue(true, "Failed to click on Browse_Button");
-		helper.uploadFile("\"C:\\Users\\Official\\Downloads\\Employee list.xlsx\"");
+		Reporter.log("<B><font color = 'blue'>Step3 .</font></B> Clicked on Browse_Button");
+		Assert.assertTrue(true, "Failed to Click on Browse_Button");
+		helper.uploadFile("\"\"");
 		Thread.sleep(3000);
 
 		 
 		helper.waitFor(Update_Button);
 		helper.highLightElement(driver, Update_Button);
 		Update_Button.click();
-		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> clicked on Update_Button");
-		Assert.assertTrue(true, "Failed to click on Update_Button");
+		Reporter.log("<B><font color = 'blue'>Step4 .</font></B> Clicked on Update_Button");
+		Assert.assertTrue(true, "Failed to Click on Update_Button");
 		Thread.sleep(6000);
 
 		
